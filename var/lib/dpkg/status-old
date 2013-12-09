@@ -3147,6 +3147,28 @@ Description: Not Erik's Windowing Toolkit - text mode windowing with slang
  for programs that have been built with newt.
 Homepage: https://fedorahosted.org/newt/
 
+Package: net-tools
+Status: install ok installed
+Priority: important
+Section: net
+Installed-Size: 910
+Maintainer: net-tools Team <pkg-net-tools-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 1.60-25
+Replaces: ja-trans (<= 0.8-2), netbase (<< 4.00)
+Depends: libc6 (>= 2.14)
+Conflicts: ja-trans (<= 0.8-2)
+Description: The NET-3 networking toolkit
+ This package includes the important tools for controlling the network
+ subsystem of the Linux kernel.  This includes arp, ifconfig, netstat,
+ rarp, nameif and route.  Additionally, this package contains utilities
+ relating to particular network hardware types (plipconfig, slattach,
+ mii-tool) and advanced aspects of IP configuration (iptunnel, ipmaddr).
+ .
+ In the upstream package 'hostname' and friends are included. Those are
+ not installed by this package, since there is a special "hostname*.deb".
+Homepage: http://net-tools.berlios.de/
+
 Package: clang
 Status: install ok installed
 Priority: optional

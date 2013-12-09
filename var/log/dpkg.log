@@ -185,3 +185,20 @@
 2013-12-09 19:49:26 trigproc man-db:amd64 2.6.5-2 2.6.5-2
 2013-12-09 19:49:26 status half-configured man-db:amd64 2.6.5-2
 2013-12-09 19:49:28 status installed man-db:amd64 2.6.5-2
+2013-12-09 21:25:36 startup archives install
+2013-12-09 21:27:04 startup archives install
+2013-12-09 21:27:04 upgrade libssl1.0.0:amd64 1.0.1e-4 1.0.1e-4
+2013-12-09 21:27:04 status half-configured libssl1.0.0:amd64 1.0.1e-4
+2013-12-09 21:27:04 status unpacked libssl1.0.0:amd64 1.0.1e-4
+2013-12-09 21:27:04 status half-installed libssl1.0.0:amd64 1.0.1e-4
+2013-12-09 21:27:05 status half-installed libssl1.0.0:amd64 1.0.1e-4
+2013-12-09 21:27:05 status unpacked libssl1.0.0:amd64 1.0.1e-4
+2013-12-09 21:27:05 status unpacked libssl1.0.0:amd64 1.0.1e-4
+2013-12-09 21:27:05 configure libssl1.0.0:amd64 1.0.1e-4 1.0.1e-4
+2013-12-09 21:27:05 status unpacked libssl1.0.0:amd64 1.0.1e-4
+2013-12-09 21:27:05 status half-configured libssl1.0.0:amd64 1.0.1e-4
+2013-12-09 21:27:06 status installed libssl1.0.0:amd64 1.0.1e-4
+2013-12-09 21:27:06 status triggers-pending libc-bin:amd64 2.17-97
+2013-12-09 21:27:06 trigproc libc-bin:amd64 2.17-97 2.17-97
+2013-12-09 21:27:06 status half-configured libc-bin:amd64 2.17-97
+2013-12-09 21:27:06 status installed libc-bin:amd64 2.17-97
