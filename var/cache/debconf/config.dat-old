@@ -124,11 +124,11 @@ Owners: libc6, libc6:amd64, libc6:i386, libpam0g:amd64
 
 Name: libssl1.0.0/restart-failed
 Template: libssl1.0.0/restart-failed
-Owners: libssl1.0.0, libssl1.0.0:amd64
+Owners: libssl1.0.0, libssl1.0.0:amd64, libssl1.0.0:i386
 
 Name: libssl1.0.0/restart-services
 Template: libssl1.0.0/restart-services
-Owners: libssl1.0.0, libssl1.0.0:amd64
+Owners: libssl1.0.0, libssl1.0.0:amd64, libssl1.0.0:i386
 
 Name: man-db/auto-update
 Template: man-db/auto-update

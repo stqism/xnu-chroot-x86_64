@@ -2413,6 +2413,26 @@ Tag: implemented-in::c, role::shared-lib
 SHA1: 8d96ead44c414a342020e72aef6a64769079ced1
 SHA256: e8e95b5942537e562e9c5355b71bc4d25e232ad81eab60d4acd0cb3dd4e90771
 
+Package: zlib1g
+Priority: required
+Section: libs
+Installed-Size: 166
+Maintainer: Mark Brown <broonie@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: zlib
+Version: 1:1.2.8.dfsg-1
+Provides: libz1
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Breaks: libxml2 (<< 2.7.6.dfsg-2), texlive-binaries (<< 2009-12)
+Conflicts: zlib1 (<= 1:1.0.4-7)
+Size: 92224
+Description: compression library - runtime
+ zlib is a library implementing the deflate compression method found
+ in gzip and PKZIP.  This package includes the shared library.
+Homepage: http://zlib.net/
+
 Package: libapt-inst1.5
 Priority: important
 Section: libs

@@ -29,3 +29,8 @@ Start-Date: 2013-12-09  21:40:00
 Commandline: apt-get install libssl1.0.0:i386
 Install: libssl1.0.0:i386 (1.0.1e-4), zlib1g:i386 (1.2.8.dfsg-1, automatic)
 End-Date: 2013-12-09  21:40:05
+
+Start-Date: 2013-12-09  22:20:58
+Commandline: apt-get upgrade
+Upgrade: binutils:amd64 (2.24-1, 2.24-2)
+End-Date: 2013-12-09  22:21:04

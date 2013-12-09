@@ -423,3 +423,24 @@
 2013-12-09 21:40:04 trigproc libc-bin:amd64 2.17-97 <none>
 2013-12-09 21:40:04 status half-configured libc-bin:amd64 2.17-97
 2013-12-09 21:40:04 status installed libc-bin:amd64 2.17-97
+2013-12-09 22:20:58 startup archives unpack
+2013-12-09 22:20:59 upgrade binutils:amd64 2.24-1 2.24-2
+2013-12-09 22:20:59 status half-configured binutils:amd64 2.24-1
+2013-12-09 22:20:59 status unpacked binutils:amd64 2.24-1
+2013-12-09 22:20:59 status half-installed binutils:amd64 2.24-1
+2013-12-09 22:20:59 status triggers-pending man-db:amd64 2.6.5-2
+2013-12-09 22:21:02 status half-installed binutils:amd64 2.24-1
+2013-12-09 22:21:02 status unpacked binutils:amd64 2.24-2
+2013-12-09 22:21:02 status unpacked binutils:amd64 2.24-2
+2013-12-09 22:21:02 trigproc man-db:amd64 2.6.5-2 2.6.5-2
+2013-12-09 22:21:02 status half-configured man-db:amd64 2.6.5-2
+2013-12-09 22:21:03 status installed man-db:amd64 2.6.5-2
+2013-12-09 22:21:03 startup packages configure
+2013-12-09 22:21:03 configure binutils:amd64 2.24-2 <none>
+2013-12-09 22:21:03 status unpacked binutils:amd64 2.24-2
+2013-12-09 22:21:03 status half-configured binutils:amd64 2.24-2
+2013-12-09 22:21:04 status installed binutils:amd64 2.24-2
+2013-12-09 22:21:04 status triggers-pending libc-bin:amd64 2.17-97
+2013-12-09 22:21:04 trigproc libc-bin:amd64 2.17-97 <none>
+2013-12-09 22:21:04 status half-configured libc-bin:amd64 2.17-97
+2013-12-09 22:21:04 status installed libc-bin:amd64 2.17-97

@@ -289,6 +289,8 @@
 /usr/share/locale/bg/LC_MESSAGES/binutils.mo
 /usr/share/locale/bg/LC_MESSAGES/ld.mo
 /usr/share/locale/bg/LC_MESSAGES/gprof.mo
+/usr/share/man
+/usr/share/man/man1
 /usr/share/man/man1/objdump.1.gz
 /usr/share/man/man1/nlmconv.1.gz
 /usr/share/man/man1/ranlib.1.gz
