@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libnettle4
+/usr/share/doc/libnettle4/README
+/usr/share/doc/libnettle4/copyright
+/usr/share/doc/libnettle4/changelog.Debian.gz
+/usr/share/doc/libnettle4/NEWS.gz
+/usr/share/doc/libnettle4/changelog.gz
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libnettle.so.4.7
+/usr/lib/x86_64-linux-gnu/libnettle.so.4

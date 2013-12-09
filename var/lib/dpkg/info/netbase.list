@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/netbase
+/usr/share/doc/netbase/changelog.gz
+/usr/share/doc/netbase/copyright
+/etc
+/etc/rpc
+/etc/protocols
+/etc/network
+/etc/services

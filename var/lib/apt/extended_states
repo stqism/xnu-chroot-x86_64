@@ -1,0 +1,336 @@
+Package: libstdc++-4.8-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libisl10
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libtimedate-perl
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libasan0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libsasl2-modules-db
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libquadmath0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libmpc3
+Architecture: amd64
+Auto-Installed: 1
+
+Package: llvm-3.3-runtime
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gcc-4.8-multilib
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libc6-dev-x32
+Architecture: amd64
+Auto-Installed: 1
+
+Package: lib32gcc1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: lib32stdc++6
+Architecture: amd64
+Auto-Installed: 1
+
+Package: m4
+Architecture: amd64
+Auto-Installed: 1
+
+Package: zlib1g-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libclang1-3.3
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libgssapi-krb5-2
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libx32gcc-4.8-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: cpp-4.8
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libgomp1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: llvm-runtime
+Architecture: amd64
+Auto-Installed: 1
+
+Package: lib32gcc-4.8-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libkrb5-3
+Architecture: amd64
+Auto-Installed: 1
+
+Package: llvm
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libtsan0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libllvm3.3
+Architecture: amd64
+Auto-Installed: 1
+
+Package: dpkg-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libclang-common-3.3-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libx32asan0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libx32itm1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libc-dev-bin
+Architecture: amd64
+Auto-Installed: 1
+
+Package: xz-utils
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libx32gomp1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libx32atomic1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libobjc4
+Architecture: amd64
+Auto-Installed: 1
+
+Package: llvm-3.3-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: patch
+Architecture: amd64
+Auto-Installed: 1
+
+Package: librtmp0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: g++
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libatomic1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libldap-2.4-2
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libblocksruntime0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libmpfr4
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libssh2-1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: g++-4.8
+Architecture: amd64
+Auto-Installed: 1
+
+Package: lib32asan0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: bzip2
+Architecture: amd64
+Auto-Installed: 1
+
+Package: binutils
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gcc
+Architecture: amd64
+Auto-Installed: 1
+
+Package: llvm-3.3
+Architecture: amd64
+Auto-Installed: 1
+
+Package: liberror-perl
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libgcc-4.8-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libdpkg-perl
+Architecture: amd64
+Auto-Installed: 1
+
+Package: cpp
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gcc-4.8
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libsigsegv2
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libx32quadmath0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: git-man
+Architecture: amd64
+Auto-Installed: 1
+
+Package: lib32gomp1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libcloog-isl4
+Architecture: amd64
+Auto-Installed: 1
+
+Package: lib32atomic1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: lib32itm1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libx32gcc1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libc6-i386
+Architecture: amd64
+Auto-Installed: 1
+
+Package: clang-3.3
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libbison-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: binfmt-support
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libsasl2-2
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libexpat1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libjsoncpp0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libobjc-4.8-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-libc-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: lib32quadmath0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libkeyutils1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libffi-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libitm1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libkrb5support0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libk5crypto3
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libc6-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libcurl3-gnutls
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libc6-x32
+Architecture: amd64
+Auto-Installed: 1
+
+Package: openssl
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gettext-base
+Architecture: amd64
+Auto-Installed: 1
+
+Package: dialog
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libasprintf0c2
+Architecture: amd64
+Auto-Installed: 1
+

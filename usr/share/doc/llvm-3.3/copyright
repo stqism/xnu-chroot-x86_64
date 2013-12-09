@@ -1,0 +1,311 @@
+This package was debianized by Sylvestre Ledru <sylvestre@debian.org>.
+
+It was downloaded from http://llvm.org/releases/download.html
+
+Debian package is released under the same license as LLVM/Clang
+
+
+==============================================================================
+LLVM Release License
+==============================================================================
+University of Illinois/NCSA
+Open Source License
+
+Copyright (c) 2003-2007 University of Illinois at Urbana-Champaign.
+All rights reserved.
+
+Developed by:
+
+    LLVM Team
+
+    University of Illinois at Urbana-Champaign
+
+    http://llvm.org
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal with
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+    * Redistributions of source code must retain the above copyright notice,
+      this list of conditions and the following disclaimers.
+
+    * Redistributions in binary form must reproduce the above copyright notice,
+      this list of conditions and the following disclaimers in the
+      documentation and/or other materials provided with the distribution.
+
+    * Neither the names of the LLVM Team, University of Illinois at
+      Urbana-Champaign, nor the names of its contributors may be used to
+      endorse or promote products derived from this Software without specific
+      prior written permission.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
+SOFTWARE.
+
+==============================================================================
+Copyrights and Licenses for Third Party Software Distributed with LLVM:
+==============================================================================
+The LLVM software contains code written by third parties.  Such software will
+have its own individual LICENSE.TXT file in the directory in which it appears.
+This file will describe the copyrights, license, and restrictions which apply
+to that code.
+
+The disclaimer of warranty in the University of Illinois Open Source License
+applies to all code in the LLVM Distribution, and nothing in any of the
+other licenses gives permission to use the names of the LLVM Team or the
+University of Illinois to endorse or promote products derived from this
+Software.
+
+The following pieces of software have additional or alternate copyrights,
+licenses, and/or restrictions:
+
+Program             Directory
+-------             ---------
+System Library      llvm/lib/System
+Compiler Driver     llvm/tools/llvmc
+Autoconf            llvm/autoconf
+                    llvm/projects/ModuleMaker/autoconf
+                    llvm/projects/sample/autoconf
+
+-----
+
+Files: 
+lib/Support/regutils.h
+lib/Support/regexec.c
+lib/Support/regstrlcpy.c
+lib/Support/regex_impl.h
+lib/Support/regcclass.h
+lib/Support/regerror.c
+lib/Support/regengine.inc
+lib/Support/regex2.h
+lib/Support/regcomp.c
+lib/Support/regcname.h
+lib/Support/regfree.c
+
+License:
+ * This code is derived from OpenBSD's libc/regex, original license follows:
+ *
+ * Copyright (c) 1992, 1993, 1994 Henry Spencer.
+ * Copyright (c) 1992, 1993, 1994
+ *      The Regents of the University of California.  All rights reserved.
+ *
+ * This code is derived from software contributed to Berkeley by
+ * Henry Spencer.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the University nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+
+-----
+
+Files:
+tools/clang/lib/Headers/limits.h
+tools/clang/lib/Headers/lzcntintrin.h
+tools/clang/lib/Headers/rtmintrin.h
+tools/clang/lib/Headers/immintrin.h
+tools/clang/lib/Headers/stdbool.h
+tools/clang/lib/Headers/cpuid.h
+tools/clang/lib/Headers/fmaintrin.h
+tools/clang/lib/Headers/iso646.h
+tools/clang/lib/Headers/x86intrin.h
+tools/clang/lib/Headers/mm_malloc.h
+tools/clang/lib/Headers/ammintrin.h
+tools/clang/lib/Headers/emmintrin.h
+tools/clang/lib/Headers/float.h
+tools/clang/lib/Headers/stdarg.h
+tools/clang/lib/Headers/popcntintrin.h
+tools/clang/lib/Headers/tgmath.h
+tools/clang/lib/Headers/mmintrin.h
+tools/clang/lib/Headers/unwind.h
+tools/clang/lib/Headers/stdalign.h
+tools/clang/lib/Headers/xopintrin.h
+tools/clang/lib/Headers/stddef.h
+tools/clang/lib/Headers/bmi2intrin.h
+tools/clang/lib/Headers/wmmintrin.h
+tools/clang/lib/Headers/stdint.h
+tools/clang/lib/Headers/smmintrin.h
+tools/clang/lib/Headers/__wmmintrin_aes.h
+tools/clang/lib/Headers/fma4intrin.h
+tools/clang/lib/Headers/altivec.h
+tools/clang/lib/Headers/tmmintrin.h
+tools/clang/lib/Headers/xmmintrin.h
+tools/clang/lib/Headers/varargs.h
+tools/clang/lib/Headers/avx2intrin.h
+tools/clang/lib/Headers/mm3dnow.h
+tools/clang/lib/Headers/__wmmintrin_pclmul.h
+tools/clang/lib/Headers/pmmintrin.h
+tools/clang/lib/Headers/nmmintrin.h
+tools/clang/lib/Headers/bmiintrin.h
+tools/clang/lib/Headers/f16cintrin.h
+tools/clang/lib/Headers/avxintrin.h
+
+License:
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+
+-----
+
+Files:
+utils/unittest/googletest/gtest.cc
+utils/unittest/googletest/include/gtest/internal/gtest-filepath.h
+utils/unittest/googletest/include/gtest/internal/gtest-port.h
+utils/unittest/googletest/include/gtest/internal/gtest-death-test-internal.h
+utils/unittest/googletest/include/gtest/internal/gtest-internal.h
+utils/unittest/googletest/include/gtest/internal/gtest-string.h
+utils/unittest/googletest/include/gtest/internal/gtest-param-util.h
+utils/unittest/googletest/include/gtest/internal/gtest-linked_ptr.h
+utils/unittest/googletest/include/gtest/internal/gtest-internal-inl.h
+utils/unittest/googletest/include/gtest/gtest-message.h
+utils/unittest/googletest/include/gtest/gtest-spi.h
+utils/unittest/googletest/include/gtest/gtest-test-part.h
+utils/unittest/googletest/include/gtest/gtest.h
+utils/unittest/googletest/include/gtest/gtest-printers.h
+utils/unittest/googletest/include/gtest/gtest_prod.h
+utils/unittest/googletest/include/gtest/gtest-death-test.h
+utils/unittest/googletest/include/gtest/gtest-typed-test.h
+utils/unittest/googletest/gtest-typed-test.cc
+utils/unittest/googletest/gtest-port.cc
+utils/unittest/googletest/gtest-printers.cc
+utils/unittest/googletest/gtest-all.cc
+utils/unittest/googletest/gtest-filepath.cc
+utils/unittest/googletest/gtest-death-test.cc
+utils/unittest/googletest/gtest-test-part.cc
+
+License:
+ * Copyright 2007, Google Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *
+ *     * Redistributions of source code must retain the above copyright
+ * notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above
+ * copyright notice, this list of conditions and the following disclaimer
+ * in the documentation and/or other materials provided with the
+ * distribution.
+ *     * Neither the name of Google Inc. nor the names of its
+ * contributors may be used to endorse or promote products derived from
+ * this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-----
+
+Files:
+tools/lldb/test/pexpect-2.4/pexpect.py
+tools/lldb/test/pexpect-2.4/screen.py
+tools/lldb/test/pexpect-2.4/PKG-INFO
+tools/lldb/test/pexpect-2.4/doc
+tools/lldb/test/pexpect-2.4/doc/index.html
+tools/lldb/test/pexpect-2.4/doc/index.template.html
+tools/lldb/test/pexpect-2.4/doc/clean.css
+tools/lldb/test/pexpect-2.4/doc/examples.html
+tools/lldb/test/pexpect-2.4/doc/email.png
+tools/lldb/test/pexpect-2.4/FSM.py
+tools/lldb/test/pexpect-2.4/pxssh.py
+tools/lldb/test/pexpect-2.4/INSTALL
+tools/lldb/test/pexpect-2.4/setup.py
+tools/lldb/test/pexpect-2.4/README
+tools/lldb/test/pexpect-2.4/LICENSE
+tools/lldb/test/pexpect-2.4/fdpexpect.py
+tools/lldb/test/pexpect-2.4/ANSI.py
+tools/lldb/test/pexpect-2.4/examples
+tools/lldb/test/pexpect-2.4/examples/df.py
+tools/lldb/test/pexpect-2.4/examples/ssh_session.py
+tools/lldb/test/pexpect-2.4/examples/astat.py
+tools/lldb/test/pexpect-2.4/examples/fix_cvs_files.py
+tools/lldb/test/pexpect-2.4/examples/bd_serv.py
+tools/lldb/test/pexpect-2.4/examples/chess3.py
+tools/lldb/test/pexpect-2.4/examples/hive.py
+tools/lldb/test/pexpect-2.4/examples/rippy.py
+tools/lldb/test/pexpect-2.4/examples/topip.py
+tools/lldb/test/pexpect-2.4/examples/README
+tools/lldb/test/pexpect-2.4/examples/table_test.html
+tools/lldb/test/pexpect-2.4/examples/ssh_tunnel.py
+tools/lldb/test/pexpect-2.4/examples/ftp.py
+tools/lldb/test/pexpect-2.4/examples/chess.py
+tools/lldb/test/pexpect-2.4/examples/sshls.py
+tools/lldb/test/pexpect-2.4/examples/chess2.py
+tools/lldb/test/pexpect-2.4/examples/cgishell.cgi
+tools/lldb/test/pexpect-2.4/examples/passmass.py
+tools/lldb/test/pexpect-2.4/examples/python.py
+tools/lldb/test/pexpect-2.4/examples/monitor.py
+tools/lldb/test/pexpect-2.4/examples/script.py
+tools/lldb/test/pexpect-2.4/examples/bd_client.py
+tools/lldb/test/pexpect-2.4/examples/uptime.py
+
+License:
+Free, open source, and all that good stuff.
+Pexpect Copyright (c) 2008 Noah Spurrier
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -1,0 +1,2 @@
+# It is providing kind of a libc remplacement
+libclang-common-3.3-dev: missing-dependency-on-libc needed by usr/lib/llvm-3.3/lib/libprofile_rt.so

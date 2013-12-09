@@ -1,0 +1,18 @@
+* add the support of libclang in llvm default (for now, it is
+called libclang1-3.3.so)
+
+* add a symbol file for libclang.so in llvm default
+
+* check if we should use alternatives
+
+* remove of clang & llvm 3.2
+
+* look at the bugs of llvm 3.2
+
+* move the header at the right place in libclang-dev
+
+* bootstrap of clang with itself
+
+* update of the soname
+
+* man page for clang-format

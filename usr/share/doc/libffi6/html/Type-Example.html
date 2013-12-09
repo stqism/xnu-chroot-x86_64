@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- 
+This manual is for Libffi, a portable foreign-function interface
+library.
+
+Copyright (C) 2008, 2010, 2011 Red Hat, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2, or (at your option) any
+later version.  A copy of the license is included in the
+section entitled "GNU General Public License".
+ -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>libffi: Type Example</title>
+
+<meta name="description" content="libffi: Type Example">
+<meta name="keywords" content="libffi: Type Example">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Index.html#Index" rel="index" title="Index">
+<link href="Types.html#Types" rel="up" title="Types">
+<link href="Multiple-ABIs.html#Multiple-ABIs" rel="next" title="Multiple ABIs">
+<link href="Structures.html#Structures" rel="prev" title="Structures">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Type-Example"></a>
+<div class="header">
+<p>
+Previous: <a href="Structures.html#Structures" accesskey="p" rel="prev">Structures</a>, Up: <a href="Types.html#Types" accesskey="u" rel="up">Types</a> &nbsp; [<a href="Index.html#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Type-Example-1"></a>
+<h4 class="subsection">2.3.3 Type Example</h4>
+
+<p>The following example initializes a <code>ffi_type</code> object
+representing the <code>tm</code> struct from Linux&rsquo;s <samp>time.h</samp>.
+</p>
+<p>Here is how the struct is defined:
+</p>
+<div class="example">
+<pre class="example">struct tm {
+    int tm_sec;
+    int tm_min;
+    int tm_hour;
+    int tm_mday;
+    int tm_mon;
+    int tm_year;
+    int tm_wday;
+    int tm_yday;
+    int tm_isdst;
+    /* Those are for future use. */
+    long int __tm_gmtoff__;
+    __const char *__tm_zone__;
+};
+</pre></div>
+
+<p>Here is the corresponding code to describe this struct to
+<code>libffi</code>:
+</p>
+<div class="example">
+<pre class="example">    {
+      ffi_type tm_type;
+      ffi_type *tm_type_elements[12];
+      int i;
+
+      tm_type.size = tm_type.alignment = 0;
+      tm_type.type = FFI_TYPE_STRUCT;
+      tm_type.elements = &amp;tm_type_elements;
+    
+      for (i = 0; i &lt; 9; i++)
+          tm_type_elements[i] = &amp;ffi_type_sint;
+
+      tm_type_elements[9] = &amp;ffi_type_slong;
+      tm_type_elements[10] = &amp;ffi_type_pointer;
+      tm_type_elements[11] = NULL;
+
+      /* tm_type can now be used to represent tm argument types and
+	 return types for ffi_prep_cif() */
+    }
+</pre></div>
+
+
+
+
+
+</body>
+</html>

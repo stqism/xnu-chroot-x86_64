@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- 
+This manual is for Libffi, a portable foreign-function interface
+library.
+
+Copyright (C) 2008, 2010, 2011 Red Hat, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2, or (at your option) any
+later version.  A copy of the license is included in the
+section entitled "GNU General Public License".
+ -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>libffi: Introduction</title>
+
+<meta name="description" content="libffi: Introduction">
+<meta name="keywords" content="libffi: Introduction">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Index.html#Index" rel="index" title="Index">
+<link href="index.html#Top" rel="up" title="Top">
+<link href="Using-libffi.html#Using-libffi" rel="next" title="Using libffi">
+<link href="index.html#Top" rel="prev" title="Top">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Introduction"></a>
+<div class="header">
+<p>
+Next: <a href="Using-libffi.html#Using-libffi" accesskey="n" rel="next">Using libffi</a>, Previous: <a href="index.html#Top" accesskey="p" rel="prev">Top</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="Index.html#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="What-is-libffi_003f"></a>
+<h2 class="chapter">1 What is libffi?</h2>
+
+<p>Compilers for high level languages generate code that follow certain
+conventions.  These conventions are necessary, in part, for separate
+compilation to work.  One such convention is the <em>calling
+convention</em>.  The calling convention is a set of assumptions made by
+the compiler about where function arguments will be found on entry to
+a function.  A calling convention also specifies where the return
+value for a function is found.  The calling convention is also
+sometimes called the <em>ABI</em> or <em>Application Binary Interface</em>.
+<a name="index-calling-convention"></a>
+<a name="index-ABI"></a>
+<a name="index-Application-Binary-Interface"></a>
+</p>
+<p>Some programs may not know at the time of compilation what arguments
+are to be passed to a function.  For instance, an interpreter may be
+told at run-time about the number and types of arguments used to call
+a given function.  &lsquo;<samp>Libffi</samp>&rsquo; can be used in such programs to
+provide a bridge from the interpreter program to compiled code.
+</p>
+<p>The &lsquo;<samp>libffi</samp>&rsquo; library provides a portable, high level programming
+interface to various calling conventions.  This allows a programmer to
+call any function specified by a call interface description at run
+time.
+</p>
+<p><acronym>FFI</acronym> stands for Foreign Function Interface.  A foreign
+function interface is the popular name for the interface that allows
+code written in one language to call code written in another language.
+The &lsquo;<samp>libffi</samp>&rsquo; library really only provides the lowest, machine
+dependent layer of a fully featured foreign function interface.  A
+layer must exist above &lsquo;<samp>libffi</samp>&rsquo; that handles type conversions for
+values passed between the two languages.
+<a name="index-FFI"></a>
+<a name="index-Foreign-Function-Interface"></a>
+</p>
+
+
+
+
+</body>
+</html>

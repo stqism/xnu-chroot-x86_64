@@ -1,0 +1,11 @@
+/.
+/lib
+/lib/libxtables.so.10.0.0
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libxtables10
+/usr/share/doc/libxtables10/copyright
+/usr/share/doc/libxtables10/changelog.Debian.gz
+/usr/share/doc/libxtables10/changelog.gz
+/lib/libxtables.so.10

@@ -1,0 +1,20 @@
+
+Start-Date: 2013-12-09  18:19:48
+Commandline: apt-get purge acpi acpid aptitude aspell aspell-en avahi-daemon bind9-host debian-faq doc-debian eject mutt netcat net-tools ppp pppconfig pppoe openssh* reportbug usbutils console-common
+Purge: aptitude:amd64 (0.6.8.2-1.2), net-tools:amd64 (1.60-25)
+End-Date: 2013-12-09  18:19:59
+
+Start-Date: 2013-12-09  18:20:41
+Commandline: apt-get install deborphan
+Install: gettext-base:amd64 (0.18.3.1-2, automatic), dialog:amd64 (1.2-20130928-1, automatic), libasprintf0c2:amd64 (0.18.3.1-2, automatic), deborphan:amd64 (1.7.28.8)
+End-Date: 2013-12-09  18:21:04
+
+Start-Date: 2013-12-09  18:21:32
+Commandline: apt-get -y purge libboost-iostreams1.53.0 libudev0 libept1.4.12 libsqlite3-0 libboost-iostreams1.54.0 libboost-iostreams1.49.0 libcwidget3
+Purge: libept1.4.12:amd64 (1.0.12), libcwidget3:amd64 (0.5.16-3.5), libsqlite3-0:amd64 (3.8.2-1), libudev0:amd64 (175-7.2), libboost-iostreams1.54.0:amd64 (1.54.0-3+b1), libboost-iostreams1.49.0:amd64 (1.49.0-4+b3), libboost-iostreams1.53.0:amd64 (1.53.0-6+b2)
+End-Date: 2013-12-09  18:21:43
+
+Start-Date: 2013-12-09  18:22:38
+Commandline: apt-get purge deborphan
+Purge: deborphan:amd64 (1.7.28.8)
+End-Date: 2013-12-09  18:22:43

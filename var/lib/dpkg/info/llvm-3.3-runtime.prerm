@@ -1,0 +1,16 @@
+#!/bin/sh -e
+
+if test "$1" = "remove"; then
+    if test -x /usr/sbin/update-binfmts; then
+        update-binfmts --package llvm-3.3-runtime \
+            --remove llvm-3.3-runtime.binfmt /usr/bin/lli-3.3 || true
+        if test -f /var/lib/binfmts/llvm-3.3.binfmt; then
+            # Purge old file
+            update-binfmts --package llvm-3.3-runtime \
+                --remove llvm-3.3.binfmt /usr/bin/lli-3.3 || true
+        fi
+    fi
+fi
+
+
+

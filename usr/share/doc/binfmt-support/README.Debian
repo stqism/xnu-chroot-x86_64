@@ -1,0 +1,41 @@
+binfmt-support for Debian
+-------------------------
+
+You must have binfmt_misc either compiled into your Linux kernel or
+available as a module in order to use this package. The module will be
+automatically inserted if necessary.
+
+If you're a system administrator, update-binfmts(8) should tell you all you
+need to know about how to use update-binfmts to manage your own local binary
+formats.
+
+If you're a package maintainer and want to use update-binfmts, you should
+install a format file like the following (without the leading spaces) in
+/usr/share/binfmts:
+
+  package javawrapper
+  interpreter /usr/bin/javawrapper
+  magic \xca\xfe\xba\xbe
+
+Assuming that this file is installed in /usr/share/binfmts/javawrapper, the
+postinst should then do this:
+
+  if [ "$1" = configure ] && which update-binfmts >/dev/null 2>&1; then
+    update-binfmts --import javawrapper
+  fi
+
+The prerm script should then do the reverse:
+
+  if [ "$1" = remove ] && which update-binfmts >/dev/null 2>&1; then
+    update-binfmts --package javawrapper \
+      --remove javawrapper /usr/bin/javawrapper
+  fi
+
+You should add 'Conflicts: binfmt-support (<< 1.1.2)' to your control file
+to ensure that the --import option is available and working.
+
+binfmt-support currently has no effect on the Hurd, although it should
+install without any problems. Patches from Hurd experts to make translators
+look like this interface are welcome.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 26 Jan 2002 19:05:24 +0000

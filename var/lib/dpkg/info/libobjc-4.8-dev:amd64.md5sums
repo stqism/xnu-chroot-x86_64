@@ -1,0 +1,12 @@
+b26f50b45a78b97664d484cb9086c781  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/NXConstStr.h
+fbba447c646485a589cce78e170073ef  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/Object.h
+7c1b2223a6d884f9d927db8589b873a9  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/Protocol.h
+a82bd92a20c7d2183752a437a1783470  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/message.h
+0da317d988598a7f06af4a45ef04fd36  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/objc-decls.h
+80f1f8fa3fc7fb54a3e4e069bde0daa0  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/objc-exception.h
+8e4daa064a13d8e00d2fa5d8ff97dea3  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/objc-sync.h
+b39d93296db9377775414666dc81d11a  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/objc.h
+3c38c35f72280576eb355f54250b4a43  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/runtime.h
+6ce842e0fc7df1a703d91bee83e4e878  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/thr.h
+824a9959baf76eefca1c184c8c154bc0  usr/lib/gcc/x86_64-linux-gnu/4.8/libobjc.a
+4e2d6aa3443e90ee424b9ac7615fa22d  usr/lib/gcc/x86_64-linux-gnu/4.8/libobjc_gc.a

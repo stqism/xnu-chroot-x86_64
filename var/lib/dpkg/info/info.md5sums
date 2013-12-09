@@ -1,0 +1,15 @@
+2269bd300ed1dcbc7362d358ab89bcdd  usr/bin/info
+042dd9fe9952ce1159efeb48800d9b98  usr/bin/infokey
+f77bab12ed1bf9fb140b0801c09e3cbd  usr/lib/mime/packages/info
+66690fea2baac83848aa56b07b19c7e7  usr/share/doc/info/AUTHORS
+55d3e7c5de41a39aee3e9583d5de7ef1  usr/share/doc/info/NEWS.gz
+5270dba268d40db1de2193f77b4bcfbe  usr/share/doc/info/README.Debian
+fc5e5d7f2839cb34e9405d4cc3ee8362  usr/share/doc/info/README.gz
+50f898e5180490e967af1ce4abcc40e1  usr/share/doc/info/TODO.gz
+7e5130007ff3ba6d23c9a33c78bab860  usr/share/doc/info/changelog.Debian.gz
+3c61b37d496eb459797aa59184e876b2  usr/share/doc/info/changelog.gz
+ca14f0117ca3dd77c105fa63b916ade3  usr/share/doc/info/copyright
+7e34066fbeab34a6fb83a929f10e2311  usr/share/man/man1/info.1.gz
+2e9b7e523cda219a7745a8a629745b9f  usr/share/man/man1/infokey.1.gz
+a6bd10a1fff3c9ce55c18df25a12cc58  usr/share/man/man5/info.5.gz
+bcc6af9edf9d0c45917b604ffed0d34f  usr/share/menu/info

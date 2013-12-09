@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+# handle symlink to directory conversion (#720149)
+DOCDIR=/usr/share/doc/llvm
+if [ -L $DOCDIR ] ; then
+  rm $DOCDIR
+fi
+
+

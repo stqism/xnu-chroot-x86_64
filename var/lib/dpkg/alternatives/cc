@@ -1,0 +1,8 @@
+auto
+/usr/bin/cc
+
+/usr/bin/clang
+10
+/usr/bin/gcc
+20
+

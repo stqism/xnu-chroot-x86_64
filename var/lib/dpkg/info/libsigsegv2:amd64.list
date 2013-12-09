@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libsigsegv.so.2.0.3
+/usr/share
+/usr/share/doc
+/usr/share/doc/libsigsegv2
+/usr/share/doc/libsigsegv2/README.woe32
+/usr/share/doc/libsigsegv2/copyright
+/usr/share/doc/libsigsegv2/NEWS.gz
+/usr/share/doc/libsigsegv2/README.gz
+/usr/share/doc/libsigsegv2/ChangeLog.1.gz
+/usr/share/doc/libsigsegv2/changelog.Debian.gz
+/usr/share/doc/libsigsegv2/changelog.gz
+/usr/lib/x86_64-linux-gnu/libsigsegv.so.2

@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=${prefix}
+libexecdir=${prefix}/lib/x86_64-linux-gnu
+libdir=${libexecdir}
+includedir=${prefix}/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.20.0
+Requires:
+Cflags: -I${includedir}/uuid
+Libs: -L${libdir} -luuid

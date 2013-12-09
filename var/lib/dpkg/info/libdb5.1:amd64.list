@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libdb-5.1.so
+/usr/share
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libdb5.1
+/usr/share/doc
+/usr/share/doc/libdb5.1
+/usr/share/doc/libdb5.1/copyright
+/usr/share/doc/libdb5.1/changelog.Debian.gz
+/usr/share/doc/libdb5.1/build_signature_amd64.txt

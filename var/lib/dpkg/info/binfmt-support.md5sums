@@ -1,0 +1,8 @@
+f252fe0c28ccaeca2ae059adb6877fa2  usr/lib/binfmt-support/run-detectors
+d807b279ebb82cab47ab166fb16f2d76  usr/sbin/update-binfmts
+3f898b33348b1d4987a7f2825fa138a8  usr/share/doc/binfmt-support/README.Debian
+841ee2fec985de96a0667e5cae8a9432  usr/share/doc/binfmt-support/TODO
+f0f213aab6cdecbfa9408069b9260378  usr/share/doc/binfmt-support/changelog.gz
+1d664cfa67b287019ec98d1f31fdef10  usr/share/doc/binfmt-support/copyright
+f1a0a7da75aaa2aba30644a7240f4bff  usr/share/doc/binfmt-support/detectors
+2cb4408967ae53e6ef691c9420afdd68  usr/share/man/man8/update-binfmts.8.gz

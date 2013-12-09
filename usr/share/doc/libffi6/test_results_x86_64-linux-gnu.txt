@@ -1,0 +1,49 @@
+make[1]: Entering directory `/build/libffi-Nqujg9/libffi-3.0.13/build'
+Making check in include
+make[2]: Entering directory `/build/libffi-Nqujg9/libffi-3.0.13/build/include'
+make[2]: Nothing to be done for `check'.
+make[2]: Leaving directory `/build/libffi-Nqujg9/libffi-3.0.13/build/include'
+Making check in testsuite
+make[2]: Entering directory `/build/libffi-Nqujg9/libffi-3.0.13/build/testsuite'
+/usr/bin/make  check-DEJAGNU
+make[3]: Entering directory `/build/libffi-Nqujg9/libffi-3.0.13/build/testsuite'
+Making a new site.exp file ...
+srcdir='../../testsuite'; export srcdir; \
+	EXPECT=`if [ -f ../../expect/expect ] ; then echo ../../expect/expect ; else echo expect ; fi`; export EXPECT; \
+	if /bin/bash -c "`if [ -f ../../../dejagnu/runtest ] ; then echo ../../../dejagnu/runtest ; else echo runtest; fi` --version" > /dev/null 2>&1; then \
+	  exit_status=0; l='libffi'; for tool in $l; do \
+	    if `if [ -f ../../../dejagnu/runtest ] ; then echo ../../../dejagnu/runtest ; else echo runtest; fi`  --tool $tool --srcdir $srcdir ; \
+	    then :; else exit_status=1; fi; \
+	  done; \
+	else echo "WARNING: could not find '`if [ -f ../../../dejagnu/runtest ] ; then echo ../../../dejagnu/runtest ; else echo runtest; fi`'" 1>&2; :;\
+	fi; \
+	exit $exit_status
+Test Run By buildd on Mon Dec  2 18:26:54 2013
+Native configuration is x86_64-pc-linux-gnu
+
+		=== libffi tests ===
+
+Schedule of variations:
+    unix
+
+Running target unix
+Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+Using ../../testsuite/config/default.exp as tool-and-target-specific interface file.
+Running ../../testsuite/libffi.call/call.exp ...
+Running ../../testsuite/libffi.special/special.exp ...
+
+		=== libffi Summary ===
+
+# of expected passes		1819
+# of unsupported tests		55
+make[3]: Leaving directory `/build/libffi-Nqujg9/libffi-3.0.13/build/testsuite'
+make[2]: Leaving directory `/build/libffi-Nqujg9/libffi-3.0.13/build/testsuite'
+Making check in man
+make[2]: Entering directory `/build/libffi-Nqujg9/libffi-3.0.13/build/man'
+make[2]: Nothing to be done for `check'.
+make[2]: Leaving directory `/build/libffi-Nqujg9/libffi-3.0.13/build/man'
+make[2]: Entering directory `/build/libffi-Nqujg9/libffi-3.0.13/build'
+make[2]: Nothing to be done for `check-am'.
+make[2]: Leaving directory `/build/libffi-Nqujg9/libffi-3.0.13/build'
+make[1]: Leaving directory `/build/libffi-Nqujg9/libffi-3.0.13/build'

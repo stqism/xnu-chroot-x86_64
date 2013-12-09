@@ -1,0 +1,13 @@
+/.
+/lib
+/lib/x86_64-linux-gnu
+/lib/x86_64-linux-gnu/libprocps.so.0.0.1
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libprocps0
+/usr/share/doc/libprocps0/changelog.gz
+/usr/share/doc/libprocps0/changelog.Debian.gz
+/usr/share/doc/libprocps0/NEWS.Debian.gz
+/usr/share/doc/libprocps0/copyright
+/lib/x86_64-linux-gnu/libprocps.so.0

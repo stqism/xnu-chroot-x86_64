@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/bin
+/usr/bin/unifdefall
+/usr/bin/unifdef
+/usr/share
+/usr/share/doc
+/usr/share/doc/unifdef
+/usr/share/doc/unifdef/README
+/usr/share/doc/unifdef/README.Debian
+/usr/share/doc/unifdef/copyright
+/usr/share/doc/unifdef/changelog.gz
+/usr/share/doc/unifdef/changelog.Debian.gz
+/usr/share/man/man1/unifdef.1.gz
+/usr/share/man/man1/unifdefall.1.gz

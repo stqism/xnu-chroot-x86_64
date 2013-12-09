@@ -1,0 +1,9 @@
+# nam stands for "no automatic margins"
+manpages binary: spelling-error-in-manpage usr/share/man/man5/termcap.5.gz
+
+# /usr/doc/ indicated as old place for documentation
+manpages binary: FSSTND-dir-in-manual-page usr/share/man/man7/LDP.7.gz
+
+# /var/catman/ only described as alternate path
+manpages binary: FSSTND-dir-in-manual-page usr/share/man/man7/hier.7.gz
+

@@ -1,0 +1,19 @@
+tcsh for Debian
+---------------
+
+The conffile /etc/csh.cshrc has as default the "del" key bound to
+delete-char. The manual file has been updated to reflect this.
+
+You may want to set a symbolic link to /bin/tcsh in the /usr/local/bin
+directory. Most tcsh scripts use this path. There is a FAQ describing
+why csh programming is considered harmful. Setting the link up is also
+useful when you have a network with various Unix boxen and users which
+use /usr/local/bin/tcsh as their shells.
+
+There are two tcsh related mailing lists, visit
+http://www.tcsh.org/MailingLists if you want to subscribe.
+
+The tcsh bug tracker is available at
+http://bugs.gw.com/
+
+ -- Thomas Lange <lange@debian.org>, Thu, 21 Jul 2011 22:36:15 +0200

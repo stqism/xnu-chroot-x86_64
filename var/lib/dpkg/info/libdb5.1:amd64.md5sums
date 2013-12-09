@@ -1,0 +1,5 @@
+ac9d69686a67532c4cc238f06bcaeb5a  usr/lib/x86_64-linux-gnu/libdb-5.1.so
+2e9eb865304eeeadd774f8f52ef012fc  usr/share/doc/libdb5.1/build_signature_amd64.txt
+c7c10dbc8e886414b499837ec66ae797  usr/share/doc/libdb5.1/changelog.Debian.gz
+73e00aa8871093e6d4f0e03a47d384ea  usr/share/doc/libdb5.1/copyright
+5b54ebe4669d006d3901237db8b9ce3e  usr/share/lintian/overrides/libdb5.1

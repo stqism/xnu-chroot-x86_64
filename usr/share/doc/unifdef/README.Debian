@@ -1,0 +1,22 @@
+unifdef
+-------
+
+The unifdef program originally appeared in 2.9BSD from sources
+contributed by Dave Yost.  Tony Finch <dot@dotat.at> adopted the
+project for FreeBSD 4.7 and has maintained it since.  Recently the
+project was split out from FreeBSD and is now maintained as a
+standalone project to encourage wider use.
+
+The upstream home page is:
+
+  http://dotat.at/prog/unifdef/
+
+Sources are maintained in git in the upstream repository at:
+
+  git://dotat.at/unifdef.git
+
+Collaboration is available on GitHub:
+
+  http://github.com/fanf2/unifdef 
+
+ -- Bob Proulx <bob@proulx.com>, Wed, 15 Sep 2010 17:36:00 -0600

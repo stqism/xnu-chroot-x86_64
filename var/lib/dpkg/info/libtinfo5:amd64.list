@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libtinfo5
+/usr/share/doc/libtinfo5/changelog.Debian.gz
+/usr/share/doc/libtinfo5/changelog.gz
+/usr/share/doc/libtinfo5/copyright
+/usr/share/doc/libtinfo5/TODO.Debian
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libtic.so.5.9
+/lib
+/lib/x86_64-linux-gnu
+/lib/x86_64-linux-gnu/libtinfo.so.5.9
+/usr/lib/x86_64-linux-gnu/libtic.so.5
+/lib/x86_64-linux-gnu/libtinfo.so.5

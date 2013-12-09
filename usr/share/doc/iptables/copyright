@@ -1,0 +1,63 @@
+Christoph Lameter (christoph@lameter.com) created the Debian iptables
+package on March 26, 2000.
+
+iptables sources were downloaded from:
+
+  ftp://ftp.netfilter.org/pub/iptables/
+
+
+This software is distributed under the GNU General Public License,
+which can be found at /usr/share/common-licenses/GPL-2.
+
+Copyright (c) 1999-2013 Netfilter Core Team
+
+  The core team:
+
+    Jozsef Kadlecsik, Harald Welte, Patrick McHardy, Pablo Neira Ayuso,
+    Yasuyuki Kozakai, Martin Josefsson, James Morris, Marc Boucher,
+    Rusty Russell
+
+
+extensions/libxt_osf.c: * Copyright (c) 2003+ Evgeniy Polyakov <zbr@ioremap.net>
+extensions/libip6t_mh.c: * Copyright (C)2006 USAGI/WIDE Project
+extensions/libxt_SET.c:/* Copyright (C) 2000-2002 Joakim Axelsson <gozem@linux.nu>
+extensions/libxt_SET.c: * Copyright (C) 2003-2010 Jozsef Kadlecsik <kadlec@blackhole.kfki.hu>
+extensions/libxt_devgroup.c: * Copyright (c) 2011 Patrick McHardy <kaber@trash.net>
+extensions/libxt_TOS.c: * Copyright Â© CC Computer Consultants GmbH, 2007
+extensions/libxt_string.c: * Copyright (C) 2000 Emmanuel Roger  <winfield@freegates.be>
+extensions/libxt_SECMARK.c: * Copyright (C) 2006 Red Hat, Inc., James Morris <jmorris@redhat.com>
+extensions/libxt_TEE.c: *	Copyright Â© Sebastian ClaÃen <sebastian.classen [at] freenet.ag>, 2007
+extensions/libxt_socket.c: * Copyright (C) 2007 BalaBit IT Ltd.
+extensions/libxt_TCPOPTSTRIP.c: * Copyright (c) 2007 Sven Schnelle <svens@bitebene.org>
+extensions/libxt_TCPOPTSTRIP.c: * Copyright Â© CC Computer Consultants GmbH, 2007
+extensions/libip6t_DNAT.c: * Copyright (c) 2011 Patrick McHardy <kaber@trash.net>
+extensions/libip6t_NETMAP.c: * Copyright (c) 2011 Patrick McHardy <kaber@trash.net>
+extensions/libxt_time.c: *	Copyright Â© CC Computer Consultants GmbH, 2007
+extensions/libxt_u32.c: * Copyright Â© CC Computer Consultants GmbH, 2007
+extensions/libxt_TCPMSS.c: * Copyright (c) 2000 Marc Boucher
+extensions/libxt_tos.c: * Copyright Â© CC Computer Consultants GmbH, 2007
+extensions/libxt_conntrack.c: *	Copyright Â© CC Computer Consultants GmbH, 2007 - 2008
+extensions/libxt_TPROXY.c: * Copyright (C) 2002-2008 BalaBit IT Ltd.
+extensions/libxt_set.c:/* Copyright (C) 2000-2002 Joakim Axelsson <gozem@linux.nu>
+extensions/libxt_set.c: * Copyright (C) 2003-2010 Jozsef Kadlecsik <kadlec@blackhole.kfki.hu>
+extensions/libxt_owner.c: *	Copyright Â© CC Computer Consultants GmbH, 2007 - 2008
+extensions/libip6t_REDIRECT.c: * Copyright (c) 2011 Patrick McHardy <kaber@trash.net>
+extensions/libxt_IDLETIMER.c: * Copyright (C) 2010 Nokia Corporation. All rights reserved.
+extensions/libxt_bpf.c: * Copyright Google, Inc. 2013
+extensions/libip6t_SNAT.c: * Copyright (c) 2011 Patrick McHardy <kaber@trash.net>
+extensions/libxt_CONNSECMARK.c: * Copyright (C) 2006 Red Hat, Inc., James Morris <jmorris@redhat.com>
+extensions/libip6t_MASQUERADE.c: * Copyright (c) 2011 Patrick McHardy <kaber@trash.net>
+include/libipq/libipq.h: * Copyright (c) 2000-2001 Netfilter Core Team
+include/linux/netfilter/xt_IDLETIMER.h: * Copyright (C) 2004, 2010 Nokia Corporation
+include/linux/netfilter/xt_osf.h: * Copyright (c) 2003+ Evgeniy Polyakov <johnpol@2ka.mxt.ru>
+include/linux/netfilter/xt_connmark.h:/* Copyright (C) 2002,2004 MARA Systems AB <http://www.marasystems.com>
+include/linux/netfilter/ipset/ip_set.h:/* Copyright (C) 2000-2002 Joakim Axelsson <gozem@linux.nu>
+include/linux/netfilter/ipset/ip_set.h: * Copyright (C) 2003-2011 Jozsef Kadlecsik <kadlec@blackhole.kfki.hu>
+include/Makefile.in:# Copyright (C) 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002,
+iptables/iptables-apply:# Copyright Â© Martin F. Krafft <madduck@madduck.net>
+iptables/iptables.xslt:     Copyright 2006 UfoMechanic 
+libxtables/xtoptions.c: *	Copyright Â© Jan Engelhardt, 2011
+utils/nfnl_osf.c: * Copyright (c) 2005 Evgeniy Polyakov <johnpol@2ka.mxt.ru>
+utils/nfbpf_compile.c: * Copyright Google, Inc. 2013
+utils/pf.os:# (C) Copyright 2000-2003 by Michal Zalewski <lcamtuf@coredump.cx>
+utils/pf.os:# (C) Copyright 2003 by Mike Frantzen <frantzen@w4g.org>

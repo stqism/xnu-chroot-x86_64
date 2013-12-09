@@ -1,0 +1,8 @@
+/usr/man man-db/noawait
+/usr/share/man man-db/noawait
+/usr/local/man man-db/noawait
+/usr/local/share/man man-db/noawait
+/usr/X11R6/man man-db/noawait
+/opt/man man-db/noawait
+/lib/udev/hwdb.d udev/noawait
+/usr/share/info install-info/noawait

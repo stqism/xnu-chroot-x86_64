@@ -1,0 +1,60 @@
+From: Colin Watson <cjwatson@debian.org>
+To: Ove Kaaven
+Cc: Alp Toker
+Subject: Cooperation between Mono and Wine for binary formats
+
+The following is a specification for extended binary format
+specifications in binfmt-support. It is being written to support the
+needs of the Mono packages. The .NET binary format is sufficiently
+similar to that used by Wine for ordinary Win32 executables that the
+decision on which to use is beyond the support provided by the
+binfmt_misc kernel module and needs to be delegated to a userspace
+process.
+
+(This necessarily involves making things a little more convoluted, but I
+hope not by too much. Bear with me.)
+
+
+A new command-line option, and corresponding format file option, is
+added, namely --detector. If this option is present, it is to be
+followed by the full path to an executable. If all other conditions in a
+binary format specification succeed, this executable will be run with
+the path to the binary in question as its first argument before the
+interpreter is considered for execution.
+
+Several different detector/interpreter pairs may be present with
+otherwise identical format strings. Each detector is run in turn, in a
+currently unspecified order, until one succeeds, i.e. returns a zero
+exit status. The corresponding interpreter will then be run as normal.
+If several identical format strings are present with no detector, they
+will be considered to have a detector of /bin/true which is run last of
+all (this may help with transitions).
+
+Implementation notes: If any detectors are present for a given
+kernel-level format, then /usr/lib/binfmt-support/run-detectors (or
+similar) is called instead of the usual interpreter. This calls each
+configured detector in turn and then execv()'s the first interpreter
+that succeeds. If none succeed, it prints an error message and exits
+non-zero.
+
+As far as wine is concerned, the modification should be as follows: add
+/usr/lib/wine/binfmt-detector-wine or similar with the Win32 format
+detection code (Alp has the details of this, it's a few dozen lines of
+C), and add 'detector /usr/lib/wine/binfmt-detector-wine' to
+/usr/share/binfmts/wine.
+
+
+The intention of all this is that users can run a random Windows
+executable with the MZ magic string and it will be passed off
+transparently to the appropriate interpreter, while keeping the
+packaging as simple as possible and avoiding the need for extra bridging
+packages (the original idea of having a single program that knows how to
+tell between Win32 and .NET executables and hands them off accordingly
+would have required an extra package and associated cruft in
+dependencies/suggestions).
+
+The Wine package doesn't need to be modified under this scheme in order
+for Mono to work, due to the /bin/true shim for format strings without
+detectors, so the transition can be quite painless. However, unless it
+is modified, binfmt_misc will attempt to run Wine over .NET executables
+if Mono is not installed.

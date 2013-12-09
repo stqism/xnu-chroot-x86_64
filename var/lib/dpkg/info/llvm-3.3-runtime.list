@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/man/man1/lli-3.3.1.gz
+/usr/share/binfmts
+/usr/share/binfmts/llvm-3.3-runtime.binfmt
+/usr/share/doc
+/usr/share/doc/llvm-3.3-runtime
+/usr/share/doc/llvm-3.3-runtime/copyright
+/usr/share/doc/llvm-3.3-runtime/changelog.Debian.gz
+/usr/lib
+/usr/lib/llvm-3.3
+/usr/lib/llvm-3.3/bin
+/usr/lib/llvm-3.3/bin/lli
+/usr/bin
+/usr/bin/lli-3.3

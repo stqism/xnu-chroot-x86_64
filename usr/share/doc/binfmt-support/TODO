@@ -1,0 +1,18 @@
+TODO list for binfmt-support; feel free to send patches. :)
+
+  * Support internationalization.
+
+  * The kernel outputs some junk to the syslog while disabling:
+
+      remove_proc_entry: binfmt_misc/javawrapper busy, count=1
+      de_put: deferred delete of javawrapper
+
+    This is binfmt_misc's fault, not mine. Nevertheless, it should be fixed,
+    especially as it has a nasty habit of ending up on the console if klogd
+    has crashed.
+
+  * Some checks to prevent silly things happening accidentally.
+
+  * Hurd support.
+
+ -- Colin Watson <cjwatson@debian.org>  Sun,  6 Jan 2002 03:00:34 +0000

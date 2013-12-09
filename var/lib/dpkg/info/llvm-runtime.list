@@ -1,0 +1,10 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/llvm-runtime
+/usr/share/doc/llvm-runtime/copyright
+/usr/share/doc/llvm-runtime/changelog.Debian.gz
+/usr/bin
+/usr/share/man/man1/lli.1.gz
+/usr/bin/lli

@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libtasn1-3
+/usr/share/doc/libtasn1-3/README
+/usr/share/doc/libtasn1-3/AUTHORS
+/usr/share/doc/libtasn1-3/copyright
+/usr/share/doc/libtasn1-3/changelog.Debian.gz
+/usr/share/doc/libtasn1-3/NEWS.gz
+/usr/share/doc/libtasn1-3/changelog.gz
+/usr/share/doc/libtasn1-3/THANKS
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libtasn1.so.3.2.0
+/usr/lib/x86_64-linux-gnu/libtasn1.so.3

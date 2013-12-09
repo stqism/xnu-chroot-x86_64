@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/lognorm
+/usr/lib/lognorm/lognormalizer
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/liblognorm.so.0.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/liblognorm0
+/usr/share/doc/liblognorm0/copyright
+/usr/share/doc/liblognorm0/changelog.gz
+/usr/share/doc/liblognorm0/changelog.Debian.gz
+/usr/lib/x86_64-linux-gnu/liblognorm.so.0
