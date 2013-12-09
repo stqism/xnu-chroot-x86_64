@@ -63,19 +63,19 @@ Owners: debconf
 
 Name: glibc/disable-screensaver
 Template: glibc/disable-screensaver
-Owners: libc6, libc6:amd64
+Owners: libc6, libc6:amd64, libc6:i386
 
 Name: glibc/restart-failed
 Template: glibc/restart-failed
-Owners: libc6, libc6:amd64
+Owners: libc6, libc6:amd64, libc6:i386
 
 Name: glibc/restart-services
 Template: glibc/restart-services
-Owners: libc6, libc6:amd64
+Owners: libc6, libc6:amd64, libc6:i386
 
 Name: glibc/upgrade
 Template: glibc/upgrade
-Owners: libc6, libc6:amd64
+Owners: libc6, libc6:amd64, libc6:i386
 
 Name: libpam-modules/disable-screensaver
 Template: libpam-modules/disable-screensaver
@@ -120,15 +120,15 @@ Owners: libpam0g:amd64
 
 Name: libraries/restart-without-asking
 Template: libraries/restart-without-asking
-Owners: libc6, libc6:amd64, libpam0g:amd64
+Owners: libc6, libc6:amd64, libc6:i386, libpam0g:amd64
 
 Name: libssl1.0.0/restart-failed
 Template: libssl1.0.0/restart-failed
-Owners: libssl1.0.0:amd64
+Owners: libssl1.0.0, libssl1.0.0:amd64, libssl1.0.0:i386
 
 Name: libssl1.0.0/restart-services
 Template: libssl1.0.0/restart-services
-Owners: libssl1.0.0:amd64
+Owners: libssl1.0.0, libssl1.0.0:amd64, libssl1.0.0:i386
 
 Name: man-db/auto-update
 Template: man-db/auto-update

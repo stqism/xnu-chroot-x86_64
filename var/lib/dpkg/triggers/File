@@ -6,3 +6,4 @@
 /opt/man man-db/noawait
 /lib/udev/hwdb.d udev/noawait
 /usr/share/info install-info/noawait
+/etc/sgml sgml-base

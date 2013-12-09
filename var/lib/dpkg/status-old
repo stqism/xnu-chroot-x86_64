@@ -229,6 +229,30 @@ Description: GNU C compiler (multilib files)
  and dependencies for the non-default multilib architecture(s).
 Homepage: http://gcc.gnu.org/
 
+Package: libxml2
+Status: install ok installed
+Priority: standard
+Section: libs
+Installed-Size: 1764
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Version: 2.9.1+dfsg1-3
+Depends: libc6 (>= 2.15), liblzma5 (>= 5.1.1alpha+20120614), zlib1g (>= 1:1.2.3.3)
+Pre-Depends: multiarch-support
+Recommends: xml-core
+Description: GNOME XML library
+ XML is a metalanguage to let you design your own markup language.
+ A regular markup language defines a way to describe information in
+ a certain class of documents (eg HTML). XML lets you define your
+ own customized markup languages for many classes of document. It
+ can do this because it's written in SGML, the international standard
+ metalanguage for markup languages.
+ .
+ This package provides a library providing an extensive API to handle
+ such XML data files.
+Homepage: http://xmlsoft.org/
+
 Package: login
 Essential: yes
 Status: install ok installed
@@ -287,6 +311,25 @@ Multi-Arch: same
 Source: openssl
 Version: 1.0.1e-4
 Depends: libc6 (>= 2.14), zlib1g (>= 1:1.1.4), debconf (>= 0.5) | debconf-2.0
+Pre-Depends: multiarch-support
+Description: Secure Sockets Layer toolkit - shared libraries
+ This package is part of the OpenSSL project's implementation of the SSL
+ and TLS cryptographic protocols for secure communication over the
+ Internet.
+ .
+ It provides the libssl and libcrypto shared libraries.
+
+Package: libssl1.0.0
+Status: install ok unpacked
+Priority: important
+Section: libs
+Installed-Size: 6977
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: openssl
+Version: 1.0.1e-4
+Depends: libc6 (>= 2.7), zlib1g (>= 1:1.1.4), debconf (>= 0.5) | debconf-2.0
 Pre-Depends: multiarch-support
 Description: Secure Sockets Layer toolkit - shared libraries
  This package is part of the OpenSSL project's implementation of the SSL
@@ -440,6 +483,31 @@ Section: libs
 Installed-Size: 112
 Maintainer: LaMont Jones <lamont@debian.org>
 Architecture: amd64
+Multi-Arch: same
+Source: util-linux
+Version: 2.20.1-5.5
+Replaces: e2fsprogs (<< 1.34-1)
+Depends: passwd, libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Recommends: uuid-runtime
+Description: Universally Unique ID library
+ The libuuid library generates and parses 128-bit universally unique
+ ids (UUIDs).  A UUID is an identifier that is unique across both
+ space and time, with respect to the space of all UUIDs.  A UUID can
+ be used for multiple purposes, from tagging objects with an extremely
+ short lifetime, to reliably identifying very persistent objects
+ across a network.
+ .
+ See RFC 4122 for more information.
+Homepage: http://userweb.kernel.org/~kzak/util-linux/
+
+Package: libuuid1
+Status: install ok installed
+Priority: required
+Section: libs
+Installed-Size: 67
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
 Multi-Arch: same
 Source: util-linux
 Version: 2.20.1-5.5
@@ -619,6 +687,30 @@ Suggests: g++-4.8-multilib, gcc-4.8-doc (>= 4.8), libstdc++6-4.8-dbg (>= 4.8.2-8
 Description: GNU C++ compiler
  This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
 Homepage: http://gcc.gnu.org/
+
+Package: libgeoip1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 256
+Maintainer: Patrick Matthäi <pmatthaei@debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: geoip
+Version: 1.6.0-1
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Recommends: geoip-database
+Suggests: geoip-bin
+Description: non-DNS IP-to-country resolver library
+ GeoIP is a C library that enables the user to find the country that any
+ IP address or hostname originates from. It uses a file based database.
+ .
+ This database simply contains IP blocks as keys, and countries as values and
+ it should be more complete and accurate than using reverse DNS lookups.
+ .
+ This package contains the shared library.
+Homepage: http://www.maxmind.com/
 
 Package: binfmt-support
 Status: install ok installed
@@ -1013,6 +1105,26 @@ Description: GNU Transactional Memory Library (32bit)
  accesses to the memory of a process, enabling easy-to-use synchronization of
  accesses to shared memory by several threads.
 Homepage: http://gcc.gnu.org/
+
+Package: liblwres90
+Status: install ok installed
+Priority: standard
+Section: libs
+Installed-Size: 99
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: amd64
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.15), libcap2 (>= 2.10), libxml2 (>= 2.6.27)
+Conflicts: libbind0
+Description: Lightweight Resolver Library used by BIND
+ The Berkeley Internet Name Domain (BIND) implements an Internet domain
+ name server.  BIND is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ .
+ This package delivers the liblwres shared library used by BIND's daemons
+ and clients.
 
 Package: dpkg-dev
 Status: install ok installed
@@ -1427,6 +1539,31 @@ Description: support library providing __atomic built-in functions (32bit)
  library providing __atomic built-in functions. When an atomic call cannot
  be turned into lock-free instructions, GCC will make calls into this library.
 Homepage: http://gcc.gnu.org/
+
+Package: sgml-base
+Status: install ok installed
+Priority: optional
+Section: text
+Installed-Size: 113
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Architecture: all
+Version: 1.26+nmu4
+Depends: perl
+Pre-Depends: dpkg (>= 1.16.4)
+Suggests: sgml-base-doc
+Conflicts: sgml-data (<= 0.02), sgmltools-2 (<= 2.0.2-4)
+Description: SGML infrastructure and SGML catalog file support
+ This package creates the SGML infrastructure directories and provides
+ SGML catalog file support in compliance with the current Debian SGML
+ Policy draft:
+ .
+   * infrastructure directories:
+      - /etc/sgml
+      - /usr/share/sgml/{declaration,dtd,entities,misc,stylesheet}
+      - /usr/share/local/sgml/{declaration,dtd,entities,misc,stylesheet}
+ .
+   * update-catalog(8): tool for maintaining the root SGML catalog
+     file and the package SGML catalog files in the '/etc/sgml' directory
 
 Package: clang-3.3
 Status: install ok installed
@@ -2201,6 +2338,26 @@ Description: compression library - runtime
  in gzip and PKZIP.  This package includes the shared library.
 Homepage: http://zlib.net/
 
+Package: zlib1g
+Status: install ok unpacked
+Priority: required
+Section: libs
+Installed-Size: 166
+Maintainer: Mark Brown <broonie@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: zlib
+Version: 1:1.2.8.dfsg-1
+Provides: libz1
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Breaks: libxml2 (<< 2.7.6.dfsg-2), texlive-binaries (<< 2009-12)
+Conflicts: zlib1 (<= 1:1.0.4-7)
+Description: compression library - runtime
+ zlib is a library implementing the deflate compression method found
+ in gzip and PKZIP.  This package includes the shared library.
+Homepage: http://zlib.net/
+
 Package: libapt-inst1.5
 Status: install ok installed
 Priority: important
@@ -2383,6 +2540,25 @@ Multi-Arch: same
 Source: gcc-4.8 (4.8.2-8)
 Version: 1:4.8.2-8
 Depends: gcc-4.8-base (= 4.8.2-8), libc6 (>= 2.14)
+Pre-Depends: multiarch-support
+Breaks: gcc-4.1, gcc-4.3 (<< 4.3.6-1), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2)
+Description: GCC support library
+ Shared version of the support library, a library of internal subroutines
+ that GCC uses to overcome shortcomings of particular machines, or
+ special needs for some languages.
+Homepage: http://gcc.gnu.org/
+
+Package: libgcc1
+Status: install ok installed
+Priority: required
+Section: libs
+Installed-Size: 148
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: gcc-4.8 (4.8.2-8)
+Version: 1:4.8.2-8
+Depends: gcc-4.8-base (= 4.8.2-8), libc6 (>= 2.2.4)
 Pre-Depends: multiarch-support
 Breaks: gcc-4.1, gcc-4.3 (<< 4.3.6-1), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2)
 Description: GCC support library
@@ -3005,6 +3181,23 @@ Description: Debian base system master password and group files
  group IDs. The update-passwd tool is provided to keep the system databases
  synchronized with these master files.
 
+Package: bind9-host
+Status: install ok installed
+Priority: standard
+Section: net
+Installed-Size: 138
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: amd64
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: dnsutils (<< 1:9.0.0), host (<< 1:9.7.0)
+Provides: host
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-4), libc6 (>= 2.14), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libdns99 (= 1:9.9.3.dfsg.P2-4), libgssapi-krb5-2 (>= 1.6.dfsg.2), libisc95 (= 1:9.9.3.dfsg.P2-4), libisccfg90 (= 1:9.9.3.dfsg.P2-4), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), liblwres90 (= 1:9.9.3.dfsg.P2-4), libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.6.27)
+Conflicts: dnsutils (<< 1:9.0.0), host (<< 1:9.7.0)
+Description: Version of 'host' bundled with BIND 9.X
+ This package provides the 'host' program in the form that is bundled with
+ the BIND 9.X sources.
+
 Package: libcomerr2
 Status: install ok installed
 Priority: required
@@ -3147,6 +3340,26 @@ Description: Not Erik's Windowing Toolkit - text mode windowing with slang
  for programs that have been built with newt.
 Homepage: https://fedorahosted.org/newt/
 
+Package: libisccc90
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 59
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: amd64
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.14), libcap2 (>= 2.10), libisc95, libxml2 (>= 2.6.27)
+Conflicts: libbind0, libbind9-41
+Description: Command Channel Library used by BIND
+ The Berkeley Internet Name Domain (BIND) implements an Internet domain
+ name server.  BIND is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ .
+ This package delivers the libisccc shared library used by BIND's daemons
+ and clients, particularly rndc.
+
 Package: net-tools
 Status: install ok installed
 Priority: important
@@ -3285,6 +3498,22 @@ Description: GCC, the GNU Compiler Collection (base package)
  contained in the GNU Compiler Collection (GCC).
 Homepage: http://gcc.gnu.org/
 
+Package: gcc-4.8-base
+Status: install ok installed
+Priority: required
+Section: libs
+Installed-Size: 209
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: gcc-4.8
+Version: 4.8.2-8
+Breaks: dehydra (<= 0.9.hg20110609-2), gcc-4.4-base (<< 4.4.7), gcj-4.4-base (<< 4.4.6-9~), gcj-4.6-base (<< 4.6.1-4~), gnat-4.4-base (<< 4.4.6-3~), gnat-4.6 (<< 4.6.1-5~)
+Description: GCC, the GNU Compiler Collection (base package)
+ This package contains files common to all languages and libraries
+ contained in the GNU Compiler Collection (GCC).
+Homepage: http://gcc.gnu.org/
+
 Package: libxtables10
 Status: install ok installed
 Priority: important
@@ -3335,6 +3564,26 @@ Description: pipeline manipulation library
  without needing to involve shell command-line parsing which is often
  error-prone and insecure.
 Homepage: http://libpipeline.nongnu.org/
+
+Package: libdns99
+Status: install ok installed
+Priority: standard
+Section: libs
+Installed-Size: 1884
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: amd64
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.14), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libgeoip1, libgssapi-krb5-2 (>= 1.10+dfsg~), libisc95, libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.6.27)
+Conflicts: libbind0, libbind9-41
+Description: DNS Shared Library used by BIND
+ The Berkeley Internet Name Domain (BIND) implements an Internet domain
+ name server.  BIND is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ .
+ This package delivers the libdns shared library used by BIND's daemons and
+ clients.
 
 Package: libsasl2-2
 Status: install ok installed
@@ -3496,6 +3745,26 @@ Description: Runtime support for the PAM library
  authentication  to work on Debian systems.  This package is required
  on almost all installations.
 Homepage: http://pam.sourceforge.net/
+
+Package: geoip-database
+Status: install ok installed
+Priority: optional
+Section: net
+Installed-Size: 3719
+Maintainer: Patrick Matthäi <pmatthaei@debian.org>
+Architecture: all
+Version: 20131118-1
+Recommends: libgeoip1
+Breaks: libgeoip1 (<< 1.4.5.dfsg)
+Description: IP lookup command line tools that use the GeoIP library (country database)
+ GeoIP is a C library that enables the user to find the country that any
+ IP address or hostname originates from. It uses a file based database.
+ .
+ This database simply contains IP blocks as keys, and countries as values and
+ it should be more complete and accurate than using reverse DNS lookups.
+ .
+ This package contains the free GeoLiteCountry database.
+Homepage: http://www.maxmind.com/
 
 Package: sysvinit
 Essential: yes
@@ -4509,6 +4778,26 @@ Description: fast, scalable, distributed revision control system
  interface, is provided as separate git* packages.
 Homepage: http://git-scm.com/
 
+Package: libbind9-90
+Status: install ok installed
+Priority: standard
+Section: libs
+Installed-Size: 79
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: amd64
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.14), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libdns99, libgssapi-krb5-2 (>= 1.6.dfsg.2), libisc95, libisccfg90, libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.6.27)
+Conflicts: libbind0, libbind9-41
+Description: BIND9 Shared Library used by BIND
+ The Berkeley Internet Name Domain (BIND) implements an Internet domain
+ name server.  BIND is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ .
+ This package delivers the libbind9 shared library used by BIND's daemons and
+ clients.
+
 Package: perl
 Status: install ok installed
 Priority: standard
@@ -4537,6 +4826,29 @@ Description: Larry Wall's Practical Extraction and Report Language
  integration, networking protocols, and encryption. Perl provides
  interfaces to C and C++ for custom extension development.
 Homepage: http://dev.perl.org/perl5/
+
+Package: libc6-i686
+Status: install ok installed
+Priority: extra
+Section: libs
+Installed-Size: 3139
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: eglibc
+Version: 2.17-97
+Pre-Depends: libc6 (= 2.17-97)
+Description: Embedded GNU C Library: Shared libraries [i686 optimized]
+ Contains the standard libraries that are used by nearly all programs on
+ the system. This package includes shared versions of the standard C
+ library and the standard math library, as well as many others.
+ .
+ This set of libraries is optimized for i686 machines, and will only be
+ used on an i686 class CPU (check the output of `uname -m').  This includes
+ Pentium Pro, Pentium II/III/IV, Celeron CPU's and similar class CPU's
+ (including clones such as AMD Athlon/Opteron, VIA C3 Nehemiah, but not VIA
+ C3 Ezra).
+Homepage: http://www.eglibc.org
 
 Package: libtinfo5
 Status: install ok installed
@@ -4678,6 +4990,38 @@ Description: AddressSanitizer -- a fast memory error detector (x32)
  AddressSanitizer (ASan) is a fast memory error detector.  It finds
  use-after-free and {heap,stack,global}-buffer overflow bugs in C/C++ programs.
 Homepage: http://gcc.gnu.org/
+
+Package: xml-core
+Status: install ok installed
+Priority: optional
+Section: text
+Installed-Size: 188
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Architecture: all
+Version: 0.13+nmu2
+Depends: sgml-base (>= 1.26+nmu2), sed (>= 4.1.2-8)
+Suggests: debhelper (>= 9.20120909)
+Conffiles:
+ /etc/sgml/xml-core.cat 055ba0bd3154c0a58b9bf8a0c9ecf2fa
+Description: XML infrastructure and XML catalog file support
+ This package creates the XML infrastructure directories and provides
+ XML catalog file support in compliance with the current Debian XML
+ Policy draft:
+ .
+   * infrastructure directories:
+      - /etc/xml
+      - /usr/share/xml/{declaration,entities,misc,schema}
+      - /usr/local/share/xml/{declaration,entities,misc,schema}
+ .
+   * XML catalog schema: OASIS XML Catalog Committee Specification 1.0
+ .
+   * update-xmlcatalog(8): tool for maintaining the root XML catalog
+     file and the package XML catalog files in the '/etc/xml' directory
+     as well as local XML catalog files.
+ .
+   * dh_installxmlcatalogs(1): debhelper tool for installing local XML
+     catalog files and registering XML entities in package XML catalog
+     files and the root XML catalog file (requires debhelper package)
 
 Package: sysvinit-utils
 Essential: yes
@@ -4945,6 +5289,31 @@ Description: Embedded GNU C Library: Shared libraries
  and the standard math library, as well as many others.
 Homepage: http://www.eglibc.org
 
+Package: libc6
+Status: install ok installed
+Priority: required
+Section: libs
+Installed-Size: 8899
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: eglibc
+Version: 2.17-97
+Replaces: libc6-i386
+Provides: glibc-2.17-1
+Depends: libgcc1
+Recommends: libc6-i686
+Suggests: glibc-doc, debconf | debconf-2.0, locales
+Breaks: hurd (<< 1:0.5.git20130928-2), locales (<< 2.17), locales-all (<< 2.17), nscd (<< 2.17)
+Conflicts: prelink (<= 0.0.20090311-1), tzdata (<< 2007k-1), tzdata-etch
+Conffiles:
+ /etc/ld.so.conf.d/i486-linux-gnu.conf de72af11e0f4e741c2cca3e0e87b7af4
+Description: Embedded GNU C Library: Shared libraries
+ Contains the standard libraries that are used by nearly all programs on
+ the system. This package includes shared versions of the standard C library
+ and the standard math library, as well as many others.
+Homepage: http://www.eglibc.org
+
 Package: libx32gcc-4.8-dev
 Status: install ok installed
 Priority: optional
@@ -5055,6 +5424,26 @@ Description: YACC-compatible parser generator
  Yacc should be able to use Bison with little trouble.  Documentation of
  the program is in the bison-doc package.
 Homepage: http://www.gnu.org/software/bison/
+
+Package: libisc95
+Status: install ok installed
+Priority: standard
+Section: libs
+Installed-Size: 408
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: amd64
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.15), libcap2 (>= 2.10), libxml2 (>= 2.7.4)
+Conflicts: libbind0, libbind9-41
+Description: ISC Shared Library used by BIND
+ The Berkeley Internet Name Domain (BIND) implements an Internet domain
+ name server.  BIND is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ .
+ This package delivers the libisc shared library used by BIND's daemons and
+ clients.
 
 Package: iptables
 Status: install ok installed
@@ -5248,6 +5637,27 @@ Description: C interface to the clang library
  locations with elements within the AST, and other facilities that support
  Clang-based development tools.
 Homepage: http://www.llvm.org/
+
+Package: libisccfg90
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 162
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: amd64
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.14), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libdns99, libgssapi-krb5-2 (>= 1.6.dfsg.2), libisc95, libisccc90, libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.6.27)
+Conflicts: libbind0, libbind9-41
+Description: Config File Handling Library used by BIND
+ The Berkeley Internet Name Domain (BIND) implements an Internet domain
+ name server.  BIND is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ .
+ This package delivers the libisccfg shared library used by BIND's daemons
+ and clients to read and write ISC-style configuration files like named.conf
+ and rndc.conf.
 
 Package: m4
 Status: install ok installed

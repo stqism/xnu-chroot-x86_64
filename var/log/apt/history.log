@@ -18,3 +18,14 @@ Start-Date: 2013-12-09  18:22:38
 Commandline: apt-get purge deborphan
 Purge: deborphan:amd64 (1.7.28.8)
 End-Date: 2013-12-09  18:22:43
+
+Start-Date: 2013-12-09  21:38:53
+Commandline: apt-get install -f
+Install: geoip-database:amd64 (20131118-1, automatic), liblwres90:amd64 (9.9.3.dfsg.P2-4, automatic), gcc-4.8-base:i386 (4.8.2-8, automatic), libisccfg90:amd64 (9.9.3.dfsg.P2-4, automatic), libbind9-90:amd64 (9.9.3.dfsg.P2-4, automatic), libc6-i686:i386 (2.17-97, automatic), libgcc1:i386 (4.8.2-8, automatic), libc6:i386 (2.17-97, automatic), libxml2:amd64 (2.9.1+dfsg1-3, automatic), libdns99:amd64 (9.9.3.dfsg.P2-4, automatic), sgml-base:amd64 (1.26+nmu4, automatic), xml-core:amd64 (0.13+nmu2, automatic), libgeoip1:amd64 (1.6.0-1, automatic), libisccc90:amd64 (9.9.3.dfsg.P2-4, automatic), libisc95:amd64 (9.9.3.dfsg.P2-4, automatic)
+Upgrade: libuuid1:amd64 (2.20.1-5.3, 2.20.1-5.5), libuuid1:i386 (2.20.1-5.3, 2.20.1-5.5)
+End-Date: 2013-12-09  21:39:17
+
+Start-Date: 2013-12-09  21:40:00
+Commandline: apt-get install libssl1.0.0:i386
+Install: libssl1.0.0:i386 (1.0.1e-4), zlib1g:i386 (1.2.8.dfsg-1, automatic)
+End-Date: 2013-12-09  21:40:05

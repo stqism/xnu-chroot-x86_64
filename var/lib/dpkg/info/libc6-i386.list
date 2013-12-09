@@ -294,7 +294,6 @@
 /lib32/libm-2.17.so
 /lib32/libnss_dns-2.17.so
 /lib32/libnsl-2.17.so
-/lib/ld-linux.so.2
 /lib32/libnss_compat.so.2
 /lib32/libutil.so.1
 /lib32/libpthread.so.0

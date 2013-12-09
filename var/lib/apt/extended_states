@@ -334,3 +334,67 @@ Package: libasprintf0c2
 Architecture: amd64
 Auto-Installed: 1
 
+Package: geoip-database
+Architecture: amd64
+Auto-Installed: 1
+
+Package: liblwres90
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gcc-4.8-base
+Architecture: i386
+Auto-Installed: 1
+
+Package: libisccfg90
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libbind9-90
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libc6-i686
+Architecture: i386
+Auto-Installed: 1
+
+Package: libgcc1
+Architecture: i386
+Auto-Installed: 1
+
+Package: libc6
+Architecture: i386
+Auto-Installed: 1
+
+Package: libxml2
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libdns99
+Architecture: amd64
+Auto-Installed: 1
+
+Package: sgml-base
+Architecture: amd64
+Auto-Installed: 1
+
+Package: xml-core
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libgeoip1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libisccc90
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libisc95
+Architecture: amd64
+Auto-Installed: 1
+
+Package: zlib1g
+Architecture: i386
+Auto-Installed: 1
+
