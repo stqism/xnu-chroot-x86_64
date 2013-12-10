@@ -1,0 +1,3 @@
+[submodule "xnu"]
+	path = xnu
+	url = https://github.com/darwin-on-arm/xnu.git
