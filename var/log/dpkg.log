@@ -524,3 +524,31 @@
 2013-12-10 03:27:43 trigproc man-db:amd64 2.6.5-2 <none>
 2013-12-10 03:27:43 status half-configured man-db:amd64 2.6.5-2
 2013-12-10 03:27:44 status installed man-db:amd64 2.6.5-2
+2013-12-10 18:25:48 startup archives unpack
+2013-12-10 18:25:48 upgrade bison:amd64 2:2.7.1.dfsg-1 2:3.0.2.dfsg-1
+2013-12-10 18:25:48 status half-configured bison:amd64 2:2.7.1.dfsg-1
+2013-12-10 18:25:48 status unpacked bison:amd64 2:2.7.1.dfsg-1
+2013-12-10 18:25:48 status half-installed bison:amd64 2:2.7.1.dfsg-1
+2013-12-10 18:25:49 status triggers-pending man-db:amd64 2.6.5-2
+2013-12-10 18:25:50 status half-installed bison:amd64 2:2.7.1.dfsg-1
+2013-12-10 18:25:50 status unpacked bison:amd64 2:3.0.2.dfsg-1
+2013-12-10 18:25:50 status unpacked bison:amd64 2:3.0.2.dfsg-1
+2013-12-10 18:25:50 upgrade libbison-dev:amd64 2:2.7.1.dfsg-1 2:3.0.2.dfsg-1
+2013-12-10 18:25:50 status half-configured libbison-dev:amd64 2:2.7.1.dfsg-1
+2013-12-10 18:25:50 status unpacked libbison-dev:amd64 2:2.7.1.dfsg-1
+2013-12-10 18:25:50 status half-installed libbison-dev:amd64 2:2.7.1.dfsg-1
+2013-12-10 18:25:51 status half-installed libbison-dev:amd64 2:2.7.1.dfsg-1
+2013-12-10 18:25:51 status unpacked libbison-dev:amd64 2:3.0.2.dfsg-1
+2013-12-10 18:25:51 status unpacked libbison-dev:amd64 2:3.0.2.dfsg-1
+2013-12-10 18:25:51 trigproc man-db:amd64 2.6.5-2 2.6.5-2
+2013-12-10 18:25:51 status half-configured man-db:amd64 2.6.5-2
+2013-12-10 18:25:51 status installed man-db:amd64 2.6.5-2
+2013-12-10 18:25:52 startup packages configure
+2013-12-10 18:25:52 configure libbison-dev:amd64 2:3.0.2.dfsg-1 <none>
+2013-12-10 18:25:52 status unpacked libbison-dev:amd64 2:3.0.2.dfsg-1
+2013-12-10 18:25:52 status half-configured libbison-dev:amd64 2:3.0.2.dfsg-1
+2013-12-10 18:25:52 status installed libbison-dev:amd64 2:3.0.2.dfsg-1
+2013-12-10 18:25:52 configure bison:amd64 2:3.0.2.dfsg-1 <none>
+2013-12-10 18:25:52 status unpacked bison:amd64 2:3.0.2.dfsg-1
+2013-12-10 18:25:52 status half-configured bison:amd64 2:3.0.2.dfsg-1
+2013-12-10 18:25:52 status installed bison:amd64 2:3.0.2.dfsg-1

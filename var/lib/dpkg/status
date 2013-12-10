@@ -4493,12 +4493,12 @@ Package: libbison-dev
 Status: install ok installed
 Priority: optional
 Section: libdevel
-Installed-Size: 374
+Installed-Size: 451
 Maintainer: Chuan-kai Lin <cklin@debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: bison
-Version: 2:2.7.1.dfsg-1
+Version: 2:3.0.2.dfsg-1
 Recommends: bison
 Description: YACC-compatible parser generator - development library
  Bison is a general-purpose parser generator that converts a
@@ -5442,12 +5442,12 @@ Package: bison
 Status: install ok installed
 Priority: optional
 Section: devel
-Installed-Size: 2047
+Installed-Size: 2201
 Maintainer: Chuan-kai Lin <cklin@debian.org>
 Architecture: amd64
 Multi-Arch: foreign
-Version: 2:2.7.1.dfsg-1
-Depends: m4, libc6 (>= 2.15), libbison-dev (= 2:2.7.1.dfsg-1)
+Version: 2:3.0.2.dfsg-1
+Depends: m4, libc6 (>= 2.15), libbison-dev (= 2:3.0.2.dfsg-1)
 Suggests: bison-doc
 Description: YACC-compatible parser generator
  Bison is a general-purpose parser generator that converts a

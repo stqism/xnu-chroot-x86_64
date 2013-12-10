@@ -4057,24 +4057,6 @@ Description: XZ-format compression utilities
   * support for flushing the encoder.
 Homepage: http://tukaani.org/xz/
 
-Package: ethtool
-Status: install ok installed
-Priority: optional
-Section: net
-Installed-Size: 314
-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
-Architecture: amd64
-Version: 1:3.11-1
-Depends: libc6 (>= 2.7)
-Conffiles:
- /etc/network/if-pre-up.d/ethtool 39693276fe35fccec75f610cb71d3e85
- /etc/network/if-up.d/ethtool 30cf82be79cd5b2360a7eb5baebeb2c7
-Description: display or change Ethernet device settings
- ethtool can be used to query and change settings such as speed, auto-
- negotiation and checksum offload on many network devices, especially
- Ethernet devices.
-Homepage: http://www.kernel.org/pub/software/network/ethtool/
-
 Package: git-man
 Status: install ok installed
 Priority: optional
@@ -4508,15 +4490,16 @@ Description: Cyrus SASL - pluggable authentication modules (DB)
 Homepage: http://www.cyrusimap.org/
 
 Package: libbison-dev
-Status: install ok installed
+Status: install ok unpacked
 Priority: optional
 Section: libdevel
-Installed-Size: 374
+Installed-Size: 451
 Maintainer: Chuan-kai Lin <cklin@debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: bison
-Version: 2:2.7.1.dfsg-1
+Version: 2:3.0.2.dfsg-1
+Config-Version: 2:2.7.1.dfsg-1
 Recommends: bison
 Description: YACC-compatible parser generator - development library
  Bison is a general-purpose parser generator that converts a
@@ -5457,15 +5440,16 @@ Description: /dev/ and hotplug management daemon
 Homepage: http://www.freedesktop.org/wiki/Software/systemd
 
 Package: bison
-Status: install ok installed
+Status: install ok unpacked
 Priority: optional
 Section: devel
-Installed-Size: 2047
+Installed-Size: 2201
 Maintainer: Chuan-kai Lin <cklin@debian.org>
 Architecture: amd64
 Multi-Arch: foreign
-Version: 2:2.7.1.dfsg-1
-Depends: m4, libc6 (>= 2.15), libbison-dev (= 2:2.7.1.dfsg-1)
+Version: 2:3.0.2.dfsg-1
+Config-Version: 2:2.7.1.dfsg-1
+Depends: m4, libc6 (>= 2.15), libbison-dev (= 2:3.0.2.dfsg-1)
 Suggests: bison-doc
 Description: YACC-compatible parser generator
  Bison is a general-purpose parser generator that converts a

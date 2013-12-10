@@ -4704,14 +4704,14 @@ Homepage: http://aptitude.alioth.debian.org/
 Package: libbison-dev
 Priority: optional
 Section: libdevel
-Installed-Size: 374
+Installed-Size: 451
 Maintainer: Chuan-kai Lin <cklin@debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: bison
-Version: 2:2.7.1.dfsg-1
+Version: 2:3.0.2.dfsg-1
 Recommends: bison
-Size: 345882
+Size: 425844
 Description: YACC-compatible parser generator - development library
  Bison is a general-purpose parser generator that converts a
  grammar description for an LALR(1) context-free grammar into a C
@@ -5624,14 +5624,14 @@ Homepage: http://www.freedesktop.org/wiki/Software/systemd
 Package: bison
 Priority: optional
 Section: devel
-Installed-Size: 2047
+Installed-Size: 2201
 Maintainer: Chuan-kai Lin <cklin@debian.org>
 Architecture: amd64
 Multi-Arch: foreign
-Version: 2:2.7.1.dfsg-1
-Depends: m4, libc6 (>= 2.15), libbison-dev (= 2:2.7.1.dfsg-1)
+Version: 2:3.0.2.dfsg-1
+Depends: m4, libc6 (>= 2.15), libbison-dev (= 2:3.0.2.dfsg-1)
 Suggests: bison-doc
-Size: 789434
+Size: 765024
 Description: YACC-compatible parser generator
  Bison is a general-purpose parser generator that converts a
  grammar description for an LALR(1) context-free grammar into a C

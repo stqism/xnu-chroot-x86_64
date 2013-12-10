@@ -1,2 +1,4 @@
 update-alternatives 2013-12-09 18:19:54: run with --remove aptitude /usr/bin/aptitude-curses
 update-alternatives 2013-12-09 18:19:54: link group aptitude fully removed
+update-alternatives 2013-12-10 18:25:52: run with --install /usr/bin/yacc yacc /usr/bin/bison.yacc 100 --slave /usr/share/man/man1/yacc.1.gz yaccman /usr/share/man/man1/bison.yacc.1.gz
+update-alternatives 2013-12-10 18:25:52: auto-repair link group yacc

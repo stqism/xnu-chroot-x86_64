@@ -54,3 +54,8 @@ Start-Date: 2013-12-10  03:27:42
 Commandline: apt-get purge ethtool
 Purge: ethtool:amd64 (3.11-1)
 End-Date: 2013-12-10  03:27:44
+
+Start-Date: 2013-12-10  18:25:48
+Commandline: apt-get upgrade
+Upgrade: bison:amd64 (2.7.1.dfsg-1, 3.0.2.dfsg-1), libbison-dev:amd64 (2.7.1.dfsg-1, 3.0.2.dfsg-1)
+End-Date: 2013-12-10  18:25:52
