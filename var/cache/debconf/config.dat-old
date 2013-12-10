@@ -139,6 +139,25 @@ Template: man-db/install-setuid
 Value: false
 Owners: man-db
 
+Name: resolvconf/downup-interfaces
+Template: resolvconf/downup-interfaces
+Value: 
+Owners: resolvconf
+
+Name: resolvconf/link-tail-to-original
+Template: resolvconf/link-tail-to-original
+Value: false
+Owners: resolvconf
+
+Name: resolvconf/linkify-resolvconf
+Template: resolvconf/linkify-resolvconf
+Value: true
+Owners: resolvconf
+
+Name: resolvconf/reboot-recommended-after-removal
+Template: resolvconf/reboot-recommended-after-removal
+Owners: resolvconf
+
 Name: tasksel/desktop
 Template: tasksel/desktop
 Owners: tasksel

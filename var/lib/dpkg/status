@@ -2129,6 +2129,43 @@ Description: Linux support headers for userspace development
  libraries.
 Homepage: https://www.kernel.org/
 
+Package: resolvconf
+Status: install ok installed
+Priority: optional
+Section: net
+Installed-Size: 267
+Maintainer: resolvconf maintainers <resolvconf-devel@lists.alioth.debian.org>
+Architecture: all
+Version: 1.74
+Depends: lsb-base (>= 4.1+Debian3), debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
+Pre-Depends: ifupdown (>= 0.7.5), initscripts (>= 2.88dsf-34)
+Breaks: dhcp3-client (<< 4.1.1-P1-15+squeeze1), dnscache-run
+Enhances: dhcpcd, dnsmasq, ifupdown, isc-dhcp-client, libc6, network-manager, nscd, pdnsd, ppp, pump, udhcpc
+Conffiles:
+ /etc/init/resolvconf.conf 355033f68372631d1b72b039347ec3a0
+ /etc/resolvconf/update.d/dnscache 981435dcc6f7b53a9fa7a0bdfbdaf5e0
+ /etc/resolvconf/update.d/libc 1efe6cdf6ed714267c30cb1d09e2cebf
+ /etc/resolvconf/resolv.conf.d/head 5aee5a60350035d958401da5c0432be3
+ /etc/resolvconf/resolv.conf.d/base d41d8cd98f00b204e9800998ecf8427e
+ /etc/resolvconf/interface-order 94fb29a0e186eb113648f9aa2beaeb9d
+ /etc/ppp/ip-up.d/000resolvconf ef5a0427ba36b06cba7cfe9b0fcf5084
+ /etc/ppp/ip-down.d/000resolvconf 822e36a5e338957611129ec32fb41374
+ /etc/network/if-down.d/resolvconf 7e3f037a117b52c4169365a95f676262
+ /etc/network/if-up.d/000resolvconf f544c89d541465f1fea7dbcf71f832c0
+ /etc/dhcp/dhclient-enter-hooks.d/resolvconf 6f8a0dec625b17370c130647a6d4e458
+ /etc/init.d/resolvconf d7e4f5e1ae8626fbebb92ed5585d1813
+Description: name server information handler
+ Resolvconf is a framework for keeping up to date the system's
+ information about name servers. It sets itself up as the intermediary
+ between programs that supply this information (such as ifup and
+ ifdown, DHCP clients, the PPP daemon and local name servers) and
+ programs that use this information (such as DNS caches and resolver
+ libraries).
+ .
+ This package may require some manual configuration. Please
+ read the README file for detailed instructions.
+Homepage: http://alioth.debian.org/projects/resolvconf/
+
 Package: libkmod2
 Status: install ok installed
 Priority: important

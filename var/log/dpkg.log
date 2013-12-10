@@ -461,3 +461,66 @@
 2013-12-10 03:18:02 status unpacked iputils-ping:amd64 3:20121221-3
 2013-12-10 03:18:02 status half-configured iputils-ping:amd64 3:20121221-3
 2013-12-10 03:18:02 status installed iputils-ping:amd64 3:20121221-3
+2013-12-10 03:26:11 startup archives unpack
+2013-12-10 03:26:11 install ethtool:amd64 <none> 1:3.11-1
+2013-12-10 03:26:11 status half-installed ethtool:amd64 1:3.11-1
+2013-12-10 03:26:11 status triggers-pending man-db:amd64 2.6.5-2
+2013-12-10 03:26:12 status unpacked ethtool:amd64 1:3.11-1
+2013-12-10 03:26:12 status unpacked ethtool:amd64 1:3.11-1
+2013-12-10 03:26:12 trigproc man-db:amd64 2.6.5-2 2.6.5-2
+2013-12-10 03:26:12 status half-configured man-db:amd64 2.6.5-2
+2013-12-10 03:26:12 status installed man-db:amd64 2.6.5-2
+2013-12-10 03:26:13 startup packages configure
+2013-12-10 03:26:13 configure ethtool:amd64 1:3.11-1 <none>
+2013-12-10 03:26:13 status unpacked ethtool:amd64 1:3.11-1
+2013-12-10 03:26:13 status unpacked ethtool:amd64 1:3.11-1
+2013-12-10 03:26:13 status unpacked ethtool:amd64 1:3.11-1
+2013-12-10 03:26:13 status half-configured ethtool:amd64 1:3.11-1
+2013-12-10 03:26:13 status installed ethtool:amd64 1:3.11-1
+2013-12-10 03:26:34 startup archives unpack
+2013-12-10 03:26:34 install resolvconf:all <none> 1.74
+2013-12-10 03:26:34 status half-installed resolvconf:all 1.74
+2013-12-10 03:26:34 status triggers-pending man-db:amd64 2.6.5-2
+2013-12-10 03:26:35 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:35 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:35 trigproc man-db:amd64 2.6.5-2 2.6.5-2
+2013-12-10 03:26:35 status half-configured man-db:amd64 2.6.5-2
+2013-12-10 03:26:35 status installed man-db:amd64 2.6.5-2
+2013-12-10 03:26:36 startup packages configure
+2013-12-10 03:26:36 configure resolvconf:all 1.74 <none>
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:36 status unpacked resolvconf:all 1.74
+2013-12-10 03:26:37 status half-configured resolvconf:all 1.74
+2013-12-10 03:26:37 status installed resolvconf:all 1.74
+2013-12-10 03:26:37 status triggers-pending resolvconf:all 1.74
+2013-12-10 03:26:37 trigproc resolvconf:all 1.74 <none>
+2013-12-10 03:26:37 status half-configured resolvconf:all 1.74
+2013-12-10 03:26:38 status installed resolvconf:all 1.74
+2013-12-10 03:27:42 startup packages purge
+2013-12-10 03:27:42 status installed ethtool:amd64 1:3.11-1
+2013-12-10 03:27:42 remove ethtool:amd64 1:3.11-1 <none>
+2013-12-10 03:27:42 status half-configured ethtool:amd64 1:3.11-1
+2013-12-10 03:27:42 status half-installed ethtool:amd64 1:3.11-1
+2013-12-10 03:27:42 status triggers-pending man-db:amd64 2.6.5-2
+2013-12-10 03:27:42 status config-files ethtool:amd64 1:3.11-1
+2013-12-10 03:27:42 purge ethtool:amd64 1:3.11-1 <none>
+2013-12-10 03:27:42 status config-files ethtool:amd64 1:3.11-1
+2013-12-10 03:27:43 status config-files ethtool:amd64 1:3.11-1
+2013-12-10 03:27:43 status config-files ethtool:amd64 1:3.11-1
+2013-12-10 03:27:43 status config-files ethtool:amd64 1:3.11-1
+2013-12-10 03:27:43 status config-files ethtool:amd64 1:3.11-1
+2013-12-10 03:27:43 status not-installed ethtool:amd64 <none>
+2013-12-10 03:27:43 trigproc man-db:amd64 2.6.5-2 <none>
+2013-12-10 03:27:43 status half-configured man-db:amd64 2.6.5-2
+2013-12-10 03:27:44 status installed man-db:amd64 2.6.5-2

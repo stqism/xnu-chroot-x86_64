@@ -39,3 +39,18 @@ Start-Date: 2013-12-10  03:18:00
 Commandline: apt-get upgrade
 Upgrade: iputils-ping:amd64 (20121221-2, 20121221-3)
 End-Date: 2013-12-10  03:18:02
+
+Start-Date: 2013-12-10  03:26:11
+Commandline: apt-get install ethtool
+Install: ethtool:amd64 (3.11-1)
+End-Date: 2013-12-10  03:26:13
+
+Start-Date: 2013-12-10  03:26:34
+Commandline: apt-get install resolvconf
+Install: resolvconf:amd64 (1.74)
+End-Date: 2013-12-10  03:26:38
+
+Start-Date: 2013-12-10  03:27:42
+Commandline: apt-get purge ethtool
+Purge: ethtool:amd64 (3.11-1)
+End-Date: 2013-12-10  03:27:44
