@@ -444,3 +444,20 @@
 2013-12-09 22:21:04 trigproc libc-bin:amd64 2.17-97 <none>
 2013-12-09 22:21:04 status half-configured libc-bin:amd64 2.17-97
 2013-12-09 22:21:04 status installed libc-bin:amd64 2.17-97
+2013-12-10 03:18:00 startup archives unpack
+2013-12-10 03:18:00 upgrade iputils-ping:amd64 3:20121221-2 3:20121221-3
+2013-12-10 03:18:00 status half-configured iputils-ping:amd64 3:20121221-2
+2013-12-10 03:18:00 status unpacked iputils-ping:amd64 3:20121221-2
+2013-12-10 03:18:00 status half-installed iputils-ping:amd64 3:20121221-2
+2013-12-10 03:18:00 status triggers-pending man-db:amd64 2.6.5-2
+2013-12-10 03:18:01 status half-installed iputils-ping:amd64 3:20121221-2
+2013-12-10 03:18:01 status unpacked iputils-ping:amd64 3:20121221-3
+2013-12-10 03:18:01 status unpacked iputils-ping:amd64 3:20121221-3
+2013-12-10 03:18:01 trigproc man-db:amd64 2.6.5-2 2.6.5-2
+2013-12-10 03:18:01 status half-configured man-db:amd64 2.6.5-2
+2013-12-10 03:18:02 status installed man-db:amd64 2.6.5-2
+2013-12-10 03:18:02 startup packages configure
+2013-12-10 03:18:02 configure iputils-ping:amd64 3:20121221-3 <none>
+2013-12-10 03:18:02 status unpacked iputils-ping:amd64 3:20121221-3
+2013-12-10 03:18:02 status half-configured iputils-ping:amd64 3:20121221-3
+2013-12-10 03:18:02 status installed iputils-ping:amd64 3:20121221-3

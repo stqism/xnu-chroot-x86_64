@@ -34,3 +34,8 @@ Start-Date: 2013-12-09  22:20:58
 Commandline: apt-get upgrade
 Upgrade: binutils:amd64 (2.24-1, 2.24-2)
 End-Date: 2013-12-09  22:21:04
+
+Start-Date: 2013-12-10  03:18:00
+Commandline: apt-get upgrade
+Upgrade: iputils-ping:amd64 (20121221-2, 20121221-3)
+End-Date: 2013-12-10  03:18:02

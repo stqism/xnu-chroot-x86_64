@@ -4676,14 +4676,14 @@ Package: iputils-ping
 Status: install ok installed
 Priority: important
 Section: net
-Installed-Size: 153
+Installed-Size: 159
 Maintainer: Noah Meyerhans <noahm@debian.org>
 Architecture: amd64
 Source: iputils
-Version: 3:20121221-2
+Version: 3:20121221-3
 Replaces: netbase (<< 4.00)
 Provides: ping
-Depends: libc6 (>= 2.11), libcap2 (>= 2.10), libgnutls-openssl27, libcap2-bin
+Depends: libc6 (>= 2.14), libcap2 (>= 2.10), libgnutls-openssl27, libcap2-bin
 Conflicts: ping, suidmanager (<< 0.50)
 Description: Tools to test the reachability of network hosts
  The ping command sends ICMP ECHO_REQUEST packets to a host in order to
