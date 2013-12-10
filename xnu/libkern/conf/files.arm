@@ -1,2 +1,0 @@
-libkern/arm/OSAtomic.s                 standard
-libkern/zlib/arm/adler32vec.s		optional zlib
