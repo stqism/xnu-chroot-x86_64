@@ -1,3 +1,6 @@
 [submodule "xnu"]
 	path = xnu
 	url = https://github.com/darwin-on-arm/xnu.git
+[submodule "image3maker"]
+	path = image3maker
+	url = https://github.com/darwin-on-arm/image3maker.git/
