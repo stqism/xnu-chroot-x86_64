@@ -552,3 +552,25 @@
 2013-12-10 18:25:52 status unpacked bison:amd64 2:3.0.2.dfsg-1
 2013-12-10 18:25:52 status half-configured bison:amd64 2:3.0.2.dfsg-1
 2013-12-10 18:25:52 status installed bison:amd64 2:3.0.2.dfsg-1
+2013-12-11 03:32:04 startup archives unpack
+2013-12-11 03:32:04 install u-boot:amd64 <none> 2013.01.01-4
+2013-12-11 03:32:04 status half-installed u-boot:amd64 2013.01.01-4
+2013-12-11 03:32:05 status unpacked u-boot:amd64 2013.01.01-4
+2013-12-11 03:32:05 status unpacked u-boot:amd64 2013.01.01-4
+2013-12-11 03:32:05 install u-boot-tools:amd64 <none> 2013.10-3
+2013-12-11 03:32:05 status half-installed u-boot-tools:amd64 2013.10-3
+2013-12-11 03:32:05 status triggers-pending man-db:amd64 2.6.5-2
+2013-12-11 03:32:05 status unpacked u-boot-tools:amd64 2013.10-3
+2013-12-11 03:32:05 status unpacked u-boot-tools:amd64 2013.10-3
+2013-12-11 03:32:06 trigproc man-db:amd64 2.6.5-2 2.6.5-2
+2013-12-11 03:32:06 status half-configured man-db:amd64 2.6.5-2
+2013-12-11 03:32:06 status installed man-db:amd64 2.6.5-2
+2013-12-11 03:32:06 startup packages configure
+2013-12-11 03:32:06 configure u-boot:amd64 2013.01.01-4 <none>
+2013-12-11 03:32:06 status unpacked u-boot:amd64 2013.01.01-4
+2013-12-11 03:32:06 status half-configured u-boot:amd64 2013.01.01-4
+2013-12-11 03:32:07 status installed u-boot:amd64 2013.01.01-4
+2013-12-11 03:32:07 configure u-boot-tools:amd64 2013.10-3 <none>
+2013-12-11 03:32:07 status unpacked u-boot-tools:amd64 2013.10-3
+2013-12-11 03:32:07 status half-configured u-boot-tools:amd64 2013.10-3
+2013-12-11 03:32:07 status installed u-boot-tools:amd64 2013.10-3

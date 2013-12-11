@@ -1,0 +1,16 @@
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/guruplug/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/sheevaplug/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/dreamplug/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/ZUMA/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/eNET/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/qemu_mips/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/dbau1100/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/hammerhead/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/sh7785lcr_32bit/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/r2dplus/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/efikamx/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/igep0020/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/mx53loco/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/omap3_beagle/uboot.elf
+u-boot: shared-lib-without-dependency-information ./usr/lib/u-boot/omap4_panda/uboot.elf
+u-boot: description-synopsis-starts-with-article

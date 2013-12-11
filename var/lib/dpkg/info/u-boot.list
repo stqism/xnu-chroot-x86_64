@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/share
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/u-boot
+/usr/share/doc
+/usr/share/doc/u-boot
+/usr/share/doc/u-boot/README.Debian.gz
+/usr/share/doc/u-boot/copyright
+/usr/share/doc/u-boot/changelog.Debian.gz

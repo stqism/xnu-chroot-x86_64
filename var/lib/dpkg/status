@@ -1435,6 +1435,25 @@ Description: System-V-like runlevel change mechanism
  configured through symbolic links in /etc/rc?.d/.
 Homepage: http://savannah.nongnu.org/projects/sysvinit
 
+Package: u-boot-tools
+Status: install ok installed
+Priority: optional
+Section: admin
+Installed-Size: 197
+Maintainer: Clint Adams <clint@debian.org>
+Architecture: amd64
+Multi-Arch: foreign
+Source: u-boot
+Version: 2013.10-3
+Replaces: u-boot (<< 2010.12-2), uboot-envtools (<< 20081215-3~), uboot-mkimage (<= 0.4build1)
+Depends: libc6 (>= 2.14)
+Breaks: u-boot (<< 2010.12-2), uboot-envtools (<< 20081215-3~), uboot-mkimage (<= 0.4build1)
+Description: companion tools for Das U-Boot bootloader
+ This package includes the mkimage program, which allows generation of U-Boot
+ images in various formats, and the fw_printenv and fw_setenv programs to read
+ and modify U-Boot's environment.
+Homepage: http://www.denx.de/wiki/U-Boot/
+
 Package: lib32gcc1
 Status: install ok installed
 Priority: extra
@@ -2603,6 +2622,22 @@ Description: GCC support library
  that GCC uses to overcome shortcomings of particular machines, or
  special needs for some languages.
 Homepage: http://gcc.gnu.org/
+
+Package: u-boot
+Status: install ok installed
+Priority: optional
+Section: admin
+Installed-Size: 73
+Maintainer: Clint Adams <clint@debian.org>
+Architecture: amd64
+Version: 2013.01.01-4
+Description: A boot loader for embedded systems
+ Das U-Boot is a cross-platform bootloader for embedded systems,
+ used as the default boot loader by several board vendors.  It is
+ intended to be easy to port and to debug, and runs on many
+ supported architectures, including PPC, ARM, MIPS, x86, m68k,
+ NIOS, and Microblaze.
+Homepage: http://www.denx.de/wiki/U-Boot/
 
 Package: base-files
 Essential: yes
