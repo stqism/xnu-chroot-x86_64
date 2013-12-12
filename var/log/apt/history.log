@@ -64,3 +64,8 @@ Start-Date: 2013-12-11  03:32:04
 Commandline: apt-get install u-boot u-boot-tools
 Install: u-boot:amd64 (2013.01.01-4), u-boot-tools:amd64 (2013.10-3)
 End-Date: 2013-12-11  03:32:07
+
+Start-Date: 2013-12-12  02:05:36
+Commandline: apt-get upgrade
+Upgrade: libcurl3-gnutls:amd64 (7.33.0-1, 7.33.0-2)
+End-Date: 2013-12-12  02:05:40

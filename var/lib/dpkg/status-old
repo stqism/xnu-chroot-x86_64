@@ -595,7 +595,7 @@ Description: Linux Standard Base 4.1 init script functionality
 Homepage: http://www.linuxfoundation.org/collaborate/workgroups/lsb
 
 Package: libcurl3-gnutls
-Status: install ok installed
+Status: install ok unpacked
 Priority: optional
 Section: libs
 Installed-Size: 543
@@ -603,7 +603,8 @@ Maintainer: Alessandro Ghedini <ghedo@debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: curl
-Version: 7.33.0-1
+Version: 7.33.0-2
+Config-Version: 7.33.0-1
 Depends: libc6 (>= 2.17), libcomerr2 (>= 1.01), libgcrypt11 (>= 1.5.1), libgnutls26 (>= 2.12.17-0), libgssapi-krb5-2 (>= 1.10+dfsg~), libidn11 (>= 1.13), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), libldap-2.4-2 (>= 2.4.7), librtmp0 (>= 2.3), libssh2-1 (>= 1.2.6), zlib1g (>= 1:1.1.4)
 Pre-Depends: multiarch-support
 Recommends: ca-certificates
@@ -1436,7 +1437,7 @@ Description: System-V-like runlevel change mechanism
 Homepage: http://savannah.nongnu.org/projects/sysvinit
 
 Package: u-boot-tools
-Status: install ok unpacked
+Status: install ok installed
 Priority: optional
 Section: admin
 Installed-Size: 197
@@ -2624,7 +2625,7 @@ Description: GCC support library
 Homepage: http://gcc.gnu.org/
 
 Package: u-boot
-Status: install ok unpacked
+Status: install ok installed
 Priority: optional
 Section: admin
 Installed-Size: 73

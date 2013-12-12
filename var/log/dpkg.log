@@ -574,3 +574,20 @@
 2013-12-11 03:32:07 status unpacked u-boot-tools:amd64 2013.10-3
 2013-12-11 03:32:07 status half-configured u-boot-tools:amd64 2013.10-3
 2013-12-11 03:32:07 status installed u-boot-tools:amd64 2013.10-3
+2013-12-12 02:05:36 startup archives unpack
+2013-12-12 02:05:37 upgrade libcurl3-gnutls:amd64 7.33.0-1 7.33.0-2
+2013-12-12 02:05:37 status half-configured libcurl3-gnutls:amd64 7.33.0-1
+2013-12-12 02:05:37 status unpacked libcurl3-gnutls:amd64 7.33.0-1
+2013-12-12 02:05:37 status half-installed libcurl3-gnutls:amd64 7.33.0-1
+2013-12-12 02:05:38 status half-installed libcurl3-gnutls:amd64 7.33.0-1
+2013-12-12 02:05:38 status unpacked libcurl3-gnutls:amd64 7.33.0-2
+2013-12-12 02:05:38 status unpacked libcurl3-gnutls:amd64 7.33.0-2
+2013-12-12 02:05:38 startup packages configure
+2013-12-12 02:05:38 configure libcurl3-gnutls:amd64 7.33.0-2 <none>
+2013-12-12 02:05:38 status unpacked libcurl3-gnutls:amd64 7.33.0-2
+2013-12-12 02:05:39 status half-configured libcurl3-gnutls:amd64 7.33.0-2
+2013-12-12 02:05:39 status installed libcurl3-gnutls:amd64 7.33.0-2
+2013-12-12 02:05:39 status triggers-pending libc-bin:amd64 2.17-97
+2013-12-12 02:05:39 trigproc libc-bin:amd64 2.17-97 <none>
+2013-12-12 02:05:39 status half-configured libc-bin:amd64 2.17-97
+2013-12-12 02:05:39 status installed libc-bin:amd64 2.17-97
