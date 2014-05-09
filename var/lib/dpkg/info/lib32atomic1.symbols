@@ -1,5 +1,6 @@
 libatomic.so.1 lib32atomic1 #MINVER#
  LIBATOMIC_1.0@LIBATOMIC_1.0 4.8
+ LIBATOMIC_1.1@LIBATOMIC_1.1 4.9
  __atomic_add_fetch_1@LIBATOMIC_1.0 4.8
  __atomic_add_fetch_2@LIBATOMIC_1.0 4.8
  __atomic_add_fetch_4@LIBATOMIC_1.0 4.8
@@ -18,6 +19,7 @@ libatomic.so.1 lib32atomic1 #MINVER#
  __atomic_exchange_2@LIBATOMIC_1.0 4.8
  __atomic_exchange_4@LIBATOMIC_1.0 4.8
  __atomic_exchange_8@LIBATOMIC_1.0 4.8
+ __atomic_feraiseexcept@LIBATOMIC_1.1 4.9
  __atomic_fetch_add_1@LIBATOMIC_1.0 4.8
  __atomic_fetch_add_2@LIBATOMIC_1.0 4.8
  __atomic_fetch_add_4@LIBATOMIC_1.0 4.8

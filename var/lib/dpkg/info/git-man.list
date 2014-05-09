@@ -6,6 +6,8 @@
 /usr/share/doc/git-man/copyright
 /usr/share/doc/git-man/changelog.gz
 /usr/share/doc/git-man/changelog.Debian.gz
+/usr/share/man
+/usr/share/man/man5
 /usr/share/man/man5/gitweb.conf.5.gz
 /usr/share/man/man5/gitrepository-layout.5.gz
 /usr/share/man/man5/gitattributes.5.gz
@@ -24,6 +26,7 @@
 /usr/share/man/man7/gitnamespaces.7.gz
 /usr/share/man/man7/gitworkflows.7.gz
 /usr/share/man/man7/gitdiffcore.7.gz
+/usr/share/man/man1
 /usr/share/man/man1/git-check-ref-format.1.gz
 /usr/share/man/man1/git-annotate.1.gz
 /usr/share/man/man1/git-sh-setup.1.gz
@@ -58,6 +61,7 @@
 /usr/share/man/man1/git-sh-i18n.1.gz
 /usr/share/man/man1/git-remote-ext.1.gz
 /usr/share/man/man1/gitweb.1.gz
+/usr/share/man/man1/git-subtree.1.gz
 /usr/share/man/man1/git-var.1.gz
 /usr/share/man/man1/git-credential-cache.1.gz
 /usr/share/man/man1/git-apply.1.gz
@@ -134,7 +138,6 @@
 /usr/share/man/man1/git-blame.1.gz
 /usr/share/man/man1/git-mergetool--lib.1.gz
 /usr/share/man/man1/git-push.1.gz
-/usr/share/man/man1/git-repo-config.1.gz
 /usr/share/man/man1/git-pack-objects.1.gz
 /usr/share/man/man1/git-check-attr.1.gz
 /usr/share/man/man1/git-verify-pack.1.gz
@@ -154,9 +157,7 @@
 /usr/share/man/man1/git-credential.1.gz
 /usr/share/man/man1/git-get-tar-commit-id.1.gz
 /usr/share/man/man1/git-checkout-index.1.gz
-/usr/share/man/man1/git-tar-tree.1.gz
 /usr/share/man/man1/git-fast-export.1.gz
-/usr/share/man/man1/git-peek-remote.1.gz
 /usr/share/man/man1/git-fmt-merge-msg.1.gz
 /usr/share/man/man1/git-fetch-pack.1.gz
 /usr/share/man/man1/git-ls-remote.1.gz
@@ -166,7 +167,7 @@
 /usr/share/man/man1/git-prune.1.gz
 /usr/share/man/man1/git-format-patch.1.gz
 /usr/share/man/man1/git-replace.1.gz
-/usr/share/man/man1/git-lost-found.1.gz
 /usr/share/man/man1/git-mergetool.1.gz
+/usr/share/man/man3
 /usr/share/man/man3/Git.3pm.gz
 /usr/share/man/man3/Git::I18N.3pm.gz

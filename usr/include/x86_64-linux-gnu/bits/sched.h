@@ -1,7 +1,6 @@
 /* Definitions of constants and data structure for POSIX 1003.1b-1993
    scheduling interface.
-   Copyright (C) 1996-1999,2001-2003,2005,2006,2007,2008,2009,2011,2012
-   Free Software Foundation, Inc.
+   Copyright (C) 1996-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -145,21 +144,21 @@ typedef struct
 # define __CPU_SET_S(cpu, setsize, cpusetp) \
   (__extension__							      \
    ({ size_t __cpu = (cpu);						      \
-      __cpu < 8 * (setsize)						      \
+      __cpu / 8 < (setsize)						      \
       ? (((__cpu_mask *) ((cpusetp)->__bits))[__CPUELT (__cpu)]		      \
 	 |= __CPUMASK (__cpu))						      \
       : 0; }))
 # define __CPU_CLR_S(cpu, setsize, cpusetp) \
   (__extension__							      \
    ({ size_t __cpu = (cpu);						      \
-      __cpu < 8 * (setsize)						      \
+      __cpu / 8 < (setsize)						      \
       ? (((__cpu_mask *) ((cpusetp)->__bits))[__CPUELT (__cpu)]		      \
 	 &= ~__CPUMASK (__cpu))						      \
       : 0; }))
 # define __CPU_ISSET_S(cpu, setsize, cpusetp) \
   (__extension__							      \
    ({ size_t __cpu = (cpu);						      \
-      __cpu < 8 * (setsize)						      \
+      __cpu / 8 < (setsize)						      \
       ? ((((const __cpu_mask *) ((cpusetp)->__bits))[__CPUELT (__cpu)]	      \
 	  & __CPUMASK (__cpu))) != 0					      \
       : 0; }))

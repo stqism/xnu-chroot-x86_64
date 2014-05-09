@@ -1,4 +1,4 @@
-/* Copyright (C) 1997-2001, 2004, 2007, 2012 Free Software Foundation, Inc.
+/* Copyright (C) 1997-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -39,11 +39,6 @@ typedef wchar_t __gwchar_t;
 # endif
 # define ____gwchar_t_defined	1
 #endif
-
-
-/* The ISO C99 standard specifies that these macros must only be
-   defined if explicitly requested.  */
-#if !defined __cplusplus || defined __STDC_FORMAT_MACROS
 
 # if __WORDSIZE == 64
 #  define __PRI64_PREFIX	"l"
@@ -267,8 +262,6 @@ typedef wchar_t __gwchar_t;
 # define SCNuPTR	__PRIPTR_PREFIX "u"
 # define SCNxPTR	__PRIPTR_PREFIX "x"
 
-#endif	/* C++ && format macros */
-
 
 __BEGIN_DECLS
 
@@ -286,8 +279,8 @@ typedef struct
 /* We have to define the `uintmax_t' type using `lldiv_t'.  */
 typedef struct
   {
-    long long int quot;		/* Quotient.  */
-    long long int rem;		/* Remainder.  */
+    __extension__ long long int quot;	/* Quotient.  */
+    __extension__ long long int rem;	/* Remainder.  */
   } imaxdiv_t;
 
 #endif

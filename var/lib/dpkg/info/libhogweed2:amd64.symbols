@@ -26,12 +26,7 @@ libhogweed.so.2 libhogweed2 #MINVER#
  _nettle_mpn_set_base256@Base 2.7
  _nettle_mpz_limbs_cmp@Base 2.7
  _nettle_mpz_limbs_copy@Base 2.7
- _nettle_mpz_limbs_finish@Base 2.7
- _nettle_mpz_limbs_modify@Base 2.7
- _nettle_mpz_limbs_read@Base 2.7
  _nettle_mpz_limbs_read_n@Base 2.7
- _nettle_mpz_limbs_write@Base 2.7
- _nettle_mpz_roinit_n@Base 2.7
  _nettle_mpz_set_n@Base 2.7
  _nettle_pkcs1_signature_prefix@Base 2.5
  _nettle_rsa_blind@Base 2.5

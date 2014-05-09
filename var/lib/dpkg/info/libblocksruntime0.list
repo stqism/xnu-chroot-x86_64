@@ -1,11 +1,12 @@
 /.
 /usr
 /usr/lib
-/usr/lib/libBlocksRuntime.so.0.0
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libBlocksRuntime.so.0.0.0
 /usr/share
 /usr/share/doc
 /usr/share/doc/libblocksruntime0
 /usr/share/doc/libblocksruntime0/copyright
 /usr/share/doc/libblocksruntime0/changelog.Debian.gz
 /usr/share/doc/libblocksruntime0/changelog.gz
-/usr/lib/libBlocksRuntime.so.0
+/usr/lib/x86_64-linux-gnu/libBlocksRuntime.so.0

@@ -1,4 +1,4 @@
-/* Copyright (C) 2002-2007, 2012 Free Software Foundation, Inc.
+/* Copyright (C) 2002-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -101,14 +101,23 @@ typedef union
        binary compatibility.  */
     int __kind;
 #ifdef __x86_64__
-    int __spins;
+    short __spins;
+    short __elision;
     __pthread_list_t __list;
 # define __PTHREAD_MUTEX_HAVE_PREV	1
+# define __PTHREAD_MUTEX_HAVE_ELISION   1
 #else
     unsigned int __nusers;
     __extension__ union
     {
-      int __spins;
+      struct
+      {
+	short __espins;
+	short __elision;
+# define __spins d.__espins
+# define __elision d.__elision
+# define __PTHREAD_MUTEX_HAVE_ELISION   2
+      } d;
       __pthread_slist_t __list;
     };
 #endif

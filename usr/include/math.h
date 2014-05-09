@@ -1,6 +1,5 @@
 /* Declarations for math functions.
-   Copyright (C) 1991-1993, 1995-1999, 2001, 2002, 2004, 2006, 2009, 2011, 2012
-   Free Software Foundation, Inc.
+   Copyright (C) 1991-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -110,9 +109,6 @@ extern long double __REDIRECT_NTH (nexttowardl,
 				   nextafter) __attribute__ ((__const__));
 #    endif
 #   endif
-#  endif
-
-#  if defined __LDBL_COMPAT || defined __NO_LONG_DOUBLE_MATH
 
 #   undef __MATHDECL_1
 #   define __MATHDECL_2(type, function,suffix, args, alias) \
@@ -285,6 +281,20 @@ enum
 # endif
 
 #endif /* Use ISO C99.  */
+
+#ifdef __USE_GNU
+/* Return nonzero value if X is a signaling NaN.  */
+# ifdef __NO_LONG_DOUBLE_MATH
+#  define issignaling(x) \
+     (sizeof (x) == sizeof (float) ? __issignalingf (x) : __issignaling (x))
+# else
+#  define issignaling(x) \
+     (sizeof (x) == sizeof (float)					      \
+      ? __issignalingf (x)						      \
+      : sizeof (x) == sizeof (double)					      \
+      ? __issignaling (x) : __issignalingl (x))
+# endif
+#endif /* Use GNU.  */
 
 #ifdef	__USE_MISC
 /* Support for various different standard error handling behaviors.  */

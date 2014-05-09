@@ -1,5 +1,5 @@
 /* -mlong-double-64 compatibility mode for <stdlib.h> functions.
-   Copyright (C) 2006, 2007 Free Software Foundation, Inc.
+   Copyright (C) 2006-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -30,12 +30,10 @@ __END_NAMESPACE_C99
 __LDBL_REDIR1_DECL (strtold_l, strtod_l)
 #endif
 
-#if defined __USE_SVID || defined __USE_XOPEN_EXTENDED
-# ifdef __USE_MISC
+#ifdef __USE_MISC
 __LDBL_REDIR1_DECL (qecvt, ecvt)
 __LDBL_REDIR1_DECL (qfcvt, fcvt)
 __LDBL_REDIR1_DECL (qgcvt, gcvt)
 __LDBL_REDIR1_DECL (qecvt_r, ecvt_r)
 __LDBL_REDIR1_DECL (qfcvt_r, fcvt_r)
-# endif
 #endif

@@ -188,20 +188,26 @@ License is available under /usr/share/common-licenses/GFDL-1.3.
 
 ============================================
 Excerpt from upstream's README:
+
 LICENSING
 ---------
-Since GnuTLS version 3.0.0, the core library has been released under
-the GNU Lesser General Public License (LGPL) version 3 or later.
+Since GnuTLS version 3.1.10, the core library has been released under
+the GNU Lesser General Public License (LGPL) version 2.1 or later.
+
+Note, however, that new versions of the gmplib library used by GnuTLS
+are distributed under LGPLv3, and as such binaries of this library
+need to be distributed under LGPLv3. If this is undesirable older
+versions of the gmplib which are under LGPLv2.1 (e.g., version 4.2.1)
+may be used instead.
 
 The GNU LGPL applies to the main GnuTLS library, while the
-included applications as well as gnutls-extra and gnutls-openssl
-libraries are under the GNU GPL version 3.  The gnutls library is
+included applications as well as gnutls-openssl 
+library are under the GNU GPL version 3.  The gnutls library is 
 located in the lib/ directory, while the applications in src/ and
-gnutls-extra and gnutls-openssl library are at libextra/.
+gnutls-openssl library is at extra/.
 
 For any copyright year range specified as YYYY-ZZZZ in this package
 note that the range specifies every single year in that closed interval.
-
 ============================================
 ============================================
 
@@ -260,12 +266,12 @@ Copyright:
 
 ============================================
 
-lib/accelerated/x86 contains code by Andy Polyakov <appro@fy.chalmers.se>,
+lib/accelerated/x86 contains code by Andy Polyakov <appro@openssl.org>,
 copyright is not assigned to the FSF. The code is licensed under the
 CRYPTOGAMS license.
 
 --------------------
-# Copyright (c) 2011, Andy Polyakov by <appro@openssl.org>
+# Copyright (c) 2011-2013, Andy Polyakov by <appro@openssl.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -334,3 +340,15 @@ License:
  * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+============================================
+
+lib/accelerated/x86/elf/aes-ssse3-x86.s
+lib/accelerated/x86/macosx/aes-ssse3-x86.s
+
+Upstream Authors: Mike Hamburg (Stanford University)
+
+Copyright: 
+ * Mike Hamburg (Stanford University), 2009.
+License:
+ Public domain.

@@ -1,5 +1,5 @@
 /* `NAN' constant for IEEE 754 machines.
-   Copyright (C) 1992,1996,1997,1999,2004,2006 Free Software Foundation, Inc.
+   Copyright (C) 1992-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -39,14 +39,14 @@
 # include <endian.h>
 
 # if __BYTE_ORDER == __BIG_ENDIAN
-#  define __nan_bytes		{ 0x7f, 0xc0, 0, 0 }
+#  define __qnan_bytes		{ 0x7f, 0xc0, 0, 0 }
 # endif
 # if __BYTE_ORDER == __LITTLE_ENDIAN
-#  define __nan_bytes		{ 0, 0, 0xc0, 0x7f }
+#  define __qnan_bytes		{ 0, 0, 0xc0, 0x7f }
 # endif
 
-static union { unsigned char __c[4]; float __d; } __nan_union
-    __attribute_used__ = { __nan_bytes };
-# define NAN	(__nan_union.__d)
+static union { unsigned char __c[4]; float __d; } __qnan_union
+  __attribute__ ((__unused__)) = { __qnan_bytes };
+# define NAN	(__qnan_union.__d)
 
 #endif	/* GCC.  */

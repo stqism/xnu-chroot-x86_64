@@ -1,2 +1,2 @@
-libbfd 2.24-system binutils (>= 2.24), binutils (<< 2.25)
-libopcodes 2.24-system binutils (>= 2.24), binutils (<< 2.25)
+libbfd 2.24.51-system.20140425 binutils (>= 2.24.51.20140425), binutils (<< 2.24.51.20140426)
+libopcodes 2.24.51-system.20140425 binutils (>= 2.24.51.20140425), binutils (<< 2.24.51.20140426)

@@ -1,0 +1,8 @@
+52bcc0e4d06f9935672467d1a5838ca5  usr/bin/file-rename
+245085b84d2be80c0daad87c9a640cf3  usr/share/doc/rename/changelog.Debian.gz
+07ae7db91559d9031493fa1b41099bce  usr/share/doc/rename/changelog.gz
+0a67e3267c51010eec988b715c2915fe  usr/share/doc/rename/copyright
+3fc688511d5595a009467326f955a17a  usr/share/doc/rename/examples/rename.pl
+c08bb9546726868b3b0280045c50a017  usr/share/man/man1/file-rename.1p.gz
+a5740452f446239f7c762daeb8beb1cc  usr/share/man/man3/File::Rename.3pm.gz
+a58fe7082316de921a5a7a4b023a5a58  usr/share/perl5/File/Rename.pm

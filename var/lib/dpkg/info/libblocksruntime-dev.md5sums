@@ -1,5 +1,6 @@
 40f60363a1084b5791e90288a7ab3e94  usr/include/Block.h
 e9ab52f36b7fc9d557d6d3d55340f07e  usr/include/Block_private.h
-bc5a2b0e53edd3ecd9b285c194fd5f40  usr/share/doc/libblocksruntime-dev/changelog.Debian.gz
-7a95f25537a6ea677895a71a7740c477  usr/share/doc/libblocksruntime-dev/changelog.gz
-f0c71e9abb7ab59c019add053b5a3503  usr/share/doc/libblocksruntime-dev/copyright
+119c9e3bd138d8fd8e6605114e19176a  usr/lib/x86_64-linux-gnu/libBlocksRuntime.a
+72212ef60a91558b6ee7a245f04d90bd  usr/share/doc/libblocksruntime-dev/changelog.Debian.gz
+b793204638a8823c1fc33192894996cd  usr/share/doc/libblocksruntime-dev/changelog.gz
+3bf9d8099fc400d2c8dcad4252ba31fe  usr/share/doc/libblocksruntime-dev/copyright

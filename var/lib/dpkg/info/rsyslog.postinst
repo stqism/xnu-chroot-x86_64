@@ -34,8 +34,10 @@ case "$1" in
     ;;
 esac
 
-
 # Automatically added by dh_systemd_enable
+# This will only remove masks created by d-s-h on package removal.
+deb-systemd-helper unmask rsyslog.service >/dev/null || true
+
 # was-enabled defaults to true, so new installations run enable.
 if deb-systemd-helper --quiet was-enabled rsyslog.service; then
 	# Enables the unit on first installation, creates new
@@ -66,5 +68,3 @@ if [ -x "/etc/init.d/rsyslog" ]; then
 fi
 # End automatically added section
 
-
-exit 0

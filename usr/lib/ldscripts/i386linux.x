@@ -2,6 +2,7 @@
 OUTPUT_FORMAT("a.out-i386-linux", "a.out-i386-linux",
 	      "a.out-i386-linux")
 OUTPUT_ARCH(i386)
+SEARCH_DIR("=/usr/i386-linux-gnuaout/lib");
 PROVIDE (__stack = 0);
 SECTIONS
 {

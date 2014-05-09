@@ -1,6 +1,6 @@
 ccfad9cbfee0c140afa126ad7323f03e  bin/gunzip
 496ff119e59b9f70a9b2bd00da0bdde9  bin/gzexe
-54bb65f28a61a2fb36af936e826ea989  bin/gzip
+784eadf63990e4b0648dc0787bade950  bin/gzip
 ccfad9cbfee0c140afa126ad7323f03e  bin/uncompress
 18cb262c4578777fe8b40f1a33cb3d2f  bin/zcat
 e3c02b0c9880f73de59de5a034d91279  bin/zcmp
@@ -15,10 +15,10 @@ b3be5f13ee3c82035b23f5f2606b2d85  bin/zforce
 d8f5fe2567655b40a17e979e2cf298f9  usr/share/doc/gzip/README-release
 131f4d7c25c899fb65524e2676c24e42  usr/share/doc/gzip/README.gz
 61985560eaa4eba25a92e7230ce97292  usr/share/doc/gzip/TODO
-aef013eef1f78641bb357cc4f5fbd70e  usr/share/doc/gzip/changelog.Debian.gz
+1ec7710604043c234676afc6b4c3704f  usr/share/doc/gzip/changelog.Debian.gz
 e112ac4ead995bbb4605fd695de6adf1  usr/share/doc/gzip/changelog.gz
 60151252816d027dbe997a0ad5a257c6  usr/share/doc/gzip/copyright
-f847b5ea0d47c1ede0a4a02f74c87384  usr/share/info/gzip.info.gz
+5faf41491b84bd116dde8fb20e96b864  usr/share/info/gzip.info.gz
 5222771a99ad9e56893ce6e136c252eb  usr/share/man/man1/gzexe.1.gz
 75a99b7ec12bda4f4d627b19ce9803ba  usr/share/man/man1/gzip.1.gz
 f23771d4aa1e3e64e9794bc59299a532  usr/share/man/man1/zdiff.1.gz

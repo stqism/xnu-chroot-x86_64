@@ -1,4 +1,4 @@
-/* Copyright (C) 2001-2012 Free Software Foundation, Inc.
+/* Copyright (C) 2001-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -36,7 +36,7 @@ __BEGIN_DECLS
 
 /* Type for a general-purpose register.  */
 #ifdef __x86_64__
-typedef unsigned long long elf_greg_t;
+__extension__ typedef unsigned long long elf_greg_t;
 #else
 typedef unsigned long elf_greg_t;
 #endif

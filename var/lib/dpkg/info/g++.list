@@ -1,8 +1,10 @@
 /.
 /usr
-/usr/bin
 /usr/share
 /usr/share/doc
-/usr/bin/x86_64-linux-gnu-g++
-/usr/bin/g++
+/usr/share/man
+/usr/share/man/man1
+/usr/bin
 /usr/share/doc/g++
+/usr/bin/g++
+/usr/bin/x86_64-linux-gnu-g++

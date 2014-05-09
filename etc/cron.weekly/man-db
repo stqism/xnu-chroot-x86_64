@@ -8,10 +8,7 @@ iosched_idle=
 # Don't try to change I/O priority in a vserver or OpenVZ.
 if ! egrep -q '(envID|VxID):.*[1-9]' /proc/self/status && \
    ([ ! -d /proc/vz ] || [ -d /proc/bc ]); then
-    dpkg_version="$(dpkg-query -W -f '${Version}' dpkg 2>/dev/null)"
-    if dpkg --compare-versions "$dpkg_version" ge 1.15.0; then
-	iosched_idle='--iosched idle'
-    fi
+    iosched_idle='--iosched idle'
 fi
 
 if ! [ -d /var/cache/man ]; then

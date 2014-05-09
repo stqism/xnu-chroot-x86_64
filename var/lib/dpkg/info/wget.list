@@ -133,6 +133,8 @@
 /usr/share/locale/de
 /usr/share/locale/de/LC_MESSAGES
 /usr/share/locale/de/LC_MESSAGES/wget.mo
+/usr/share/man
+/usr/share/man/man1
 /usr/share/man/man1/wget.1.gz
 /etc
 /etc/wgetrc

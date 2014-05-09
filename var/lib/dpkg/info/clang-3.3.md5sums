@@ -1,7 +1,7 @@
 f430f8f84496b9509f65cf7f6a3fd396  usr/bin/asan_symbolize
-4ac8a9ec84902213e498cb758d074874  usr/bin/clang
-63f0bfa81cea6df5b9fb8ff69a2fed44  usr/bin/clang-check
-f143c73a35154afd26368ce03e577a65  usr/bin/clang-tblgen
+eca100cd27d17164353126e08fd0678d  usr/bin/clang
+b9c73b9596537628f3096b7d4b29402f  usr/bin/clang-check
+b41f5110893d6dfcc88ceb6270298aba  usr/bin/clang-tblgen
 e375da0c0e2968bc2195c4fa711cdaee  usr/bin/pollycc
 f9ab5aa76924318923c6aae1100c9a76  usr/lib/llvm-3.3/bin/c-index-test
 6fc5c9d5faf694f62685b55ab5a4beba  usr/share/clang/scan-build/c++-analyzer
@@ -20,7 +20,7 @@ cb2e7aec72fcb78bcf8f090aadd1a391  usr/share/clang/scan-view/Resources/bugcatcher
 994700e9b45ebac04a9b2887b486a540  usr/share/clang/scan-view/scan-view
 49124ac72a463b9660536874f23f4420  usr/share/clang/scan-view/startfile.py
 2017a3d345b02eaa2f3eb23718271547  usr/share/doc/clang-3.3/TODO.Debian
-ceff9a2fa9d20c8fbe90dc483b533b2f  usr/share/doc/clang-3.3/changelog.Debian.gz
+c753df705f378a5f1afed4491c7cb25f  usr/share/doc/clang-3.3/changelog.Debian.gz
 063e0448ac11bde832bec75b88775293  usr/share/doc/clang-3.3/copyright
 37a22bf0d1d7e99274b50fb28c507928  usr/share/lintian/overrides/clang-3.3
 7a945dd2bc27e67128502331db008582  usr/share/man/man1/clang-3.3.1.gz

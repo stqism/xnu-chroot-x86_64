@@ -1,5 +1,5 @@
 /* Machine-independant string function optimizations.
-   Copyright (C) 1997-2004, 2007, 2008, 2012 Free Software Foundation, Inc.
+   Copyright (C) 1997-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
    Contributed by Ulrich Drepper <drepper@cygnus.com>, 1997.
 
@@ -21,7 +21,7 @@
 # error "Never use <bits/string2.h> directly; include <string.h> instead."
 #endif
 
-#if !defined __NO_STRING_INLINES && !defined __BOUNDED_POINTERS__
+#ifndef __NO_STRING_INLINES
 
 /* Unlike the definitions in the header <bits/string.h> the
    definitions contained here are not optimized down to assembler
@@ -839,7 +839,7 @@ __stpcpy_small (char *__dest,
 # endif
 
 # define __strcmp_cc(s1, s2, l) \
-  (__extension__ ({ register int __result =				      \
+  (__extension__ ({ int __result =					      \
 		      (((const unsigned char *) (const char *) (s1))[0]	      \
 		       - ((const unsigned char *) (const char *)(s2))[0]);    \
 		    if (l > 0 && __result == 0)				      \
@@ -868,7 +868,7 @@ __stpcpy_small (char *__dest,
 # define __strcmp_cg(s1, s2, l1) \
   (__extension__ ({ const unsigned char *__s2 =				      \
 		      (const unsigned char *) (const char *) (s2);	      \
-		    register int __result =				      \
+		    int __result =					      \
 		      (((const unsigned char *) (const char *) (s1))[0]	      \
 		       - __s2[0]);					      \
 		    if (l1 > 0 && __result == 0)			      \
@@ -887,30 +887,7 @@ __stpcpy_small (char *__dest,
 		      }							      \
 		    __result; }))
 
-# define __strcmp_gc(s1, s2, l2) \
-  (__extension__ ({ const unsigned char *__s1 =				      \
-		      (const unsigned char *) (const char *) (s1);	      \
-		    register int __result =				      \
-		      __s1[0] - ((const unsigned char *)		      \
-				 (const char *) (s2))[0];		      \
-		    if (l2 > 0 && __result == 0)			      \
-		      {							      \
-			__result = (__s1[1]				      \
-				    - ((const unsigned char *)		      \
-				       (const char *) (s2))[1]);	      \
-			if (l2 > 1 && __result == 0)			      \
-			  {						      \
-			    __result =					      \
-			      (__s1[2] - ((const unsigned char *)	      \
-					  (const char *) (s2))[2]);	      \
-			    if (l2 > 2 && __result == 0)		      \
-			      __result =				      \
-				(__s1[3]				      \
-				 - ((const unsigned char *)		      \
-				    (const char *) (s2))[3]);		      \
-			  }						      \
-		      }							      \
-		    __result; }))
+# define __strcmp_gc(s1, s2, l2) (- __strcmp_cg (s2, s1, l2))
 #endif
 
 
@@ -969,7 +946,7 @@ __STRING_INLINE size_t __strcspn_c1 (const char *__s, int __reject);
 __STRING_INLINE size_t
 __strcspn_c1 (const char *__s, int __reject)
 {
-  register size_t __result = 0;
+  size_t __result = 0;
   while (__s[__result] != '\0' && __s[__result] != __reject)
     ++__result;
   return __result;
@@ -980,7 +957,7 @@ __STRING_INLINE size_t __strcspn_c2 (const char *__s, int __reject1,
 __STRING_INLINE size_t
 __strcspn_c2 (const char *__s, int __reject1, int __reject2)
 {
-  register size_t __result = 0;
+  size_t __result = 0;
   while (__s[__result] != '\0' && __s[__result] != __reject1
 	 && __s[__result] != __reject2)
     ++__result;
@@ -993,7 +970,7 @@ __STRING_INLINE size_t
 __strcspn_c3 (const char *__s, int __reject1, int __reject2,
 	      int __reject3)
 {
-  register size_t __result = 0;
+  size_t __result = 0;
   while (__s[__result] != '\0' && __s[__result] != __reject1
 	 && __s[__result] != __reject2 && __s[__result] != __reject3)
     ++__result;
@@ -1045,7 +1022,7 @@ __STRING_INLINE size_t __strspn_c1 (const char *__s, int __accept);
 __STRING_INLINE size_t
 __strspn_c1 (const char *__s, int __accept)
 {
-  register size_t __result = 0;
+  size_t __result = 0;
   /* Please note that __accept never can be '\0'.  */
   while (__s[__result] == __accept)
     ++__result;
@@ -1057,7 +1034,7 @@ __STRING_INLINE size_t __strspn_c2 (const char *__s, int __accept1,
 __STRING_INLINE size_t
 __strspn_c2 (const char *__s, int __accept1, int __accept2)
 {
-  register size_t __result = 0;
+  size_t __result = 0;
   /* Please note that __accept1 and __accept2 never can be '\0'.  */
   while (__s[__result] == __accept1 || __s[__result] == __accept2)
     ++__result;
@@ -1069,7 +1046,7 @@ __STRING_INLINE size_t __strspn_c3 (const char *__s, int __accept1,
 __STRING_INLINE size_t
 __strspn_c3 (const char *__s, int __accept1, int __accept2, int __accept3)
 {
-  register size_t __result = 0;
+  size_t __result = 0;
   /* Please note that __accept1 to __accept3 never can be '\0'.  */
   while (__s[__result] == __accept1 || __s[__result] == __accept2
 	 || __s[__result] == __accept3)
@@ -1221,7 +1198,7 @@ __STRING_INLINE char *__strsep_1c (char **__s, char __reject);
 __STRING_INLINE char *
 __strsep_1c (char **__s, char __reject)
 {
-  register char *__retval = *__s;
+  char *__retval = *__s;
   if (__retval != NULL && (*__s = strchr (__retval, __reject)) != NULL)
     *(*__s)++ = '\0';
   return __retval;
@@ -1231,10 +1208,10 @@ __STRING_INLINE char *__strsep_2c (char **__s, char __reject1, char __reject2);
 __STRING_INLINE char *
 __strsep_2c (char **__s, char __reject1, char __reject2)
 {
-  register char *__retval = *__s;
+  char *__retval = *__s;
   if (__retval != NULL)
     {
-      register char *__cp = __retval;
+      char *__cp = __retval;
       while (1)
 	{
 	  if (*__cp == '\0')
@@ -1259,10 +1236,10 @@ __STRING_INLINE char *__strsep_3c (char **__s, char __reject1, char __reject2,
 __STRING_INLINE char *
 __strsep_3c (char **__s, char __reject1, char __reject2, char __reject3)
 {
-  register char *__retval = *__s;
+  char *__retval = *__s;
   if (__retval != NULL)
     {
-      register char *__cp = __retval;
+      char *__cp = __retval;
       while (1)
 	{
 	  if (*__cp == '\0')

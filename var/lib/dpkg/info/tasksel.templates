@@ -306,7 +306,7 @@ Description-zh_TW.UTF-8: 選擇所要安裝的軟體：
 Template: tasksel/desktop
 Type: multiselect
 Choices: gnome, kde, xfce, lxde
-Default: gnome
+Default: xfce
 Description: The desktop environment to install when the desktop task is selected
  This can be preseeded to change the default.
 

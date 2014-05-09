@@ -107,9 +107,8 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  initialize_krb5_error_table@krb5_3_MIT 1.6.dfsg.2
  initialize_kv5m_error_table@krb5_3_MIT 1.6.dfsg.2
  initialize_prof_error_table@krb5_3_MIT 1.6.dfsg.2
+ k5_build_conf_principals@krb5_3_MIT 1.12~alpha1+dfsg
  k5_ccselect_free_context@krb5_3_MIT 1.10+dfsg~alpha1
- k5_copy_etypes@krb5_3_MIT 1.11+dfsg
- k5_count_etypes@krb5_3_MIT 1.11+dfsg
  k5_etypes_contains@krb5_3_MIT 1.11+dfsg
  k5_expand_path_tokens@krb5_3_MIT 1.11+dfsg
  k5_expand_path_tokens_extra@krb5_3_MIT 1.11+dfsg
@@ -118,8 +117,13 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  k5_free_pa_otp_challenge@krb5_3_MIT 1.11+dfsg
  k5_free_pa_otp_req@krb5_3_MIT 1.11+dfsg
  k5_free_serverlist@krb5_3_MIT 1.10+dfsg~alpha1
+ k5_hostrealm_free_context@krb5_3_MIT 1.12~alpha1+dfsg
+ k5_init_trace@krb5_3_MIT 1.12~alpha1+dfsg
  k5_kt_get_principal@krb5_3_MIT 1.10+dfsg~alpha1
+ k5_localauth_free_context@krb5_3_MIT 1.12~alpha1+dfsg
  k5_locate_kdc@krb5_3_MIT 1.10+dfsg~alpha1
+ k5_os_free_context@krb5_3_MIT 1.12~alpha1+dfsg
+ k5_os_init_context@krb5_3_MIT 1.12~alpha1+dfsg
  k5_plugin_free_modules@krb5_3_MIT 1.9+dfsg~beta1
  k5_plugin_load@krb5_3_MIT 1.9+dfsg~beta1
  k5_plugin_load_all@krb5_3_MIT 1.9+dfsg~beta1
@@ -218,7 +222,6 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_cc_remove_cred@krb5_3_MIT 1.6.dfsg.2
  krb5_cc_resolve@krb5_3_MIT 1.6.dfsg.2
  krb5_cc_retrieve_cred@krb5_3_MIT 1.6.dfsg.2
- krb5_cc_retrieve_cred_default@krb5_3_MIT 1.6.dfsg.2
  krb5_cc_select@krb5_3_MIT 1.10+dfsg~alpha1
  krb5_cc_set_config@krb5_3_MIT 1.8+dfsg
  krb5_cc_set_default_name@krb5_3_MIT 1.6.dfsg.2
@@ -251,15 +254,11 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_copy_keyblock_contents@krb5_3_MIT 1.6.dfsg.2
  krb5_copy_principal@krb5_3_MIT 1.6.dfsg.2
  krb5_copy_ticket@krb5_3_MIT 1.6.dfsg.2
- krb5_create_secure_file@krb5_3_MIT 1.6.dfsg.2
  krb5_crypto_us_timeofday@krb5_3_MIT 1.6.dfsg.2
  krb5_decode_authdata_container@krb5_3_MIT 1.7dfsg
  krb5_decode_ticket@krb5_3_MIT 1.6.dfsg.2
  krb5_decrypt_tkt_part@krb5_3_MIT 1.6.dfsg.2
- krb5_default_pwd_prompt1@krb5_3_MIT 1.6.dfsg.2
- krb5_default_pwd_prompt2@krb5_3_MIT 1.6.dfsg.2
  krb5_deltat_to_string@krb5_3_MIT 1.6.dfsg.2
- krb5_do_preauth@krb5_3_MIT 1.6.dfsg.2
  krb5_encode_authdata_container@krb5_3_MIT 1.7dfsg
  krb5_encode_kdc_rep@krb5_3_MIT 1.6.dfsg.2
  krb5_encrypt_helper@krb5_3_MIT 1.6.dfsg.2
@@ -295,6 +294,7 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_free_enc_sam_response_enc_2@krb5_3_MIT 1.6.dfsg.2
  krb5_free_enc_sam_response_enc_2_contents@krb5_3_MIT 1.6.dfsg.2
  krb5_free_enc_tkt_part@krb5_3_MIT 1.6.dfsg.2
+ krb5_free_enctypes@krb5_3_MIT 1.12~alpha1+dfsg
  krb5_free_error@krb5_3_MIT 1.6.dfsg.2
  krb5_free_error_message@krb5_3_MIT 1.6.dfsg.2
  krb5_free_etype_info@krb5_3_MIT 1.6.dfsg.2
@@ -309,8 +309,6 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_free_keyblock@krb5_3_MIT 1.6.dfsg.2
  krb5_free_keyblock_contents@krb5_3_MIT 1.6.dfsg.2
  krb5_free_keytab_entry_contents@krb5_3_MIT 1.6.dfsg.2
- krb5_free_krbhst@krb5_3_MIT 1.6.dfsg.2
- krb5_free_ktypes@krb5_3_MIT 1.6.dfsg.2
  krb5_free_last_req@krb5_3_MIT 1.6.dfsg.2
  krb5_free_octet_data@krb5_3_MIT 1.10+dfsg~alpha1
  krb5_free_pa_data@krb5_3_MIT 1.6.dfsg.2
@@ -382,7 +380,6 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_get_init_creds_opt_set_salt@krb5_3_MIT 1.6.dfsg.2
  krb5_get_init_creds_opt_set_tkt_life@krb5_3_MIT 1.6.dfsg.2
  krb5_get_init_creds_password@krb5_3_MIT 1.6.dfsg.2
- krb5_get_krbhst@krb5_3_MIT 1.6.dfsg.2
  krb5_get_notification_message@krb5_3_MIT 1.6.dfsg.2
  krb5_get_permitted_enctypes@krb5_3_MIT 1.6.dfsg.2
  krb5_get_profile@krb5_3_MIT 1.6.dfsg.2
@@ -419,6 +416,7 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_kt_default@krb5_3_MIT 1.6.dfsg.2
  krb5_kt_default_name@krb5_3_MIT 1.6.dfsg.2
  krb5_kt_dfl_ops@krb5_3_MIT 1.6.dfsg.2
+ krb5_kt_dup@krb5_3_MIT 1.12~alpha1+dfsg
  krb5_kt_end_seq_get@krb5_3_MIT 1.6.dfsg.2
  krb5_kt_free_entry@krb5_3_MIT 1.6.dfsg.2
  krb5_kt_get_entry@krb5_3_MIT 1.6.dfsg.2
@@ -439,7 +437,6 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_make_authdata_kdc_issued@krb5_3_MIT 1.8+dfsg
  krb5_make_full_ipaddr@krb5_3_MIT 1.6.dfsg.2
  krb5_make_fulladdr@krb5_3_MIT 1.6.dfsg.2
- krb5_max_dgram_size@krb5_3_MIT 1.6.dfsg.2
  krb5_mcc_ops@krb5_3_MIT 1.6.dfsg.2
  krb5_merge_authdata@krb5_3_MIT 1.7dfsg
  krb5_mk_1cred@krb5_3_MIT 1.6.dfsg.2
@@ -453,9 +450,6 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_mk_safe@krb5_3_MIT 1.6.dfsg.2
  krb5_net_read@krb5_3_MIT 1.6.dfsg.2
  krb5_net_write@krb5_3_MIT 1.6.dfsg.2
- krb5_os_free_context@krb5_3_MIT 1.6.dfsg.2
- krb5_os_hostaddr@krb5_3_MIT 1.6.dfsg.2
- krb5_os_init_context@krb5_3_MIT 1.6.dfsg.2
  krb5_os_localaddr@krb5_3_MIT 1.6.dfsg.2
  krb5_overridekeyname@krb5_3_MIT 1.6.dfsg.2
  krb5_pac_add_buffer@krb5_3_MIT 1.7dfsg
@@ -535,6 +529,9 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_responder_otp_challenge_free@krb5_3_MIT 1.11+dfsg
  krb5_responder_otp_get_challenge@krb5_3_MIT 1.11+dfsg
  krb5_responder_otp_set_answer@krb5_3_MIT 1.11+dfsg
+ krb5_responder_pkinit_challenge_free@krb5_3_MIT 1.12~alpha1+dfsg
+ krb5_responder_pkinit_get_challenge@krb5_3_MIT 1.12~alpha1+dfsg
+ krb5_responder_pkinit_set_answer@krb5_3_MIT 1.12~alpha1+dfsg
  krb5_responder_set_answer@krb5_3_MIT 1.11+dfsg
  krb5_salttype_to_string@krb5_3_MIT 1.6.dfsg.2
  krb5_sendauth@krb5_3_MIT 1.6.dfsg.2
@@ -578,7 +575,6 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_string_to_deltat@krb5_3_MIT 1.6.dfsg.2
  krb5_string_to_salttype@krb5_3_MIT 1.6.dfsg.2
  krb5_string_to_timestamp@krb5_3_MIT 1.6.dfsg.2
- krb5_sync_disk_file@krb5_3_MIT 1.6.dfsg.2
  krb5_timeofday@krb5_3_MIT 1.6.dfsg.2
  krb5_timestamp_to_sfstring@krb5_3_MIT 1.6.dfsg.2
  krb5_timestamp_to_string@krb5_3_MIT 1.6.dfsg.2
@@ -588,7 +584,6 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_tkt_creds_get_times@krb5_3_MIT 1.9+dfsg~beta1
  krb5_tkt_creds_init@krb5_3_MIT 1.9+dfsg~beta1
  krb5_tkt_creds_step@krb5_3_MIT 1.9+dfsg~beta1
- krb5_try_realm_txt_rr@krb5_3_MIT 1.6.dfsg.2
  krb5_unlock_file@krb5_3_MIT 1.6.dfsg.2
  krb5_unpack_full_ipaddr@krb5_3_MIT 1.6.dfsg.2
  krb5_unparse_name@krb5_3_MIT 1.6.dfsg.2
@@ -605,11 +600,8 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5_walk_realm_tree@krb5_3_MIT 1.6.dfsg.2
  krb5_write_message@krb5_3_MIT 1.6.dfsg.2
  krb5int_accessor@krb5_3_MIT 1.6.dfsg.2
- krb5int_build_conf_principals@krb5_3_MIT 1.11+dfsg
  krb5int_cc_default@krb5_3_MIT 1.6.dfsg.2
- krb5int_clean_hostname@krb5_3_MIT 1.8+dfsg
  krb5int_cleanup_library@krb5_3_MIT 1.6.dfsg.2
- krb5int_cm_call_select@krb5_3_MIT 1.6.dfsg.2
  krb5int_copy_data_contents@krb5_3_MIT 1.11+dfsg
  krb5int_copy_data_contents_add0@krb5_3_MIT 1.7dfsg
  krb5int_find_pa_data@krb5_3_MIT 1.7dfsg
@@ -617,10 +609,9 @@ libkrb5.so.3 libkrb5-3 #MINVER#
  krb5int_free_data_list@krb5_3_MIT 1.8+dfsg
  krb5int_get_authdata_containee_types@krb5_3_MIT 1.8+dfsg
  krb5int_init_context_kdc@krb5_3_MIT 1.6.dfsg.2
- krb5int_init_trace@krb5_3_MIT 1.9+dfsg~beta1
  krb5int_initialize_library@krb5_3_MIT 1.6.dfsg.2
  krb5int_parse_enctype_list@krb5_3_MIT 1.11+dfsg
- krb5int_sendtokdc_debug_handler@krb5_3_MIT 1.6.dfsg.2
+ krb5int_random_string@krb5_3_MIT 1.12~alpha1+dfsg
  krb5int_tgtname@krb5_3_MIT 1.9+dfsg~beta1
  krb5int_trace@krb5_3_MIT 1.9+dfsg~beta1
  profile_abandon@krb5_3_MIT 1.6.dfsg.2

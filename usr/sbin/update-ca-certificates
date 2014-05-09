@@ -69,7 +69,8 @@ add() {
     ln -sf "$CERT" "$PEM"
     echo +$PEM >> "$ADDED"
   fi
-  cat "$CERT" >> "$TEMPBUNDLE"
+  # Add trailing newline to certificate, if it is missing (#635570)
+  sed -e '$a\' "$CERT" >> "$TEMPBUNDLE"
 }
 
 remove() {
@@ -121,7 +122,7 @@ done
 # administrator.
 if [ -d "$LOCALCERTSDIR" ]
 then
-  find -L "$LOCALCERTSDIR" -type f -name '*.crt' | while read crt
+  find -L "$LOCALCERTSDIR" -type f -name '*.crt' | sort | while read crt
   do
     add "$crt"
   done

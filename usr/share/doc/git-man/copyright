@@ -1,9 +1,9 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Contact: git@vger.kernel.org
-Source: http://code.google.com/p/git-core/downloads/list
+Source: https://www.kernel.org/pub/software/scm/git/
 
 Files: *
-Copyright: © 2005-2013, Linus Torvalds and others.
+Copyright: © 2005-2014, Linus Torvalds and others.
 License: GPL-2
 
 Files: xdiff/*
@@ -15,21 +15,34 @@ Copyright: © 2010, Google Inc.
            and other copyright owners as documented in JGit's IP log.
 License: EDL-1.0
 
-Files: gitk-git/*
-Copyright: © 2005-2013, Paul Mackerras, et al.
+Files: ewah/*
+Copyright: © 2013, GitHub Inc.
+           © 2009-2013, Daniel Lemire, Cliff Moon,
+	       David McIntosh, Rober Becho, Google Inc. and Veronika Zenz
 License: GPL-2+
+
+Files: gitk-git/*
+Copyright: © 2005-2014, Paul Mackerras, et al.
+License: GPL-2+
+
+Files: gitk-git/po/bg.po
+Copyright: © 2014, Alexander Shopov <ash@kambanaria.org>
+License: GPL-2
+Comment: This file is distributed under the same license as the git package.
 
 Files: git-gui/*
 Copyright: © 2005-2010, Shawn Pearce, et. al.
 License: GPL-2+
 
-Files: git-gui/po/de.po git-gui/po/fr.po git-gui/po/glossary/*
+Files: git-gui/po/bg.po git-gui/po/de.po git-gui/po/fr.po git-gui/po/glossary/*
 Copyright: © 2007-2008, Shawn Pearce, et al.
+           © 2012-2014, Alexander Shopov <ash@kambanaria.org>
 License: GPL-2
 Comment: This file is distributed under the same license as the git package.
 
-Files: git-gui/po/glossary/pt_br.po
+Files: git-gui/po/glossary/el.po git-gui/po/glossary/pt_br.po
 Copyright: © 2007, Shawn Pearce, et al.
+           © 2009, Jimmy Angelakos
 License: GPL-2+
 Comment: This file is distributed under the same license as the git-gui package.
 
@@ -90,6 +103,10 @@ Files: kwset.c kwset.h
 Copyright: © 1989, 1998, 2000, 2005, Free Software Foundation, Inc.
 License: GPL-2+
 
+Files: khash.h
+Copyright: © 2008, 2009, 2011 by Attractive Chaos <attractor@live.co.uk>
+License: Expat
+
 Files: trace.c
 Copyright: © 2000-2002, Michael R. Elkins <me@mutt.org>
            © 2002-2004, Oswald Buddenhagen <ossi@users.sf.net>
@@ -106,11 +123,6 @@ License: GPL-2+
 Files: t/test-lib.sh
 Copyright: © 2005, Junio C Hamano
 License: GPL-2+
-
-Files: compat/fnmatch/*
-Copyright: © 1991-1999, Free Software Foundation, Inc.
-License: LGPL-2+
-Comment: This file is part of the GNU C Library.
 
 Files: compat/inet_ntop.c compat/inet_pton.c
 Copyright: © 1996-2001, Internet Software Consortium.

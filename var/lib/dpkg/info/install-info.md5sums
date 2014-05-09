@@ -1,11 +1,11 @@
-02f0423a334b0338b6d7e15809fd1072  usr/bin/ginstall-info
+369e11bb6ceaf0a872647d5846907cd7  usr/bin/ginstall-info
 3dc3c8e7f34eada7c4ad61f4b2a6b77f  usr/bin/install-info
 afddd0190fe1c93c1136684c0e605dc7  usr/sbin/update-info-dir
 66690fea2baac83848aa56b07b19c7e7  usr/share/doc/install-info/AUTHORS
 55d3e7c5de41a39aee3e9583d5de7ef1  usr/share/doc/install-info/NEWS.gz
 fc5e5d7f2839cb34e9405d4cc3ee8362  usr/share/doc/install-info/README.gz
 50f898e5180490e967af1ce4abcc40e1  usr/share/doc/install-info/TODO.gz
-7e5130007ff3ba6d23c9a33c78bab860  usr/share/doc/install-info/changelog.Debian.gz
+def8c42951279a372df0317abea86043  usr/share/doc/install-info/changelog.Debian.gz
 3c61b37d496eb459797aa59184e876b2  usr/share/doc/install-info/changelog.gz
 ca14f0117ca3dd77c105fa63b916ade3  usr/share/doc/install-info/copyright
 0607a438f34ccbf93811265f95435210  usr/share/man/man1/ginstall-info.1.gz

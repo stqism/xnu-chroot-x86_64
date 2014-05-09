@@ -15,7 +15,7 @@ b5ce961d3b91bfaa5ec56d99f7dc4b8d  usr/share/debconf/debconf.conf
 c2a6b50b9405e34841982c27f5949ad1  usr/share/debconf/frontend
 669b6f370973e8be33f6d1ff3431950a  usr/share/debconf/transition_db.pl
 20c51c96dc14801a095b3994715731f5  usr/share/doc/debconf/README.Debian
-3f86e078c63fba6a98d8d240b00e16fd  usr/share/doc/debconf/changelog.gz
+cd6d0a28e4a85a8e0c3d5152fc388f74  usr/share/doc/debconf/changelog.gz
 1aa3b78d3182195ba56c01cb7227ead3  usr/share/doc/debconf/copyright
 ce8cbe0dfeddc4bbb314754838c98db4  usr/share/lintian/overrides/debconf
 691754848ae661ca89ce70e30fa73b4d  usr/share/man/man1/debconf-apt-progress.1.gz
@@ -128,7 +128,7 @@ c826594c3b7dbeb965b863115a51f9b2  usr/share/perl5/Debconf/FrontEnd/Noninteractiv
 4e497c3708468b5596c68f9edeb7fc14  usr/share/perl5/Debconf/FrontEnd/Passthrough.pm
 dbeebdb064ae7d7d399543cfc4713012  usr/share/perl5/Debconf/FrontEnd/Readline.pm
 2e6b83d495fc01a6dd07806c8acaa1e2  usr/share/perl5/Debconf/FrontEnd/ScreenSize.pm
-df3bbeff744cbd7398e36b88536adb1e  usr/share/perl5/Debconf/FrontEnd/Teletype.pm
+22a4af7da2960fd87452449a88d7ea64  usr/share/perl5/Debconf/FrontEnd/Teletype.pm
 a9ac9868f237206993bde33a17a61220  usr/share/perl5/Debconf/FrontEnd/Text.pm
 7ffb67a8e8d623beb2be7c08d2c80b8f  usr/share/perl5/Debconf/FrontEnd/Web.pm
 072dbdddbd69162468e988d43848cbca  usr/share/perl5/Debconf/Gettext.pm

@@ -1,6 +1,6 @@
 8374302ab936fb95e0b0d140d0891851  usr/sbin/tzconfig
 5461b4c9623a1657baf85fbc0c8576b6  usr/share/doc/tzdata/README.Debian
-ecc229ef05ffd61c9e921fb5cbd5cbd8  usr/share/doc/tzdata/changelog.Debian.gz
+692679ab34d538c8eed14dff55fca504  usr/share/doc/tzdata/changelog.Debian.gz
 07bbd4a7ad1729ab3b4b3aa4fdfb150d  usr/share/doc/tzdata/copyright
 74c6fb9ae4ea68d0012c1f6ad42b5848  usr/share/zoneinfo/Africa/Abidjan
 25ed5f5d04c8d528bdf09f9c04c06a00  usr/share/zoneinfo/Africa/Accra
@@ -161,11 +161,12 @@ f3c7549131547b89e7613df9db759d0d  usr/share/zoneinfo/America/Yellowknife
 df478cc881a9b73d6e446eee6023a9ac  usr/share/zoneinfo/Antarctica/Palmer
 348698ff6310962d618d62a99c9161d3  usr/share/zoneinfo/Antarctica/Rothera
 50b0b2c64b387bc771b2838324ed334e  usr/share/zoneinfo/Antarctica/Syowa
+07b95c15de99cb3164484d3ae6cc28cf  usr/share/zoneinfo/Antarctica/Troll
 ab8268f7df91383eeb45a69714200b48  usr/share/zoneinfo/Antarctica/Vostok
 bf4f10e6703e5142a7c4d23dc4cd7ef0  usr/share/zoneinfo/Arctic/Longyearbyen
 5da4b15c4f736ada2254e093902cfe2b  usr/share/zoneinfo/Asia/Aden
 eeb2f013e22005e7f69c1269bffea7dc  usr/share/zoneinfo/Asia/Almaty
-a4fbfe2cd841f10f37955afde94d466b  usr/share/zoneinfo/Asia/Amman
+a25f6ed4230647dd1f6ec67d3151b638  usr/share/zoneinfo/Asia/Amman
 4fbfa58e0602bbc765ab5819a923a49a  usr/share/zoneinfo/Asia/Anadyr
 2c0dc51f3903271b768fa9d1caa4c243  usr/share/zoneinfo/Asia/Aqtau
 3cb22699d183d387abad1b3d35303a20  usr/share/zoneinfo/Asia/Aqtobe
@@ -186,9 +187,9 @@ bce44ffea18a29f069c50f598135a2bd  usr/share/zoneinfo/Asia/Colombo
 d60ec98c1ae7522b39a95ccbf6c36f46  usr/share/zoneinfo/Asia/Dili
 d5478d49821d3a14c656c678acff86df  usr/share/zoneinfo/Asia/Dubai
 d653b6769713fb4fb4d79807db4f5b15  usr/share/zoneinfo/Asia/Dushanbe
-7aa5866f856196ec7557a46cbac3cdd8  usr/share/zoneinfo/Asia/Gaza
+43940b90a5c0fc7694910cb3b1efa5af  usr/share/zoneinfo/Asia/Gaza
 e4e07f977355fa6772e53eb7af19989e  usr/share/zoneinfo/Asia/Harbin
-5262e30c269af2723d89135e5ae2c85b  usr/share/zoneinfo/Asia/Hebron
+9b1658534075d1933cc7d55a101f9ceb  usr/share/zoneinfo/Asia/Hebron
 eda064cac86a9146d12254572aa80725  usr/share/zoneinfo/Asia/Hovd
 b6f6a9741e334d06893d825a206358b2  usr/share/zoneinfo/Asia/Irkutsk
 720a274190df2b172229d80dc72862fe  usr/share/zoneinfo/Asia/Jakarta
@@ -268,11 +269,11 @@ a8d98ea5913ddcacdd1b4bcf41ab5d1f  usr/share/zoneinfo/Canada/Pacific
 96372bcb8f6b257d3a357003c1cc444e  usr/share/zoneinfo/Canada/Yukon
 e596d67fecdef4498f5092600b628a89  usr/share/zoneinfo/Chile/Continental
 801ec22dce02304657ebb285cdafe24d  usr/share/zoneinfo/Chile/EasterIsland
-342e846a86fda89db7dd7774e4c8d479  usr/share/zoneinfo/Cuba
+1877fc45317e144ea206ddc622cebba2  usr/share/zoneinfo/Cuba
 16b84f2a83840fd4132c2e3fbff3b758  usr/share/zoneinfo/EET
 d0f150b6acc4dc78b8ada8abb1079af6  usr/share/zoneinfo/EST
 e7a28a1315bcd4deedaaac6d1c3cd3e2  usr/share/zoneinfo/EST5EDT
-fd472d962dfaed72d4446ffc301f6972  usr/share/zoneinfo/Egypt
+a1a6811340fae8c39359e3f3dcf65991  usr/share/zoneinfo/Egypt
 96df3646d31db7d3cfb729f25a4a37e1  usr/share/zoneinfo/Eire
 768398e41bf019d053d57c7b50624ff0  usr/share/zoneinfo/Etc/GMT+1
 37f1bfaa0549a9c1229e68556d0842db  usr/share/zoneinfo/Etc/GMT+10
@@ -311,7 +312,7 @@ f9db15e2ba6f8f1784f76b14a221e938  usr/share/zoneinfo/Europe/Budapest
 96039e70388d843950bcbef21328bba6  usr/share/zoneinfo/Europe/Copenhagen
 77fe14fec44142c1435dcc4eac003df4  usr/share/zoneinfo/Europe/Gibraltar
 b4911f55d68ccc195c4e41623885f124  usr/share/zoneinfo/Europe/Kaliningrad
-e354f6697f57e12b5d2d5380473eae41  usr/share/zoneinfo/Europe/Kiev
+f957769855be8b9d5983e51c033975d8  usr/share/zoneinfo/Europe/Kiev
 3242615a805f051357309a89874633f3  usr/share/zoneinfo/Europe/Luxembourg
 9adedd59faaf242a67cdfcdc9e7020fa  usr/share/zoneinfo/Europe/Madrid
 4c45462736658db028cc42532e44c9c9  usr/share/zoneinfo/Europe/Malta
@@ -323,7 +324,7 @@ dc4ea7e37ba20ea164845151f1d2966a  usr/share/zoneinfo/Europe/Nicosia
 1de02ec0eb9ca87219d19cde9582a48c  usr/share/zoneinfo/Europe/Riga
 58589fac16a76840389d9b451e971443  usr/share/zoneinfo/Europe/Samara
 9828f4466350e4529d97c04e85554430  usr/share/zoneinfo/Europe/San_Marino
-0117755e29e89d6bfa5aa9f29320a44e  usr/share/zoneinfo/Europe/Simferopol
+127c0490194d567125304e65046bca1b  usr/share/zoneinfo/Europe/Simferopol
 68e6be692f44b3ed696fd2e6ef806927  usr/share/zoneinfo/Europe/Sofia
 1b9ed89af7331c6141249d181b42c621  usr/share/zoneinfo/Europe/Stockholm
 68d72517db2252116d121d8624828ebf  usr/share/zoneinfo/Europe/Tallinn
@@ -354,7 +355,7 @@ d6cc761e496667ef984dc327c6ddc4a5  usr/share/zoneinfo/Indian/Mauritius
 42995adc75d3aeaeb0817142e65c10ba  usr/share/zoneinfo/Indian/Mayotte
 1342d1100aa31ec74572c9b6c96ca914  usr/share/zoneinfo/Indian/Reunion
 c3e2df9cdb360e3d102dd1d7cfc5b499  usr/share/zoneinfo/Iran
-1cf1e820a851875f9a59b9ee9bd1a5a2  usr/share/zoneinfo/Israel
+64090029aca03e4aab26171b4759b381  usr/share/zoneinfo/Israel
 8f62d7eb12dca6294a8dc221b752bef5  usr/share/zoneinfo/Jamaica
 f17769e8eb35e7a08cfedfe9b2f6b5ef  usr/share/zoneinfo/Japan
 468aa3286f4f8641d4a9b5315614f57b  usr/share/zoneinfo/Kwajalein
@@ -365,9 +366,6 @@ edec79f292e5b8c0d32b521af1f118bd  usr/share/zoneinfo/Libya
 35f1ad4dc2fa7a146f18bc3df28f4361  usr/share/zoneinfo/Mexico/BajaNorte
 2a157b818df8ab296baf6de38cd7d32b  usr/share/zoneinfo/Mexico/BajaSur
 cff58c6976849e1e8f94d4288b07b9d2  usr/share/zoneinfo/Mexico/General
-a466e096ecdd09992c1515e09bb65301  usr/share/zoneinfo/Mideast/Riyadh87
-5b130cbaf52aa0a080853e0ffb1ab123  usr/share/zoneinfo/Mideast/Riyadh88
-0740ee383c6065f05042f450157639aa  usr/share/zoneinfo/Mideast/Riyadh89
 2bcf2f33917bed5122c58a4f208066a9  usr/share/zoneinfo/NZ
 9d9d022e2243a3d0bfd667cfeaf58858  usr/share/zoneinfo/NZ-CHAT
 02b73b0cf0d96e2f75cae56b178bf58e  usr/share/zoneinfo/Navajo
@@ -377,7 +375,7 @@ c9452f6b9e08d83c6815c38600798964  usr/share/zoneinfo/PST8PDT
 dc9f9111b4d4af1ef36ac45378abeeee  usr/share/zoneinfo/Pacific/Efate
 d02e35ce24b2c2441e48777753f3808a  usr/share/zoneinfo/Pacific/Enderbury
 e5ebecaf9fd19fde1716248c4cfd74cf  usr/share/zoneinfo/Pacific/Fakaofo
-d8dc1c2a061c98dd257051223dca7a24  usr/share/zoneinfo/Pacific/Fiji
+a3e819ecd8cd826eb52a9d92ae41795a  usr/share/zoneinfo/Pacific/Fiji
 179b0c8ba50fabc81738d030f18aedb6  usr/share/zoneinfo/Pacific/Funafuti
 ca8c75f875c8cad250a151634a444e5b  usr/share/zoneinfo/Pacific/Galapagos
 72ee1f15d9d59d8dc9f2407b68ae9834  usr/share/zoneinfo/Pacific/Guadalcanal
@@ -418,7 +416,7 @@ cd701cd27b7cdd61ff7d71259b0f1f82  usr/share/zoneinfo/SystemV/PST8
 685e6cae6f7d63e690bf35b955ff4afb  usr/share/zoneinfo/SystemV/PST8PDT
 1bdad4b918931a29d41c202f92e72ccf  usr/share/zoneinfo/SystemV/YST9
 cc6f572873b04b8684bdb1cf7de1f66a  usr/share/zoneinfo/SystemV/YST9YDT
-d243875439adb3b667e82af04ad8be63  usr/share/zoneinfo/Turkey
+56c26bbc53d7d8dc661da4ccfc1d78bf  usr/share/zoneinfo/Turkey
 790522aeaf1fe3fcdea3f3aead32a27e  usr/share/zoneinfo/UCT
 72534a816882e0ac2ac52595677ef81c  usr/share/zoneinfo/US/Aleutian
 660e305e3bb438c0ae8819055ed9352f  usr/share/zoneinfo/US/East-Indiana
@@ -589,11 +587,12 @@ b4d758ecac31facd76a4cd02f328a9e8  usr/share/zoneinfo/right/Antarctica/Mawson
 114da8444456b989316ce5cc244cb7d8  usr/share/zoneinfo/right/Antarctica/Palmer
 fe92acb79e0853a0d5a16f6ca2c4d650  usr/share/zoneinfo/right/Antarctica/Rothera
 095671282e8b76566a0ebf940fffccd0  usr/share/zoneinfo/right/Antarctica/Syowa
+d898d925699a6fbdb7e5e5ad04e9c6c0  usr/share/zoneinfo/right/Antarctica/Troll
 9707b79b3650fa305a372d6a4395a54c  usr/share/zoneinfo/right/Antarctica/Vostok
 419193258c1483f33d438b72cd3c5e5f  usr/share/zoneinfo/right/Arctic/Longyearbyen
 5771206b097a7c59073b8a0ab7ba42c0  usr/share/zoneinfo/right/Asia/Aden
 c75d825c31d805de34c0971a6244a089  usr/share/zoneinfo/right/Asia/Almaty
-0045d5c812a208062bc5757cbdabc3ff  usr/share/zoneinfo/right/Asia/Amman
+725d9f86cd604e9f70d20e6027102391  usr/share/zoneinfo/right/Asia/Amman
 954b7a09fd9de90f4179ebf124808944  usr/share/zoneinfo/right/Asia/Anadyr
 284a3e2c9d4928665264226c6e13be5e  usr/share/zoneinfo/right/Asia/Aqtau
 40d91c0cacb6428cf2cb11e259c39a45  usr/share/zoneinfo/right/Asia/Aqtobe
@@ -614,9 +613,9 @@ dac7c089eca9f7ae4b128e500f036e66  usr/share/zoneinfo/right/Asia/Colombo
 eb644e38c734994d9fe59c37c9d10b78  usr/share/zoneinfo/right/Asia/Dili
 6560daa62278250b38f51dabf36185d3  usr/share/zoneinfo/right/Asia/Dubai
 57039935789ba440a7358abdac86efd0  usr/share/zoneinfo/right/Asia/Dushanbe
-3a7ec0fc71805774a6c50d77521b9a35  usr/share/zoneinfo/right/Asia/Gaza
+c41b3038388b56927a16d01fd35716c4  usr/share/zoneinfo/right/Asia/Gaza
 1d0557745f0a3ff005f73f722111ba76  usr/share/zoneinfo/right/Asia/Harbin
-69fddde9dab0ba72fd515e95fa37ee7e  usr/share/zoneinfo/right/Asia/Hebron
+405df9c68d4882286fe587f02069ea94  usr/share/zoneinfo/right/Asia/Hebron
 1babb2f20ea63055328cdd08de048aa2  usr/share/zoneinfo/right/Asia/Hovd
 439066b61bfcfcf62dc5f6e54e5f867a  usr/share/zoneinfo/right/Asia/Irkutsk
 fa3358fbef8fea266a7209f90f4dc6c6  usr/share/zoneinfo/right/Asia/Jakarta
@@ -696,11 +695,11 @@ e0f28a3a9d94bdfcd124425ec82f1f82  usr/share/zoneinfo/right/Canada/Newfoundland
 1194e6e959855be965053c13a41a247a  usr/share/zoneinfo/right/Canada/Yukon
 6eed8135a7b4f8258cb8404a2caf6a8c  usr/share/zoneinfo/right/Chile/Continental
 0b5b5b7755da69d0748e60eca4ac2bfe  usr/share/zoneinfo/right/Chile/EasterIsland
-23a16d1258357564913c59988bd1c0da  usr/share/zoneinfo/right/Cuba
+14ea0b82370a45bda1a2297ac528b3ea  usr/share/zoneinfo/right/Cuba
 315b90f66c2991d09483cea458fa9223  usr/share/zoneinfo/right/EET
 d9efe385b6e0c50e5bab854dc407d181  usr/share/zoneinfo/right/EST
 abbe85d6ac6f4d6bfde30c35edbaaff1  usr/share/zoneinfo/right/EST5EDT
-d575a4169257ccfa0581342a2225e8ca  usr/share/zoneinfo/right/Egypt
+6c25433b99b7d8efbfa05f1b31f9de44  usr/share/zoneinfo/right/Egypt
 86ccdd333d690607b98f82935fcefba4  usr/share/zoneinfo/right/Eire
 3a3c698a5210727d86285227b8d291d4  usr/share/zoneinfo/right/Etc/GMT+1
 b31a37a93453190d4d0ee4a1210ff601  usr/share/zoneinfo/right/Etc/GMT+10
@@ -739,7 +738,7 @@ c6bde25d0bdd2698e5b3a7fe551e5882  usr/share/zoneinfo/right/Europe/Bucharest
 8b8f53de8984ca7c4c5c2976694ef902  usr/share/zoneinfo/right/Europe/Copenhagen
 41a0bdd18e9db5ee214f2be9e13130c8  usr/share/zoneinfo/right/Europe/Gibraltar
 ffa7e09493447274c0b8b5acbd8b3103  usr/share/zoneinfo/right/Europe/Kaliningrad
-23b3d96248eddb0b97fcaaa6752bbbee  usr/share/zoneinfo/right/Europe/Kiev
+34a4ae237a314244b4d29760b725be1f  usr/share/zoneinfo/right/Europe/Kiev
 ed962b7ac145b6980fa3530a3928c73e  usr/share/zoneinfo/right/Europe/Luxembourg
 9a983d58a771f48a7eeee1b16b3d6300  usr/share/zoneinfo/right/Europe/Madrid
 cffb2032b415e1125deadfa9bdbf0f44  usr/share/zoneinfo/right/Europe/Malta
@@ -751,7 +750,7 @@ d130eafad97891110ce6a58ab06d5376  usr/share/zoneinfo/right/Europe/Paris
 b9ccfbbdd3d006f7ba17151f5a114e0f  usr/share/zoneinfo/right/Europe/Riga
 e8b9f3be2e85c22440504dd235938ca0  usr/share/zoneinfo/right/Europe/Samara
 251359f28c1a73caab49fe026160900c  usr/share/zoneinfo/right/Europe/San_Marino
-16cd2132f514c99155d433cdf808de86  usr/share/zoneinfo/right/Europe/Simferopol
+49da769c992c176ba38aeeb5590b716c  usr/share/zoneinfo/right/Europe/Simferopol
 ca048a1b80c64f3de43c071b1fa0e2ef  usr/share/zoneinfo/right/Europe/Sofia
 b2d0ac5dfded89036c5b1fd3f54a26d5  usr/share/zoneinfo/right/Europe/Stockholm
 9038c0daba2a6b1d6537e609a27a73e2  usr/share/zoneinfo/right/Europe/Tallinn
@@ -782,7 +781,7 @@ cda6351611a4982a940c26a511f14d3f  usr/share/zoneinfo/right/Indian/Mauritius
 a66e9eaf4e95372069e1f5e8c0cfe95c  usr/share/zoneinfo/right/Indian/Mayotte
 6432e30754240225fd6ee80a53ae7618  usr/share/zoneinfo/right/Indian/Reunion
 3d963d0744d17862de184dd4a9f72e57  usr/share/zoneinfo/right/Iran
-a5518e57c1fa5ed5c782f965b9c448a1  usr/share/zoneinfo/right/Israel
+b996baf9d3f08dc528834cf280a0046e  usr/share/zoneinfo/right/Israel
 e612f9d4fe634c6cdf654317b7eea4ab  usr/share/zoneinfo/right/Jamaica
 e7247a842e1c14eaabe5fd34452de701  usr/share/zoneinfo/right/Japan
 005f0b381e79df21a4771ef44d2dc2d5  usr/share/zoneinfo/right/Kwajalein
@@ -793,9 +792,6 @@ f0dd7e51d473a5c2740a565163ad20af  usr/share/zoneinfo/right/MST
 7c5e5c1d10cc4b01e339a39ec230dec4  usr/share/zoneinfo/right/Mexico/BajaNorte
 e540ca76c5c346c0bd779b66820ae04e  usr/share/zoneinfo/right/Mexico/BajaSur
 4a0d3a0eaa79255606a07acbe68f42b7  usr/share/zoneinfo/right/Mexico/General
-7b2bab0f6ebd3520f1f19731812fd9b4  usr/share/zoneinfo/right/Mideast/Riyadh87
-2b6f20ac42cd8870cb18aa8238048693  usr/share/zoneinfo/right/Mideast/Riyadh88
-420d83fb4495ae9102574ccc01a477d8  usr/share/zoneinfo/right/Mideast/Riyadh89
 7dab5fa0823d613280c61c4907553715  usr/share/zoneinfo/right/NZ
 b55bfd522e4939a86b2ab43b4b5d7f17  usr/share/zoneinfo/right/NZ-CHAT
 c39f9ae4f39cd4b02bf8310c3cb235a2  usr/share/zoneinfo/right/Navajo
@@ -805,7 +801,7 @@ c39f9ae4f39cd4b02bf8310c3cb235a2  usr/share/zoneinfo/right/Navajo
 d7615196610eff0e34e202f46c8c7ab9  usr/share/zoneinfo/right/Pacific/Efate
 993f91677a4f74a6c3641a1440fc693c  usr/share/zoneinfo/right/Pacific/Enderbury
 6f4a94841d1efa304ecb986cb8e674b0  usr/share/zoneinfo/right/Pacific/Fakaofo
-483dc01e376fc1294941d26d36c6bda0  usr/share/zoneinfo/right/Pacific/Fiji
+aa85515e260650b6677ed9c23420392f  usr/share/zoneinfo/right/Pacific/Fiji
 11814a415b54c7673ed0223631608b0d  usr/share/zoneinfo/right/Pacific/Funafuti
 9a0f6f4857ce6ce5dc3d899b91c5da8d  usr/share/zoneinfo/right/Pacific/Galapagos
 0dd524a7756691f2887fdb512e76311c  usr/share/zoneinfo/right/Pacific/Guadalcanal
@@ -847,7 +843,7 @@ f7b318e325acc52c69fbdf83b574de84  usr/share/zoneinfo/right/SystemV/HST10
 9d0eaadf9d9cf13d0df26dd78c696dde  usr/share/zoneinfo/right/SystemV/PST8PDT
 7ac8b5dd5ec401426a33b76d094c938d  usr/share/zoneinfo/right/SystemV/YST9
 e87db7939afeeb0ca751d70037702d3c  usr/share/zoneinfo/right/SystemV/YST9YDT
-bcbc18d63a779a7fb14fec2d73146978  usr/share/zoneinfo/right/Turkey
+60899f72dcbd60e64e0047791340ee1b  usr/share/zoneinfo/right/Turkey
 e3830edb08e4c61ff28b90ce3579a240  usr/share/zoneinfo/right/UCT
 6ebf7ba2decaff26c5d249717267a0a7  usr/share/zoneinfo/right/US/Aleutian
 52ddeb612b94e2dcd8634f56ae527cec  usr/share/zoneinfo/right/US/East-Indiana
@@ -857,4 +853,4 @@ ddceef09a39a98aff51d9bea955b56b3  usr/share/zoneinfo/right/US/Michigan
 4a1526f8449ac322badd9d0cf9289a74  usr/share/zoneinfo/right/W-SU
 859d313d2a2937d743127bc68267eaf5  usr/share/zoneinfo/right/WET
 281edab935eb93fc5eb17fd0922958a0  usr/share/zoneinfo/right/Zulu
-11a04ee0312cfaf4bb4f146666d7dd0d  usr/share/zoneinfo/zone.tab
+81c43daeb1d6b00c119b922cd35c8af0  usr/share/zoneinfo/zone.tab

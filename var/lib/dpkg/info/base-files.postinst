@@ -32,6 +32,18 @@ migrate_directory() {
   fi
 }
 
+update_to_current_default() {
+  if [ -f /etc/$1 ]; then
+    md5=`md5sum /etc/$1 | cut -f 1 -d " "`
+    if grep -q "$md5" /usr/share/base-files/$1.md5sums; then
+      if ! cmp -s /usr/share/base-files/$1 /etc/$1; then
+        cp -p /usr/share/base-files/$1 /etc/$1
+        echo Updating /etc/$1 to current default.
+      fi
+    fi
+  fi
+}
+
 if [ ! -e /etc/dpkg/origins/default ]; then
   if [ -e /etc/dpkg/origins/debian ]; then
     ln -sf debian /etc/dpkg/origins/default
@@ -107,15 +119,8 @@ if [ ! -f /usr/info/dir ] && [ ! -f /usr/share/info/dir ]; then
 fi
 
 if [ "$1" = "configure" ] && [ "$2" != "" ]; then
-  if [ -f /etc/profile ]; then
-    md5=`md5sum /etc/profile | cut -f 1 -d " "`
-    if grep -q "$md5" /usr/share/base-files/profile.md5sums; then
-      if ! cmp -s /usr/share/base-files/profile /etc/profile; then
-        cp -p /usr/share/base-files/profile /etc/profile
-        echo Updating /etc/profile to current default.
-      fi
-    fi
-  fi
+  update_to_current_default profile
+  update_to_current_default nsswitch.conf
 fi
 
 if dpkg --compare-versions "$2" lt-nl "6.10"; then

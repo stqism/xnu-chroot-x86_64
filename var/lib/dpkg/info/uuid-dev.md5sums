@@ -1,8 +1,8 @@
 35a97c82d22737936a4ba8fb6924bcd4  usr/include/uuid/uuid.h
-f8a5554f4308367c83c85d609bcf1ae2  usr/lib/x86_64-linux-gnu/libuuid.a
+567a54b7e4de1c48123391cbdcd3b753  usr/lib/x86_64-linux-gnu/libuuid.a
 00f110565d1bef4ec4b0390cf09351f7  usr/lib/x86_64-linux-gnu/pkgconfig/uuid.pc
 790c274b92d47a2e72e494cbfcea75bf  usr/share/doc/uuid-dev/README.Debian
-34c1eda6ec358789799f47e59f3d7ebf  usr/share/doc/uuid-dev/changelog.Debian.gz
+361f57395f2926405574ff0813886812  usr/share/doc/uuid-dev/changelog.Debian.gz
 9423346b962b53fe2ea6cb6e66f32108  usr/share/doc/uuid-dev/changelog.gz
 e83ea606c16ac2e3ac057f245065933d  usr/share/doc/uuid-dev/copyright
 3587d503c0f0aeddf88df34eb587df25  usr/share/man/man3/uuid.3.gz

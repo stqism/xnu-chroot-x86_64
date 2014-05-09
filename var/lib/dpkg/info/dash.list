@@ -13,6 +13,8 @@
 /usr/share/doc/dash/NEWS.Debian.gz
 /usr/share/doc/dash/README.Debian.diet
 /usr/share/doc/dash/README.source
+/usr/share/man
+/usr/share/man/man1
 /usr/share/man/man1/dash.1.gz
 /bin/sh
 /usr/share/man/man1/sh.1.gz

@@ -1,10 +1,10 @@
 /.
 /usr
-/usr/lib
-/usr/lib/libbind9.so.90.0.7
 /usr/share
 /usr/share/doc
 /usr/share/doc/libbind9-90
-/usr/share/doc/libbind9-90/changelog.Debian.gz
 /usr/share/doc/libbind9-90/copyright
+/usr/share/doc/libbind9-90/changelog.Debian.gz
+/usr/lib
+/usr/lib/libbind9.so.90.0.9
 /usr/lib/libbind9.so.90

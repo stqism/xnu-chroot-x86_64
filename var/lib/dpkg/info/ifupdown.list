@@ -27,7 +27,10 @@
 /usr/share/lintian
 /usr/share/lintian/overrides
 /usr/share/lintian/overrides/ifupdown
+/usr/share/man
+/usr/share/man/man8
 /usr/share/man/man8/ifup.8.gz
+/usr/share/man/man5
 /usr/share/man/man5/interfaces.5.gz
 /usr/share/doc
 /usr/share/doc/ifupdown
@@ -50,5 +53,5 @@
 /usr/share/doc/ifupdown/examples/bridge
 /sbin/ifquery
 /sbin/ifdown
-/usr/share/man/man8/ifquery.8.gz
 /usr/share/man/man8/ifdown.8.gz
+/usr/share/man/man8/ifquery.8.gz

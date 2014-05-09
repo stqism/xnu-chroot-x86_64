@@ -222,6 +222,36 @@ then
 	fi
 fi
 
+#
+# Install runsystem.sysv on Hurd.
+#
+if [ "$(uname -s)" = GNU ]
+then
+	get_runsystem() {
+	    update-alternatives --query runsystem \
+		| sed -n -e '/^Value:/s|.*\.||p'
+	}
+
+	current="$(get_runsystem)"
+	update-alternatives --quiet \
+		--install /etc/hurd/runsystem runsystem \
+		/etc/hurd/runsystem.sysv 10 \
+		--slave /sbin/halt halt /sbin/halt-sysv \
+		--slave /sbin/reboot reboot /sbin/reboot-sysv
+	new="$(get_runsystem)"
+
+	if [ "$current" != "$new" ]; then
+	    echo "Switching from runsystem.$current to runsystem.$new."
+	    echo
+	fi
+
+	echo "You can use update-alternatives --config runsystem to select"
+	echo "the runsystem to use."
+	echo
+	echo "You must use halt-hurd or reboot-hurd to halt or reboot the"
+	echo "system whenever you change the runsystem."
+fi
+
 # Ensure we have a random seed on first boot.
 if [ "$PREV_VER" = "" ]; then
 	if which invoke-rc.d >/dev/null 2>&1

@@ -8,5 +8,5 @@ a82bd92a20c7d2183752a437a1783470  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/
 b39d93296db9377775414666dc81d11a  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/objc.h
 3c38c35f72280576eb355f54250b4a43  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/runtime.h
 6ce842e0fc7df1a703d91bee83e4e878  usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc/thr.h
-824a9959baf76eefca1c184c8c154bc0  usr/lib/gcc/x86_64-linux-gnu/4.8/libobjc.a
-4e2d6aa3443e90ee424b9ac7615fa22d  usr/lib/gcc/x86_64-linux-gnu/4.8/libobjc_gc.a
+ae80a9c809bc380105cbde31126a74c0  usr/lib/gcc/x86_64-linux-gnu/4.8/libobjc.a
+488cddf1127a5ea60ed55168bd75fd4c  usr/lib/gcc/x86_64-linux-gnu/4.8/libobjc_gc.a

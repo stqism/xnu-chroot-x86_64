@@ -1,3 +1,134 @@
+[2014-02-10] Version 0.6.10
+
+Note that 0.6.9 was an experimental release.  Most of the changes it
+contained are temporarily reverted, but they will return.
+
+- New features:
+
+  * New sort policy 'installsizechange', for sorting by change in installed size
+    of each package when the desired actions are applied (Closes: #676075)
+
+- Bug fixes:
+
+  * Fix segfault and show the correct changelog when executing "aptitude
+    changelog <source-package-name>", and no binary packages in that source
+    package match the source package name (Closes: #723821)
+
+  * Use new URL to grab changelogs, redirections were set up so it is not
+    currently a problem, but the new location seems to be the canonical place
+    for metadata (Closes: #708345)
+
+  * Fix incorrect results with some sorting policies (Closes: #720750)
+
+- Internal changes:
+
+  * Change INCLUDES to AM_CPPFLAGS in automake files to avoid warning:
+    "'INCLUDES' is the old name for 'AM_CPPFLAGS' (or '*_CPPFLAGS')"
+
+- Documentation:
+
+  * Update manual to refer to canonical git repository.
+
+- Translation updates:
+
+  * Improve and explain some translation messages, thanks helix84@centrum.sk
+    (Closes: #537858).
+
+
+[2014-01-26] Version 0.6.8.4
+
+- New features:
+
+  * Get changelogs also when package origin is from "Debian Backports" and not
+    only "Debian", thanks Gerfried Fuchs (Closes: #714619)
+  * New sort policy 'debsize' for sorting by package size, thanks Marcel Partap
+  * Add "Reinstall (shortcut L)" to the package menu (Closes: #633788)
+  * Add descriptions for sections introduced in 2011 (education, introspection,
+    metapackages) (Closes: #674681)
+
+- Bug fixes:
+
+  * Do not group packages as tasks based on their name, rather, use their
+    section (Closes: #679602)
+  * Change AC_ARG_ENABLE(package-state-loc, ...) for
+    AC_ARG_WITH(package-state-loc, ...), and the same for "lock-loc", to fix
+    inconsistency/bug in the configure file.  Thanks Jeremy Laine (Closes:
+    #399757)
+  * Correct slightly the error message when the invocation of dpkg fails to
+    perform an operation (Closes: #348758)
+
+- Documentation:
+
+  * Improve description and fix typo for the "show" command in man page, thanks
+    Regid Ichira (Closes: #692173)
+
+- Translation updates:
+
+  * Fix inconsistent German translations (Closes: #720186)
+  * Fix important error in translation in Spanish manpage, thanks Martintxo
+    (Closes: #727815)
+  * Fix error in Spanish translation, thanks Manolo Díaz (Closes: #716669)
+
+[2014-01-19] Version 0.6.8.3
+
+- Bug fixes:
+
+  * Avoid segfault with some status line formats (Closes: #714186)
+    * src/pkg_columnizer.cc (setup_column): Avoid a crash by checking that the
+      current item is really a package before accessing package properties.
+
+- Build system changes:
+
+  * Fix FTBFS with g++-4.8 by removing unused typedefs (Closes: #701243)
+    * src/generic/apt/aptitude_resolver.universe.cc
+    * src/generic/apt/resolver_manager.cc
+    * src/generic/problemresolver/choice.h
+
+  * Support Boost 1.53 (Closes: #710208)
+    * configure.ac: Determine the return type of boost::make_shared.
+    * src/generic/util/sqlite.h: Use that information.
+    * src/generic/util/sqlite.h (statement, blob): Also befriend the new
+      boost::make_shared prototype.  Some better solution may be possible at a
+      later point, this is enough for now.
+    * src/cmdline/mocks/terminal.h: Remove predefinition of boost::make_shared
+      that conflicts with Boost 1.53.
+
+  * Update support for automake and similar tools (autogen.sh)
+    * Do not restrict them to -1.11, use default instead
+    * Add --copy to automake, otherwise creates symbolic links
+
+- Internal changes:
+
+  * task_list is not extern
+    * src/generic/apt/tasks.h:
+    * src/pkg_grouppolicy.cc: Variable task_list is only used within tasks.cc,
+      and need not be extern.
+
+- Documentation:
+
+  * Replace solitary use of "visual mode" with "visual interface" in
+    doc/en/aptitude.xml
+
+  * Typo in manual: 'Apt::AutoRemove::InstallRecommends' should be
+    'RecommendsImportant' in doc/en/manpage.xml
+
+- Translation updates:
+
+  * Russian translation of documentation.  Thanks to Lev Lamberov and the
+    Russian localization team.
+
+  * Refresh of .pot and .po files with respect to current source
+  * Some config item strings should be the same width
+    * po/*.po: Use whitespace to adjust the widths where they differ.
+    * src/apt_config_treeitems.cc: Add comment for translators.
+  * German, by Benjamin Weis and Holger Wansing (Closes: #729329)
+  * Japanese (Closes: #728115)
+  * Russian by Yuri Kozlov (Closes: #725280)
+  * Asturian by Inigo Varela (Closes: #698512)
+  * Danish by Morten Bo Johansen (Closes: #700885)
+  * French by David Prévot (Closes: #693323)
+    * Fixed error close to line 3048 due to mismatch in parameters
+
 [9/7/2012]
 Version 0.6.8.2                             "Say 'what' again"
 

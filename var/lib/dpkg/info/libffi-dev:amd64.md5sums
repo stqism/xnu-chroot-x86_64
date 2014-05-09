@@ -1,7 +1,7 @@
 aff90b107c3bd3595bfd25b581d9f8fc  usr/include/x86_64-linux-gnu/ffi.h
 34d8d698b5ee139fa134d9c84da01880  usr/include/x86_64-linux-gnu/ffitarget.h
-b75f72db09f6a5fdaac0f45a00fe932b  usr/lib/x86_64-linux-gnu/libffi.a
-3e48c5bfa0809b54fd2b1c44caa4dff1  usr/lib/x86_64-linux-gnu/libffi_pic.a
+34a964ac2282dca0ad2fead015ea8203  usr/lib/x86_64-linux-gnu/libffi.a
+2bd0e16010b707cc38e0fd51928b1372  usr/lib/x86_64-linux-gnu/libffi_pic.a
 dffcc3dc0e32992601d8e5ad8e33fc40  usr/lib/x86_64-linux-gnu/pkgconfig/libffi.pc
 abc97e22697fb6b9c85440ff1271d2a8  usr/share/doc-base/libffi
 36c35e71cba2891ebc28f0bdead5b5f8  usr/share/doc/libffi6/ChangeLog.libffi.gz
@@ -22,8 +22,7 @@ ba3399c1603e9045df27d8b7c49815b4  usr/share/doc/libffi6/html/The-Closure-API.htm
 fb7a8216ee9a37f8bcd93bba92cdbf4d  usr/share/doc/libffi6/html/Types.html
 493090604a62529526edbfd3ddc401e9  usr/share/doc/libffi6/html/Using-libffi.html
 1482c892b00b3a2b7d33759350f26d40  usr/share/doc/libffi6/html/index.html
-b6af5483df67e7b2c4a22fd3e78c3a91  usr/share/doc/libffi6/test_results_bi32_x86_64-linux-gnu.txt
-8ff81ad5313b0a74c515ba479a0f9087  usr/share/doc/libffi6/test_results_x86_64-linux-gnu.txt
+a507ddbe2f2fe80fd9745e53451d9af5  usr/share/doc/libffi6/test_results_x86_64-linux-gnu.txt
 b7ec720a6fc09a59ad150e3aaeaf2425  usr/share/info/libffi.info.gz
 e36429510654ef6a7f74aaaa8feec9b2  usr/share/man/man3/ffi.3.gz
 25b59b47bbbd635ec9294dbaa6e2f936  usr/share/man/man3/ffi_call.3.gz

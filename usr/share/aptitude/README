@@ -1,6 +1,6 @@
                              aptitude user's manual
 
-Version 0.6.8.2
+Version 0.6.10
 
   Daniel Burrows
 
@@ -378,8 +378,8 @@ How can I get aptitude?
        file)
 
    Once all the required components are available, open a terminal and
-   execute the command tar zxf aptitude-0.6.8.2.tar.gz to unpack the source
-   code. Once the source code is unpacked, type cd aptitude-0.6.8.2 &&
+   execute the command tar zxf aptitude-0.6.10.tar.gz to unpack the source
+   code. Once the source code is unpacked, type cd aptitude-0.6.10 &&
    ./configure && make to compile aptitude. If this succeeds, make sure you
    are the root user (by using su, for instance), then type make install to
    install aptitude on your computer. Once aptitude is successfully
@@ -392,7 +392,7 @@ How can I get aptitude?
    If you want to test the latest bleeding-edge source code for aptitude, you
    can download unreleased aptitude source code using Git. Install Git
    (available from http://git-scm.com/) and execute the command git clone
-   git://git.debian.org/git/aptitude/aptitude.git to retrieve the most recent
+   git://anonscm.debian.org/aptitude/aptitude.git to retrieve the most recent
    source code.
 
    [Warning] Warning
@@ -1511,6 +1511,9 @@ The aptitude terminal user interface
    | Package -> Install (+) | Flag the currently selected package for       |
    |                        | installation.                                 |
    |------------------------+-----------------------------------------------|
+   | Package -> Reinstall   | Flag the currently selected package for       |
+   | (L)                    | reinstallation.                               |
+   |------------------------+-----------------------------------------------|
    | Package -> Remove (-)  | Flag the currently selected package for       |
    |                        | removal.                                      |
    |------------------------+-----------------------------------------------|
@@ -2077,11 +2080,11 @@ Managing packages
    |                         | distribution, so they can avoid known-bad    |
    |                         | versions of packages.                        |
    |-------------------------+----------------------------------------------|
-   |                         | Reinstalls the package.                      |
+   |                         | Flag the current package for reinstallation. |
    |                         |                                              |
    |                         | Note that the reinstallation will not be     |
-   |                         | saved when you quit aptitude or perform an   |
-   | Reinstall: press L      | install run, for technical reasons           |
+   | Reinstall: Package ->   | saved when you quit aptitude or perform an   |
+   | Reinstall (L)           | install run, for technical reasons           |
    |                         | (essentially, the underlying software layers |
    |                         | (dpkg and apt) do not provide any way to     |
    |                         | find out whether a reinstallation was        |
@@ -3848,10 +3851,10 @@ Customizing aptitude
           selected package; in the command-line search, this is the package
           being displayed.
 
-    Escape       Name      Default size  Expandable        Description
+    Escape       Name       Default size Expandable        Description
                                                     This is not really an
                                                     escape; it simply inserts
-   %%       Literal %      1             No         a percent sign into the
+   %%       Literal %       1            No         a percent sign into the
                                                     output at the point at
                                                     which it occurs.
                                                     In some circumstances, a
@@ -3859,7 +3862,7 @@ Customizing aptitude
                                                     will have "parameters":
                                                     for instance, in the
                                                     command-line search, the
-   %#number Parameter      Variable      No         groups matched by the
+   %#number Parameter       Variable     No         groups matched by the
             Replacement                             search are used as
                                                     parameters when
                                                     displaying the result.
@@ -3868,67 +3871,67 @@ Customizing aptitude
                                                     indicated by number.
                                                     A single-character flag
                                                     summarizing any action to
-   %a       Action Flag    1             No         be performed on the
+   %a       Action Flag     1            No         be performed on the
                                                     package, as described in
                                                     Figure 2.10, "Values of
                                                     the "action" flag".
                                                     A somewhat more verbose
-   %A       Action         10            No         description of the action
+   %A       Action          10           No         description of the action
                                                     to be performed on the
                                                     package.
                                                     If there are no broken
                                                     packages, produces
                                                     nothing. Otherwise,
-   %B       Broken Count   12            No         produces a string such as
+   %B       Broken Count    12           No         produces a string such as
                                                     "Broken: 10" describing
                                                     the number of broken
                                                     packages.
                                                     A single-character flag
                                                     summarizing the current
-   %c       Current State  1             No         state of the package, as
+   %c       Current State   1            No         state of the package, as
             Flag                                    described in Figure 2.9,
                                                     "Values of the "current
                                                     state" flag".
                                                     A more verbose
-   %C       Current State  11            No         description of the
+   %C       Current State   11           No         description of the
                                                     current state of the
                                                     package.
-   %d       Description    40            Yes        The package's short
+   %d       Description     40           Yes        The package's short
                                                     description.
                                                     The size of the package
-   %D       Package Size   8             No         file containing the
+   %D       Package Size    8            No         file containing the
                                                     package.
                                                     The name of the computer
-   %H       Hostname       15            No         on which aptitude is
+   %H       Hostname        15           No         on which aptitude is
                                                     running.
                                                     Displays the highest
                                                     priority assigned to a
                                                     package version; for
-   %i       Pin priority   4             No         packages, displays the
+   %i       Pin priority    4            No         packages, displays the
                                                     priority of the version
                                                     which will be forced to
                                                     be installed (if any).
                                                     The (estimated) amount of
-   %I       Installed Size 8             No         space the package takes
+   %I       Installed Size  8            No         space the package takes
                                                     up on disk.
-   %m       Maintainer     30            Yes        The maintainer of the
+   %m       Maintainer      30           Yes        The maintainer of the
                                                     package.
                                                     If the package is
-   %M       Automatic Flag 1             No         automatically installed,
+   %M       Automatic Flag  1            No         automatically installed,
                                                     outputs "A"; otherwise,
                                                     outputs nothing.
-            Program        The length of            Outputs the version of
-   %n       Version        "0.6.8.2".    No         aptitude that is running,
-                                                    currently "0.6.8.2".
-                           The length of            Outputs the name of the
-   %N       Program Name   the name.     No         program; usually
+                            The length              Outputs the version of
+   %n       Program Version of "0.6.10". No         aptitude that is running,
+                                                    currently "0.6.10".
+                            The length              Outputs the name of the
+   %N       Program Name    of the name. No         program; usually
                                                     "aptitude".
                                                     If no packages are going
                                                     to be installed, outputs
                                                     nothing. Otherwise,
                                                     outputs a string
                                                     describing the total size
-   %o       Download Size  17            No         of all the package files
+   %o       Download Size   17           No         of all the package files
                                                     which will be installed
                                                     (an estimate of how much
                                                     needs to be downloaded);
@@ -3937,53 +3940,53 @@ Customizing aptitude
                                                     Outputs the name of the
                                                     package. When a package
                                                     is displayed in a tree
-   %p       Package Name   30            Yes        context, the name of the
+   %p       Package Name    30           Yes        context, the name of the
                                                     package will be indented,
                                                     if possible, according to
                                                     its depth in the tree.
-   %P       Priority       9             No         Outputs the priority of
+   %P       Priority        9            No         Outputs the priority of
                                                     the package.
                                                     Outputs the approximate
-   %r       Reverse        2             No         number of installed
-            Depends Count                           packages which depend
+   %r       Reverse Depends 2            No         number of installed
+            Count                                   packages which depend
                                                     upon the package.
                                                     Outputs an abbreviated
             Abbreviated                             description of the
-   %R       Priority       3             No         package's priority: for
+   %R       Priority        3            No         package's priority: for
                                                     instance, "Important"
                                                     becomes "Imp".
-   %s       Section        10            No         Outputs the section of
+   %s       Section         10           No         Outputs the section of
                                                     the package.
                                                     If the package is
-   %S       Trust Status   1             No         untrusted, displays the
+   %S       Trust Status    1            No         untrusted, displays the
                                                     letter "U".
-   %t       Archive        10            Yes        The archive in which the
+   %t       Archive         10           Yes        The archive in which the
                                                     package is found.
                                                     Outputs "*" if the
-   %T       Tagged         1             No         package is tagged,
+   %T       Tagged          1            No         package is tagged,
                                                     nothing otherwise.^[19]
                                                     If the scheduled actions
                                                     will alter the amount of
             Disk Usage                              space used on the disk,
-   %u       Change         30            No         outputs a description of
+   %u       Change          30           No         outputs a description of
                                                     the change in disk space;
                                                     for instance, "Will use
                                                     100MB of disk space."
                                                     Outputs the currently
-            Current                                 installed version of the
-   %v       Version        14            No         package, or <none> if the
+                                                    installed version of the
+   %v       Current Version 14           No         package, or <none> if the
                                                     package is not currently
                                                     installed.
                                                     Outputs the version of
                                                     the package which would
             Candidate                               be installed if Package
-   %V       Version        14            No         -> Install (+) were
+   %V       Version         14           No         -> Install (+) were
                                                     issued on the package, or
                                                     <none> if the package is
                                                     not currently available.
                                                     Outputs how much
                                                     additional space will be
-   %Z       Size Change    9             No         used or how much space
+   %Z       Size Change     9            No         used or how much space
                                                     will be freed by
                                                     installing, upgrading, or
                                                     removing a package.
@@ -4233,6 +4236,17 @@ Customizing aptitude
 
            Sorts packages by the estimated amount of size they require when
            installed.
+
+   installsizechange
+
+           Sorts packages by the change in the installed size (estimated
+           amount of size required when installed), comparing the current
+           version (if installed) and the candidate version to be installed,
+           upgraded or removed.
+
+   debsize
+
+           Sorts packages by the size of the package.
 
    name
 
@@ -5606,8 +5620,9 @@ Customizing aptitude
    is. Every occurrence of the -v command-line option adds 1 to this value.
    Option: Aptitude::CmdLine::Visual-Preview
    Default: false
-   Description: If this option is true, aptitude will enter its visual mode
-   to display the preview of an installation run and to download packages.
+   Description: If this option is true, aptitude will enter its visual
+   interface to display the preview of an installation run and to download
+   packages.
    Option: Aptitude::Delete-Unused
    Default: true
    Description: If this option is true, automatically installed packages
@@ -6916,11 +6931,11 @@ Command-line actions
 
    show
 
-           Displays detailed information about one or more packages, listed
-           following the search command. If a package name contains a tilde
-           character ("~") or a question mark ("?"), it will be treated as a
-           search pattern and all matching packages will be displayed (see
-           the section "Search Patterns" in the aptitude reference manual).
+           Displays detailed information about one or more packages. If a
+           package name contains a tilde character ("~") or a question mark
+           ("?"), it will be treated as a search pattern and all matching
+           packages will be displayed (see the section "Search Patterns" in
+           the aptitude reference manual).
 
            If the verbosity level is 1 or greater (i.e., at least one -v is
            present on the command-line), information about all versions of
@@ -7440,7 +7455,7 @@ Options
            recommendations will not be removed.
 
            This corresponds to the pair of configuration options
-           Apt::Install-Recommends and Apt::AutoRemove::InstallRecommends.
+           Apt::Install-Recommends and Apt::AutoRemove::RecommendsImportant.
 
    -r, --with-recommends
 

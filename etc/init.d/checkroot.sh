@@ -84,7 +84,11 @@ do_start () {
 	# If not we try to use the /dev/root alias device, and if that
 	# fails we create a temporary node in /run.
 	#
-	if [ "$rootcheck" = yes ]
+	# Do this only on Linux. Neither kFreeBSD nor Hurd have
+	# /dev/root and the device ids used here are specific to
+	# Linux.
+	KERNEL="$(uname)"
+	if [ "$rootcheck" = yes ] && [ "$KERNEL" = Linux ]
 	then
 		ddev="$(mountpoint -qx $rootdev)"
 		rdev="$(mountpoint -d /)"
@@ -148,7 +152,7 @@ Will restart in 5 seconds."
 	# See if we want to check the root file system.
 	#
 	FSCKCODE=0
-	if [ -f /fastboot ] || grep -s -w -i "fastboot" /proc/cmdline
+	if is_fastboot_active
 	then
 		[ "$rootcheck" = yes ] && log_warning_msg "Fast boot enabled, so skipping root file system check."
 		rootcheck=no

@@ -2,22 +2,26 @@
 
 set -e
 
-PATH=/usr/bin:/bin:/usr/sbin:/sbin
-export PATH
-
-for f in /bin/ping /bin/ping6; do
-    # if the admin has set an override, don't do anything at all
-    if ! dpkg-statoverride --list $f > /dev/null 2>&1; then
-        if getcap $f > /dev/null 2>&1; then
-            if echo "cap_net_raw+p" | setcap -q - $f; then
-                # remove the setuid bit!
-                chmod -s $f
-            fi
+if [ "$1" = configure ]; then
+    # If we have setcap is installed, try setting cap_net_raw+ep,
+    # which allows us to install our binaries without the setuid
+    # bit.
+    if command -v setcap > /dev/null; then
+        if setcap cap_net_raw+ep /bin/ping cap_net_raw+ep /bin/ping6; then
+            echo "Setcap worked! Ping(6) is not suid!"
+        else
+            echo "Setcap failed on /bin/ping, falling back to setuid" >&2
+            chmod u+s /bin/ping /bin/ping6
         fi
+    else
+        echo "Setcap is not installed, falling back to setuid" >&2
+        chmod u+s /bin/ping /bin/ping6
     fi
-done
+fi
 
 
+
+exit 0
 
 # Local variables:
 # mode: shell-script

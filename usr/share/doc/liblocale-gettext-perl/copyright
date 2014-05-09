@@ -1,7 +1,7 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
-Maintainer: Phillip Vandry <vandry@TZoNE.ORG>
-Source: http://search.cpan.org/dist/Locale-gettext/
-Name: Locale-gettext
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Locale-gettext
+Upstream-Contact: Phillip Vandry <vandry@TZoNE.ORG>
+Source: https://metacpan.org/release/Locale-gettext
 
 Files: *
 Copyright: 1996-2005, Phillip Vandry <vandry@TZoNE.ORG>

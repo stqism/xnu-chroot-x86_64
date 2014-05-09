@@ -1,9 +1,9 @@
-54c3d5f2af74b8963cb3a38c4d34ba9e  usr/bin/patch
+b57d7c70b0429d91bcf580c79143a886  usr/bin/patch
 885a4bd9fb34f545c04de0919ec6379a  usr/share/doc/patch/AUTHORS
 0389eaf61cfeea384fa43b9ce5809c89  usr/share/doc/patch/NEWS.Debian.gz
 9fd4836d0ec9d861121be806a58c2ec6  usr/share/doc/patch/NEWS.gz
 acb0187af0426ed1363152c33009cbde  usr/share/doc/patch/README
-b3ca22b49ab597a3a000754d18970289  usr/share/doc/patch/changelog.Debian.gz
+9e5c7835291d61850085835dabb29d41  usr/share/doc/patch/changelog.Debian.gz
 50d06cff23668a7b9ac6e20daf256ad0  usr/share/doc/patch/changelog.gz
 b288ee880145818094e8d6d6a3bc5026  usr/share/doc/patch/copyright
 96cb5321726476358190d32dc6e3ef60  usr/share/lintian/overrides/patch

@@ -15,4 +15,6 @@
 /usr/share/lintian
 /usr/share/lintian/overrides
 /usr/share/lintian/overrides/patch
+/usr/share/man
+/usr/share/man/man1
 /usr/share/man/man1/patch.1.gz

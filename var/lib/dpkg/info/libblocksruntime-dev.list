@@ -1,13 +1,15 @@
 /.
 /usr
-/usr/lib
 /usr/include
 /usr/include/Block.h
 /usr/include/Block_private.h
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libBlocksRuntime.a
 /usr/share
 /usr/share/doc
 /usr/share/doc/libblocksruntime-dev
 /usr/share/doc/libblocksruntime-dev/copyright
 /usr/share/doc/libblocksruntime-dev/changelog.Debian.gz
 /usr/share/doc/libblocksruntime-dev/changelog.gz
-/usr/lib/libBlocksRuntime.so
+/usr/lib/x86_64-linux-gnu/libBlocksRuntime.so

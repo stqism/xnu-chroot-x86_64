@@ -143,6 +143,8 @@
 /usr/share/locale/nl
 /usr/share/locale/nl/LC_MESSAGES
 /usr/share/locale/nl/LC_MESSAGES/grep.mo
+/usr/share/man
+/usr/share/man/man1
 /usr/share/man/man1/grep.1.gz
 /usr/bin
 /usr/bin/rgrep

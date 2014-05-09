@@ -1,6 +1,6 @@
                            aptitude ユーザマニュアル
 
-バージョン 0.6.8.2
+バージョン 0.6.10
 
   Burrows Daniel [FAMILY Given]
 
@@ -377,8 +377,8 @@ aptitude を入手するには
        までスクロールし、「.orig.tar.gz」ファイルをダウンロードしてください)
 
    必要な部品がすべて利用可能になったら、ターミナルを開いてコマンド tar zxf
-   aptitude-0.6.8.2.tar.gz を実行し、ソースコードを展開してください。ソースコ
-   ードが展開されたら、cd aptitude-0.6.8.2 && ./configure && make と入力して
+   aptitude-0.6.10.tar.gz を実行し、ソースコードを展開してください。ソースコ
+   ードが展開されたら、cd aptitude-0.6.10 && ./configure && make と入力して
    aptitude をコンパイルしてください。コンパイルが成功したら、(例えば su など
    を用いて) 必ず root ユーザになり、make install と入力してコンピュータに
    aptitude をインストールしてください。aptitude のインストールに成功したら、
@@ -391,7 +391,7 @@ aptitude を入手するには
    If you want to test the latest bleeding-edge source code for aptitude, you
    can download unreleased aptitude source code using Git. Install Git
    (available from http://git-scm.com/) and execute the command git clone
-   git://git.debian.org/git/aptitude/aptitude.git to retrieve the most recent
+   git://anonscm.debian.org/aptitude/aptitude.git to retrieve the most recent
    source code.
 
    [**] 警告
@@ -1494,66 +1494,67 @@ The aptitude terminal user interface
    図2.3 「パッケージ」メニューで利用可能なコマンド
 
    +------------------------------------------------------------------------+
-   |         コマンド         |                    説明                     |
-   |--------------------------+---------------------------------------------|
-   | パッケージ → インストー  | 現在選択中のパッケージにインストール用のフ  |
-   | ル (+)                   | ラグを立てます。                            |
-   |--------------------------+---------------------------------------------|
-   | パッケージ → 削除 (-)    | 現在選択中のパッケージに削除用のフラグを立  |
-   |                          | てます。                                    |
-   |--------------------------+---------------------------------------------|
-   | パッケージ → 完全削除    | 現在選択中のパッケージに完全削除用のフラグ  |
-   | (_)                      | を立てます。                                |
-   |--------------------------+---------------------------------------------|
-   | パッケージ → 一時固定    | 現在選択中のパッケージに設定された、実行さ  |
-   | (:)                      | れていないインストール・更新・削除をすべて  |
-   |                          | 取り消し、設定された固定状態を解除します。  |
-   |--------------------------+---------------------------------------------|
-   | パッケージ → 固定 (=)    | 現在選択中のパッケージが更新されないように  |
-   |                          | 固定します。                                |
-   |--------------------------+---------------------------------------------|
-   |                          | 現在選択中のパッケージに、「自動的にインス  |
-   |                          | トールされた」パッケージという印をつけます  |
-   | パッケージ → 自動的にイ  | 。手動でインストールされたパッケージおよび  |
-   | ンストールされたという印 | 自動的にインストールされたパッケージに関し  |
-   | を添付 (M)               | てさらに詳しく知りたければ、「自動的にイン  |
-   |                          | ストールされたパッケージの管理」を参照して  |
-   |                          | ください。                                  |
-   |--------------------------+---------------------------------------------|
-   |                          | 現在選択中のパッケージに、「手動でインスト  |
-   |                          | ールされた」パッケージという印をつけます。  |
-   | パッケージ → 手動でイン  | 手動でインストールされたパッケージおよび自  |
-   | ストールしたという印を添 | 動的にインストールされたパッケージに関して  |
-   | 付 (m)                   | さらに詳しく知りたければ、「自動的にインス  |
-   |                          | トールされたパッケージの管理」を参照してく  |
-   |                          | ださい。                                    |
-   |--------------------------+---------------------------------------------|
-   |                          | 更新可能なパッケージを選択している場合、そ  |
-   | パッケージ → バージョン  | れを現在利用可能なバージョンに更新するのを  |
-   | の禁止 (F)               | 禁止します。パッケージの特定のバージョンを  |
-   |                          | 選択している場合、パッケージをそのバージョ  |
-   |                          | ンに更新するのを禁止します。                |
-   |--------------------------+---------------------------------------------|
-   |                          | 現在選択中のパッケージに関する情報 (パッケ  |
-   | パッケージ → 情報        | ージが依存するパッケージ・依存されているパ  |
-   | (enter)                  | ッケージ・利用可能なバージョンなど) を含む  |
-   |                          | スクリーンを表示します。                    |
-   |--------------------------+---------------------------------------------|
-   |                          | When browsing the package list, cycles      |
-   |                          | through the information that can be         |
-   |                          | displayed in the information area (the      |
-   |                          | lower half of the display). The information |
-   | Package → Cycle          | area can display the long description of    |
-   | Information (i)          | the selected package (its default           |
-   |                          | behavior), a summary of the dependencies    |
-   |                          | related to the package, or an analysis of   |
-   |                          | which other packages require or suggest the |
-   |                          | selected package.                           |
-   |--------------------------+---------------------------------------------|
-   |                          | 現在選択中のパッケージの Debian での変更履  |
-   | パッケージ → 変更履歴    | 歴を表示します。特定バージョンの変更履歴だ  |
-   | (C)                      | け見るには、そのバージョンを選択してからこ  |
-   |                          | のコマンドを実行してください。              |
+   |        コマンド         |                     説明                     |
+   |-------------------------+----------------------------------------------|
+   | パッケージ → インストー | 現在選択中のパッケージにインストール用のフラ |
+   | ル (+)                  | グを立てます。                               |
+   |-------------------------+----------------------------------------------|
+   | Package → Reinstall (L) | Flag the currently selected package for      |
+   |                         | reinstallation.                              |
+   |-------------------------+----------------------------------------------|
+   | パッケージ → 削除 (-)   | 現在選択中のパッケージに削除用のフラグを立て |
+   |                         | ます。                                       |
+   |-------------------------+----------------------------------------------|
+   | パッケージ → 完全削除   | 現在選択中のパッケージに完全削除用のフラグを |
+   | (_)                     | 立てます。                                   |
+   |-------------------------+----------------------------------------------|
+   | パッケージ → 一時固定   | 現在選択中のパッケージに設定された、実行され |
+   | (:)                     | ていないインストール・更新・削除をすべて取り |
+   |                         | 消し、設定された固定状態を解除します。       |
+   |-------------------------+----------------------------------------------|
+   | パッケージ → 固定 (=)   | 現在選択中のパッケージが更新されないように固 |
+   |                         | 定します。                                   |
+   |-------------------------+----------------------------------------------|
+   |                         | 現在選択中のパッケージに、「自動的にインスト |
+   | パッケージ → 自動的にイ | ールされた」パッケージという印をつけます。手 |
+   | ンストールされたという  | 動でインストールされたパッケージおよび自動的 |
+   | 印を添付 (M)            | にインストールされたパッケージに関してさらに |
+   |                         | 詳しく知りたければ、「自動的にインストールさ |
+   |                         | れたパッケージの管理」を参照してください。   |
+   |-------------------------+----------------------------------------------|
+   |                         | 現在選択中のパッケージに、「手動でインストー |
+   | パッケージ → 手動でイン | ルされた」パッケージという印をつけます。手動 |
+   | ストールしたという印を  | でインストールされたパッケージおよび自動的に |
+   | 添付 (m)                | インストールされたパッケージに関してさらに詳 |
+   |                         | しく知りたければ、「自動的にインストールされ |
+   |                         | たパッケージの管理」を参照してください。     |
+   |-------------------------+----------------------------------------------|
+   |                         | 更新可能なパッケージを選択している場合、それ |
+   | パッケージ → バージョン | を現在利用可能なバージョンに更新するのを禁止 |
+   | の禁止 (F)              | します。パッケージの特定のバージョンを選択し |
+   |                         | ている場合、パッケージをそのバージョンに更新 |
+   |                         | するのを禁止します。                         |
+   |-------------------------+----------------------------------------------|
+   |                         | 現在選択中のパッケージに関する情報 (パッケー |
+   | パッケージ → 情報       | ジが依存するパッケージ・依存されているパッケ |
+   | (enter)                 | ージ・利用可能なバージョンなど) を含むスクリ |
+   |                         | ーンを表示します。                           |
+   |-------------------------+----------------------------------------------|
+   |                         | When browsing the package list, cycles       |
+   |                         | through the information that can be          |
+   |                         | displayed in the information area (the lower |
+   |                         | half of the display). The information area   |
+   | Package → Cycle         | can display the long description of the      |
+   | Information (i)         | selected package (its default behavior), a   |
+   |                         | summary of the dependencies related to the   |
+   |                         | package, or an analysis of which other       |
+   |                         | packages require or suggest the selected     |
+   |                         | package.                                     |
+   |-------------------------+----------------------------------------------|
+   |                         | 現在選択中のパッケージの Debian での変更履歴 |
+   | パッケージ → 変更履歴   | を表示します。特定バージョンの変更履歴だけ見 |
+   | (C)                     | るには、そのバージョンを選択してからこのコマ |
+   |                         | ンドを実行してください。                     |
    +------------------------------------------------------------------------+
 
     The Resolver menu
@@ -2007,83 +2008,83 @@ The aptitude terminal user interface
    Packages」) and issuing the command.
 
    +------------------------------------------------------------------------+
-   |          コマンド           |                   説明                   |
-   |-----------------------------+------------------------------------------|
-   |                             | Flag the current package for             |
-   |                             | installation.                            |
-   |                             |                                          |
-   | Install: パッケージ → イン  | If the package is not installed, it will |
-   | ストール (+)                | be installed. If it is already           |
-   |                             | installed, it will be upgraded if        |
-   |                             | possible and any sticky upgrade          |
-   |                             | prevention that is in effect (eg, Hold)  |
-   |                             | will be cancelled.                       |
-   |-----------------------------+------------------------------------------|
-   |                             | Flag the currently selected package for  |
-   | Remove: パッケージ → 削除   | removal.                                 |
-   | (-)                         |                                          |
-   |                             | If the package is installed, it will be  |
-   |                             | removed.                                 |
-   |-----------------------------+------------------------------------------|
-   |                             | Flag the current package to be purged.   |
-   |                             |                                          |
-   | Purge: パッケージ → 完全削  | If the package is installed, it will be  |
-   | 除 (_)                      | removed. Furthermore, even if it is      |
-   |                             | removed, any remaining files (such as    |
-   |                             | configuration files) related to the      |
-   |                             | package will be removed from the system. |
-   |-----------------------------+------------------------------------------|
-   |                             | Flag the current package to be kept at   |
-   |                             | its current version.                     |
-   |                             |                                          |
-   | Keep: パッケージ → 一時固定 | Any action that was to be performed on   |
-   | (:)                         | the package -- installation, removal, or |
-   |                             | upgrade -- is cancelled, and any         |
-   |                             | persistent hold that was set on the      |
-   |                             | package is removed.                      |
-   |-----------------------------+------------------------------------------|
-   |                             | Set a persistent hold on the package.    |
-   |                             |                                          |
-   |                             | As with Keep, any action that was to be  |
-   | Hold: パッケージ → 固定 (=) | performed on the package is cancelled.   |
-   |                             | In addition, the package will not be     |
-   |                             | automatically upgraded ^[a] until the    |
-   |                             | hold is removed. You may cancel a hold   |
-   |                             | by issuing the Install command.          |
-   |-----------------------------+------------------------------------------|
-   |                             | The package will not be automatically    |
-   |                             | upgraded^[a] to the version it would     |
-   |                             | currently be upgraded to. If it was      |
-   |                             | going to be upgraded, the upgrade will   |
-   |                             | be cancelled.                            |
-   |                             |                                          |
-   |                             | If you issue this command on a           |
-   | パッケージ → バージョンの禁 | particular version of a package, the     |
-   | 止 (F)                      | package will not be upgraded to the      |
-   |                             | selected version. Note that only one     |
-   |                             | version can be forbidden at once.        |
-   |                             |                                          |
-   |                             | This functionality is largely provided   |
-   |                             | as a convenience for users of the        |
-   |                             | 「unstable」 distribution, so they can   |
-   |                             | avoid known-bad versions of packages.    |
-   |-----------------------------+------------------------------------------|
-   |                             | Reinstalls the package.                  |
-   |                             |                                          |
-   |                             | Note that the reinstallation will not be |
-   |                             | saved when you quit aptitude or perform  |
-   | Reinstall: press L          | an install run, for technical reasons    |
-   |                             | (essentially, the underlying software    |
-   |                             | layers (dpkg and apt) do not provide any |
-   |                             | way to find out whether a reinstallation |
-   |                             | was successful or not).                  |
-   |-----------------------------+------------------------------------------|
-   | パッケージ → 自動的にインス | Sets whether the package is treated as   |
-   | トールされたという印を添付  | having been automatically installed;     |
-   | (M), パッケージ → 手動でイ  | automatically installed packages will be |
-   | ンストールしたという印を添  | removed when no other package requires   |
-   | 付 (m)                      | them. For more information, see 「自動的 |
-   |                             | にインストールされたパッケージの管理」.  |
+   |          コマンド          |                   説明                    |
+   |----------------------------+-------------------------------------------|
+   |                            | Flag the current package for              |
+   |                            | installation.                             |
+   |                            |                                           |
+   | Install: パッケージ → イン | If the package is not installed, it will  |
+   | ストール (+)               | be installed. If it is already installed, |
+   |                            | it will be upgraded if possible and any   |
+   |                            | sticky upgrade prevention that is in      |
+   |                            | effect (eg, Hold) will be cancelled.      |
+   |----------------------------+-------------------------------------------|
+   |                            | Flag the currently selected package for   |
+   | Remove: パッケージ → 削除  | removal.                                  |
+   | (-)                        |                                           |
+   |                            | If the package is installed, it will be   |
+   |                            | removed.                                  |
+   |----------------------------+-------------------------------------------|
+   |                            | Flag the current package to be purged.    |
+   |                            |                                           |
+   | Purge: パッケージ → 完全削 | If the package is installed, it will be   |
+   | 除 (_)                     | removed. Furthermore, even if it is       |
+   |                            | removed, any remaining files (such as     |
+   |                            | configuration files) related to the       |
+   |                            | package will be removed from the system.  |
+   |----------------------------+-------------------------------------------|
+   |                            | Flag the current package to be kept at    |
+   |                            | its current version.                      |
+   |                            |                                           |
+   | Keep: パッケージ → 一時固  | Any action that was to be performed on    |
+   | 定 (:)                     | the package -- installation, removal, or  |
+   |                            | upgrade -- is cancelled, and any          |
+   |                            | persistent hold that was set on the       |
+   |                            | package is removed.                       |
+   |----------------------------+-------------------------------------------|
+   |                            | Set a persistent hold on the package.     |
+   |                            |                                           |
+   |                            | As with Keep, any action that was to be   |
+   | Hold: パッケージ → 固定    | performed on the package is cancelled. In |
+   | (=)                        | addition, the package will not be         |
+   |                            | automatically upgraded ^[a] until the     |
+   |                            | hold is removed. You may cancel a hold by |
+   |                            | issuing the Install command.              |
+   |----------------------------+-------------------------------------------|
+   |                            | The package will not be automatically     |
+   |                            | upgraded^[a] to the version it would      |
+   |                            | currently be upgraded to. If it was going |
+   |                            | to be upgraded, the upgrade will be       |
+   |                            | cancelled.                                |
+   |                            |                                           |
+   |                            | If you issue this command on a particular |
+   | パッケージ → バージョンの  | version of a package, the package will    |
+   | 禁止 (F)                   | not be upgraded to the selected version.  |
+   |                            | Note that only one version can be         |
+   |                            | forbidden at once.                        |
+   |                            |                                           |
+   |                            | This functionality is largely provided as |
+   |                            | a convenience for users of the 「unstable |
+   |                            | 」 distribution, so they can avoid        |
+   |                            | known-bad versions of packages.           |
+   |----------------------------+-------------------------------------------|
+   |                            | Flag the current package for              |
+   |                            | reinstallation.                           |
+   |                            |                                           |
+   |                            | Note that the reinstallation will not be  |
+   | Reinstall: Package →       | saved when you quit aptitude or perform   |
+   | Reinstall (L)              | an install run, for technical reasons     |
+   |                            | (essentially, the underlying software     |
+   |                            | layers (dpkg and apt) do not provide any  |
+   |                            | way to find out whether a reinstallation  |
+   |                            | was successful or not).                   |
+   |----------------------------+-------------------------------------------|
+   | パッケージ → 自動的にイン  | Sets whether the package is treated as    |
+   | ストールされたという印を添 | having been automatically installed;      |
+   | 付 (M), パッケージ → 手動  | automatically installed packages will be  |
+   | でインストールしたという印 | removed when no other package requires    |
+   | を添付 (m)                 | them. For more information, see 「自動的  |
+   |                            | にインストールされたパッケージの管理」.   |
    |------------------------------------------------------------------------|
    | ^[a] That is, it will be unaffected by アクション → 更新可能パッケージ |
    | という印を添付 (U) or the full-upgrade or safe-upgrade command-line    |
@@ -3835,116 +3836,115 @@ aptitude のカスタマイズ
         どちらか一方を指します。コマンドライン検索では、表示されているパッケ
         ージを指します。
 
-   エスケー    名前    デフォルトサイ 伸長可能              説明
-    プ表記                   ズ         か?
-                                               これは実際にはエスケープ表記で
-   %%       リテラル % 1              いいえ   はありません。出力において、こ
-                                               の表記がある場所にパーセント記
-                                               号を挿入するだけです。
-                                               状況によっては、表示用の書式指
-                                               定文字列に「パラメタ」が含まれ
-                                               ていることがあります。例えばコ
-            パラメタ置                         マンドラインで search を実行す
-   %#数字   換         可変           いいえ   ると、検索結果を表示する際に、
-                                               検索にマッチしたグループがパラ
-                                               メタとして使用されます。この書
-                                               式指定コードは、数字で表される
-                                               パラメタで置換されます。
-                                               パッケージに対して実行予定のあ
-            アクション                         らゆるアクションを簡潔に表す、
-   %a       フラグ     1              いいえ   単一文字のフラグ (図2.10「「ア
-                                               クション」フラグの値」を参照し
-                                               てください)。
-                                               パッケージに対して実行予定のア
-   %A       アクション 10             いいえ   クションについての、いくらか冗
-                                               長な記述。
-                                               破損パッケージがない場合は何も
-                                               生成しません。存在する場合は、
-   %B       破損の数   12             いいえ   破損パッケージ数を表す
-                                               「Broken: 10」のような文字列を
-                                               生成します。
-                                               パッケージの現在の状態を簡潔に
-   %c       現在の状態 1              いいえ   表す、単一文字のフラグ (図2.9
-            のフラグ                           「「現在の状態」フラグの値」を
-                                               参照してください)。
-   %C       現在の状態 11             いいえ   パッケージの現在の状態について
-                                               の、より冗長な記述。
-   %d       説明       40             はい     パッケージ説明・要約版。
-   %D       パッケージ 8              いいえ   パッケージを含むパッケージファ
-            サイズ                             イルのサイズ。
-   %H       ホスト名   15             いいえ   aptitude を実行しているコンピ
-                                               ュータの名前。
-                                               パッケージバージョンに対しては
-                                               、指定されたプライオリティ値の
-            Pin プライ                         中で最も高いものを表示します。
-   %i       オリティ   4              いいえ   パッケージに対しては、強制的に
-                                               インストールされる予定のバージ
-                                               ョンがもしあれば、そのプライオ
-                                               リティ値を表示します。
-   %I       インストー 8              いいえ   パッケージが占有するディスク領
-            ルサイズ                           域の (推定) 量。
-   %m       メンテナ   30             はい     パッケージのメンテナ。
-                                               パッケージが自動的にインストー
-   %M       自動フラグ 1              いいえ   ルされたものである場合、「A」
-                                               を出力します。そうでない場合は
-                                               何も出力しません。
-            プログラム 「0.6.8.2」の           Outputs the version of
-   %n       バージョン 長さ。         いいえ   aptitude that is running,
-                                               currently 「0.6.8.2」.
-   %N       プログラム The length of  いいえ   Outputs the name of the
-            名         the name.               program; usually 「aptitude」.
-                                               インストール予定のパッケージが
-                                               ない場合は何も出力しません。パ
-                                               ッケージがある場合は、インスト
-   %o       ダウンロー 17             いいえ   ール予定の全パッケージファイル
-            ドサイズ                           の合計のサイズ (必要なダウンロ
-                                               ードの量を示す推定値) を表す文
-                                               字列 (例えば 「DL サイズ:
-                                               1000B」) を出力します。
-                                               パッケージの名前を出力します。
-            パッケージ                         パッケージがツリー状の一覧に表
-   %p       名         30             はい     示される場合、可能であれば、パ
-                                               ッケージの名前はツリー内での深
-                                               さに応じてインデントされます。
-   %P       優先度     9              いいえ   パッケージの優先度を出力します
-                                               。
-                                               パッケージに依存しているインス
-   %r       逆依存の数 2              いいえ   トール済みパッケージのおおよそ
-                                               の数を出力します。
-            優先度・簡                         パッケージの優先度の簡略表記を
-   %R       略版       3              いいえ   出力します。例えば「重要」は「
-                                               重」となります。
-   %s       セクション 10             いいえ   パッケージのセクションを出力し
-                                               ます。
-                                               パッケージが信頼できないもので
-   %S       信頼状態   1              いいえ   ある場合、"U" の文字を表示しま
-                                               す。
-   %t       アーカイブ 10             はい     パッケージが発見されたアーカイ
-                                               ブ。
-                                               Outputs 「*」 if the package
-   %T       タグつき   1              いいえ   is tagged, nothing
-                                               otherwise.^[19]
-                                               予定されているアクションによっ
-                                               て、使用されるディスク領域の量
-   %u       ディスク使 30             いいえ   が変化する場合は、ディスク領域
-            用量の変化                         の変化を記述する文字列 (例えば
-                                               、「100MB のディスク領域を新た
-                                               に使用します」) を出力します。
-                                               パッケージが現在インストールさ
-   %v       現在のバー 14             いいえ   れている場合はそのバージョンを
-            ジョン                             、現在インストールされていない
-                                               場合は <なし> を、出力します。
-                                               パッケージが現在入手可能な場合
-                                               は、パッケージ → インストール
-            インストー                         (+) がそのパッケージに対して発
-   %V       ル候補のバ 14             いいえ   行されたときにインストールされ
-            ージョン                           るバージョンを、現在入手不可能
-                                               な場合は <なし> を、出力します
-                                               。
-                                               パッケージのインストール・更新
-   %Z       サイズの変 9              いいえ   ・削除によって使用または解放さ
-            化                                 れるディスク領域の量を出力しま
-                                               す。
+   エスケー    名前    デフォルトサ  伸長可能              説明
+    プ表記                 イズ        か?
+                                              これは実際にはエスケープ表記で
+   %%       リテラル % 1             いいえ   はありません。出力において、こ
+                                              の表記がある場所にパーセント記
+                                              号を挿入するだけです。
+                                              状況によっては、表示用の書式指
+                                              定文字列に「パラメタ」が含まれ
+                                              ていることがあります。例えばコ
+            パラメタ置                        マンドラインで search を実行す
+   %#数字   換         可変          いいえ   ると、検索結果を表示する際に、
+                                              検索にマッチしたグループがパラ
+                                              メタとして使用されます。この書
+                                              式指定コードは、数字で表される
+                                              パラメタで置換されます。
+                                              パッケージに対して実行予定のあ
+            アクション                        らゆるアクションを簡潔に表す、
+   %a       フラグ     1             いいえ   単一文字のフラグ (図2.10「「ア
+                                              クション」フラグの値」を参照し
+                                              てください)。
+                                              パッケージに対して実行予定のア
+   %A       アクション 10            いいえ   クションについての、いくらか冗
+                                              長な記述。
+                                              破損パッケージがない場合は何も
+                                              生成しません。存在する場合は、
+   %B       破損の数   12            いいえ   破損パッケージ数を表す「Broken:
+                                              10」のような文字列を生成します
+                                              。
+                                              パッケージの現在の状態を簡潔に
+   %c       現在の状態 1             いいえ   表す、単一文字のフラグ (図2.9「
+            のフラグ                          「現在の状態」フラグの値」を参
+                                              照してください)。
+   %C       現在の状態 11            いいえ   パッケージの現在の状態について
+                                              の、より冗長な記述。
+   %d       説明       40            はい     パッケージ説明・要約版。
+   %D       パッケージ 8             いいえ   パッケージを含むパッケージファ
+            サイズ                            イルのサイズ。
+   %H       ホスト名   15            いいえ   aptitude を実行しているコンピュ
+                                              ータの名前。
+                                              パッケージバージョンに対しては
+                                              、指定されたプライオリティ値の
+            Pin プライ                        中で最も高いものを表示します。
+   %i       オリティ   4             いいえ   パッケージに対しては、強制的に
+                                              インストールされる予定のバージ
+                                              ョンがもしあれば、そのプライオ
+                                              リティ値を表示します。
+   %I       インストー 8             いいえ   パッケージが占有するディスク領
+            ルサイズ                          域の (推定) 量。
+   %m       メンテナ   30            はい     パッケージのメンテナ。
+                                              パッケージが自動的にインストー
+   %M       自動フラグ 1             いいえ   ルされたものである場合、「A」を
+                                              出力します。そうでない場合は何
+                                              も出力しません。
+            プログラム 「0.6.10」の           Outputs the version of aptitude
+   %n       バージョン 長さ。        いいえ   that is running, currently
+                                              「0.6.10」.
+   %N       プログラム The length of いいえ   Outputs the name of the
+            名         the name.              program; usually 「aptitude」.
+                                              インストール予定のパッケージが
+                                              ない場合は何も出力しません。パ
+                                              ッケージがある場合は、インスト
+   %o       ダウンロー 17            いいえ   ール予定の全パッケージファイル
+            ドサイズ                          の合計のサイズ (必要なダウンロ
+                                              ードの量を示す推定値) を表す文
+                                              字列 (例えば 「DL サイズ: 1000B
+                                              」) を出力します。
+                                              パッケージの名前を出力します。
+            パッケージ                        パッケージがツリー状の一覧に表
+   %p       名         30            はい     示される場合、可能であれば、パ
+                                              ッケージの名前はツリー内での深
+                                              さに応じてインデントされます。
+   %P       優先度     9             いいえ   パッケージの優先度を出力します
+                                              。
+                                              パッケージに依存しているインス
+   %r       逆依存の数 2             いいえ   トール済みパッケージのおおよそ
+                                              の数を出力します。
+            優先度・簡                        パッケージの優先度の簡略表記を
+   %R       略版       3             いいえ   出力します。例えば「重要」は「
+                                              重」となります。
+   %s       セクション 10            いいえ   パッケージのセクションを出力し
+                                              ます。
+                                              パッケージが信頼できないもので
+   %S       信頼状態   1             いいえ   ある場合、"U" の文字を表示しま
+                                              す。
+   %t       アーカイブ 10            はい     パッケージが発見されたアーカイ
+                                              ブ。
+   %T       タグつき   1             いいえ   Outputs 「*」 if the package is
+                                              tagged, nothing otherwise.^[19]
+                                              予定されているアクションによっ
+                                              て、使用されるディスク領域の量
+   %u       ディスク使 30            いいえ   が変化する場合は、ディスク領域
+            用量の変化                        の変化を記述する文字列 (例えば
+                                              、「100MB のディスク領域を新た
+                                              に使用します」) を出力します。
+                                              パッケージが現在インストールさ
+   %v       現在のバー 14            いいえ   れている場合はそのバージョンを
+            ジョン                            、現在インストールされていない
+                                              場合は <なし> を、出力します。
+                                              パッケージが現在入手可能な場合
+                                              は、パッケージ → インストール
+            インストー                        (+) がそのパッケージに対して発
+   %V       ル候補のバ 14            いいえ   行されたときにインストールされ
+            ージョン                          るバージョンを、現在入手不可能
+                                              な場合は <なし> を、出力します
+                                              。
+                                              パッケージのインストール・更新
+   %Z       サイズの変 9             いいえ   ・削除によって使用または解放さ
+            化                                れるディスク領域の量を出力しま
+                                              す。
 
     パッケージ階層構造のカスタマイズ
 
@@ -4187,6 +4187,17 @@ aptitude のカスタマイズ
 
            インストール時に必要となるサイズの推定量でパッケージを並び替えます
            。
+
+   installsizechange
+
+           Sorts packages by the change in the installed size (estimated
+           amount of size required when installed), comparing the current
+           version (if installed) and the candidate version to be installed,
+           upgraded or removed.
+
+   debsize
+
+           Sorts packages by the size of the package.
 
    name
 
@@ -5546,7 +5557,7 @@ aptitude のカスタマイズ
    Every occurrence of the -v command-line option adds 1 to this value.
    Option: Aptitude::CmdLine::Visual-Preview
    デフォルト: false
-   説明: If this option is true, aptitude will enter its visual mode to
+   説明: If this option is true, aptitude will enter its visual interface to
    display the preview of an installation run and to download packages.
    Option: Aptitude::Delete-Unused
    デフォルト: true
@@ -6849,12 +6860,11 @@ Command-line actions
 
    show
 
-           Displays detailed information about one or more packages, listed
-           following the search command. If a package name contains a tilde
-           character (「~」) or a question mark (「?」), it will be treated
-           as a search pattern and all matching packages will be displayed
-           (see the section 「Search Patterns」 in the aptitude reference
-           manual).
+           Displays detailed information about one or more packages. If a
+           package name contains a tilde character (「~」) or a question mark
+           (「?」), it will be treated as a search pattern and all matching
+           packages will be displayed (see the section 「Search Patterns」 in
+           the aptitude reference manual).
 
            饒舌レベルが 1 以上の場合 (つまり、コマンドラインに -v が 1 つ以上
            与えられている場合)、そのパッケージのすべてのバージョンについて情
@@ -7370,7 +7380,7 @@ Command-line actions
            recommendations will not be removed.
 
            This corresponds to the pair of configuration options
-           Apt::Install-Recommends and Apt::AutoRemove::InstallRecommends.
+           Apt::Install-Recommends and Apt::AutoRemove::RecommendsImportant.
 
    -r, --with-recommends
 

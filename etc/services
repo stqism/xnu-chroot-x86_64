@@ -355,6 +355,7 @@ remctl		4373/tcp		# Remote Authenticated Command Service
 remctl		4373/udp
 f5-iquery	4353/tcp			# F5 iQuery
 f5-iquery	4353/udp
+ipsec-nat-t	4500/udp			# IPsec NAT-Traversal [RFC3947]
 iax		4569/tcp			# Inter-Asterisk eXchange
 iax		4569/udp
 mtn		4691/tcp			# monotone Netsync Protocol
@@ -453,6 +454,7 @@ zabbix-trapper	10051/tcp			# Zabbix Trapper
 zabbix-trapper	10051/udp
 amanda		10080/tcp			# amanda backup services
 amanda		10080/udp
+dicom		11112/tcp
 hkp		11371/tcp			# OpenPGP HTTP Keyserver
 hkp		11371/udp
 bprd		13720/tcp			# VERITAS NetBackup
@@ -569,6 +571,7 @@ nsca		5667/tcp			# Nagios Agent - NSCA
 mrtd		5674/tcp			# MRT Routing Daemon
 bgpsim		5675/tcp			# MRT Routing Simulator
 canna		5680/tcp			# cannaserver
+syslog-tls	6514/tcp			# Syslog over TLS [RFC5425]
 sane-port	6566/tcp	sane saned	# SANE network scanner daemon
 ircd		6667/tcp			# Internet Relay Chat
 zope-ftp	8021/tcp			# zope management by ftp

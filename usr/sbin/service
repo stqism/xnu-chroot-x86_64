@@ -81,13 +81,14 @@ while [ $# -gt 0 ]; do
               *)
                 if ! is_ignored_file "${SERVICE}" \
 		    && [ -x "${SERVICEDIR}/${SERVICE}" ]; then
-                        if ! grep -qs "\(^\|\W\)status)" "$SERVICE"; then
+                        out=$(env -i LANG="$LANG" PATH="$PATH" TERM="$TERM" "$SERVICEDIR/$SERVICE" status 2>&1)
+                        retval=$?
+                        if echo "$out" | egrep -iq "usage:"; then
                           #printf " %s %-60s %s\n" "[?]" "$SERVICE:" "unknown" 1>&2
                           echo " [ ? ]  $SERVICE" 1>&2
                           continue
                         else
-                          out=$(env -i LANG="$LANG" PATH="$PATH" TERM="$TERM" "$SERVICEDIR/$SERVICE" status 2>&1)
-                          if [ "$?" = "0" -a -n "$out" ]; then
+                          if [ "$retval" = "0" -a -n "$out" ]; then
                             #printf " %s %-60s %s\n" "[+]" "$SERVICE:" "running"
                             echo " [ + ]  $SERVICE"
                             continue
@@ -149,6 +150,7 @@ then
    esac
 fi
 
+
 run_via_sysvinit() {
    # Otherwise, use the traditional sysvinit
    if [ -x "${SERVICEDIR}/${SERVICE}" ]; then
@@ -159,13 +161,31 @@ run_via_sysvinit() {
    fi
 }
 
+update_openrc_started_symlinks() {
+   # maintain the symlinks of /run/openrc/started so that
+   # rc-status works with the service command as well
+   if [ -d /run/openrc/started ] ; then
+      case "${ACTION}" in
+      start)
+         if [ ! -h /run/openrc/started/$SERVICE ] ; then
+            ln -s $SERVICEDIR/$SERVICE /run/openrc/started/$SERVICE || true
+         fi
+      ;;
+      stop)
+         rm /run/openrc/started/$SERVICE || true
+      ;;
+      esac
+   fi
+}
+
 # When this machine is running systemd, standard service calls are turned into
 # systemctl calls.
 if [ -n "$is_systemd" ]
 then
+   UNIT="${SERVICE%.sh}.service"
    case "${ACTION}" in
       restart|status)
-         exec systemctl ${ACTION} ${SERVICE}.service
+         exec systemctl ${ACTION} ${UNIT}
       ;;
       start|stop)
          # Follow the principle of least surprise for SysV people:
@@ -173,32 +193,32 @@ then
          # has one or more .socket files, we also stop the .socket units.
          # Users who need more control will use systemctl directly.
          for unit in $(systemctl list-unit-files --full --type=socket 2>/dev/null | sed -ne 's/\.socket\s*[a-z]*\s*$/.socket/p'); do
-             if [ "$(systemctl -p Triggers show $unit)" = "Triggers=${SERVICE}.service" ]; then
+             if [ "$(systemctl -p Triggers show $unit)" = "Triggers=${UNIT}" ]; then
                 systemctl ${ACTION} $unit
              fi
          done
-         exec systemctl ${ACTION} ${SERVICE}.service
+         exec systemctl ${ACTION} ${UNIT}
       ;;
       reload)
-         _canreload="$(systemctl -p CanReload show ${SERVICE}.service 2>/dev/null)"
+         _canreload="$(systemctl -p CanReload show ${UNIT} 2>/dev/null)"
          if [ "$_canreload" = "CanReload=no" ]; then
             # The reload action falls back to the sysv init script just in case
             # the systemd service file does not (yet) support reload for a
             # specific service.
             run_via_sysvinit
          else
-            exec systemctl reload "${SERVICE}.service"
+            exec systemctl reload "${UNIT}"
          fi
          ;;
       force-stop)
-         exec systemctl --signal=KILL kill "${SERVICE}.service"
+         exec systemctl --signal=KILL kill "${UNIT}"
          ;;
       force-reload)
-         _canreload="$(systemctl -p CanReload show ${SERVICE}.service 2>/dev/null)"
+         _canreload="$(systemctl -p CanReload show ${UNIT} 2>/dev/null)"
          if [ "$_canreload" = "CanReload=no" ]; then
-            exec systemctl restart "${SERVICE}.service"
+            exec systemctl restart "${UNIT}"
          else
-            exec systemctl reload "${SERVICE}.service"
+            exec systemctl reload "${UNIT}"
          fi
          ;;
       *)
@@ -209,4 +229,5 @@ then
    esac
 fi
 
+update_openrc_started_symlinks
 run_via_sysvinit

@@ -1,7 +1,7 @@
-c00cd73a909910b09ca4ee34d3479f94  usr/lib/x86_64-linux-gnu/libsasl2.so.2.0.25
-e042d6323a8d1cf4db55d05d142a3c6a  usr/share/doc/libsasl2-2/NEWS.Debian.gz
+c950bd11243e040e6c71584f089076d6  usr/lib/x86_64-linux-gnu/libsasl2.so.2.0.25
+cba810b73f30ce64df6e67ece59d3459  usr/share/doc/libsasl2-2/NEWS.Debian.gz
 98c1bc6998a957ef0c0e4a516f927a98  usr/share/doc/libsasl2-2/README.Debian
 f6ca26587b4d1c4457b978f0d4f2c3cb  usr/share/doc/libsasl2-2/README.configure-options
-e6308f7fe042584141b8246b08688065  usr/share/doc/libsasl2-2/changelog.Debian.gz
-987c908c1a9b42c374a0e64e969906ab  usr/share/doc/libsasl2-2/changelog.gz
-aca5f6cee4d31610ab0d78cac2e0206d  usr/share/doc/libsasl2-2/copyright
+d6f4d7f21559a547d676abcb6f33c220  usr/share/doc/libsasl2-2/changelog.Debian.gz
+e2e4778c884d0be2e6feadbf65dac6f8  usr/share/doc/libsasl2-2/changelog.gz
+2dd499cf271a2da00f64c86a3ae65f33  usr/share/doc/libsasl2-2/copyright

@@ -15,6 +15,7 @@ libapt-inst.so.1.5 libapt-inst1.5 #MINVER#
  _ZN10debDebFile14ControlExtractD1Ev@Base 0.8.0
  _ZN10debDebFile14ControlExtractD2Ev@Base 0.8.0
  _ZN10debDebFile14ExtractArchiveER12pkgDirStream@Base 0.8.0
+ _ZN10debDebFile16ExtractTarMemberER12pkgDirStreamPKc@Base 0.9.15.4
  _ZN10debDebFile17MemControlExtract11TakeControlEPKvm@Base 0.8.0
  _ZN10debDebFile17MemControlExtract4ReadERS_@Base 0.8.0
  _ZN10debDebFile17MemControlExtract6DoItemERN12pkgDirStream4ItemERi@Base 0.8.0

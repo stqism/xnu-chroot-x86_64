@@ -1,6 +1,6 @@
 /* Default linker script, for normal executables */
 OUTPUT_FORMAT(pei-x86-64)
-SEARCH_DIR("=/usr/local/lib/x86_64-linux-gnu"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib/x86_64-linux-gnu"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib/x86_64-linux-gnu"); SEARCH_DIR("=/usr/lib");
+SEARCH_DIR("=/usr/x86_64-pep/lib"); SEARCH_DIR("=/usr/local/lib/x86_64-linux-gnu"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib/x86_64-linux-gnu"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib/x86_64-linux-gnu"); SEARCH_DIR("=/usr/lib");
 SECTIONS
 {
   /* Make the virtual address and file offset synced if the alignment is
@@ -141,10 +141,10 @@ SECTIONS
     PROVIDE ( _end = .);
      __end__ = .;
   }
-  .rsrc BLOCK(__section_alignment__) :
+  .rsrc BLOCK(__section_alignment__) : SUBALIGN(4)
   {
     *(.rsrc)
-    *(SORT(.rsrc$*))
+    *(.rsrc$*)
   }
   .reloc BLOCK(__section_alignment__) :
   {

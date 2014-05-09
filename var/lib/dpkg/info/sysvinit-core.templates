@@ -1,0 +1,14 @@
+Template: sysvinit/hurd-fix-inittab
+Type: boolean
+Description: Update getty file names in /etc/inittab?
+ Your /etc/inittab seems to use /libexec/getty as getty. The default
+ inittab has been changed, however your /etc/inittab has been
+ modified. Note that sysvinit has never been used to boot an Hurd
+ system, so any errors in that file would not have shown up.
+ .
+ If you want to change /etc/inittab to use /sbin/getty as getty, choose
+ yes. If you choose yes, a backup will be stored in /etc/inittab.dpkg-old.
+ .
+ If you choose no, an updated inittab will be written to
+ /etc/inittab.dpkg-new. Please review the changes and update your
+ /etc/inittab accordingly.

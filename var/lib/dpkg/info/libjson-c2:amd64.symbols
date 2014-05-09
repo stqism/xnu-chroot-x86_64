@@ -6,6 +6,7 @@ libjson-c.so.2 libjson-c2 #MINVER#
  array_list_new@Base 0.10
  array_list_put_idx@Base 0.10
  array_list_sort@Base 0.10
+ json_c_get_random_seed@Base 0.11
  json_c_version@Base 0.11
  json_c_version_num@Base 0.11
  json_hex_chars@Base 0.10

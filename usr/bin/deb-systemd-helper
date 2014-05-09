@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 # vim:ts=4:sw=4:expandtab
-# © 2013 Michael Stapelberg <stapelberg@debian.org>
+# © 2013-2014 Michael Stapelberg <stapelberg@debian.org>
 #
 # All rights reserved.
 #
@@ -35,7 +35,7 @@ deb-systemd-helper - subset of systemctl for machines not running systemd
 
 =head1 SYNOPSIS
 
-B<deb-systemd-helper> enable|disable|mask|unmask|is-enabled|was-enabled|debian-installed|update-state|reenable S<I<unit file> ...>
+B<deb-systemd-helper> enable | disable | purge | mask | unmask | is-enabled | was-enabled | debian-installed | update-state | reenable S<I<unit file> ...>
 
 =head1 DESCRIPTION
 
@@ -44,8 +44,7 @@ the enable, disable, is-enabled and reenable commands from systemctl.
 
 The "enable" action will only be performed once (when first installing the
 package). On the first "enable", an state file is created which will be deleted
-upon "disable", but only when _DEB_SYSTEMD_HELPER_PURGE=1 to distinguish purge
-from remove.
+upon "purge".
 
 The "mask" action will keep state on whether the service was enabled/disabled
 before and will properly return to that state on "unmask".
@@ -377,8 +376,12 @@ sub mask_service {
         # If the link already exists, don’t do anything.
         return if -l $mask_link && readlink($mask_link) eq '/dev/null';
 
-        # Otherwise, error out.
-        error("$mask_link already exists");
+        # If the file already exists, the user most likely copied the .service
+        # file to /etc/ to change it in some way. In this case we don’t need to
+        # mask the .service in the first place, since it will not be removed by
+        # dpkg.
+        debug "$mask_link already exists, not masking.";
+        return;
     }
 
     make_path(dirname($mask_link));
@@ -441,6 +444,11 @@ if (!$ENV{DPKG_MAINTSCRIPT_PACKAGE}) {
     exit 1;
 }
 
+if ($action eq 'purge') {
+    $ENV{_DEB_SYSTEMD_HELPER_PURGE} = 1;
+    $action = 'disable';
+}
+
 debug "is purge = " . (is_purge() ? "yes" : "no");
 
 my $rc = 0;
@@ -496,10 +504,10 @@ for my $scriptname (@ARGV) {
         # subdirectories. Necessary to cleanly pass a piuparts run.
         rmdir_if_empty('/var/lib/systemd/deb-systemd-helper-enabled');
 
-        # Same with /etc/systemd, where we create symlinks. If systemd is not
-        # installed (and no other package shipping service files), this would
-        # make piuparts fail, too.
-        rmdir_if_empty('/etc/systemd');
+        # Same with directories below /etc/systemd, where we create symlinks.
+        # If systemd is not installed (and no other package shipping service
+        # files), this would make piuparts fail, too.
+        rmdir_if_empty($_) for (grep { -d } </etc/systemd/system/*>);
     }
 
     if ($action eq 'enable') {

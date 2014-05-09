@@ -370,6 +370,7 @@ libisl.so.10 libisl10 #MINVER#
  isl_basic_map_add@Base 0.10
  isl_basic_map_add_constraint@Base 0.10
  isl_basic_map_add_constraints_dim_map@Base 0.10
+ isl_basic_map_add_div_constraint@Base 0.12.2
  isl_basic_map_add_div_constraints@Base 0.10
  isl_basic_map_add_div_constraints_var@Base 0.10
  isl_basic_map_add_eq@Base 0.10

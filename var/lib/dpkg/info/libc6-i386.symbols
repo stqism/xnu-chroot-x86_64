@@ -1,5 +1,5 @@
 ld-linux.so.2 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.0@GLIBC_2.0 2.0
  GLIBC_2.1@GLIBC_2.1 2.1
  GLIBC_2.3@GLIBC_2.3 2.3
@@ -15,6 +15,7 @@ ld-linux.so.2 libc6-i386 #MINVER#
  _dl_argv@GLIBC_PRIVATE 0 1
  _dl_deallocate_tls@GLIBC_PRIVATE 0 1
  _dl_debug_state@GLIBC_PRIVATE 0 1
+ _dl_find_dso_for_object@GLIBC_PRIVATE 0 1
  _dl_get_tls_static_info@GLIBC_PRIVATE 0 1
  _dl_make_stack_executable@GLIBC_PRIVATE 0 1
  _dl_mcount@GLIBC_2.1 2.1
@@ -28,21 +29,21 @@ ld-linux.so.2 libc6-i386 #MINVER#
  malloc@GLIBC_2.0 2.0
  realloc@GLIBC_2.0 2.0
 libBrokenLocale.so.1 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.0@GLIBC_2.0 2.0
  __ctype_get_mb_cur_max@GLIBC_2.0 2.0
 libSegFault.so libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  __invoke_dynamic_linker__@Base 2.3.6
 libanl.so.1 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.2.3@GLIBC_2.2.3 2.2.3
  gai_cancel@GLIBC_2.2.3 2.2.3
  gai_error@GLIBC_2.2.3 2.2.3
  gai_suspend@GLIBC_2.2.3 2.2.3
  getaddrinfo_a@GLIBC_2.2.3 2.2.3
 libc.so.6 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GCC_3.0@GCC_3.0 2.3.6
  GLIBC_2.0@GLIBC_2.0 2.0
  GLIBC_2.1.1@GLIBC_2.1.1 2.1.1
@@ -56,6 +57,7 @@ libc.so.6 libc6-i386 #MINVER#
  GLIBC_2.15@GLIBC_2.15 2.15
  GLIBC_2.16@GLIBC_2.16 2.16
  GLIBC_2.17@GLIBC_2.17 2.17
+ GLIBC_2.18@GLIBC_2.18 2.18
  GLIBC_2.1@GLIBC_2.1 2.1
  GLIBC_2.2.1@GLIBC_2.2.1 2.2.1
  GLIBC_2.2.2@GLIBC_2.2.2 2.2.2
@@ -248,6 +250,7 @@ libc.so.6 libc6-i386 #MINVER#
  __backtrace_symbols_fd@GLIBC_2.1 2.1
  __bsd_getpgrp@GLIBC_2.0 2.0
  __bzero@GLIBC_2.0 2.0
+ __call_tls_dtors@GLIBC_PRIVATE 0 1
  __check_rhosts_file@GLIBC_2.0 2.0
  __chk_fail@GLIBC_2.3.4 2.3.4
  __clock_getcpuclockid@GLIBC_PRIVATE 0 1
@@ -276,6 +279,7 @@ libc.so.6 libc6-i386 #MINVER#
  __cxa_at_quick_exit@GLIBC_2.10 2.10
  __cxa_atexit@GLIBC_2.1.3 2.1.3
  __cxa_finalize@GLIBC_2.1.3 2.1.3
+ __cxa_thread_atexit_impl@GLIBC_2.18 2.18
  __cyg_profile_func_enter@GLIBC_2.2 2.2
  __cyg_profile_func_exit@GLIBC_2.2 2.2
  __daylight@GLIBC_2.0 2.0
@@ -477,6 +481,7 @@ libc.so.6 libc6-i386 #MINVER#
  __memset_gcn_by2@GLIBC_2.1.1 2.1.1
  __memset_gcn_by4@GLIBC_2.1.1 2.1.1
  __memset_gg@GLIBC_2.1.1 2.1.1
+ __mktemp@GLIBC_PRIVATE 0 1
  __moddi3@GLIBC_2.0 2.0
  __modify_ldt@GLIBC_PRIVATE 0 1
  __monstartup@GLIBC_2.0 2.0
@@ -2421,12 +2426,12 @@ libc.so.6 libc6-i386 #MINVER#
  xprt_register@GLIBC_2.0 2.0
  xprt_unregister@GLIBC_2.0 2.0
 libcidn.so.1 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  idna_to_ascii_lz@GLIBC_PRIVATE 0 1
  idna_to_unicode_lzlz@GLIBC_PRIVATE 0 1
 libcrypt.so.1 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.0@GLIBC_2.0 2.0
  crypt@GLIBC_2.0 2.0
  crypt_r@GLIBC_2.0 2.0
@@ -2436,7 +2441,7 @@ libcrypt.so.1 libc6-i386 #MINVER#
  setkey@GLIBC_2.0 2.0
  setkey_r@GLIBC_2.0 2.0
 libdl.so.2 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.0@GLIBC_2.0 2.0
  GLIBC_2.1@GLIBC_2.1 2.1
  GLIBC_2.3.3@GLIBC_2.3.3 2.3.3
@@ -2454,9 +2459,10 @@ libdl.so.2 libc6-i386 #MINVER#
  dlsym@GLIBC_2.0 2.0
  dlvsym@GLIBC_2.1 2.1
 libm.so.6 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.0@GLIBC_2.0 2.0
  GLIBC_2.15@GLIBC_2.15 2.15
+ GLIBC_2.18@GLIBC_2.18 2.18
  GLIBC_2.1@GLIBC_2.1 2.1
  GLIBC_2.2@GLIBC_2.2 2.2
  GLIBC_2.4@GLIBC_2.4 2.4
@@ -2508,6 +2514,9 @@ libm.so.6 libc6-i386 #MINVER#
  __hypot_finite@GLIBC_2.15 2.15
  __hypotf_finite@GLIBC_2.15 2.15
  __hypotl_finite@GLIBC_2.15 2.15
+ __issignaling@GLIBC_2.18 2.18
+ __issignalingf@GLIBC_2.18 2.18
+ __issignalingl@GLIBC_2.18 2.18
  __j0_finite@GLIBC_2.15 2.15
  __j0f_finite@GLIBC_2.15 2.15
  __j0l_finite@GLIBC_2.15 2.15
@@ -2865,7 +2874,7 @@ libm.so.6 libc6-i386 #MINVER#
  ynf@GLIBC_2.0 2.0
  ynl@GLIBC_2.0 2.0
 libmemusage.so libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  __invoke_dynamic_linker__@Base 2.3.6
  calloc@Base 2.3.6
  free@Base 2.3.6
@@ -2876,7 +2885,7 @@ libmemusage.so libc6-i386 #MINVER#
  munmap@Base 2.3.6
  realloc@Base 2.3.6
 libnsl.so.1 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.0@GLIBC_2.0 2.0
  GLIBC_2.1@GLIBC_2.1 2.1
  GLIBC_2.2@GLIBC_2.2 2.2
@@ -3010,7 +3019,7 @@ libnsl.so.1 libc6-i386 #MINVER#
  yperr_string@GLIBC_2.0 2.0
  ypprot_err@GLIBC_2.0 2.0
 libnss_compat.so.2 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_compat_endgrent@GLIBC_PRIVATE 0 1
  _nss_compat_endpwent@GLIBC_PRIVATE 0 1
@@ -3028,7 +3037,7 @@ libnss_compat.so.2 libc6-i386 #MINVER#
  _nss_compat_setpwent@GLIBC_PRIVATE 0 1
  _nss_compat_setspent@GLIBC_PRIVATE 0 1
 libnss_dns.so.2 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_dns_getcanonname_r@GLIBC_PRIVATE 0 1
  _nss_dns_gethostbyaddr2_r@GLIBC_PRIVATE 0 1
@@ -3040,7 +3049,7 @@ libnss_dns.so.2 libc6-i386 #MINVER#
  _nss_dns_getnetbyaddr_r@GLIBC_PRIVATE 0 1
  _nss_dns_getnetbyname_r@GLIBC_PRIVATE 0 1
 libnss_files.so.2 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_files_endaliasent@GLIBC_PRIVATE 0 1
  _nss_files_endetherent@GLIBC_PRIVATE 0 1
@@ -3110,7 +3119,7 @@ libnss_files.so.2 libc6-i386 #MINVER#
  _nss_files_setspent@GLIBC_PRIVATE 0 1
  _nss_netgroup_parseline@GLIBC_PRIVATE 0 1
 libnss_hesiod.so.2 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_hesiod_endgrent@GLIBC_PRIVATE 0 1
  _nss_hesiod_endprotoent@GLIBC_PRIVATE 0 1
@@ -3130,7 +3139,7 @@ libnss_hesiod.so.2 libc6-i386 #MINVER#
  _nss_hesiod_setpwent@GLIBC_PRIVATE 0 1
  _nss_hesiod_setservent@GLIBC_PRIVATE 0 1
 libnss_nis.so.2 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_nis_endaliasent@GLIBC_PRIVATE 0 1
  _nss_nis_endetherent@GLIBC_PRIVATE 0 1
@@ -3190,7 +3199,7 @@ libnss_nis.so.2 libc6-i386 #MINVER#
  _nss_nis_setservent@GLIBC_PRIVATE 0 1
  _nss_nis_setspent@GLIBC_PRIVATE 0 1
 libnss_nisplus.so.2 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_nisplus_endaliasent@GLIBC_PRIVATE 0 1
  _nss_nisplus_endetherent@GLIBC_PRIVATE 0 1
@@ -3249,17 +3258,18 @@ libnss_nisplus.so.2 libc6-i386 #MINVER#
  _nss_nisplus_setservent@GLIBC_PRIVATE 0 1
  _nss_nisplus_setspent@GLIBC_PRIVATE 0 1
 libpcprofile.so libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  __cyg_profile_func_enter@Base 2.3.6
  __cyg_profile_func_exit@Base 2.3.6
  __invoke_dynamic_linker__@Base 2.3.6
 libpthread.so.0 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.0@GLIBC_2.0 2.0
  GLIBC_2.1.1@GLIBC_2.1.1 2.1.1
  GLIBC_2.1.2@GLIBC_2.1.2 2.1.2
  GLIBC_2.11@GLIBC_2.11 2.11
  GLIBC_2.12@GLIBC_2.12 2.12
+ GLIBC_2.18@GLIBC_2.18 2.18
  GLIBC_2.1@GLIBC_2.1 2.1
  GLIBC_2.2.3@GLIBC_2.2.3 2.2.3
  GLIBC_2.2.6@GLIBC_2.2.6 2.2.6
@@ -3406,6 +3416,7 @@ libpthread.so.0 libc6-i386 #MINVER#
  pthread_exit@GLIBC_2.0 2.0
  pthread_getaffinity_np@GLIBC_2.3.3 2.3.3
  pthread_getaffinity_np@GLIBC_2.3.4 2.3.4
+ pthread_getattr_default_np@GLIBC_2.18 2.18
  pthread_getattr_np@GLIBC_2.2.3 2.2.3
  pthread_getconcurrency@GLIBC_2.1 2.1
  pthread_getcpuclockid@GLIBC_2.2 2.2
@@ -3462,6 +3473,7 @@ libpthread.so.0 libc6-i386 #MINVER#
  pthread_self@GLIBC_2.0 2.0
  pthread_setaffinity_np@GLIBC_2.3.3 2.3.3
  pthread_setaffinity_np@GLIBC_2.3.4 2.3.4
+ pthread_setattr_default_np@GLIBC_2.18 2.18
  pthread_setcancelstate@GLIBC_2.0 2.0
  pthread_setcanceltype@GLIBC_2.0 2.0
  pthread_setconcurrency@GLIBC_2.1 2.1
@@ -3516,7 +3528,7 @@ libpthread.so.0 libc6-i386 #MINVER#
  waitpid@GLIBC_2.0 2.0
  write@GLIBC_2.0 2.0
 libresolv.so.2 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.0@GLIBC_2.0 2.0
  GLIBC_2.2@GLIBC_2.2 2.2
  GLIBC_2.3.2@GLIBC_2.3.2 2.3.2
@@ -3625,7 +3637,7 @@ libresolv.so.2 libc6-i386 #MINVER#
  res_send_setqhook@GLIBC_2.0 2.0
  res_send_setrhook@GLIBC_2.0 2.0
 librt.so.1 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.1@GLIBC_2.1 2.1
  GLIBC_2.2@GLIBC_2.2 2.2
  GLIBC_2.3.4@GLIBC_2.3.4 2.3.4
@@ -3674,7 +3686,7 @@ librt.so.1 libc6-i386 #MINVER#
  timer_gettime@GLIBC_2.2 2.2
  timer_settime@GLIBC_2.2 2.2
 libthread_db.so.1 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.1.3@GLIBC_2.1.3 2.1.3
  GLIBC_2.2.3@GLIBC_2.2.3 2.2.3
  GLIBC_2.3.3@GLIBC_2.3.3 2.3.3
@@ -3720,7 +3732,7 @@ libthread_db.so.1 libc6-i386 #MINVER#
  td_thr_tsd@GLIBC_2.1.3 2.1.3
  td_thr_validate@GLIBC_2.1.3 2.1.3
 libutil.so.1 libc6-i386 #MINVER#
-| libc6-i386 (>> 2.17), libc6-i386 (<< 2.18)
+| libc6-i386 (>> 2.18), libc6-i386 (<< 2.19)
  GLIBC_2.0@GLIBC_2.0 2.0
  forkpty@GLIBC_2.0 2.0
  login@GLIBC_2.0 2.0

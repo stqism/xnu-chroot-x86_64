@@ -1,6 +1,7 @@
 /.
 /usr
 /usr/share
+/usr/share/man
 /usr/share/man/man7
 /usr/share/man/man7/futex.7.gz
 /usr/share/man/man7/cpuset.7.gz
@@ -31,6 +32,7 @@
 /usr/share/man/man7/posixoptions.7.gz
 /usr/share/man/man7/svipc.7.gz
 /usr/share/man/man7/netdevice.7.gz
+/usr/share/man/man7/vdso.7.gz
 /usr/share/man/man7/signal.7.gz
 /usr/share/man/man7/iso_8859-5.7.gz
 /usr/share/man/man7/glob.7.gz
@@ -91,7 +93,9 @@
 /usr/share/man/man7/unix.7.gz
 /usr/share/man/man7/iso_8859-8.7.gz
 /usr/share/man/man7/mailaddr.7.gz
+/usr/share/man/man3
 /usr/share/man/man3/intro.3.gz
+/usr/share/man/man8
 /usr/share/man/man8/sln.8.gz
 /usr/share/man/man8/sync.8.gz
 /usr/share/man/man8/zic.8.gz
@@ -128,9 +132,11 @@
 /usr/share/man/man4/hpsa.4.gz
 /usr/share/man/man4/msr.4.gz
 /usr/share/man/man4/ram.4.gz
+/usr/share/man/man1
 /usr/share/man/man1/getent.1.gz
 /usr/share/man/man1/intro.1.gz
 /usr/share/man/man1/ldd.1.gz
+/usr/share/man/man5
 /usr/share/man/man5/core.5.gz
 /usr/share/man/man5/rpc.5.gz
 /usr/share/man/man5/termcap.5.gz
@@ -172,8 +178,8 @@
 /usr/share/doc/manpages/copyright
 /usr/share/doc/manpages/README.Debian
 /usr/share/doc/manpages/changelog.Debian.gz
+/usr/share/doc/manpages/man-pages-3.61.Announce
 /usr/share/doc/manpages/changelog.gz
-/usr/share/doc/manpages/man-pages-3.54.Announce
 /usr/share/doc/manpages/POSIX-MANPAGES
 /usr/share/doc/manpages/TODO.Debian
 /usr/share/lintian

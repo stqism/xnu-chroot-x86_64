@@ -699,7 +699,7 @@ s,@LLVM_ETCDIR@,|#_!!_#|/usr/lib/llvm-3.3/etc/llvm,g
 s,@LLVM_INCLUDEDIR@,|#_!!_#|/usr/lib/llvm-3.3/include,g
 s,@LLVM_INFODIR@,|#_!!_#|/usr/lib/llvm-3.3/info,g
 s,@LLVM_MANDIR@,|#_!!_#|/usr/lib/llvm-3.3/man,g
-s,@LLVM_CONFIGTIME@,|#_!!_#|Wed Dec  4 17:13:17 UTC 2013,g
+s,@LLVM_CONFIGTIME@,|#_!!_#|Wed Dec 18 10:38:13 UTC 2013,g
 s,@BINDINGS_TO_BUILD@,|#_!!_#|ocaml ,g
 s,@ALL_BINDINGS@,|#_!!_#|ocaml,g
 CEOF
@@ -1162,7 +1162,7 @@ s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_ETCDIR\)[	 (].*,\1define\2 "/usr/lib/llvm-3.3/etc
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_INCLUDEDIR\)[	 (].*,\1define\2 "/usr/lib/llvm-3.3/include" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_INFODIR\)[	 (].*,\1define\2 "/usr/lib/llvm-3.3/info" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_MANDIR\)[	 (].*,\1define\2 "/usr/lib/llvm-3.3/man" ,
-s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_CONFIGTIME\)[	 (].*,\1define\2 "Wed Dec  4 17:13:17 UTC 2013" ,
+s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_CONFIGTIME\)[	 (].*,\1define\2 "Wed Dec 18 10:38:13 UTC 2013" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_HOST_TRIPLE\)[	 (].*,\1define\2 "x86_64-pc-linux-gnu" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_DEFAULT_TARGET_TRIPLE\)[	 (].*,\1define\2 "x86_64-pc-linux-gnu" ,
 s/ $//

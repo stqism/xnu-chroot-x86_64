@@ -11,6 +11,7 @@
 /usr/share/ca-certificates
 /usr/share/ca-certificates/mozilla
 /usr/share/ca-certificates/mozilla/A-Trust-nQual-03.crt
+/usr/share/ca-certificates/mozilla/ACCVRAIZ1.crt
 /usr/share/ca-certificates/mozilla/ACEDICOM_Root.crt
 /usr/share/ca-certificates/mozilla/AC_Raíz_Certicámara_S.A..crt
 /usr/share/ca-certificates/mozilla/Actalis_Authentication_Root_CA.crt
@@ -25,6 +26,7 @@
 /usr/share/ca-certificates/mozilla/America_Online_Root_Certification_Authority_1.crt
 /usr/share/ca-certificates/mozilla/America_Online_Root_Certification_Authority_2.crt
 /usr/share/ca-certificates/mozilla/ApplicationCA_-_Japanese_Government.crt
+/usr/share/ca-certificates/mozilla/Atos_TrustedRoot_2011.crt
 /usr/share/ca-certificates/mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt
 /usr/share/ca-certificates/mozilla/Baltimore_CyberTrust_Root.crt
 /usr/share/ca-certificates/mozilla/Buypass_Class_2_CA_1.crt
@@ -63,6 +65,7 @@
 /usr/share/ca-certificates/mozilla/Digital_Signature_Trust_Co._Global_CA_1.crt
 /usr/share/ca-certificates/mozilla/Digital_Signature_Trust_Co._Global_CA_3.crt
 /usr/share/ca-certificates/mozilla/E-Guven_Kok_Elektronik_Sertifika_Hizmet_Saglayicisi.crt
+/usr/share/ca-certificates/mozilla/E-Tugra_Certification_Authority.crt
 /usr/share/ca-certificates/mozilla/EBG_Elektronik_Sertifika_Hizmet_Sağlayıcısı.crt
 /usr/share/ca-certificates/mozilla/EC-ACC.crt
 /usr/share/ca-certificates/mozilla/EE_Certification_Centre_Root_CA.crt
@@ -72,7 +75,6 @@
 /usr/share/ca-certificates/mozilla/Equifax_Secure_CA.crt
 /usr/share/ca-certificates/mozilla/Equifax_Secure_Global_eBusiness_CA.crt
 /usr/share/ca-certificates/mozilla/Equifax_Secure_eBusiness_CA_1.crt
-/usr/share/ca-certificates/mozilla/Firmaprofesional_Root_CA.crt
 /usr/share/ca-certificates/mozilla/GTE_CyberTrust_Global_Root.crt
 /usr/share/ca-certificates/mozilla/GeoTrust_Global_CA.crt
 /usr/share/ca-certificates/mozilla/GeoTrust_Global_CA_2.crt
@@ -109,6 +111,7 @@
 /usr/share/ca-certificates/mozilla/RSA_Security_2048_v3.crt
 /usr/share/ca-certificates/mozilla/Root_CA_Generalitat_Valenciana.crt
 /usr/share/ca-certificates/mozilla/S-TRUST_Authentication_and_Encryption_Root_CA_2005_PN.crt
+/usr/share/ca-certificates/mozilla/SG_TRUST_SERVICES_RACINE.crt
 /usr/share/ca-certificates/mozilla/SecureSign_RootCA11.crt
 /usr/share/ca-certificates/mozilla/SecureTrust_CA.crt
 /usr/share/ca-certificates/mozilla/Secure_Global_CA.crt
@@ -123,6 +126,7 @@
 /usr/share/ca-certificates/mozilla/Starfield_Root_Certificate_Authority_-_G2.crt
 /usr/share/ca-certificates/mozilla/Starfield_Services_Root_Certificate_Authority_-_G2.crt
 /usr/share/ca-certificates/mozilla/StartCom_Certification_Authority.crt
+/usr/share/ca-certificates/mozilla/StartCom_Certification_Authority_2.crt
 /usr/share/ca-certificates/mozilla/StartCom_Certification_Authority_G2.crt
 /usr/share/ca-certificates/mozilla/SwissSign_Gold_CA_-_G2.crt
 /usr/share/ca-certificates/mozilla/SwissSign_Platinum_CA_-_G2.crt
@@ -130,17 +134,19 @@
 /usr/share/ca-certificates/mozilla/Swisscom_Root_CA_1.crt
 /usr/share/ca-certificates/mozilla/Swisscom_Root_CA_2.crt
 /usr/share/ca-certificates/mozilla/Swisscom_Root_EV_CA_2.crt
+/usr/share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_2.crt
 /usr/share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_3.crt
 /usr/share/ca-certificates/mozilla/TC_TrustCenter_Class_2_CA_II.crt
 /usr/share/ca-certificates/mozilla/TC_TrustCenter_Class_3_CA_II.crt
 /usr/share/ca-certificates/mozilla/TC_TrustCenter_Universal_CA_I.crt
 /usr/share/ca-certificates/mozilla/TDC_Internet_Root_CA.crt
-/usr/share/ca-certificates/mozilla/TDC_OCES_Root_CA.crt
 /usr/share/ca-certificates/mozilla/TURKTRUST_Certificate_Services_Provider_Root_1.crt
 /usr/share/ca-certificates/mozilla/TURKTRUST_Certificate_Services_Provider_Root_2.crt
 /usr/share/ca-certificates/mozilla/TURKTRUST_Certificate_Services_Provider_Root_2007.crt
+/usr/share/ca-certificates/mozilla/TWCA_Global_Root_CA.crt
 /usr/share/ca-certificates/mozilla/TWCA_Root_Certification_Authority.crt
 /usr/share/ca-certificates/mozilla/Taiwan_GRCA.crt
+/usr/share/ca-certificates/mozilla/TeliaSonera_Root_CA_v1.crt
 /usr/share/ca-certificates/mozilla/Thawte_Premium_Server_CA.crt
 /usr/share/ca-certificates/mozilla/Thawte_Server_CA.crt
 /usr/share/ca-certificates/mozilla/Trustis_FPS_Root_CA.crt
@@ -161,19 +167,16 @@
 /usr/share/ca-certificates/mozilla/Verisign_Class_3_Public_Primary_Certification_Authority.crt
 /usr/share/ca-certificates/mozilla/Verisign_Class_3_Public_Primary_Certification_Authority_-_G2.crt
 /usr/share/ca-certificates/mozilla/Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.crt
+/usr/share/ca-certificates/mozilla/Verisign_Class_3_Public_Primary_Certification_Authority_2.crt
 /usr/share/ca-certificates/mozilla/Verisign_Class_4_Public_Primary_Certification_Authority_-_G3.crt
 /usr/share/ca-certificates/mozilla/Visa_eCommerce_Root.crt
 /usr/share/ca-certificates/mozilla/WellsSecure_Public_Root_Certificate_Authority.crt
-/usr/share/ca-certificates/mozilla/Wells_Fargo_Root_CA.crt
 /usr/share/ca-certificates/mozilla/XRamp_Global_CA_Root.crt
 /usr/share/ca-certificates/mozilla/certSIGN_ROOT_CA.crt
 /usr/share/ca-certificates/mozilla/ePKI_Root_Certification_Authority.crt
 /usr/share/ca-certificates/mozilla/thawte_Primary_Root_CA.crt
 /usr/share/ca-certificates/mozilla/thawte_Primary_Root_CA_-_G2.crt
 /usr/share/ca-certificates/mozilla/thawte_Primary_Root_CA_-_G3.crt
-/usr/share/ca-certificates/cacert.org
-/usr/share/ca-certificates/cacert.org/cacert.org_class3.crt
-/usr/share/ca-certificates/cacert.org/cacert.org_root.crt
 /usr/share/ca-certificates/spi-inc.org
 /usr/share/ca-certificates/spi-inc.org/spi-cacert-2008.crt
 /usr/share/doc
@@ -199,4 +202,6 @@
 /usr/share/doc/ca-certificates/examples/ca-certificates-local/local/Makefile
 /usr/share/doc/ca-certificates/changelog.gz
 /usr/share/doc/ca-certificates/NEWS.Debian.gz
+/usr/share/man
+/usr/share/man/man8
 /usr/share/man/man8/update-ca-certificates.8.gz

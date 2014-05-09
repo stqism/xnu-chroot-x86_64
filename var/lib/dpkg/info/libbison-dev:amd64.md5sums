@@ -1,4 +1,4 @@
-af196abc891e60af133adf08a58c370e  usr/lib/x86_64-linux-gnu/liby.a
+8afcb90a5515c9867ae5b35b7d62b59a  usr/lib/x86_64-linux-gnu/liby.a
 f13bf16277871a8c14299c5a7c54db1f  usr/share/doc/libbison-dev/AUTHORS
 41afd0cac5b4a9add515ed069ccc1388  usr/share/doc/libbison-dev/ChangeLog-1998.gz
 eec9196c1231ae39ae534d7b1ba04dc6  usr/share/doc/libbison-dev/ChangeLog-2012.gz
@@ -6,6 +6,6 @@ f81c9b50870d7151077ff51464ca509d  usr/share/doc/libbison-dev/NEWS.gz
 6a03293b9ecfd9e483573f8893548339  usr/share/doc/libbison-dev/README
 fa4c5691cef686c7c405fbea7457567c  usr/share/doc/libbison-dev/THANKS.gz
 a3323fcdc9f1f4264b742a2aa9207445  usr/share/doc/libbison-dev/TODO.gz
-502fa9c8847de8c68b43f1279a97f909  usr/share/doc/libbison-dev/changelog.Debian.gz
+2e9ce0ff6b19352c8cd9e95a9f541c36  usr/share/doc/libbison-dev/changelog.Debian.gz
 e096700cbb5676383c83939a531478ae  usr/share/doc/libbison-dev/changelog.gz
 b98596d4b5d54d1f65ef291ec0d0bf03  usr/share/doc/libbison-dev/copyright

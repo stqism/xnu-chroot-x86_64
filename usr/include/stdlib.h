@@ -1,4 +1,4 @@
-/* Copyright (C) 1991-2007, 2009-2011, 2012 Free Software Foundation, Inc.
+/* Copyright (C) 1991-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -151,7 +151,7 @@ extern long int atol (const char *__nptr)
      __THROW __attribute_pure__ __nonnull ((1)) __wur;
 __END_NAMESPACE_STD
 
-#if defined __USE_ISOC99 || (defined __GLIBC_HAVE_LONG_LONG && defined __USE_MISC)
+#if defined __USE_ISOC99 || defined __USE_MISC
 __BEGIN_NAMESPACE_C99
 /* Convert a string to a long long integer.  */
 __extension__ extern long long int atoll (const char *__nptr)
@@ -189,7 +189,7 @@ extern unsigned long int strtoul (const char *__restrict __nptr,
      __THROW __nonnull ((1));
 __END_NAMESPACE_STD
 
-#if defined __GLIBC_HAVE_LONG_LONG && defined __USE_BSD
+#ifdef __USE_BSD
 /* Convert a string to a quadword integer.  */
 __extension__
 extern long long int strtoq (const char *__restrict __nptr,
@@ -200,9 +200,9 @@ __extension__
 extern unsigned long long int strtouq (const char *__restrict __nptr,
 				       char **__restrict __endptr, int __base)
      __THROW __nonnull ((1));
-#endif /* GCC and use BSD.  */
+#endif /* Use BSD.  */
 
-#if defined __USE_ISOC99 || (defined __GLIBC_HAVE_LONG_LONG && defined __USE_MISC)
+#if defined __USE_ISOC99 || defined __USE_MISC
 __BEGIN_NAMESPACE_C99
 /* Convert a string to a quadword integer.  */
 __extension__
@@ -215,7 +215,7 @@ extern unsigned long long int strtoull (const char *__restrict __nptr,
 					char **__restrict __endptr, int __base)
      __THROW __nonnull ((1));
 __END_NAMESPACE_C99
-#endif /* ISO C99 or GCC and use MISC.  */
+#endif /* ISO C99 or use MISC.  */
 
 
 #ifdef __USE_GNU
@@ -415,7 +415,8 @@ struct drand48_data
     unsigned short int __old_x[3]; /* Old state.  */
     unsigned short int __c;	/* Additive const. in congruential formula.  */
     unsigned short int __init;	/* Flag for initializing.  */
-    unsigned long long int __a;	/* Factor in congruential formula.  */
+    __extension__ unsigned long long int __a;	/* Factor in congruential
+						   formula.  */
   };
 
 /* Return non-negative, double-precision floating-point value in [0.0,1.0).  */
@@ -506,7 +507,7 @@ extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
 #ifdef __USE_ISOC11
 /* ISO C variant of aligned allocation.  */
 extern void *aligned_alloc (size_t __alignment, size_t __size)
-     __THROW __wur __attribute__ ((__malloc__, __alloc_size__ (2)));
+     __THROW __attribute_malloc__ __attribute_alloc_size__ ((2)) __wur;
 #endif
 
 __BEGIN_NAMESPACE_STD
@@ -755,6 +756,10 @@ extern void *bsearch (const void *__key, const void *__base,
 		      size_t __nmemb, size_t __size, __compar_fn_t __compar)
      __nonnull ((1, 2, 5)) __wur;
 
+#ifdef __USE_EXTERN_INLINES
+# include <bits/stdlib-bsearch.h>
+#endif
+
 /* Sort NMEMB elements of BASE, of SIZE bytes each,
    using COMPAR to perform the comparisons.  */
 extern void qsort (void *__base, size_t __nmemb, size_t __size,
@@ -818,9 +823,9 @@ extern char *fcvt (double __value, int __ndigit, int *__restrict __decpt,
    be written to BUF.  */
 extern char *gcvt (double __value, int __ndigit, char *__buf)
      __THROW __nonnull ((3)) __wur;
+#endif
 
-
-# ifdef __USE_MISC
+#ifdef __USE_MISC
 /* Long double versions of above functions.  */
 extern char *qecvt (long double __value, int __ndigit,
 		    int *__restrict __decpt, int *__restrict __sign)
@@ -849,21 +854,20 @@ extern int qfcvt_r (long double __value, int __ndigit,
 		    int *__restrict __decpt, int *__restrict __sign,
 		    char *__restrict __buf, size_t __len)
      __THROW __nonnull ((3, 4, 5));
-# endif	/* misc */
-#endif	/* use MISC || use X/Open Unix */
+#endif	/* misc */
 
 
 __BEGIN_NAMESPACE_STD
 /* Return the length of the multibyte character
    in S, which is no longer than N.  */
-extern int mblen (const char *__s, size_t __n) __THROW __wur;
+extern int mblen (const char *__s, size_t __n) __THROW;
 /* Return the length of the given multibyte character,
    putting its `wchar_t' representation in *PWC.  */
 extern int mbtowc (wchar_t *__restrict __pwc,
-		   const char *__restrict __s, size_t __n) __THROW __wur;
+		   const char *__restrict __s, size_t __n) __THROW;
 /* Put the multibyte character represented
    by WCHAR in S, returning its length.  */
-extern int wctomb (char *__s, wchar_t __wchar) __THROW __wur;
+extern int wctomb (char *__s, wchar_t __wchar) __THROW;
 
 
 /* Convert a multibyte string to a wide char string.  */

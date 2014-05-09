@@ -31,10 +31,13 @@
 /usr/share/doc/gcc-4.8-base/gomp/changelog.gz
 /usr/share/doc/gcc-4.8-base/changelog.gz
 /usr/share/doc/gcc-4.8-base/README.ssp
+/usr/share/man
+/usr/share/man/man1
 /usr/share/man/man1/gcc-nm-4.8.1.gz
 /usr/share/man/man1/gcc-ranlib-4.8.1.gz
 /usr/share/man/man1/gcc-ar-4.8.1.gz
 /usr/bin/x86_64-linux-gnu-gcc-nm-4.8
+/usr/bin/x86_64-linux-gnu-gcov-4.8
 /usr/bin/x86_64-linux-gnu-gcc-ranlib-4.8
 /usr/bin/x86_64-linux-gnu-gcc-4.8
 /usr/bin/x86_64-linux-gnu-gcc-ar-4.8

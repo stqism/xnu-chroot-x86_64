@@ -142,10 +142,6 @@ Package: patch
 Architecture: amd64
 Auto-Installed: 1
 
-Package: librtmp0
-Architecture: amd64
-Auto-Installed: 1
-
 Package: g++
 Architecture: amd64
 Auto-Installed: 1
@@ -370,10 +366,6 @@ Package: libxml2
 Architecture: amd64
 Auto-Installed: 1
 
-Package: libdns99
-Architecture: amd64
-Auto-Installed: 1
-
 Package: sgml-base
 Architecture: amd64
 Auto-Installed: 1
@@ -395,6 +387,54 @@ Architecture: amd64
 Auto-Installed: 1
 
 Package: zlib1g
+Architecture: i386
+Auto-Installed: 1
+
+Package: libdb5.3
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libdns100
+Architecture: amd64
+Auto-Installed: 1
+
+Package: liblogging-stdlog0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: rename
+Architecture: amd64
+Auto-Installed: 1
+
+Package: sysvinit-core
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libprocps3
+Architecture: amd64
+Auto-Installed: 1
+
+Package: startpar
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libfl-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libx32stdc++6
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libdebconfclient0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gcc-4.9-base
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gcc-4.9-base
 Architecture: i386
 Auto-Installed: 1
 

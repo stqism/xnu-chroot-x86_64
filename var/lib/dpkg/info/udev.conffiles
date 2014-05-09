@@ -1,5 +1,5 @@
+/etc/init.d/udev-finish
 /etc/init.d/udev
-/etc/udev/links.conf
 /etc/udev/udev.conf
 /etc/init/udev-finish.conf
 /etc/init/udev.conf

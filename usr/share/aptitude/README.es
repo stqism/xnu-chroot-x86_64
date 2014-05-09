@@ -1,6 +1,6 @@
                          Manual de usuario de aptitude
 
-Versión 0.6.8.2
+Versión 0.6.10
 
   Daniel Burrows
 
@@ -389,13 +389,13 @@ Versión 0.6.8.2
        la base de la página y descargue el fichero “.orig.tar.gz”).
 
    Una vez que disponga de todos los componentes necesarios, abra una
-   terminal y ejecute la orden tar zxf aptitude-0.6.8.2.tar.gz para
+   terminal y ejecute la orden tar zxf aptitude-0.6.10.tar.gz para
    desempaquetar el código fuente. Una vez que haya desempaquetado el código
-   fuente, introduzca cd aptitude-0.6.8.2 && ./configure && make para
-   compilar aptitude. Si tiene éxito, asegúrese de que es el usuario root
-   (usando su, por ejemplo), y después teclee make install para instalar
-   aptitude en su equipo. Una vez que haya instalado aptitude con éxito,
-   ejecutar aptitude en una terminal debería iniciar el programa.
+   fuente, introduzca cd aptitude-0.6.10 && ./configure && make para compilar
+   aptitude. Si tiene éxito, asegúrese de que es el usuario root (usando su,
+   por ejemplo), y después teclee make install para instalar aptitude en su
+   equipo. Una vez que haya instalado aptitude con éxito, ejecutar aptitude
+   en una terminal debería iniciar el programa.
 
   Cómo seguir y participar en el desarrollo de aptitude.
 
@@ -404,7 +404,7 @@ Versión 0.6.8.2
    Si quiere probar el código fuente más reciente de aptitude, puede
    descargar el código fuente no publicado de aptitude utilizando Git.
    Instale Git (disponible en http://git-scm.com/) y ejecute la orden git
-   clone git://git.debian.org/git/aptitude/aptitude.git para obtener el
+   clone git://anonscm.debian.org/aptitude/aptitude.git para obtener el
    código fuente más reciente.
 
    [Aviso] Aviso
@@ -1542,6 +1542,9 @@ La interfaz de usuario de aptitude en la terminal
    | Paquete → Instalar (+)  | Marca el paquete seleccionado para su        |
    |                         | instalación.                                 |
    |-------------------------+----------------------------------------------|
+   | Package → Reinstall (L) | Flag the currently selected package for      |
+   |                         | reinstallation.                              |
+   |-------------------------+----------------------------------------------|
    | Paquete → Eliminar (-)  | Marca el paquete seleccionado para su        |
    |                         | eliminación.                                 |
    |-------------------------+----------------------------------------------|
@@ -2064,82 +2067,81 @@ Gestionar paquetes.
    ejemplo, “Paquetes actualizables”), y ejecutando la orden.
 
    +------------------------------------------------------------------------+
-   |           Orden           |                Descripción                 |
-   |---------------------------+--------------------------------------------|
-   |                           | Marcar el paquete para su instalación.     |
-   |                           |                                            |
-   | Instalar: Paquete →       | Si el paquete no está instalado, se        |
-   | Instalar (+)              | instalará. Si ya lo está, se actualizará,  |
-   |                           | de ser posible, y cualquier retención en   |
-   |                           | efecto se cancelará.                       |
-   |---------------------------+--------------------------------------------|
-   |                           | Marcar el paquete seleccionado para su     |
-   | Eliminar: Paquete →       | eliminación.                               |
-   | Eliminar (-)              |                                            |
-   |                           | Si el paquete está instalado, se           |
-   |                           | eliminará.                                 |
-   |---------------------------+--------------------------------------------|
-   |                           | Marcar el paquete para ser purgado         |
-   |                           |                                            |
-   |                           | Si el paquete esta instalado, se           |
-   | Purgar: Paquete → Purgar  | eliminará. Mas aún, aunque se elimine,     |
-   | (_)                       | cualquier fichero resultante (tales como   |
-   |                           | los ficheros de configuración)             |
-   |                           | relacionados con el paquete también se     |
-   |                           | eliminarán del sistema.                    |
-   |---------------------------+--------------------------------------------|
-   |                           | Marcar el paquete para que se mantenga en  |
-   |                           | su versión actual.                         |
-   |                           |                                            |
-   | Mantener: Paquete →       | Cualquier acción que se fuese a llevar a   |
-   | Mantener (:)              | cabo sobre el paquete -- instalación,      |
-   |                           | eliminación o actualización -- se cancela, |
-   |                           | y cualquier retención impuesta al paquete  |
-   |                           | se elimina.                                |
-   |---------------------------+--------------------------------------------|
-   |                           | Imponer una retención al paquete.          |
-   |                           |                                            |
-   |                           | Al igual que con «Mantener», se cancela    |
-   | Retener: Paquete →        | cualquier acción programada para el        |
-   | Retener (=)               | paquete. Además, el paquete no se          |
-   |                           | actualizará automáticamente ^[a] hasta que |
-   |                           | elimine esta acción. Puede cancelar        |
-   |                           | «Mantener» ejecutando la siguiente orden.  |
-   |---------------------------+--------------------------------------------|
-   |                           | El paquete no se actualizará               |
-   |                           | automáticamente ^[a] a la versión a la que |
-   |                           | lo iba a ser. Si se iba a actualizar, la   |
-   |                           | actualización se cancela.                  |
-   |                           |                                            |
-   |                           | Si ejecuta esta orden sobre una versión en |
-   |                           | particular de un paquete, el paquete no se |
-   | Paquete → Prohibir        | actualizará a la versión escogida. Observe |
-   | versiones (F)             | que sólo puede prohibir una versión al     |
-   |                           | mismo tiempo.                              |
-   |                           |                                            |
-   |                           | Esta funcionalidad se ha implementado en   |
-   |                           | gran medida para la conveniencia de la     |
-   |                           | distribución “unstable (sid)”, para que    |
-   |                           | así se puedan evitar versiones de          |
-   |                           | programas ya conocidas como malas.         |
-   |---------------------------+--------------------------------------------|
-   |                           | Reinstalar el paquete.                     |
-   |                           |                                            |
-   |                           | Tenga en cuenta que la reinstalación no se |
-   |                           | guardará cuando salga de aptitude o        |
-   | Reinstalar: pulse L       | ejecute un proceso de instalación, por     |
-   |                           | razones técnicas (básicamente, las capas   |
-   |                           | de software subyacentes, dpkg y apt no     |
-   |                           | proporcionan ninguna manera de ver si una  |
-   |                           | reinstalación ha tenido éxito o no).       |
-   |---------------------------+--------------------------------------------|
-   |                           | Define si un paquete se toma como          |
-   |                           | automáticamente instalado; los paquetes    |
-   | Paquete → Marcar          | automáticamente instalados se eliminarán   |
-   | automático (M), Paquete → | cuando ningún otro paquete dependa de      |
-   | Marcar manual (m)         | ellos. Para más información, consulte      |
-   |                           | “Gestionar paquetes automáticamente        |
-   |                           | instalados.”.                              |
+   |          Orden           |                 Descripción                 |
+   |--------------------------+---------------------------------------------|
+   |                          | Marcar el paquete para su instalación.      |
+   |                          |                                             |
+   | Instalar: Paquete →      | Si el paquete no está instalado, se         |
+   | Instalar (+)             | instalará. Si ya lo está, se actualizará,   |
+   |                          | de ser posible, y cualquier retención en    |
+   |                          | efecto se cancelará.                        |
+   |--------------------------+---------------------------------------------|
+   |                          | Marcar el paquete seleccionado para su      |
+   | Eliminar: Paquete →      | eliminación.                                |
+   | Eliminar (-)             |                                             |
+   |                          | Si el paquete está instalado, se eliminará. |
+   |--------------------------+---------------------------------------------|
+   |                          | Marcar el paquete para ser purgado          |
+   |                          |                                             |
+   | Purgar: Paquete → Purgar | Si el paquete esta instalado, se eliminará. |
+   | (_)                      | Mas aún, aunque se elimine, cualquier       |
+   |                          | fichero resultante (tales como los ficheros |
+   |                          | de configuración) relacionados con el       |
+   |                          | paquete también se eliminarán del sistema.  |
+   |--------------------------+---------------------------------------------|
+   |                          | Marcar el paquete para que se mantenga en   |
+   |                          | su versión actual.                          |
+   |                          |                                             |
+   | Mantener: Paquete →      | Cualquier acción que se fuese a llevar a    |
+   | Mantener (:)             | cabo sobre el paquete -- instalación,       |
+   |                          | eliminación o actualización -- se cancela,  |
+   |                          | y cualquier retención impuesta al paquete   |
+   |                          | se elimina.                                 |
+   |--------------------------+---------------------------------------------|
+   |                          | Imponer una retención al paquete.           |
+   |                          |                                             |
+   |                          | Al igual que con «Mantener», se cancela     |
+   | Retener: Paquete →       | cualquier acción programada para el         |
+   | Retener (=)              | paquete. Además, el paquete no se           |
+   |                          | actualizará automáticamente ^[a] hasta que  |
+   |                          | elimine esta acción. Puede cancelar         |
+   |                          | «Mantener» ejecutando la siguiente orden.   |
+   |--------------------------+---------------------------------------------|
+   |                          | El paquete no se actualizará                |
+   |                          | automáticamente ^[a] a la versión a la que  |
+   |                          | lo iba a ser. Si se iba a actualizar, la    |
+   |                          | actualización se cancela.                   |
+   |                          |                                             |
+   |                          | Si ejecuta esta orden sobre una versión en  |
+   |                          | particular de un paquete, el paquete no se  |
+   | Paquete → Prohibir       | actualizará a la versión escogida. Observe  |
+   | versiones (F)            | que sólo puede prohibir una versión al      |
+   |                          | mismo tiempo.                               |
+   |                          |                                             |
+   |                          | Esta funcionalidad se ha implementado en    |
+   |                          | gran medida para la conveniencia de la      |
+   |                          | distribución “unstable (sid)”, para que así |
+   |                          | se puedan evitar versiones de programas ya  |
+   |                          | conocidas como malas.                       |
+   |--------------------------+---------------------------------------------|
+   |                          | Flag the current package for                |
+   |                          | reinstallation.                             |
+   |                          |                                             |
+   |                          | Tenga en cuenta que la reinstalación no se  |
+   | Reinstall: Package →     | guardará cuando salga de aptitude o ejecute |
+   | Reinstall (L)            | un proceso de instalación, por razones      |
+   |                          | técnicas (básicamente, las capas de         |
+   |                          | software subyacentes, dpkg y apt no         |
+   |                          | proporcionan ninguna manera de ver si una   |
+   |                          | reinstalación ha tenido éxito o no).        |
+   |--------------------------+---------------------------------------------|
+   |                          | Define si un paquete se toma como           |
+   |                          | automáticamente instalado; los paquetes     |
+   | Paquete → Marcar         | automáticamente instalados se eliminarán    |
+   | automático (M), Paquete  | cuando ningún otro paquete dependa de       |
+   | → Marcar manual (m)      | ellos. Para más información, consulte       |
+   |                          | “Gestionar paquetes automáticamente         |
+   |                          | instalados.”.                               |
    |------------------------------------------------------------------------|
    | ^[a] Ésto es, que no se verá afectado por Acciones → Marcar            |
    | actualizable (U) o por las órdenes en línea de órdenes full-upgrade o  |
@@ -4028,8 +4030,8 @@ Personalizar aptitude
                                                        devuelve nada.
                                                        Mostrar la versión de
    %n       Versión del      La longitud de  No        aptitude que está
-            programa         “0.6.8.2”.                ejecutando,
-                                                       actualmente “0.6.8.2”.
+            programa         “0.6.10”.                 ejecutando,
+                                                       actualmente “0.6.10”.
                                                        Mostrar el nombre del
    %N       Nombre del       La longitud del No        programa;
             programa         nombre.                   generalmente,
@@ -4366,6 +4368,17 @@ Personalizar aptitude
 
            Ordenar paquetes según la cantidad estimada de espacio que
            necesitan cuando se instalan.
+
+   installsizechange
+
+           Sorts packages by the change in the installed size (estimated
+           amount of size required when installed), comparing the current
+           version (if installed) and the candidate version to be installed,
+           upgraded or removed.
+
+   debsize
+
+           Sorts packages by the size of the package.
 
    name
 
@@ -5806,8 +5819,9 @@ Personalizar aptitude
    órdenes de aptitude. Cada aparición de la opción -v añade 1 a este valor.
    Opción: Aptitude::CmdLine::Visual-Preview
    Predeterminado: false
-   Descripción: Si esta opción vale true, aptitude entrará en modo gráfico
-   para poder previsualizar el proceso de instalación, y descargar paquetes.
+   Descripción: If this option is true, aptitude will enter its visual
+   interface to display the preview of an installation run and to download
+   packages.
    Opción: Aptitude::Delete-Unused
    Predeterminado: true
    Descripción: Si se activa esta opción, se eliminarán los paquetes
@@ -7068,7 +7082,7 @@ Acciones en la línea de órdenes
    safe-upgrade
 
            Actualiza los paquetes instalados a su versión más reciente. Los
-           paquetes instalados se eliminarán a menos que no se utilizen
+           paquetes instalados no se eliminarán a menos que no se utilicen
            (consulte la sección “Gestionar paquetes automáticamente
            instalados” en la guía de referencia de aptitude). Los paquetes no
            instalados se pueden instalar para resolver dependencias a menos
@@ -7172,12 +7186,11 @@ Acciones en la línea de órdenes
 
    show
 
-           Muestra información detallada relativa a uno o más paquetes,
-           listados de acuerdo a la orden «search». Si el nombre de un
-           paquete contiene un carácter de tilde (“~”) o un signo de
-           interrogación (“?”), se tomará como un patrón de búsqueda y verá
-           todos aquellos paquetes coincidentes (consulte la sección
-           “Patrones de búsqueda” en el manual de referencia de aptitude).
+           Displays detailed information about one or more packages. If a
+           package name contains a tilde character (“~”) or a question mark
+           (“?”), it will be treated as a search pattern and all matching
+           packages will be displayed (see the section “Search Patterns” in
+           the aptitude reference manual).
 
            Si el nivel de verbosidad es 1 o mayor (p. ej., al menos hay un -v
            en la línea de órdenes), aparecerá información acerca de todas las
@@ -7724,8 +7737,8 @@ Opciones
            paquetes (esto invalida las configuraciones en /etc/apt/apt.conf y
            ~/.aptitude/config)
 
-           Esto se corresponde con las dos opciones de configuración
-           Apt::Install-Recommends y Apt::AutoRemove::InstallRecommends.
+           This corresponds to the pair of configuration options
+           Apt::Install-Recommends and Apt::AutoRemove::RecommendsImportant.
 
    -r, --with-recommends
 

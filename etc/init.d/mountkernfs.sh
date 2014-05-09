@@ -42,6 +42,16 @@ mount_filesystems () {
 	then
 		domount "$MNTMODE" sysfs "" /sys sysfs "-onodev,noexec,nosuid"
 	fi
+
+	if [ -d /sys/fs/pstore ]
+	then
+		domount "$MNTMODE" pstore "" /sys/fs/pstore pstore ""
+	fi
+
+	if [ -d /sys/kernel/config ]
+	then
+		domount "$MNTMODE" configfs "" /sys/kernel/config configfs ""
+	fi
 }
 
 case "$1" in

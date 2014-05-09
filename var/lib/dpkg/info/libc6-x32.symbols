@@ -1,5 +1,5 @@
 ld-linux-x32.so.2 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  __libc_enable_secure@GLIBC_PRIVATE 0 1
@@ -11,6 +11,7 @@ ld-linux-x32.so.2 libc6-x32 #MINVER#
  _dl_argv@GLIBC_PRIVATE 0 1
  _dl_deallocate_tls@GLIBC_PRIVATE 0 1
  _dl_debug_state@GLIBC_PRIVATE 0 1
+ _dl_find_dso_for_object@GLIBC_PRIVATE 0 1
  _dl_get_tls_static_info@GLIBC_PRIVATE 0 1
  _dl_make_stack_executable@GLIBC_PRIVATE 0 1
  _dl_mcount@GLIBC_2.16 2.16
@@ -24,23 +25,24 @@ ld-linux-x32.so.2 libc6-x32 #MINVER#
  malloc@GLIBC_2.16 2.16
  realloc@GLIBC_2.16 2.16
 libBrokenLocale.so.1 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  __ctype_get_mb_cur_max@GLIBC_2.16 2.16
 libSegFault.so libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  __invoke_dynamic_linker__@Base 2.3.6
 libanl.so.1 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  gai_cancel@GLIBC_2.16 2.16
  gai_error@GLIBC_2.16 2.16
  gai_suspend@GLIBC_2.16 2.16
  getaddrinfo_a@GLIBC_2.16 2.16
 libc.so.6 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  GLIBC_2.17@GLIBC_2.17 2.17
+ GLIBC_2.18@GLIBC_2.18 2.18
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _Exit@GLIBC_2.16 2.16
  _IO_2_1_stderr_@GLIBC_2.16 2.16
@@ -190,6 +192,7 @@ libc.so.6 libc6-x32 #MINVER#
  __backtrace_symbols_fd@GLIBC_2.16 2.16
  __bsd_getpgrp@GLIBC_2.16 2.16
  __bzero@GLIBC_2.16 2.16
+ __call_tls_dtors@GLIBC_PRIVATE 0 1
  __check_rhosts_file@GLIBC_2.16 2.16
  __chk_fail@GLIBC_2.16 2.16
  __clock_getcpuclockid@GLIBC_PRIVATE 0 1
@@ -211,6 +214,7 @@ libc.so.6 libc6-x32 #MINVER#
  __cxa_at_quick_exit@GLIBC_2.16 2.16
  __cxa_atexit@GLIBC_2.16 2.16
  __cxa_finalize@GLIBC_2.16 2.16
+ __cxa_thread_atexit_impl@GLIBC_2.18 2.18
  __cyg_profile_func_enter@GLIBC_2.16 2.16
  __cyg_profile_func_exit@GLIBC_2.16 2.16
  __daylight@GLIBC_2.16 2.16
@@ -386,6 +390,7 @@ libc.so.6 libc6-x32 #MINVER#
  __mempcpy_chk@GLIBC_2.16 2.16
  __mempcpy_small@GLIBC_2.16 2.16
  __memset_chk@GLIBC_2.16 2.16
+ __mktemp@GLIBC_PRIVATE 0 1
  __monstartup@GLIBC_2.16 2.16
  __morecore@GLIBC_2.16 2.16
  __nanosleep@GLIBC_2.16 2.16
@@ -2189,12 +2194,12 @@ libc.so.6 libc6-x32 #MINVER#
  xprt_register@GLIBC_2.16 2.16
  xprt_unregister@GLIBC_2.16 2.16
 libcidn.so.1 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  idna_to_ascii_lz@GLIBC_PRIVATE 0 1
  idna_to_unicode_lzlz@GLIBC_PRIVATE 0 1
 libcrypt.so.1 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  crypt@GLIBC_2.16 2.16
  crypt_r@GLIBC_2.16 2.16
@@ -2204,7 +2209,7 @@ libcrypt.so.1 libc6-x32 #MINVER#
  setkey@GLIBC_2.16 2.16
  setkey_r@GLIBC_2.16 2.16
 libdl.so.2 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _dlfcn_hook@GLIBC_PRIVATE 0 1
@@ -2218,8 +2223,9 @@ libdl.so.2 libc6-x32 #MINVER#
  dlsym@GLIBC_2.16 2.16
  dlvsym@GLIBC_2.16 2.16
 libm.so.6 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
+ GLIBC_2.18@GLIBC_2.18 2.18
  _LIB_VERSION@GLIBC_2.16 2.16
  __acos_finite@GLIBC_2.16 2.16
  __acosf_finite@GLIBC_2.16 2.16
@@ -2266,6 +2272,9 @@ libm.so.6 libc6-x32 #MINVER#
  __hypot_finite@GLIBC_2.16 2.16
  __hypotf_finite@GLIBC_2.16 2.16
  __hypotl_finite@GLIBC_2.16 2.16
+ __issignaling@GLIBC_2.18 2.18
+ __issignalingf@GLIBC_2.18 2.18
+ __issignalingl@GLIBC_2.18 2.18
  __j0_finite@GLIBC_2.16 2.16
  __j0f_finite@GLIBC_2.16 2.16
  __j0l_finite@GLIBC_2.16 2.16
@@ -2616,7 +2625,7 @@ libm.so.6 libc6-x32 #MINVER#
  ynf@GLIBC_2.16 2.16
  ynl@GLIBC_2.16 2.16
 libmemusage.so libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  __invoke_dynamic_linker__@Base 2.3.6
  calloc@Base 2.3.6
  free@Base 2.3.6
@@ -2627,7 +2636,7 @@ libmemusage.so libc6-x32 #MINVER#
  munmap@Base 2.3.6
  realloc@Base 2.3.6
 libnsl.so.1 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  __create_ib_request@GLIBC_PRIVATE 0 1
@@ -2759,7 +2768,7 @@ libnsl.so.1 libc6-x32 #MINVER#
  yperr_string@GLIBC_2.16 2.16
  ypprot_err@GLIBC_2.16 2.16
 libnss_compat.so.2 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_compat_endgrent@GLIBC_PRIVATE 0 1
  _nss_compat_endpwent@GLIBC_PRIVATE 0 1
@@ -2777,7 +2786,7 @@ libnss_compat.so.2 libc6-x32 #MINVER#
  _nss_compat_setpwent@GLIBC_PRIVATE 0 1
  _nss_compat_setspent@GLIBC_PRIVATE 0 1
 libnss_dns.so.2 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_dns_getcanonname_r@GLIBC_PRIVATE 0 1
  _nss_dns_gethostbyaddr2_r@GLIBC_PRIVATE 0 1
@@ -2789,7 +2798,7 @@ libnss_dns.so.2 libc6-x32 #MINVER#
  _nss_dns_getnetbyaddr_r@GLIBC_PRIVATE 0 1
  _nss_dns_getnetbyname_r@GLIBC_PRIVATE 0 1
 libnss_files.so.2 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_files_endaliasent@GLIBC_PRIVATE 0 1
  _nss_files_endetherent@GLIBC_PRIVATE 0 1
@@ -2859,7 +2868,7 @@ libnss_files.so.2 libc6-x32 #MINVER#
  _nss_files_setspent@GLIBC_PRIVATE 0 1
  _nss_netgroup_parseline@GLIBC_PRIVATE 0 1
 libnss_hesiod.so.2 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_hesiod_endgrent@GLIBC_PRIVATE 0 1
  _nss_hesiod_endprotoent@GLIBC_PRIVATE 0 1
@@ -2879,7 +2888,7 @@ libnss_hesiod.so.2 libc6-x32 #MINVER#
  _nss_hesiod_setpwent@GLIBC_PRIVATE 0 1
  _nss_hesiod_setservent@GLIBC_PRIVATE 0 1
 libnss_nis.so.2 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_nis_endaliasent@GLIBC_PRIVATE 0 1
  _nss_nis_endetherent@GLIBC_PRIVATE 0 1
@@ -2939,7 +2948,7 @@ libnss_nis.so.2 libc6-x32 #MINVER#
  _nss_nis_setservent@GLIBC_PRIVATE 0 1
  _nss_nis_setspent@GLIBC_PRIVATE 0 1
 libnss_nisplus.so.2 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_nisplus_endaliasent@GLIBC_PRIVATE 0 1
  _nss_nisplus_endetherent@GLIBC_PRIVATE 0 1
@@ -2998,13 +3007,14 @@ libnss_nisplus.so.2 libc6-x32 #MINVER#
  _nss_nisplus_setservent@GLIBC_PRIVATE 0 1
  _nss_nisplus_setspent@GLIBC_PRIVATE 0 1
 libpcprofile.so libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  __cyg_profile_func_enter@Base 2.3.6
  __cyg_profile_func_exit@Base 2.3.6
  __invoke_dynamic_linker__@Base 2.3.6
 libpthread.so.0 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
+ GLIBC_2.18@GLIBC_2.18 2.18
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _IO_flockfile@GLIBC_2.16 2.16
  _IO_ftrylockfile@GLIBC_2.16 2.16
@@ -3084,7 +3094,6 @@ libpthread.so.0 libc6-x32 #MINVER#
  pause@GLIBC_2.16 2.16
  pread64@GLIBC_2.16 2.16
  pread@GLIBC_2.16 2.16
- pthread_atfork@GLIBC_2.16 2.16
  pthread_attr_destroy@GLIBC_2.16 2.16
  pthread_attr_getaffinity_np@GLIBC_2.16 2.16
  pthread_attr_getdetachstate@GLIBC_2.16 2.16
@@ -3132,6 +3141,7 @@ libpthread.so.0 libc6-x32 #MINVER#
  pthread_equal@GLIBC_2.16 2.16
  pthread_exit@GLIBC_2.16 2.16
  pthread_getaffinity_np@GLIBC_2.16 2.16
+ pthread_getattr_default_np@GLIBC_2.18 2.18
  pthread_getattr_np@GLIBC_2.16 2.16
  pthread_getconcurrency@GLIBC_2.16 2.16
  pthread_getcpuclockid@GLIBC_2.16 2.16
@@ -3187,6 +3197,7 @@ libpthread.so.0 libc6-x32 #MINVER#
  pthread_rwlockattr_setpshared@GLIBC_2.16 2.16
  pthread_self@GLIBC_2.16 2.16
  pthread_setaffinity_np@GLIBC_2.16 2.16
+ pthread_setattr_default_np@GLIBC_2.18 2.18
  pthread_setcancelstate@GLIBC_2.16 2.16
  pthread_setcanceltype@GLIBC_2.16 2.16
  pthread_setconcurrency@GLIBC_2.16 2.16
@@ -3235,7 +3246,7 @@ libpthread.so.0 libc6-x32 #MINVER#
  waitpid@GLIBC_2.16 2.16
  write@GLIBC_2.16 2.16
 libresolv.so.2 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  __b64_ntop@GLIBC_2.16 2.16
@@ -3336,7 +3347,7 @@ libresolv.so.2 libc6-x32 #MINVER#
  res_send_setqhook@GLIBC_2.16 2.16
  res_send_setrhook@GLIBC_2.16 2.16
 librt.so.1 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  __mq_open_2@GLIBC_2.16 2.16
  aio_cancel64@GLIBC_2.16 2.16
@@ -3379,7 +3390,7 @@ librt.so.1 libc6-x32 #MINVER#
  timer_gettime@GLIBC_2.16 2.16
  timer_settime@GLIBC_2.16 2.16
 libthread_db.so.1 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  td_init@GLIBC_2.16 2.16
  td_log@GLIBC_2.16 2.16
@@ -3422,7 +3433,7 @@ libthread_db.so.1 libc6-x32 #MINVER#
  td_thr_tsd@GLIBC_2.16 2.16
  td_thr_validate@GLIBC_2.16 2.16
 libutil.so.1 libc6-x32 #MINVER#
-| libc6-x32 (>> 2.17), libc6-x32 (<< 2.18)
+| libc6-x32 (>> 2.18), libc6-x32 (<< 2.19)
  GLIBC_2.16@GLIBC_2.16 2.16
  forkpty@GLIBC_2.16 2.16
  login@GLIBC_2.16 2.16

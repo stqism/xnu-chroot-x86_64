@@ -48,7 +48,7 @@ License: BSD-4-clause
 Files: debian/*
 Copyright: 2002-2004, Dima Barsky <dima@debian.org>
            2006-2009, Fabian Fagerholm <fabbe@debian.org>
-           2006-2011, Roberto C. Sanchez <roberto@connexer.com>
+           2006-2011, 2014, Roberto C. Sanchez <roberto@connexer.com>
 License: GPL-2+ or BSD-2-clause
   On Debian systems, the complete text of the GNU General Public License,
   version 2, can be found in /usr/share/common-licenses/GPL-2.

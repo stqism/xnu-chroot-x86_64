@@ -20,7 +20,7 @@ esac
 
 # Automatically added by dh_installinit
 if [ -x "/etc/init.d/kmod" ]; then
-	update-rc.d kmod start 20 S . >/dev/null || exit $?
+	update-rc.d kmod defaults >/dev/null || exit $?
 fi
 # End automatically added section
 

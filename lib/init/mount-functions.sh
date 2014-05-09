@@ -176,7 +176,8 @@ domount () {
 
 	if [ "$PRIFSTYPE" = proc ]; then
 		case "$KERNEL" in
-			Linux|GNU) FSTYPE=proc ;;
+			Linux)     FSTYPE=proc ;;
+			GNU)       FSTYPE=proc; FS_OPTS="-ocompatible" ;;
 			*FreeBSD)  FSTYPE=linprocfs ;;
 			*)         FSTYPE=procfs ;;
 		esac
@@ -190,7 +191,6 @@ domount () {
 	elif [ "$PRIFSTYPE" = tmpfs ]; then
 		# always accept tmpfs, to mount /run before /proc
 		case "$KERNEL" in
-			GNU)	FSTYPE=none ;; # for now
 			*)	FSTYPE=$PRIFSTYPE ;;
 		esac
 	elif grep -E -qs "$PRIFSTYPE\$" /proc/filesystems; then
@@ -659,4 +659,18 @@ mount_tmp ()
 			chmod "$TMP_MODE" /tmp
 		fi
 	fi
+}
+
+is_fastboot_active() {
+	if [ -f /fastboot ] ; then
+	    return 0
+	fi
+	for cmd in $(cat /proc/cmdline) ; do
+	    case "$cmd" in
+		fastboot)
+		    return 0
+		    ;;
+	    esac
+	done
+	return 1
 }

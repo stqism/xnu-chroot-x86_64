@@ -9,11 +9,11 @@ Comment:
  .
     Larry Wall et. al. (see /usr/share/doc/perl/AUTHORS).
  .
- Last checked against: Perl 5.18.1
+ Last checked against: Perl 5.18.2
 
 Files: *
 Copyright:
- Perl is Copyright (C) 1987-2012 by Larry Wall and others. All rights reserved.
+ Perl is Copyright (C) 1987-2013 by Larry Wall and others. All rights reserved.
 License: GPL-1+ or Artistic
     This program is free software; you can redistribute it and/or modify
     it under the terms of either:
@@ -23,10 +23,6 @@ License: GPL-1+ or Artistic
        version, or
  .
     b) the "Artistic License" which comes with Perl.
- .
- On Debian GNU/Linux systems, the complete text of the GNU General
- Public License can be found in `/usr/share/common-licenses/GPL-1' and
- the Artistic Licence in `/usr/share/common-licenses/Artistic'.
 Comment:
  The directories ext/, dist/, and cpan/ contain separate distributions
  that have been bundled with the Perl core. The copyright and license
@@ -117,9 +113,6 @@ Comment:
  The first two alternative licenses, as retrieved at
   Thu, 09 May 2013 00:00:38 +0300
  are included at the end of this file.
- .
- On Debian GNU/Linux systems, the complete text of the LGPL 2.1
- license can be found in `/usr/share/common-licenses/LGPL-2.1'.
  .
  Part of this file carries the following comment:
  .
@@ -1874,6 +1867,18 @@ License: GPL-1+ or Artistic
  and/or modified under the same terms as Perl itself. It is assumed that
  other contributors have placed their contributions under a compatible
  license.
+
+License: LGPL-2.1
+ On Debian GNU/Linux systems, the complete text of the LGPL 2.1
+ license can be found in `/usr/share/common-licenses/LGPL-2.1'.
+
+License: GPL-1+
+ On Debian GNU/Linux systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-1'.
+
+License: Artistic
+ On Debian GNU/Linux systems, the complete text of the
+ Artistic Licence can be found in `/usr/share/common-licenses/Artistic'.
 
 License: Artistic-2
  Copyright (c) 2000-2006, The Perl Foundation.

@@ -1,5 +1,5 @@
 # Copyright © 2007-2009 Raphaël Hertzog <hertzog@debian.org>
-# Copyright © 2012 Guillem Jover <guillem@debian.org>
+# Copyright © 2008-2009,2012-2014 Guillem Jover <guillem@debian.org>
 #
 # This program is free software; you may redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -341,11 +341,13 @@ sub deps_compare {
 	my @deps = $b->get_deps();
 	$b = $deps[0];
     }
-    my $ar = defined($a->{relation}) ? $a->{relation} : 'undef';
-    my $br = defined($b->{relation}) ? $b->{relation} : 'undef';
+    my $ar = $a->{relation} // 'undef';
+    my $br = $b->{relation} // 'undef';
+    my $av = $a->{version} // '';
+    my $bv = $a->{version} // '';
     return (($a->{package} cmp $b->{package}) ||
 	    ($relation_ordering{$ar} <=> $relation_ordering{$br}) ||
-	    ($a->{version} cmp $b->{version}));
+	    ($av cmp $bv));
 }
 
 

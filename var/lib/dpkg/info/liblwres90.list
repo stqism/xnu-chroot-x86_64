@@ -1,10 +1,10 @@
 /.
 /usr
-/usr/lib
-/usr/lib/liblwres.so.90.0.4
 /usr/share
 /usr/share/doc
 /usr/share/doc/liblwres90
-/usr/share/doc/liblwres90/changelog.Debian.gz
 /usr/share/doc/liblwres90/copyright
+/usr/share/doc/liblwres90/changelog.Debian.gz
+/usr/lib
+/usr/lib/liblwres.so.90.0.7
 /usr/lib/liblwres.so.90

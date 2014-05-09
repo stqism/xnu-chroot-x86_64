@@ -4,11 +4,12 @@ Upstream-Contact: Werner Koch <wk@gnupg.org>
 Source: http://www.gnupg.org/
 
 Files: *
-Copyright: 1998-2012 Free Software Foundation, Inc.
+Copyright: 1998-2013 Free Software Foundation, Inc.
+           1997, 1998, 2013 Werner Koch
 License: GPL-3+ with OpenSSL exception
 
 Files: debian/*
-Copyright: 1998-2006 James Troup, 2008-2012 Daniel Leidert, Sune Vuorela, Thijs Kinkhorst.
+Copyright: 1998-2006 James Troup, 2008-2014 Daniel Leidert, Sune Vuorela, Thijs Kinkhorst.
 License: GPL-3+ with OpenSSL exception
 
 License: GPL-3+ with OpenSSL exception

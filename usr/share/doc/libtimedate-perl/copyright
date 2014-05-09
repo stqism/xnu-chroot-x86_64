@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: TimeDate
 Upstream-Contact: Graham Barr <gbarr@pobox.com>
-Source: https://metacpan.org/release/TimeDate/
+Source: https://metacpan.org/release/TimeDate
 
 Files: *
 Copyright: 1995-2009, Graham Barr <gbarr@pobox.com>

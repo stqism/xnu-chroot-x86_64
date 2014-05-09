@@ -81,12 +81,16 @@ if there's no file for the given vendor.
 
 =cut
 
+my %VENDOR_CACHE;
 sub get_vendor_info(;$) {
     my $vendor = shift || 'default';
+    return $VENDOR_CACHE{$vendor} if exists $VENDOR_CACHE{$vendor};
+
     my $file = get_vendor_file($vendor);
     return unless $file;
     my $fields = Dpkg::Control::HashCore->new();
     $fields->load($file) or error(_g('%s is empty'), $file);
+    $VENDOR_CACHE{$vendor} = $fields;
     return $fields;
 }
 
@@ -144,18 +148,25 @@ sub get_vendor_object {
     return $OBJECT_CACHE{$vendor} if exists $OBJECT_CACHE{$vendor};
 
     my ($obj, @names);
-    if ($vendor ne 'Default') {
-        push @names, $vendor, lc($vendor), ucfirst($vendor), ucfirst(lc($vendor));
-    }
-    foreach my $name (@names, 'Default') {
+    push @names, $vendor, lc($vendor), ucfirst($vendor), ucfirst(lc($vendor));
+
+    foreach my $name (@names) {
         eval qq{
             require Dpkg::Vendor::$name;
             \$obj = Dpkg::Vendor::$name->new();
         };
-        last unless $@;
+        unless ($@) {
+            $OBJECT_CACHE{$vendor} = $obj;
+            return $obj;
+        }
     }
-    $OBJECT_CACHE{$vendor} = $obj;
-    return $obj;
+
+    my $info = get_vendor_info($vendor);
+    if (defined $info and defined $info->{'Parent'}) {
+        return get_vendor_object($info->{'Parent'});
+    } else {
+        return get_vendor_object('Default');
+    }
 }
 
 =item Dpkg::Vendor::run_vendor_hook($hookid, @params)

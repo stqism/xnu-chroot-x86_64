@@ -39,7 +39,7 @@ prefix="/usr"
 exec_prefix="${prefix}"
 
 bindir="${exec_prefix}/bin"
-includedir="${prefix}/include/ncursesw"
+includedir="${prefix}/include"
 libdir="/usr/lib/x86_64-linux-gnu"
 datarootdir="${prefix}/share"
 datadir="${datarootdir}"
@@ -127,7 +127,7 @@ ENDECHO
 		;;
 	# identification
 	--version)
-		echo "5.9.20130608"
+		echo "5.9.20140118"
 		;;
 	--abi-version)
 		echo "5"

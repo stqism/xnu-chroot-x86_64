@@ -1,7 +1,7 @@
-/etc/default/useradd
-/etc/cron.daily/passwd
-/etc/pam.d/passwd
-/etc/pam.d/chfn
-/etc/pam.d/chsh
-/etc/pam.d/chpasswd
 /etc/pam.d/newusers
+/etc/pam.d/chpasswd
+/etc/pam.d/chsh
+/etc/pam.d/chfn
+/etc/pam.d/passwd
+/etc/cron.daily/passwd
+/etc/default/useradd

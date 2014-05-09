@@ -1,7 +1,10 @@
 /.
 /usr
 /usr/share
+/usr/share/man
+/usr/share/man/man8
 /usr/share/man/man8/rmt-tar.8.gz
+/usr/share/man/man1
 /usr/share/man/man1/tarcat.1.gz
 /usr/share/man/man1/tar.1.gz
 /usr/share/doc

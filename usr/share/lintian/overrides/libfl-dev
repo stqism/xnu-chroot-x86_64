@@ -1,0 +1,3 @@
+libfl-dev: non-dev-pkg-with-shlib-symlink
+libfl-dev: package-name-doesnt-match-sonames
+libfl-dev: no-symbols-control-file

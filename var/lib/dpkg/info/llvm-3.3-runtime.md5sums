@@ -1,5 +1,5 @@
 375a3ba691639f872470112700467a15  usr/lib/llvm-3.3/bin/lli
 0fb16edadce1be3c0a71477323117a91  usr/share/binfmts/llvm-3.3-runtime.binfmt
-ceff9a2fa9d20c8fbe90dc483b533b2f  usr/share/doc/llvm-3.3-runtime/changelog.Debian.gz
+c753df705f378a5f1afed4491c7cb25f  usr/share/doc/llvm-3.3-runtime/changelog.Debian.gz
 063e0448ac11bde832bec75b88775293  usr/share/doc/llvm-3.3-runtime/copyright
-0f35709fe89ee991e2f2e91398ff4ea1  usr/share/man/man1/lli-3.3.1.gz
+08ceccc059fe76d927cda1d0580631fe  usr/share/man/man1/lli-3.3.1.gz

@@ -43,6 +43,7 @@ SECTIONS
     KEEP (*(SORT_NONE(.init)))
   }
   .plt          0 : { *(.plt) *(.iplt) }
+  .plt.bnd      0 : { *(.plt.bnd) }
   .text         0 :
   {
     *(.text .stub)

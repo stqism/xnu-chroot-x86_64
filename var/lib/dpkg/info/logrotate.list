@@ -3,7 +3,10 @@
 /usr/sbin
 /usr/sbin/logrotate
 /usr/share
+/usr/share/man
+/usr/share/man/man8
 /usr/share/man/man8/logrotate.8.gz
+/usr/share/man/man5
 /usr/share/bug
 /usr/share/bug/logrotate
 /usr/share/bug/logrotate/script

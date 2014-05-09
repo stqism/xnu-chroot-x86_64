@@ -22,7 +22,7 @@
 # tar file.  Unclear on whether there is a distinction here between
 # the GNU or POSIX variant of USTAR.
 
-VERSION=1.4.15
+VERSION=1.4.16
 TAR=/bin/tar
 GPG=gpg
 

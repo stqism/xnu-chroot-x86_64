@@ -25,7 +25,7 @@ our @EXPORT = qw($version $progname $admindir $dpkglibdir $pkgdatadir);
 our ($PROGNAME) = $0 =~ m{(?:.*/)?([^/]*)};
 
 # The following lines are automatically fixed at install time
-our $PROGVERSION='1.17.4';
+our $PROGVERSION='1.17.9';
 our $CONFDIR='/etc/dpkg';
 our $ADMINDIR='/var/lib/dpkg';
 our $LIBDIR='/usr/lib/dpkg';

@@ -1,4 +1,4 @@
-262d672ef29e6f772618e043f115a115  bin/nano
+0cc3afd51b04eb092299062823d714b9  bin/nano
 29a52f21839aaf4094f2b2043109f43e  usr/share/doc-base/nano
 448e904f63986be82d18f0917721b6a2  usr/share/doc-base/nano-faq
 3d4b12cf0073d9aeebbf29e661fd5da5  usr/share/doc/nano/AUTHORS
@@ -9,7 +9,7 @@ a4ee8fd431a8db6cc84a7fb6c29931b9  usr/share/doc/nano/README
 54cdb409a70b74d1a8b41a731e0d9ef5  usr/share/doc/nano/THANKS
 2864bac6c4e3e9264a8a68509e511e81  usr/share/doc/nano/TODO.gz
 9319db0df664b9fcfe6937b78666c607  usr/share/doc/nano/UPGRADE.gz
-9839c0563d0e0116ae76656bf36f4c9c  usr/share/doc/nano/changelog.Debian.gz
+cc18072cfa3e35ba14cad1191a2d00e4  usr/share/doc/nano/changelog.Debian.gz
 d2b7963b6bcf44a590001e7c5b0ef8a8  usr/share/doc/nano/changelog.gz
 418ab056bf038e453fddb817c8cf685a  usr/share/doc/nano/copyright
 7403de768e02c4430f2a9ce73b9c5984  usr/share/doc/nano/examples/nanorc.sample.gz

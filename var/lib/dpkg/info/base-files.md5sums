@@ -1,6 +1,6 @@
 aa1a21c05d527419829e9f94283be890  usr/share/lintian/overrides/base-files
 fbd937e067f0a83fb9422713a6b84a8a  usr/share/doc/base-files/README.FHS
-edb37d6497f45d1d3fac7b414acf152b  usr/share/doc/base-files/changelog.gz
+92b3f576bdb509c34af6b4d19179b945  usr/share/doc/base-files/changelog.gz
 0ff35d0861e825046e1387e9e8c70071  usr/share/doc/base-files/README
 8e7badde0a4ea386286ddedc08dbb3e5  usr/share/doc/base-files/copyright
 f921793d03cc6d63ec4b15e9be8fd3f8  usr/share/common-licenses/Artistic
@@ -14,9 +14,10 @@ e6a600fd5e1d9cbde2d983680233ad02  usr/share/common-licenses/LGPL-3
 3775480a712fc46a69647678acb234cb  usr/share/common-licenses/BSD
 24ea4c7092233849b4394699333b5c56  usr/share/common-licenses/GFDL-1.2
 5b122a36d0f6dc55279a0ebc69f3c60b  usr/share/common-licenses/GPL-1
-295c15c4bdac80e50b37689ef08f359c  usr/share/base-files/nsswitch.conf
+f8e97bf611374634c7cb3a6085503ab5  usr/share/base-files/nsswitch.conf
 e12f5739f81b08c470f20890304bf53e  usr/share/base-files/dot.bashrc
 876ca0ce39bff3c19d2abeb767157eac  usr/share/base-files/profile.md5sums
+79b7eaf9a6f42351a5b61ca2b9c0a79e  usr/share/base-files/nsswitch.conf.md5sums
 9830e3dbb6a828f2cc824db8db0ceaf7  usr/share/base-files/motd
 f9128f409878ce10d54d06488e3ce136  usr/share/base-files/info.dir
 d7332c00bf5e7b27af5ba5a2fecfb2cb  usr/share/base-files/staff-group-for-usr-local

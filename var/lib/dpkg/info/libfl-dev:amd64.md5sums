@@ -1,0 +1,12 @@
+09b454bc31eefe6c9c7ed6d172d4dde3  usr/include/FlexLexer.h
+a462bf159d6d8dffcda7ec6681b5a331  usr/lib/x86_64-linux-gnu/libfl.a
+0e9289d105380d69fc2deefe60ea15b0  usr/lib/x86_64-linux-gnu/libfl.so.2.0.0
+a462bf159d6d8dffcda7ec6681b5a331  usr/lib/x86_64-linux-gnu/libfl_pic.a
+18bd83bce77d576f3f8de68f89ecd725  usr/lib/x86_64-linux-gnu/libfl_pic.so.2.0.0
+3289621e59c1126111a02551e4b2b32e  usr/share/doc/libfl-dev/NEWS.Debian.gz
+70c4a7eb697dc811f2220c02e7f363b1  usr/share/doc/libfl-dev/README
+58d70b20a0a002d4f5f2839f2d2320b6  usr/share/doc/libfl-dev/README.Debian
+824fa26e2c9fd5a603fc1dc217608612  usr/share/doc/libfl-dev/changelog.Debian.gz
+c0c1ead7c8ebd60da4d8112342bff7db  usr/share/doc/libfl-dev/changelog.gz
+09d184671e579b07a7be7c313a28a56d  usr/share/doc/libfl-dev/copyright
+8a097bc61519d604a473abca15620331  usr/share/lintian/overrides/libfl-dev

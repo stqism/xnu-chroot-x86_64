@@ -77,6 +77,7 @@ libtinfo.so.5 libtinfo5 #MINVER#
  _nc_home_terminfo@Base 0
  _nc_init_acs@Base 0
  _nc_init_keytry@Base 0
+ _nc_init_termtype@Base 5.9+20131221
  _nc_is_abs_path@Base 0
  _nc_is_dir_path@Base 0
  _nc_is_file_path@Base 0

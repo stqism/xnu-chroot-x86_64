@@ -1,4 +1,4 @@
-/* Copyright (C) 1999 Free Software Foundation, Inc.
+/* Copyright (C) 1999-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -16,7 +16,7 @@
    <http://www.gnu.org/licenses/>.  */
 
 #ifndef _SCSI_IOCTL_H
-#define _SCSI_IOCTL_H 
+#define _SCSI_IOCTL_H
 
 /* IOCTLs for SCSI.  */
 #define SCSI_IOCTL_SEND_COMMAND		1	/* Send a command to the SCSI host.  */

@@ -27,12 +27,17 @@
 /usr/share/lintian
 /usr/share/lintian/overrides
 /usr/share/lintian/overrides/rsyslog
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man5
 /usr/share/man/man5/rsyslog.conf.5.gz
+/usr/share/man/man8
 /usr/share/man/man8/rsyslogd.8.gz
 /usr/lib
 /usr/lib/tmpfiles.d
 /usr/lib/tmpfiles.d/xconsole.conf
 /usr/lib/rsyslog
+/usr/lib/rsyslog/mmutf8fix.so
 /usr/lib/rsyslog/omprog.so
 /usr/lib/rsyslog/lmregexp.so
 /usr/lib/rsyslog/lmnetstrms.so
@@ -53,6 +58,8 @@
 /usr/lib/rsyslog/omruleset.so
 /usr/lib/rsyslog/lmnet.so
 /usr/lib/rsyslog/immark.so
+/usr/lib/rsyslog/mmpstrucdata.so
+/usr/lib/rsyslog/mmsequence.so
 /usr/lib/rsyslog/mmanon.so
 /usr/lib/rsyslog/mmnormalize.so
 /usr/lib/rsyslog/lmnsd_ptcp.so

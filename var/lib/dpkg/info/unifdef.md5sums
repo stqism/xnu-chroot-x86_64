@@ -1,8 +1,8 @@
-0e10dd172139b2a58ea44c1f31fb3fa7  usr/bin/unifdef
-c00ed54791eee8f91ecb87b43788bc6f  usr/bin/unifdefall
-f8f2cbf74761a8202df5914336e3265d  usr/share/doc/unifdef/README
+a2f1678675ff14581349ab81ae3e4e60  usr/bin/unifdef
+5f4dc78dfa6bb7d5791a3ce4e36335f2  usr/bin/unifdefall
+7e80d2b4f4df324b0bc430ec2f538b75  usr/share/doc/unifdef/README
 566dcafec72e84fd2ef9270472a52c5f  usr/share/doc/unifdef/README.Debian
-f3f2da59d36c3635a3c2e555ed40e4e8  usr/share/doc/unifdef/changelog.Debian.gz
-06b68a7129889a29dc1304740cfe59f1  usr/share/doc/unifdef/changelog.gz
+43eb79905bb73edf9331c2a39af75e4a  usr/share/doc/unifdef/changelog.Debian.gz
+62885f90338d4d4ad2df378f4d2f735b  usr/share/doc/unifdef/changelog.gz
 0a45d7e29d2f26dd3a8320e227bdb92d  usr/share/doc/unifdef/copyright
-58651ce63a3362b940b6591ffc876c15  usr/share/man/man1/unifdef.1.gz
+9fb7c4bc1df1c5cc7b44956c7d44e4df  usr/share/man/man1/unifdef.1.gz

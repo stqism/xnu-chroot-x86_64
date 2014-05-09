@@ -11,6 +11,7 @@ libaudit.so.1 libaudit1 #MINVER#
  audit_close@Base 1:2.2.1
  audit_delete_rule_data@Base 1:2.2.1
  audit_detect_machine@Base 1:2.2.1
+ audit_determine_machine@Base 1:2.3.6
  audit_elf_to_machine@Base 1:2.2.1
  audit_encode_nv_string@Base 1:2.2.1
  audit_encode_value@Base 1:2.2.1

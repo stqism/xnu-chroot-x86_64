@@ -1,5 +1,5 @@
 /* Prototype declarations for math functions; helper file for <math.h>.
-   Copyright (C) 1996-2003, 2006, 2011, 2012 Free Software Foundation, Inc.
+   Copyright (C) 1996-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -112,8 +112,7 @@ __MATHCALL (log,, (_Mdouble_ __x));
 __MATHCALL (log10,, (_Mdouble_ __x));
 
 /* Break VALUE into integral and fractional parts.  */
-__MATHCALL (modf,, (_Mdouble_ __x, _Mdouble_ *__iptr))
-     __attribute__ ((__nonnull__ (2)));
+__MATHCALL (modf,, (_Mdouble_ __x, _Mdouble_ *__iptr)) __nonnull ((2));
 _Mdouble_END_NAMESPACE
 
 #ifdef __USE_GNU
@@ -221,7 +220,7 @@ __END_NAMESPACE_C99
 
 #ifdef __USE_ISOC99
 __BEGIN_NAMESPACE_C99
-/* Return representation of NaN for double type.  */
+/* Return representation of qNaN for double type.  */
 __MATHCALLX (nan,, (const char *__tagb), (__const__));
 __END_NAMESPACE_C99
 #endif
@@ -324,11 +323,13 @@ __MATHCALL (remquo,, (_Mdouble_ __x, _Mdouble_ __y, int *__quo));
 /* Round X to nearest integral value according to current rounding
    direction.  */
 __MATHDECL (long int,lrint,, (_Mdouble_ __x));
+__extension__
 __MATHDECL (long long int,llrint,, (_Mdouble_ __x));
 
 /* Round X to nearest integral value, rounding halfway cases away from
    zero.  */
 __MATHDECL (long int,lround,, (_Mdouble_ __x));
+__extension__
 __MATHDECL (long long int,llround,, (_Mdouble_ __x));
 
 
@@ -357,6 +358,12 @@ __MATHCALL (fma,, (_Mdouble_ __x, _Mdouble_ __y, _Mdouble_ __z));
 
 #if defined __USE_MISC || defined __USE_XOPEN_EXTENDED || defined __USE_ISOC99
 __END_NAMESPACE_C99
+#endif
+
+#ifdef __USE_GNU
+/* Test for signaling NaN.  */
+__MATHDECL_1 (int, __issignaling,, (_Mdouble_ __value))
+     __attribute__ ((__const__));
 #endif
 
 #if defined __USE_MISC || defined __USE_XOPEN_EXTENDED

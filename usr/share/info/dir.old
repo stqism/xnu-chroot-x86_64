@@ -25,6 +25,9 @@ Basics
 Compression
 * Gzip: (gzip).                 General (de)compression of files (lzw).
 
+Development
+* libffi: (libffi).             Portable foreign-function interface library.
+
 Editors
 * nano: (nano).                 Small and friendly text editor.
 
@@ -52,9 +55,9 @@ Individual utilities
 * df: (coreutils)df invocation.                 Report file system disk usage.
 * diff: (diffutils)Invoking diff.               Compare 2 files line by line.
 * diff3: (diffutils)Invoking diff3.             Compare 3 files line by line.
-* dir: (coreutils)dir invocation.               List directories briefly.
 * dircolors: (coreutils)dircolors invocation.   Color setup for ls.
 * dirname: (coreutils)dirname invocation.       Strip last file name component.
+* dir: (coreutils)dir invocation.               List directories briefly.
 * du: (coreutils)du invocation.                 Report on disk usage.
 * echo: (coreutils)echo invocation.             Print a line of text.
 * env: (coreutils)env invocation.               Modify the environment.
@@ -95,15 +98,15 @@ Individual utilities
 * paste: (coreutils)paste invocation.           Merge lines of files.
 * patch: (diffutils)Invoking patch.             Apply a patch to a file.
 * pathchk: (coreutils)pathchk invocation.       Check file name portability.
-* pr: (coreutils)pr invocation.                 Paginate or columnate files.
 * printenv: (coreutils)printenv invocation.     Print environment variables.
 * printf: (coreutils)printf invocation.         Format and print data.
+* pr: (coreutils)pr invocation.                 Paginate or columnate files.
 * ptx: (coreutils)ptx invocation.               Produce permuted indexes.
 * pwd: (coreutils)pwd invocation.               Print working directory.
 * readlink: (coreutils)readlink invocation.     Print referent of a symlink.
 * realpath: (coreutils)readpath invocation.     Print resolved file names.
-* rm: (coreutils)rm invocation.                 Remove files.
 * rmdir: (coreutils)rmdir invocation.           Remove empty directories.
+* rm: (coreutils)rm invocation.                 Remove files.
 * runcon: (coreutils)runcon invocation.         Run in specified SELinux CTX.
 * sdiff: (diffutils)Invoking sdiff.             Merge 2 files side-by-side.
 * seq: (coreutils)seq invocation.               Print numeric sequences
@@ -125,9 +128,9 @@ Individual utilities
 * test: (coreutils)test invocation.             File/string tests.
 * timeout: (coreutils)timeout invocation.       Run with time limit.
 * touch: (coreutils)touch invocation.           Change file timestamps.
-* tr: (coreutils)tr invocation.                 Translate characters.
 * true: (coreutils)true invocation.             Do nothing, successfully.
 * truncate: (coreutils)truncate invocation.     Shrink/extend size of a file.
+* tr: (coreutils)tr invocation.                 Translate characters.
 * tsort: (coreutils)tsort invocation.           Topological sort.
 * tty: (coreutils)tty invocation.               Print terminal name.
 * uname: (coreutils)uname invocation.           Print system information.
@@ -139,8 +142,8 @@ Individual utilities
 * users: (coreutils)users invocation.           Print current user names.
 * vdir: (coreutils)vdir invocation.             List directories verbosely.
 * wc: (coreutils)wc invocation.                 Line, word, and byte counts.
-* who: (coreutils)who invocation.               Print who is logged in.
 * whoami: (coreutils)whoami invocation.         Print effective user ID.
+* who: (coreutils)who invocation.               Print who is logged in.
 * xargs: (find)Invoking xargs.                  Operating on many files.
 * yes: (coreutils)yes invocation.               Print a string indefinitely.
 * zcat: (gzip)Overview.                         Decompression to stdout.
@@ -149,13 +152,21 @@ Individual utilities
 * zgrep: (gzip)Overview.                        Search compressed files.
 * zmore: (gzip)Overview.                        Decompression output by pages.
 
+Libraries
+* RLuserman: (rluserman).       The GNU readline library User's Manual.
+
 Network applications
 * Wget: (wget).                 Non-interactive network downloader.
+
+Programming
+* flex: (flex).                 Fast lexical analyzer generator (lex 
+                                  replacement).
 
 Programming & development tools
 * GDBM: (gdbm).                 The GNU database manager.
 
 Text creation and manipulation
 * Diffutils: (diffutils).       Comparing and merging files.
+* M4: (m4).                     A powerful macro processor.
 * grep: (grep).                 Print lines matching a pattern.
 * sed: (sed).                   Stream EDitor.  

@@ -1,9 +1,9 @@
 /.
 /etc
 /etc/init.d
+/etc/init.d/udev-finish
 /etc/init.d/udev
 /etc/udev
-/etc/udev/links.conf
 /etc/udev/hwdb.d
 /etc/udev/udev.conf
 /etc/udev/rules.d
@@ -18,8 +18,10 @@
 /usr
 /usr/share
 /usr/share/doc
+/usr/share/man
 /usr/share/man/man7
 /usr/share/man/man7/udev.7.gz
+/usr/share/man/man8
 /usr/share/man/man8/systemd-udevd.service.8.gz
 /usr/share/man/man8/udevadm.8.gz
 /usr/share/bug
@@ -35,9 +37,7 @@
 /usr/share/initramfs-tools/hooks
 /usr/share/initramfs-tools/hooks/udev
 /lib
-/lib/firmware
 /lib/udev
-/lib/udev/write_cd_rules
 /lib/udev/v4l_id
 /lib/udev/logger.agent
 /lib/udev/collect
@@ -55,18 +55,18 @@
 /lib/udev/hwdb.d/20-OUI.hwdb
 /lib/udev/rule_generator.functions
 /lib/udev/write_net_rules
+/lib/udev/udev-finish
 /lib/udev/keyboard-force-release.sh
 /lib/udev/rules.d
 /lib/udev/rules.d/75-persistent-net-generator.rules
 /lib/udev/rules.d/75-tty-description.rules
 /lib/udev/rules.d/60-persistent-serial.rules
 /lib/udev/rules.d/95-udev-late.rules
-/lib/udev/rules.d/91-permissions.rules
 /lib/udev/rules.d/78-sound-card.rules
 /lib/udev/rules.d/60-persistent-alsa.rules
 /lib/udev/rules.d/75-probe_mtd.rules
-/lib/udev/rules.d/75-cd-aliases-generator.rules
 /lib/udev/rules.d/80-drivers.rules
+/lib/udev/rules.d/73-idrac.rules
 /lib/udev/rules.d/64-btrfs.rules
 /lib/udev/rules.d/70-power-switch.rules
 /lib/udev/rules.d/80-net-name-slot.rules
@@ -83,7 +83,6 @@
 /lib/udev/rules.d/61-accelerometer.rules
 /lib/udev/rules.d/75-net-description.rules
 /lib/udev/rules.d/60-persistent-v4l.rules
-/lib/udev/devices
 /lib/udev/ata_id
 /lib/udev/accelerometer
 /lib/udev/mtd_probe
@@ -159,7 +158,6 @@
 /lib/udev/keymaps/logitech-wave-cordless
 /lib/udev/keymaps/samsung-sq1us
 /lib/udev/keymaps/module-sony
-/lib/udev/create_static_nodes
 /lib/udev/scsi_id
 /lib/systemd
 /lib/systemd/systemd-udevd
@@ -171,6 +169,7 @@
 /lib/systemd/system/systemd-udevd-kernel.socket
 /lib/systemd/system/sysinit.target.wants
 /lib/systemd/system/systemd-udevd.service
+/lib/systemd/system/udev-finish.service
 /bin
 /bin/udevadm
 /sbin
@@ -184,5 +183,6 @@
 /lib/systemd/system/sockets.target.wants/systemd-udevd-kernel.socket
 /lib/systemd/system/sysinit.target.wants/systemd-udev-trigger.service
 /lib/systemd/system/sysinit.target.wants/systemd-udevd.service
+/lib/systemd/system/sysinit.target.wants/udev-finish.service
 /sbin/udevd
 /sbin/udevadm

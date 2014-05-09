@@ -225,6 +225,13 @@ sub init_options {
     # Skip debianization while specific to some formats has an impact
     # on code common to all formats
     $self->{options}{skip_debianization} ||= 0;
+
+    # Set default compressor for new formats.
+    $self->{options}{compression} //= 'xz';
+    $self->{options}{comp_level} //= compression_get_property($self->{options}{compression},
+                                                              'default_level');
+    $self->{options}{comp_ext} //= compression_get_property($self->{options}{compression},
+                                                            'file_ext');
 }
 
 sub initialize {
@@ -456,7 +463,13 @@ sub extract {
     my $newdirectory = $_[0];
 
     my ($ok, $error) = version_check($self->{fields}{'Version'});
-    error($error) unless $ok;
+    if (not $ok) {
+        if ($self->{options}{ignore_bad_version}) {
+            warning($error);
+        } else {
+            error($error);
+        }
+    }
 
     # Copy orig tarballs
     if ($self->{options}{copy_orig_tarballs}) {
@@ -583,7 +596,7 @@ sub write_dsc {
 	$fields->{$f} = $opts{override}{$f};
     }
 
-    unless($opts{nocheck}) {
+    unless ($opts{nocheck}) {
         foreach my $f (qw(Source Version)) {
             unless (defined($fields->{$f})) {
                 error(_g('missing information for critical output field %s'), $f);

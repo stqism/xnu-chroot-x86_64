@@ -18,7 +18,6 @@ sub usage {
 	print STDERR "update-rc.d: error: @_\n" if ($#_ >= 0);
 	print STDERR <<EOF;
 usage: update-rc.d [-n] [-f] <basename> remove
-       update-rc.d [-n] <basename> defaults [NN | SS KK]
        update-rc.d [-n] <basename> disable|enable [S|2|3|4|5]
 		-n: not really
 		-f: force
@@ -107,6 +106,50 @@ sub make_systemd_links {
     }
 }
 
+# Manage the .override file for upstart jobs, so update-rc.d enable/disable
+# work on upstart systems the same as on sysvinit/systemd.
+sub upstart_toggle {
+    my ($scriptname, $action) = @_;
+
+    # This needs to be done by manually parsing .override files instead of
+    # using initctl, because upstart might not be installed yet.
+    my $service_path;
+    if (-f "/etc/init/$scriptname.conf") {
+        $service_path = "/etc/init/$scriptname.override";
+    }
+    if (!defined($service_path)) {
+        return;
+    }
+    my $fh;
+    my $enabled = 1;
+    my $overrides = '';
+    if (open $fh, '<', $service_path) {
+        while (<$fh>) {
+           if (/^\s*manual\s*$/) {
+               $enabled = 0;
+           } else {
+               $overrides .= $_;
+           }
+        }
+    }
+    close($fh);
+
+    if ($enabled && $action eq 'disable') {
+        open $fh, '>>', $service_path or error("unable to write $service_path");
+        print $fh "manual\n";
+        close($fh);
+    } elsif (!$enabled && $action eq 'enable') {
+        if ($overrides ne '') {
+            open $fh, '>', $service_path . '.new' or error ("unable to write $service_path");
+            print $fh $overrides;
+            close($fh);
+            rename($service_path . '.new', $service_path) or error($!);
+        } else {
+            unlink($service_path) or error($!);
+        }
+    }
+}
+
 ## Dependency based
 sub insserv_updatercd {
     my @args = @_;
@@ -168,6 +211,8 @@ sub insserv_updatercd {
         }
     } elsif ("disable" eq $action || "enable" eq $action) {
         make_systemd_links($scriptname, $action);
+
+        upstart_toggle($scriptname, $action);
 
         insserv_toggle($notreally, $action, $scriptname, @args);
         # Call insserv to resequence modified links

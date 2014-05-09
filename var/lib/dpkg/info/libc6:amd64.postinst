@@ -117,7 +117,7 @@ then
     if [ -n "$hwcappkgs" ]; then
         for pkg in $hwcappkgs ; do
             ver=$(dpkg-query -l $pkg 2>/dev/null | sed -e '/^[a-z][a-z]\s/!d;/^.[nc]/d;' -e "s/^..\s\+$pkg[0-9a-z:]*\s\+//;s/\s.*//g")
-            if [ -n "$ver" ] && [ "$ver" != "2.17-97" ]; then
+            if [ -n "$ver" ] && [ "$ver" != "2.18-5" ]; then
                 all_upgraded=no
             fi
         done
@@ -139,7 +139,7 @@ then
 	if [ ! -d /var/mail ] && [ ! -L /var/mail ]; then
 	    ln -sf spool/mail /var/mail
 	fi
-	if dpkg --compare-versions "$preversion" lt 2.17; then
+	if dpkg --compare-versions "$preversion" lt 2.18; then
 	    check="apache2.2-common apache apache-ssl apache-perl autofs at"
 	    check="$check boa cucipop courier-authdaemon cron cups exim"
 	    check="$check exim4-base dovecot-common cucipop incron lprng lpr"
@@ -239,6 +239,13 @@ then
 		    echo "Restarting services possibly affected by the upgrade:"
 		    failed=""
 		    for service in $services; do
+			# We can't just use a generic rewrite here, as it was
+			# samba in wheezy and smbd in jessie, which confuses.
+			if [ "$service" = "samba" ]; then
+			    if [ -x /etc/init.d/smbd ] || [ -f /etc/init/smbd ]; then
+				service="smbd"
+			    fi
+			fi
 		    	if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
 			    idl="invoke-rc.d ${service}"
 			elif [ -f /usr/share/file-rc/rc ] || [ -f /usr/lib/file-rc/rc ] && [ -f /etc/runlevel.conf ]; then
@@ -299,7 +306,7 @@ then
 	    else
 		echo "Nothing to restart."
 	    fi
-	fi # end upgrading and $preversion lt 2.17
+	fi # end upgrading and $preversion lt 2.18
     fi # Upgrading
 
     # Restart init.  Currently handles chroots and upstart, and assumes

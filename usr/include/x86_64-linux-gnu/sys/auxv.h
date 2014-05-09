@@ -1,5 +1,5 @@
 /* Access to the auxiliary vector.
-   Copyright (C) 2012 Free Software Foundation, Inc.
+   Copyright (C) 2012-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -20,6 +20,7 @@
 #define _SYS_AUXV_H 1
 
 #include <elf.h>
+#include <bits/auxv.h>
 #include <sys/cdefs.h>
 #include <bits/hwcap.h>
 

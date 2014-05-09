@@ -1,6 +1,5 @@
 /* Prototypes and definition for malloc implementation.
-   Copyright (C) 1996,1997,1999,2000,2002-2004,2005,2007,2009,2011,2012
-   Free Software Foundation, Inc.
+   Copyright (C) 1996-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -23,35 +22,14 @@
 #include <features.h>
 #include <stddef.h>
 #include <stdio.h>
-# define __malloc_ptr_t  void *
 
-/* Used by GNU libc internals. */
-#define __malloc_size_t size_t
-#define __malloc_ptrdiff_t ptrdiff_t
-
-#ifdef __GNUC__
-
-# define __MALLOC_P(args)	args __THROW
-/* This macro will be used for functions which might take C++ callback
-   functions.  */
-# define __MALLOC_PMT(args)	args
-
-# ifdef _LIBC
-#  define __MALLOC_HOOK_VOLATILE
-#  define __MALLOC_DEPRECATED
-# else
-#  define __MALLOC_HOOK_VOLATILE volatile
-#  define __MALLOC_DEPRECATED __attribute_deprecated__
-# endif
-
-#else	/* Not GCC.  */
-
-# define __MALLOC_P(args)	args
-# define __MALLOC_PMT(args)	args
+#ifdef _LIBC
 # define __MALLOC_HOOK_VOLATILE
+# define __MALLOC_DEPRECATED
+#else
+# define __MALLOC_HOOK_VOLATILE volatile
 # define __MALLOC_DEPRECATED __attribute_deprecated__
-
-#endif	/* GCC.  */
+#endif
 
 
 __BEGIN_DECLS
@@ -170,18 +148,18 @@ extern void (*__MALLOC_HOOK_VOLATILE __malloc_initialize_hook) (void)
      __MALLOC_DEPRECATED;
 /* Hooks for debugging and user-defined versions. */
 extern void (*__MALLOC_HOOK_VOLATILE __free_hook) (void *__ptr,
-						   const __malloc_ptr_t)
+						   const void *)
      __MALLOC_DEPRECATED;
 extern void *(*__MALLOC_HOOK_VOLATILE __malloc_hook) (size_t __size,
-						      const __malloc_ptr_t)
+						      const void *)
      __MALLOC_DEPRECATED;
 extern void *(*__MALLOC_HOOK_VOLATILE __realloc_hook) (void *__ptr,
 						       size_t __size,
-						       const __malloc_ptr_t)
+						       const void *)
      __MALLOC_DEPRECATED;
 extern void *(*__MALLOC_HOOK_VOLATILE __memalign_hook) (size_t __alignment,
 							size_t __size,
-							const __malloc_ptr_t)
+							const void *)
      __MALLOC_DEPRECATED;
 extern void (*__MALLOC_HOOK_VOLATILE __after_morecore_hook) (void);
 

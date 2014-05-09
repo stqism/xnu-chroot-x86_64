@@ -1,7 +1,7 @@
 /.
 /usr
-/usr/include
 /usr/share
 /usr/share/doc
-/usr/include/asm
+/usr/include
 /usr/share/doc/gcc-multilib
+/usr/include/asm

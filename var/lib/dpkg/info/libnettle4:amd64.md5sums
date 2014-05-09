@@ -1,6 +1,7 @@
-c0d62eb1277207896353148e3ac7f766  usr/lib/x86_64-linux-gnu/libnettle.so.4.7
+17c578fe5ccf3792f44f8105dd0806f2  usr/lib/x86_64-linux-gnu/libnettle.so.4.7
 f703c6291416efcbf1d440a4bd08b402  usr/share/doc/libnettle4/NEWS.gz
 c9f40087443b9345b116619ae342c26c  usr/share/doc/libnettle4/README
-1e25cf1d6bed531b3b630a6d0d1b5e70  usr/share/doc/libnettle4/changelog.Debian.gz
+baa7bc7cb5567beccab4a60fca169e6c  usr/share/doc/libnettle4/changelog.Debian.amd64.gz
+a366e799f6faf1cf7e896d864706e44f  usr/share/doc/libnettle4/changelog.Debian.gz
 51837903126aca26249abd015ecc1fde  usr/share/doc/libnettle4/changelog.gz
 b5f458d64602d4f35b2bf7c57dd76d73  usr/share/doc/libnettle4/copyright

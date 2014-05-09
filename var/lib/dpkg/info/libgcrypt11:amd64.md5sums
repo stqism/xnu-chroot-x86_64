@@ -1,8 +1,8 @@
-23bebe997f6d7755d1e0a75a35757f39  lib/x86_64-linux-gnu/libgcrypt.so.11.8.2
+088a939a965944b05e4265f87e4729bd  lib/x86_64-linux-gnu/libgcrypt.so.11.8.2
 cc1933b74254b077ad022de724d91e4a  usr/share/doc/libgcrypt11/AUTHORS.gz
 3e4fb838f9c35d3a46a6aec6b7611584  usr/share/doc/libgcrypt11/NEWS.gz
 7b93bb717fbce17a169bb7fd6dabd442  usr/share/doc/libgcrypt11/README.gz
 2676c26bf70bc0aa0e64b27ab249646c  usr/share/doc/libgcrypt11/THANKS.gz
-1259d7c060e4eb32f15a5dc26e2b310f  usr/share/doc/libgcrypt11/changelog.Debian.gz
+04284a0013a55463015e88fdafc8d649  usr/share/doc/libgcrypt11/changelog.Debian.gz
 848fe877de9ebfbfccccfdf1672b08f0  usr/share/doc/libgcrypt11/changelog.gz
 d24c2b425a33f6d1938bae041efe1129  usr/share/doc/libgcrypt11/copyright

@@ -23,6 +23,7 @@
 /usr/share/lintian
 /usr/share/lintian/overrides
 /usr/share/lintian/overrides/base-files
+/usr/share/man
 /usr/share/dict
 /usr/share/doc
 /usr/share/doc/base-files
@@ -48,6 +49,7 @@
 /usr/share/base-files/nsswitch.conf
 /usr/share/base-files/dot.bashrc
 /usr/share/base-files/profile.md5sums
+/usr/share/base-files/nsswitch.conf.md5sums
 /usr/share/base-files/motd
 /usr/share/base-files/info.dir
 /usr/share/base-files/staff-group-for-usr-local

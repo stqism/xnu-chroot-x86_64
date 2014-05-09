@@ -1,4 +1,4 @@
-/* Copyright (C) 1991-2012 Free Software Foundation, Inc.
+/* Copyright (C) 1991-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -128,9 +128,6 @@
 #ifndef _LOOSE_KERNEL_NAMES
 # define __KERNEL_STRICT_NAMES
 #endif
-
-/* Always use ISO C things.  */
-#define	__USE_ANSI	1
 
 /* Convenience macros to test the versions of glibc and gcc.
    Use them like this:
@@ -352,18 +349,10 @@
 /* Major and minor version number of the GNU C library package.  Use
    these macros to test for features in specific releases.  */
 #define	__GLIBC__	2
-#define	__GLIBC_MINOR__	17
+#define	__GLIBC_MINOR__	18
 
 #define __GLIBC_PREREQ(maj, min) \
 	((__GLIBC__ << 16) + __GLIBC_MINOR__ >= ((maj) << 16) + (min))
-
-/* Decide whether a compiler supports the long long datatypes.  */
-#if defined __GNUC__ \
-    || (defined __PGI && defined __i386__ ) \
-    || (defined __INTEL_COMPILER && (defined __i386__ || defined __ia64__)) \
-    || (defined __STDC_VERSION__ && __STDC_VERSION__ >= 199901L)
-# define __GLIBC_HAVE_LONG_LONG	1
-#endif
 
 /* This is here only because every header file already includes this one.  */
 #ifndef __ASSEMBLER__

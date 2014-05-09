@@ -37,7 +37,7 @@ if [ "$1" = "remove" ]; then
     if [ -n "$hwcappkgs" ]; then
         for pkg in $hwcappkgs ; do
             ver=$(dpkg-query -l $pkg 2>/dev/null | sed -e '/^[a-z][a-z]\s/!d;/^.[nc]/d;' -e "s/^..\s\+$pkg[0-9a-z:]*\s\+//;s/\s.*//g")
-            if [ -n "$ver" ] && [ "$ver" != "2.17-97" ]; then
+            if [ -n "$ver" ] && [ "$ver" != "2.18-5" ]; then
                 all_upgraded=no
             fi
         done

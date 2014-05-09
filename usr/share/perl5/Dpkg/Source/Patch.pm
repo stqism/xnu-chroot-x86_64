@@ -107,6 +107,8 @@ sub add_diff_file {
     # Check diff and write it in patch file
     my $difflinefound = 0;
     my $binary = 0;
+    local $_;
+
     while (<$diffgen>) {
         if (m/^(?:binary|[^-+\@ ].*\bdiffer\b)/i) {
             $binary = 1;
@@ -227,7 +229,7 @@ sub add_diff_directory {
                 push @diff_files, [$fn, 0, 0, "$old/$fn", '/dev/null',
                                    "$basedir.orig/$fn", '/dev/null'];
             } else {
-                warning(_g('ignoring deletion of file %s'), $fn);
+                warning(_g('ignoring deletion of file %s, use --include-removal to override'), $fn);
             }
         } elsif (-d _) {
             warning(_g('ignoring deletion of directory %s'), $fn);
@@ -330,14 +332,23 @@ sub _getline {
     return $line;
 }
 
-# Strip timestamp
-sub _strip_ts {
-    my $header = shift;
+# Fetch the header filename ignoring the optional timestamp
+sub _fetch_filename {
+    my ($diff, $header) = @_;
 
-    # Tab is the official separator, it's always used when
-    # filename contain spaces. Try it first, otherwise strip on space
-    # if there's no tab
-    $header =~ s/\s.*// unless ($header =~ s/\t.*//);
+    # Strip any leading spaces.
+    $header =~ s/^\s+//;
+
+    # Is it a C-style string?
+    if ($header =~ m/^"/) {
+        error(_g('diff %s patches file with C-style encoded filename'), $diff);
+    } else {
+        # Tab is the official separator, it's always used when
+        # filename contain spaces. Try it first, otherwise strip on space
+        # if there's no tab
+        $header =~ s/\s.*// unless $header =~ s/\t.*//;
+    }
+
     return $header;
 }
 
@@ -403,10 +414,10 @@ sub analyze {
 	}
 	$diff_count++;
 	# read file header (---/+++ pair)
-	unless(s/^--- //) {
+	unless (s/^--- //) {
 	    error(_g("expected ^--- in line %d of diff `%s'"), $., $diff);
 	}
-        $path{old} = $_ = _strip_ts($_);
+	$path{old} = $_ = _fetch_filename($diff, $_);
 	$fn{old} = $_ if $_ ne '/dev/null' and s{^[^/]*/+}{$destdir/};
 	if (/\.dpkg-orig$/) {
 	    error(_g("diff `%s' patches file with name ending .dpkg-orig"), $diff);
@@ -418,7 +429,7 @@ sub analyze {
 	unless (s/^\+\+\+ //) {
 	    error(_g("line after --- isn't as expected in diff `%s' (line %d)"), $diff, $.);
 	}
-        $path{new} = $_ = _strip_ts($_);
+	$path{new} = $_ = _fetch_filename($diff, $_);
 	$fn{new} = $_ if $_ ne '/dev/null' and s{^[^/]*/+}{$destdir/};
 
 	unless (defined $fn{old} or defined $fn{new}) {
@@ -503,7 +514,7 @@ sub analyze {
 	    }
 	    $hunk++;
 	}
-	unless($hunk) {
+	unless ($hunk) {
 	    error(_g("expected ^\@\@ at line %d of diff `%s'"), $., $diff);
 	}
     }

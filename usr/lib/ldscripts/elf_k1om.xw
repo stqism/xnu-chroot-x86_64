@@ -3,7 +3,7 @@ OUTPUT_FORMAT("elf64-k1om", "elf64-k1om",
 	      "elf64-k1om")
 OUTPUT_ARCH(k1om)
 ENTRY(_start)
-SEARCH_DIR("=/usr/local/lib/x86_64-linux-gnu"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib/x86_64-linux-gnu"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib/x86_64-linux-gnu"); SEARCH_DIR("=/usr/lib");
+SEARCH_DIR("=/usr/x86_64-linux-gnu/lib"); SEARCH_DIR("=/usr/local/lib/x86_64-linux-gnu"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib/x86_64-linux-gnu"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib/x86_64-linux-gnu"); SEARCH_DIR("=/usr/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */
@@ -33,22 +33,20 @@ SECTIONS
       *(.rela.ldata .rela.ldata.* .rela.gnu.linkonce.l.*)
       *(.rela.lbss .rela.lbss.* .rela.gnu.linkonce.lb.*)
       *(.rela.lrodata .rela.lrodata.* .rela.gnu.linkonce.lr.*)
-      PROVIDE_HIDDEN (__rel_iplt_start = .);
-      PROVIDE_HIDDEN (__rel_iplt_end = .);
-      PROVIDE_HIDDEN (__rela_iplt_start = .);
-      *(.rela.iplt)
-      PROVIDE_HIDDEN (__rela_iplt_end = .);
+      *(.rela.ifunc)
     }
   .rela.plt       :
     {
       *(.rela.plt)
+      PROVIDE_HIDDEN (__rela_iplt_start = .);
+      *(.rela.iplt)
+      PROVIDE_HIDDEN (__rela_iplt_end = .);
     }
   .init           :
   {
     KEEP (*(SORT_NONE(.init)))
   }
-  .plt            : { *(.plt) }
-  .iplt           : { *(.iplt) }
+  .plt            : { *(.plt) *(.iplt) }
   .text           :
   {
     *(.text.unlikely .text.*_unlikely .text.unlikely.*)

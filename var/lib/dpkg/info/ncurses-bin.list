@@ -7,10 +7,13 @@
 /usr/share/doc/ncurses-bin/changelog.gz
 /usr/share/doc/ncurses-bin/copyright
 /usr/share/doc/ncurses-bin/FAQ
+/usr/share/man
 /usr/share/man/man7
 /usr/share/man/man7/term.7.gz
+/usr/share/man/man5
 /usr/share/man/man5/terminfo.5.gz
 /usr/share/man/man5/term.5.gz
+/usr/share/man/man1
 /usr/share/man/man1/ncursesw5-config.1.gz
 /usr/share/man/man1/ncurses5-config.1.gz
 /usr/share/man/man1/captoinfo.1.gz

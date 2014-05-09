@@ -1,6 +1,6 @@
                        Manuel de l'utilisateur d'aptitude
 
-Version 0.6.8.2
+Version 0.6.10
 
   Daniel Burrows
 
@@ -387,8 +387,8 @@ Comment se procure-t-on aptitude ?
        « .orig.tar.gz »).
 
    Une fois tous ces composants réunis, ouvrez un terminal et exécutez la
-   commande : tar zxf aptitude-0.6.8.2.tar.gz pour décompresser le code
-   source. Une fois les sources décompressées, tapez cd aptitude-0.6.8.2 &&
+   commande : tar zxf aptitude-0.6.10.tar.gz pour décompresser le code
+   source. Une fois les sources décompressées, tapez cd aptitude-0.6.10 &&
    ./configure && make pour compiler aptitude. Si cela réussit, vérifiez que
    vous êtes sous l'utilisateur root (en utilisant, par exemple, su), tapez
    alors make install pour installer aptitude sur votre ordinateur. Une fois
@@ -403,7 +403,7 @@ Comment se procure-t-on aptitude ?
    vous pouvez télécharger le code source non encore publié d'aptitude en
    utilisant Git. Installez Git (disponible à http://www.git-scm.com/) et
    exécutez la commande git clone
-   git://git.debian.org/git/aptitude/aptitude.git afin de récupérer le code
+   git://anonscm.debian.org/aptitude/aptitude.git afin de récupérer le code
    source le plus récent.
 
    [Avertissement] Avertissement
@@ -1568,68 +1568,72 @@ L'interface utilisateur d'aptitude depuis le terminal
    Figure 2.3. Commandes disponibles dans le menu Paquet
 
    +------------------------------------------------------------------------+
-   |        Commande        |                 Description                   |
-   |------------------------+-----------------------------------------------|
-   | Paquet → Installer (+) | Marquer le paquet actuellement sélectionné    |
-   |                        | pour installation.                            |
-   |------------------------+-----------------------------------------------|
-   | Paquet → Supprimer (-) | Marquer le paquet actuellement sélectionné    |
-   |                        | pour suppression.                             |
-   |------------------------+-----------------------------------------------|
-   | Paquet → Purger (_)    | Marquer le paquet actuellement sélectionné    |
-   |                        | pour purge.                                   |
-   |------------------------+-----------------------------------------------|
-   |                        | Annuler toute installation, mise à jour ou    |
-   | Paquet → Garder (:)    | suppression prévue pour le paquet             |
-   |                        | actuellement sélectionné et retirer tout gel  |
-   |                        | qui aurait été mis sur le paquet.             |
-   |------------------------+-----------------------------------------------|
-   | Paquet → Geler (=)     | Geler le paquet actuellement sélectionné.     |
-   |------------------------+-----------------------------------------------|
-   |                        | Marquer le paquet actuellement sélectionné    |
-   |                        | comme étant un paquet « installé              |
-   | Paquet → Marquer       | automatiquement ». Pour plus d'informations   |
-   | automatiquement (M)    | sur les paquets installés manuellement et     |
-   |                        | automatiquement, consultez la section         |
-   |                        | intitulée « Gérer les paquets automatiquement |
-   |                        | installés ».                                  |
-   |------------------------+-----------------------------------------------|
-   |                        | Marquer le paquet actuellement sélectionné    |
-   |                        | comme étant un paquet « installé              |
-   | Paquet → Marquer       | manuellement ». Pour plus d'informations sur  |
-   | manuellement (m)       | les paquets installés manuellement et         |
-   |                        | automatiquement, consultez la section         |
-   |                        | intitulée « Gérer les paquets automatiquement |
-   |                        | installés ».                                  |
-   |------------------------+-----------------------------------------------|
-   |                        | Si un paquet qui peut être mis à jour est     |
-   |                        | sélectionné, cela interdit sa mise à jour     |
-   | Paquet → Interdire la  | vers la version actuellement disponible       |
-   | version (F)            | uniquement. Si une version du paquet est      |
-   |                        | sélectionnée, cela interdit au paquet d'être  |
-   |                        | mis à jour vers cette version.                |
-   |------------------------+-----------------------------------------------|
-   |                        | Afficher un écran contenant des informations  |
-   | Paquet → Informations  | sur le paquet actuellement sélectionné, comme |
-   | (entrée)               | les paquets dont il dépend, les paquets qui   |
-   |                        | en dépendent, et ses versions disponibles.    |
-   |------------------------+-----------------------------------------------|
-   |                        | Lors du parcours de la liste des paquets, les |
-   |                        | informations peuvent être affichées           |
-   |                        | cycliquement dans la zone d'informations (la  |
-   | Paquet → Circuler      | moitié inférieure de l'écran). Cette zone     |
-   | cycliquement dans      | d'information peut afficher la description    |
-   | l'information sur les  | longue des paquets sélectionnés (c'est le     |
-   | paquets (i)            | comportement par défaut), un résumé des       |
-   |                        | dépendances liées à ce paquet, ou une analyse |
-   |                        | des paquets qui nécessitent ou suggèrent le   |
-   |                        | paquet sélectionné.                           |
-   |------------------------+-----------------------------------------------|
-   |                        | Affiche la liste des modifications du paquet  |
-   | Paquet → Liste des     | Debian actuellement sélectionné. Pour voir    |
-   | modifications (C)      | les modifications d'une version particulière, |
-   |                        | sélectionnez cette version avant d'exécuter   |
-   |                        | cette commande.                               |
+   |        Commande         |                 Description                  |
+   |-------------------------+----------------------------------------------|
+   | Paquet → Installer (+)  | Marquer le paquet actuellement sélectionné   |
+   |                         | pour installation.                           |
+   |-------------------------+----------------------------------------------|
+   | Package → Reinstall (L) | Flag the currently selected package for      |
+   |                         | reinstallation.                              |
+   |-------------------------+----------------------------------------------|
+   | Paquet → Supprimer (-)  | Marquer le paquet actuellement sélectionné   |
+   |                         | pour suppression.                            |
+   |-------------------------+----------------------------------------------|
+   | Paquet → Purger (_)     | Marquer le paquet actuellement sélectionné   |
+   |                         | pour purge.                                  |
+   |-------------------------+----------------------------------------------|
+   |                         | Annuler toute installation, mise à jour ou   |
+   | Paquet → Garder (:)     | suppression prévue pour le paquet            |
+   |                         | actuellement sélectionné et retirer tout gel |
+   |                         | qui aurait été mis sur le paquet.            |
+   |-------------------------+----------------------------------------------|
+   | Paquet → Geler (=)      | Geler le paquet actuellement sélectionné.    |
+   |-------------------------+----------------------------------------------|
+   |                         | Marquer le paquet actuellement sélectionné   |
+   |                         | comme étant un paquet « installé             |
+   | Paquet → Marquer        | automatiquement ». Pour plus d'informations  |
+   | automatiquement (M)     | sur les paquets installés manuellement et    |
+   |                         | automatiquement, consultez la section        |
+   |                         | intitulée « Gérer les paquets                |
+   |                         | automatiquement installés ».                 |
+   |-------------------------+----------------------------------------------|
+   |                         | Marquer le paquet actuellement sélectionné   |
+   |                         | comme étant un paquet « installé             |
+   | Paquet → Marquer        | manuellement ». Pour plus d'informations sur |
+   | manuellement (m)        | les paquets installés manuellement et        |
+   |                         | automatiquement, consultez la section        |
+   |                         | intitulée « Gérer les paquets                |
+   |                         | automatiquement installés ».                 |
+   |-------------------------+----------------------------------------------|
+   |                         | Si un paquet qui peut être mis à jour est    |
+   |                         | sélectionné, cela interdit sa mise à jour    |
+   | Paquet → Interdire la   | vers la version actuellement disponible      |
+   | version (F)             | uniquement. Si une version du paquet est     |
+   |                         | sélectionnée, cela interdit au paquet d'être |
+   |                         | mis à jour vers cette version.               |
+   |-------------------------+----------------------------------------------|
+   |                         | Afficher un écran contenant des informations |
+   | Paquet → Informations   | sur le paquet actuellement sélectionné,      |
+   | (entrée)                | comme les paquets dont il dépend, les        |
+   |                         | paquets qui en dépendent, et ses versions    |
+   |                         | disponibles.                                 |
+   |-------------------------+----------------------------------------------|
+   |                         | Lors du parcours de la liste des paquets,    |
+   |                         | les informations peuvent être affichées      |
+   |                         | cycliquement dans la zone d'informations (la |
+   | Paquet → Circuler       | moitié inférieure de l'écran). Cette zone    |
+   | cycliquement dans       | d'information peut afficher la description   |
+   | l'information sur les   | longue des paquets sélectionnés (c'est le    |
+   | paquets (i)             | comportement par défaut), un résumé des      |
+   |                         | dépendances liées à ce paquet, ou une        |
+   |                         | analyse des paquets qui nécessitent ou       |
+   |                         | suggèrent le paquet sélectionné.             |
+   |-------------------------+----------------------------------------------|
+   |                         | Affiche la liste des modifications du paquet |
+   | Paquet → Liste des      | Debian actuellement sélectionné. Pour voir   |
+   | modifications (C)       | les modifications d'une version              |
+   |                         | particulière, sélectionnez cette version     |
+   |                         | avant d'exécuter cette commande.             |
    +------------------------------------------------------------------------+
 
     Le menu « Solutions »
@@ -2175,12 +2179,13 @@ Gérer les paquets
    |                             | éviter certaines versions de paquet      |
    |                             | connues comme étant défectueuses.        |
    |-----------------------------+------------------------------------------|
-   |                             | Réinstaller le paquet.                   |
+   |                             | Flag the current package for             |
+   |                             | reinstallation.                          |
    |                             |                                          |
    |                             | Remarquez que la marque de               |
    |                             | réinstallation ne sera pas sauvegardée   |
-   |                             | quand vous quitterez aptitude ou         |
-   | Réinstaller : appuyer sur L | lancerez un processus d'installation     |
+   | Reinstall: Package →        | quand vous quitterez aptitude ou         |
+   | Reinstall (L)               | lancerez un processus d'installation     |
    |                             | pour des raisons techniques (brièvement, |
    |                             | les couches logicielles sous-jacentes    |
    |                             | — dpkg et apt — ne fournissent aucun     |
@@ -4150,8 +4155,8 @@ Personnalisation d'aptitude
             automatique                            afficher « A », sinon ne
                                                    rien afficher.
             Version du        Longueur de          Version d'aptitude en
-   %n       programme         « 0.6.8.2 » Non      cours de fonctionnement,
-                                                   actuellement « 0.6.8.2 ».
+   %n       programme         « 0.6.10 »  Non      cours de fonctionnement,
+                                                   actuellement « 0.6.10 ».
    %N       Nom du programme  Longueur du Non      Nom du programme,
                               nom.                 généralement « aptitude ».
                                                    Si aucun paquet ne doit
@@ -4483,6 +4488,17 @@ Personnalisation d'aptitude
 
            Trier les paquets selon l'estimation de la taille nécessaire à
            l'installation.
+
+   installsizechange
+
+           Sorts packages by the change in the installed size (estimated
+           amount of size required when installed), comparing the current
+           version (if installed) and the candidate version to be installed,
+           upgraded or removed.
+
+   debsize
+
+           Sorts packages by the size of the package.
 
    name
 
@@ -5960,9 +5976,9 @@ Personnalisation d'aptitude
    commande ajoute 1 à cette valeur.
    Option : Aptitude::CmdLine::Visual-Preview
    Valeur par défaut : false
-   Description : Si cette option vaut true, aptitude va entrer dans le mode
-   graphique pour afficher l'aperçu du processus d'installation et pour
-   télécharger les paquets.
+   Description : If this option is true, aptitude will enter its visual
+   interface to display the preview of an installation run and to download
+   packages.
    Option : Aptitude::Delete-Unused
    Valeur par défaut : true
    Description : Si cette option vaut true, les paquets automatiquement
@@ -7367,13 +7383,11 @@ Actions en ligne de commande
 
    show
 
-           Afficher des informations détaillées sur un ou plusieurs paquets
-           dont les noms sont indiqués après la commande search. Si un nom de
-           paquet contient un caractère tilde (« ~ ») ou un point
-           d'interrogation (« ? »), il sera alors traité comme un motif de
-           recherche, et tous les paquets correspondants seront affichés
-           (voir la section « Motifs de recherche » dans le manuel de
-           référence d'aptitude).
+           Displays detailed information about one or more packages. If a
+           package name contains a tilde character (« ~ ») or a question mark
+           (« ? »), it will be treated as a search pattern and all matching
+           packages will be displayed (see the section « Search Patterns » in
+           the aptitude reference manual).
 
            Si le niveau de verbosité est au moins 1 (c'est-à-dire que
            l'option -v est présente sur la ligne de commande), les
@@ -7931,8 +7945,8 @@ Options
            installés précédemment pour ces mêmes raisons de recommandation ne
            seront pas supprimés.
 
-           Directives du fichier de configuration : Apt::Install-Recommends
-           et Apt::AutoRemove::InstallRecommends.
+           This corresponds to the pair of configuration options
+           Apt::Install-Recommends and Apt::AutoRemove::RecommendsImportant.
 
    -r, --with-recommends
 

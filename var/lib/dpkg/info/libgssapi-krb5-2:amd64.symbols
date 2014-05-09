@@ -69,6 +69,8 @@ libgssapi_krb5.so.2 libgssapi-krb5-2 #MINVER#
  gss_export_name_composite@gssapi_krb5_2_MIT 1.8+dfsg
  gss_export_sec_context@gssapi_krb5_2_MIT 1.6.dfsg.2
  gss_get_mic@gssapi_krb5_2_MIT 1.6.dfsg.2
+ gss_get_mic_iov@gssapi_krb5_2_MIT 1.12~alpha1+dfsg
+ gss_get_mic_iov_length@gssapi_krb5_2_MIT 1.12~alpha1+dfsg
  gss_get_name_attribute@gssapi_krb5_2_MIT 1.8+dfsg
  gss_import_cred@gssapi_krb5_2_MIT 1.11+dfsg
  gss_import_name@gssapi_krb5_2_MIT 1.6.dfsg.2
@@ -97,7 +99,7 @@ libgssapi_krb5.so.2 libgssapi-krb5-2 #MINVER#
  gss_krb5_set_cred_rcache@gssapi_krb5_2_MIT 1.7+dfsg
  gss_krb5int_make_seal_token_v3@gssapi_krb5_2_MIT 1.6.dfsg.2
  gss_krb5int_unseal_token_v3@gssapi_krb5_2_MIT 1.6.dfsg.2
- gss_localname@gssapi_krb5_2_MIT 1.9.1+dfsg-2
+ gss_localname@gssapi_krb5_2_MIT 1.9.1+dfsg
  gss_map_name_to_any@gssapi_krb5_2_MIT 1.8+dfsg
  gss_mech_iakerb@gssapi_krb5_2_MIT 1.9+dfsg~beta1
  gss_mech_krb5@gssapi_krb5_2_MIT 1.6.dfsg.2
@@ -144,6 +146,7 @@ libgssapi_krb5.so.2 libgssapi-krb5-2 #MINVER#
  gss_userok@gssapi_krb5_2_MIT 1.9.1+dfsg
  gss_verify@gssapi_krb5_2_MIT 1.6.dfsg.2
  gss_verify_mic@gssapi_krb5_2_MIT 1.6.dfsg.2
+ gss_verify_mic_iov@gssapi_krb5_2_MIT 1.12~alpha1+dfsg
  gss_wrap@gssapi_krb5_2_MIT 1.6.dfsg.2
  gss_wrap_aead@gssapi_krb5_2_MIT 1.7+dfsg
  gss_wrap_iov@gssapi_krb5_2_MIT 1.7+dfsg

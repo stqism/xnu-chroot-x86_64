@@ -1,5 +1,5 @@
 /* O_*, F_*, FD_* bit values for Linux.
-   Copyright (C) 2001-2012 Free Software Foundation, Inc.
+   Copyright (C) 2001-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -294,6 +294,13 @@ struct f_owner_ex
 					   we splice from/to).  */
 # define SPLICE_F_MORE		4	/* Expect more data.  */
 # define SPLICE_F_GIFT		8	/* Pages passed in are a gift.  */
+
+
+/* Flags for fallocate.  */
+# define FALLOC_FL_KEEP_SIZE		1 /* Don't extend size of file
+					     even if offset + len is
+					     greater than file size.  */
+# define FALLOC_FL_PUNCH_HOLE		2 /* Create a hole in the file.  */
 
 
 /* File handle structure.  */

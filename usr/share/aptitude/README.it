@@ -1,6 +1,6 @@
                            Manuale utente di aptitude
 
-Versione 0.6.8.2
+Versione 0.6.10
 
   Daniel Burrows
 
@@ -390,8 +390,8 @@ Come si può ottenere aptitude?
        pagina fino in fondo e scaricare il file «.orig.tar.gz».)
 
    Una volta disponibili tutti i componenti richiesti, aprire un terminale ed
-   eseguire il comando tar xzf aptitude-0.6.8.2.tar.gz per estrarre il codice
-   sorgente. Una volta fatto, digitare cd aptitude-0.6.8.2&& ./configure &&
+   eseguire il comando tar xzf aptitude-0.6.10.tar.gz per estrarre il codice
+   sorgente. Una volta fatto, digitare cd aptitude-0.6.10&& ./configure &&
    make per compilare aptitude. Se ciò avviene con successo, assicurarsi di
    essere l'utente root (usando su, ad esempio), poi digitare make install
    per installare aptitude sul computer. Una volta che aptitude è installato
@@ -406,7 +406,7 @@ Come si può ottenere aptitude?
    aptitude, si può scaricare il codice sorgente di aptitude non ancora
    rilasciato usando Git. Installare Git (disponibile da http://git-scm.com/)
    ed eseguire il comando git clone
-   git://git.debian.org/git/aptitude/aptitude.git per recuperare il codice
+   git://anonscm.debian.org/aptitude/aptitude.git per recuperare il codice
    sorgente più recente.
 
    [Avvertimento] Avvertimento
@@ -1549,6 +1549,9 @@ L'interfaccia utente in terminale di aptitude
    | Pacchetto → Installa (+) | Contrassegna il pacchetto selezionato per   |
    |                          | l'installazione.                            |
    |--------------------------+---------------------------------------------|
+   | Package → Reinstall (L)  | Flag the currently selected package for     |
+   |                          | reinstallation.                             |
+   |--------------------------+---------------------------------------------|
    | Pacchetto → Rimuovi (-)  | Contrassegna il pacchetto selezionato per   |
    |                          | la rimozione.                               |
    |--------------------------+---------------------------------------------|
@@ -2178,11 +2181,12 @@ Gestire i pacchetti
    |                            | pacchetti che sono note per avere         |
    |                            | problemi.                                 |
    |----------------------------+-------------------------------------------|
-   |                            | Reinstalla il pacchetto.                  |
+   |                            | Flag the current package for              |
+   |                            | reinstallation.                           |
    |                            |                                           |
    |                            | Notare che per ragioni tecniche           |
-   |                            | (fondamentalmente i livelli software      |
-   | Reinstalla: premere L      | sottostanti, dpkg e apt, non forniscono   |
+   | Reinstall: Package →       | (fondamentalmente i livelli software      |
+   | Reinstall (L)              | sottostanti, dpkg e apt, non forniscono   |
    |                            | un modo per sapere se una reinstallazione |
    |                            | ha avuto successo o meno) la              |
    |                            | reinstallazione non viene salvata quando  |
@@ -4162,10 +4166,10 @@ Personalizzare aptitude
             automatico                               in output «A»,
                                                      altrimenti l'output è
                                                      vuoto.
-                            La lunghezza             Produce in output la
-   %n       Versione del    di           No          versione di aptitude che
-            programma       «0.6.8.2».               è in esecuzione,
-                                                     attualmente «0.6.8.2».
+                                                     Produce in output la
+   %n       Versione del    La lunghezza No          versione di aptitude che
+            programma       di «0.6.10».             è in esecuzione,
+                                                     attualmente «0.6.10».
             Nome del        La lunghezza             Produce in output il
    %N       programma       del nome.    No          nome del programma;
                                                      solitamente «aptitude».
@@ -4507,6 +4511,17 @@ Personalizzare aptitude
 
            Ordina i pacchetti in base alla quantità stimata di spazio di cui
            hanno bisogno una volta installati.
+
+   installsizechange
+
+           Sorts packages by the change in the installed size (estimated
+           amount of size required when installed), comparing the current
+           version (if installed) and the candidate version to be installed,
+           upgraded or removed.
+
+   debsize
+
+           Sorts packages by the size of the package.
 
    name
 
@@ -6034,9 +6049,9 @@ Personalizzare aptitude
    questo valore di 1.
    Opzione: Aptitude::CmdLine::Visual-Preview
    Predefinito: false
-   Descrizione: Se questa opzione è true, aptitude entra nella sua modalità
-   visuale per mostrare l'anteprima di un giro di installazioni e per
-   scaricare i pacchetti.
+   Descrizione: If this option is true, aptitude will enter its visual
+   interface to display the preview of an installation run and to download
+   packages.
    Opzione: Aptitude::Delete-Unused
    Predefinito: true
    Descrizione: Se questa opzione è true, i pacchetti automaticamente
@@ -7426,12 +7441,11 @@ Azioni disponibili dalla riga di comando
 
    show
 
-           Mostra informazioni dettagliate su uno o più pacchetti elencati
-           dopo il comando di ricerca. Se un nome di pacchetto contiene un
-           carattere tilde («~») o un punto interrogativo («?») viene
-           interpretato come un modello di ricerca e vengono quindi mostrati
-           tutti i pacchetti che corrispondono (vedere la sezione «Modelli di
-           ricerca» nel manuale di riferimento di aptitude.
+           Displays detailed information about one or more packages. If a
+           package name contains a tilde character («~») or a question mark
+           («?»), it will be treated as a search pattern and all matching
+           packages will be displayed (see the section «Search Patterns» in
+           the aptitude reference manual).
 
            Se il livello di prolissità è uguale o maggiore a 1 (cioè nella
            riga di comando è presente almeno una volta -v), vengono mostrate
@@ -7991,8 +8005,8 @@ Opzioni
            in /etc/apt/apt.conf e ~/.aptitude/config). I pacchetti già
            installati a causa di raccomandazioni non vengono rimossi.
 
-           Corrisponde alla coppia di opzioni di configurazione
-           Apt::Install-Recommends e Apt::AutoRemove::InstallRecommends.
+           This corresponds to the pair of configuration options
+           Apt::Install-Recommends and Apt::AutoRemove::RecommendsImportant.
 
    -r, --with-recommends
 

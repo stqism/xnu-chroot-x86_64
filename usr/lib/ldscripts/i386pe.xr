@@ -1,5 +1,6 @@
 /* Script for ld -r: link without relocation */
 OUTPUT_FORMAT(pe-i386)
+SEARCH_DIR("=/usr/x86_64-pep/lib");
 SECTIONS
 {
   .text  :
@@ -69,7 +70,7 @@ SECTIONS
   {
     /* end is deprecated, don't use it */
   }
-  .rsrc  :
+  .rsrc  : SUBALIGN(4)
   {
     *(.rsrc)
   }

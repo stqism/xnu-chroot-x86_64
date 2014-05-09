@@ -53,7 +53,13 @@ sub init_options {
          'debian/source/local-patch-header';
     $self->{options}{sourcestyle} ||= 'X';
     $self->{options}{skip_debianization} ||= 0;
+    $self->{options}{ignore_bad_version} ||= 0;
     $self->{options}{abort_on_upstream_changes} ||= 0;
+
+    # V1.0 only supports gzip compression.
+    $self->{options}{compression} //= 'gzip';
+    $self->{options}{comp_level} //= compression_get_property('gzip', 'default_level');
+    $self->{options}{comp_ext} //= compression_get_property('gzip', 'file_ext');
 }
 
 sub parse_cmdline_option {
@@ -67,6 +73,9 @@ sub parse_cmdline_option {
         return 1;
     } elsif ($opt =~ m/^--skip-debianization$/) {
         $o->{skip_debianization} = 1;
+        return 1;
+    } elsif ($opt =~ m/^--ignore-bad-version$/) {
+        $o->{ignore_bad_version} = 1;
         return 1;
     } elsif ($opt =~ m/^--abort-on-upstream-changes$/) {
         $o->{abort_on_upstream_changes} = 1;
@@ -354,7 +363,8 @@ sub do_build {
 					DIR => getcwd(), UNLINK => 0);
         push_exit_handler(sub { unlink($newdiffgz) });
         my $diff = Dpkg::Source::Patch->new(filename => $newdiffgz,
-                                            compression => 'gzip');
+                                            compression => 'gzip',
+                                            compression_level => $self->{options}{comp_level});
         $diff->create();
         $diff->add_diff_directory($origdir, $dir,
                 basedirname => $basedirname,

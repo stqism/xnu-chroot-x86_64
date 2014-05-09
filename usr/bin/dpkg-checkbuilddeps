@@ -110,16 +110,22 @@ unless (defined($bd_value) or defined($bc_value)) {
 my (@unmet, @conflicts);
 
 if ($bd_value) {
-	push @unmet, build_depends('Build-Depends/Build-Depends-Arch/Build-Depends-Indep',
-		deps_parse($bd_value, reduce_restrictions => 1, build_dep => 1,
-			   build_profiles => \@build_profiles,
-			   host_arch => $host_arch), $facts);
+    my $dep = deps_parse($bd_value, reduce_restrictions => 1,
+                         build_dep => 1, build_profiles => \@build_profiles,
+                         host_arch => $host_arch);
+    error(_g('error occurred while parsing %s'),
+          'Build-Depends/Build-Depends-Arch/Build-Depends-Indep')
+        unless defined $dep;
+    push @unmet, build_depends($dep, $facts);
 }
 if ($bc_value) {
-	push @conflicts, build_conflicts('Build-Conflicts/Build-Conflicts-Arch/Build-Conflicts-Indep',
-		deps_parse($bc_value, reduce_restrictions => 1, build_dep => 1,
-			   build_profiles => \@build_profiles, union => 1,
-			   host_arch => $host_arch), $facts);
+    my $dep = deps_parse($bc_value, reduce_restrictions => 1, union => 1,
+                         build_dep => 1, build_profiles => \@build_profiles,
+                         host_arch => $host_arch);
+    error(_g('error occurred while parsing %s'),
+          'Build-Conflicts/Build-Conflicts-Arch/Build-Conflicts-Indep')
+        unless defined $dep;
+    push @conflicts, build_conflicts($dep, $facts);
 }
 
 if (@unmet) {
@@ -183,44 +189,27 @@ sub parse_status {
 # in as the 4th parameter. If not set, dpkg will be queried for the build
 # architecture.
 sub build_depends {
-	return check_line(1, @_);
+    my ($dep_list, $facts) = @_;
+
+    $dep_list->simplify_deps($facts);
+    if ($dep_list->is_empty()) {
+        return ();
+    } else {
+        return $dep_list->get_deps();
+    }
 }
 
-# This function is exactly like unmet_build_depends, except it
+# This function is exactly like build_depends(), except it
 # checks for build conflicts, and returns a list of the packages
 # that are installed and are conflicted with.
 sub build_conflicts {
-	return check_line(0, @_);
-}
+    my ($dep_list, $facts) = @_;
 
-# This function does all the work. The first parameter is 1 to check build
-# deps, and 0 to check build conflicts.
-sub check_line {
-	my $build_depends=shift;
-	my $fieldname=shift;
-	my $dep_list=shift;
-	my $facts=shift;
-
-	my @unmet=();
-
-	unless(defined($dep_list)) {
-	    error(_g('error occurred while parsing %s'), $fieldname);
-	}
-
-	if ($build_depends) {
-		$dep_list->simplify_deps($facts);
-		if ($dep_list->is_empty()) {
-			return ();
-		} else {
-			return $dep_list->get_deps();
-		}
-	} else { # Build-Conflicts
-		my @conflicts = ();
-		foreach my $dep ($dep_list->get_deps()) {
-			if ($dep->get_evaluation($facts)) {
-				push @conflicts, $dep;
-			}
-		}
-		return @conflicts;
-	}
+    my @conflicts = ();
+    foreach my $dep ($dep_list->get_deps()) {
+        if ($dep->get_evaluation($facts)) {
+            push @conflicts, $dep;
+        }
+    }
+    return @conflicts;
 }

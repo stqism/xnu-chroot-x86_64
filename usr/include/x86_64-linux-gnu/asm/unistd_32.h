@@ -348,5 +348,7 @@
 #define __NR_process_vm_writev 348
 #define __NR_kcmp 349
 #define __NR_finit_module 350
+#define __NR_sched_setattr 351
+#define __NR_sched_getattr 352
 
 #endif /* _ASM_X86_UNISTD_32_H */

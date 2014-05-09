@@ -1,9 +1,9 @@
 f532e5d899e012a523e813e9ae02dd24  lib/ifupdown/settle-dad.sh
-6bedcde021ddf4b47cd2577b0b1ca2cb  sbin/ifup
+1fcd0f54e20b048c92443ac80ebb4b57  sbin/ifup
 0f7d64825a5d0f0b04b871596377bef9  usr/share/doc/ifupdown/NEWS.Debian.gz
 241c6d749b8ba3f07b81a1266bccc2d1  usr/share/doc/ifupdown/README
 94e604eb3920b1eb5efa4b6ce5e52db0  usr/share/doc/ifupdown/TODO
-0ebbbc05ef0fbd2178f6626d3adee060  usr/share/doc/ifupdown/changelog.gz
+747c546d498c1c98885a7a5c37012d45  usr/share/doc/ifupdown/changelog.gz
 1c9d2e2e5a56455eaebb479c1dbb20f1  usr/share/doc/ifupdown/contrib/ensureifup
 cde381570a371a774ff092d246ea786a  usr/share/doc/ifupdown/contrib/ifstate
 62f92e0d54d70005677860b6600579a8  usr/share/doc/ifupdown/contrib/ifstate-check
@@ -16,5 +16,5 @@ a5cebf40c83ebd0d1d5703790ec7be65  usr/share/doc/ifupdown/examples/network-interf
 e8bb6daaf2f8a4f0e0e819a64612772d  usr/share/doc/ifupdown/examples/pcmcia-compat.sh
 d3c899ac2785db804fab38b216a39bc5  usr/share/doc/ifupdown/examples/ping-places.sh
 d3ad310d259ffcea6e2853428fd04875  usr/share/lintian/overrides/ifupdown
-926d271dc18ae38f1ff29096869cb60f  usr/share/man/man5/interfaces.5.gz
-c90b140c80af1900eca667b54a148d4b  usr/share/man/man8/ifup.8.gz
+4e1275a548749d3f0440194b9e93f271  usr/share/man/man5/interfaces.5.gz
+40a7abb01b9aa0f34c59248405a7efc0  usr/share/man/man8/ifup.8.gz

@@ -9,4 +9,7 @@
 /usr/share/doc/libsigc++-2.0-0c2a/copyright
 /usr/share/doc/libsigc++-2.0-0c2a/changelog.Debian.gz
 /usr/share/doc/libsigc++-2.0-0c2a/changelog.gz
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libsigc++-2.0-0c2a
 /usr/lib/x86_64-linux-gnu/libsigc-2.0.so.0

@@ -14,6 +14,7 @@ libp11-kit.so.0 libp11-kit0 #MINVER#
  p11_kit_iter_begin_with@Base 0.15.1
  p11_kit_iter_destroy_object@Base 0.20.0
  p11_kit_iter_free@Base 0.15.1
+ p11_kit_iter_get_attributes@Base 0.20.2
  p11_kit_iter_get_module@Base 0.15.1
  p11_kit_iter_get_object@Base 0.15.1
  p11_kit_iter_get_session@Base 0.15.1

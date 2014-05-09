@@ -1,0 +1,2 @@
+May  9 23:11:48 samism rsyslogd: [origin software="rsyslogd" swVersion="7.6.3" x-pid="26051" x-info="http://www.rsyslog.com"] start
+May  9 23:17:01 samism CRON[28259]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)

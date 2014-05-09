@@ -276,6 +276,7 @@ then
     is_upstart=1
 elif test -d /run/systemd/system ; then
     is_systemd=1
+    UNIT="${INITSCRIPTID%.sh}.service"
 elif test ! -f "${INITDPREFIX}${INITSCRIPTID}" ; then
     ## Verifies if the given initscript ID is known
     ## For sysvinit, this error is critical
@@ -390,7 +391,7 @@ _executable=
 if [ -n "$is_upstart" ]; then
     _executable=1
 elif [ -n "$is_systemd" ]; then
-    _state=$(systemctl -p LoadState show "${INITSCRIPTID}.service" 2>/dev/null)
+    _state=$(systemctl -p LoadState show "${UNIT}" 2>/dev/null)
     if [ "$_state" != "LoadState=masked" ]; then
         _executable=1
     fi
@@ -519,25 +520,25 @@ if test x${FORCE} != x || test ${RC} -eq 104 ; then
                 fi
                 case $saction in
                     start|stop|restart|status)
-                        systemctl "${saction}" "${INITSCRIPTID}.service" && exit 0
+                        systemctl "${saction}" "${UNIT}" && exit 0
                         ;;
                     reload)
-                        _canreload="$(systemctl -p CanReload show ${INITSCRIPTID}.service 2>/dev/null)"
+                        _canreload="$(systemctl -p CanReload show ${UNIT} 2>/dev/null)"
                         if [ "$_canreload" = "CanReload=no" ]; then
                             "${INITDPREFIX}${INITSCRIPTID}" "${saction}" "$@" && exit 0
                         else
-                            systemctl reload "${INITSCRIPTID}.service" && exit 0
+                            systemctl reload "${UNIT}" && exit 0
                         fi
                         ;;
                     force-stop)
-                        systemctl --signal=KILL kill "${INITSCRIPTID}.service" && exit 0
+                        systemctl --signal=KILL kill "${UNIT}" && exit 0
                         ;;
                     force-reload)
-                        _canreload="$(systemctl -p CanReload show ${INITSCRIPTID}.service 2>/dev/null)"
+                        _canreload="$(systemctl -p CanReload show ${UNIT} 2>/dev/null)"
                         if [ "$_canreload" = "CanReload=no" ]; then
-                           systemctl restart "${INITSCRIPTID}.service" && exit 0
+                           systemctl restart "${UNIT}" && exit 0
                         else
-                           systemctl reload "${INITSCRIPTID}.service" && exit 0
+                           systemctl reload "${UNIT}" && exit 0
                         fi
                         ;;
                     *)

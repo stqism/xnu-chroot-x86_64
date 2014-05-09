@@ -1,0 +1,17 @@
+4d8b2562566c2ef888c035ed9e3025f8  sbin/halt
+e42f98e5adbbb5c9e3d38f6123f86821  sbin/init
+283a47a3549a10ed4941b966f3d7edc5  sbin/runlevel
+4edd19a93d771c900de98b7ed28b5d22  sbin/shutdown
+fb663b037ed8e678e67fce11f21bd8e4  usr/include/initreq.h
+bc13c966d9d6e7a6b07dc50037e7d789  usr/share/doc/sysvinit-core/changelog.Debian.gz
+d3dceb86c27a74dc46bda1df54c9e973  usr/share/doc/sysvinit-core/changelog.gz
+c0c88c885a61973dd72de395303e740b  usr/share/doc/sysvinit-core/copyright
+9ad7d49e3dece20acb9bdf34893328bc  usr/share/lintian/overrides/sysvinit-core
+8ddbeb9d6e74c9e5bfe8f70fcf606c29  usr/share/man/man5/initscript.5.gz
+9a07a865770540941fd5f10fc1a5a28d  usr/share/man/man5/inittab.5.gz
+a6e8ce502002a4d4a3fd0a2b379a3765  usr/share/man/man8/halt.8.gz
+bd2fb9d425000884714c3a84bc8a2182  usr/share/man/man8/init.8.gz
+dd8088e43810f10411b5ef970c992f24  usr/share/man/man8/runlevel.8.gz
+341bfb5cdd70799f87d6d85b97c3ccda  usr/share/man/man8/shutdown.8.gz
+5a107e6c5de94c95d3f2802e377670d5  usr/share/sysvinit/inittab
+3908af25643dc0faf9e4474972ca05e5  usr/share/sysvinit/update-rc.d

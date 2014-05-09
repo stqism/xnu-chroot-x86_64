@@ -25,7 +25,7 @@ $sendmail="/usr/sbin/sendmail -t";
 
 sub VERSION_MESSAGE ()
 {
-    print STDOUT "gpgkeys_mailto (GnuPG) 1.4.15\n";
+    print STDOUT "gpgkeys_mailto (GnuPG) 1.4.16\n";
 }
 
 sub HELP_MESSAGE ()

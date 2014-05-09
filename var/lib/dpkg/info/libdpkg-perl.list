@@ -35,6 +35,8 @@
 /usr/share/lintian
 /usr/share/lintian/overrides
 /usr/share/lintian/overrides/libdpkg-perl
+/usr/share/man
+/usr/share/man/man3
 /usr/share/man/man3/Dpkg::Exit.3.gz
 /usr/share/man/man3/Dpkg::IPC.3.gz
 /usr/share/man/man3/Dpkg::Changelog::Entry::Debian.3.gz
@@ -120,6 +122,8 @@
 /usr/share/perl5/Dpkg/Deps.pm
 /usr/share/perl5/Dpkg/BuildFlags.pm
 /usr/share/perl5/Dpkg/BuildEnv.pm
+/usr/share/perl5/Dpkg/Dist
+/usr/share/perl5/Dpkg/Dist/Files.pm
 /usr/share/perl5/Dpkg/Interface
 /usr/share/perl5/Dpkg/Interface/Storable.pm
 /usr/share/perl5/Dpkg/Checksums.pm

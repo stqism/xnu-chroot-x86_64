@@ -23,3 +23,4 @@ initscripts: init.d-script-should-depend-on-virtual-facility etc/init.d/mountall
 initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/mountnfs.sh: required-start
 initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/halt: required-stop
 initscripts: init.d-script-possible-missing-stop etc/init.d/umountroot 1
+initscripts: unusual-interpreter etc/init.d/skeleton #!/lib/init/init-d-script

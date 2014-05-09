@@ -5,7 +5,8 @@
 
 test_description='Test remote-bzr'
 
-. ./test-lib.sh
+test -n "$TEST_DIRECTORY" || TEST_DIRECTORY=${0%/*}/../../t
+. "$TEST_DIRECTORY"/test-lib.sh
 
 if ! test_have_prereq PYTHON
 then
@@ -65,13 +66,33 @@ test_expect_success 'pushing' '
 	test_cmp expected actual
 '
 
+test_expect_success 'forced pushing' '
+	(
+	cd gitrepo &&
+	echo three-new >content &&
+	git commit -a --amend -m three-new &&
+	git push -f
+	) &&
+
+	(
+	cd bzrrepo &&
+	# the forced update overwrites the bzr branch but not the bzr
+	# working directory (it tries to merge instead)
+	bzr revert
+	) &&
+
+	echo three-new >expected &&
+	cat bzrrepo/content >actual &&
+	test_cmp expected actual
+'
+
 test_expect_success 'roundtrip' '
 	(
 	cd gitrepo &&
 	git pull &&
 	git log --format="%s" -1 origin/master >actual
 	) &&
-	echo three >expected &&
+	echo three-new >expected &&
 	test_cmp expected actual &&
 
 	(cd gitrepo && git push && git pull) &&
@@ -361,7 +382,7 @@ test_expect_success 'strip' '
 '
 
 test_expect_success 'export utf-8 authors' '
-	test_when_finished "rm -rf bzrrepo gitrepo && LC_ALL=C && unset GIT_COMMITTER_NAME" &&
+	test_when_finished "rm -rf bzrrepo gitrepo && LC_ALL=C && GIT_COMMITTER_NAME=\"C O Mitter\""
 
 	LC_ALL=en_US.UTF-8
 	export LC_ALL
@@ -378,7 +399,7 @@ test_expect_success 'export utf-8 authors' '
 	git add content &&
 	git commit -m one &&
 	git remote add bzr "bzr::../bzrrepo" &&
-	git push bzr
+	git push bzr master
 	) &&
 
 	(
@@ -387,6 +408,30 @@ test_expect_success 'export utf-8 authors' '
 	) &&
 
 	echo "committer: Grégoire <committer@example.com>" >expected &&
+	test_cmp expected actual
+'
+
+test_expect_success 'push different author' '
+	test_when_finished "rm -rf bzrrepo gitrepo" &&
+
+	bzr init bzrrepo &&
+
+	(
+	git init gitrepo &&
+	cd gitrepo &&
+	echo john >> content &&
+	git add content &&
+	git commit -m john --author "John Doe <jdoe@example.com>" &&
+	git remote add bzr "bzr::../bzrrepo" &&
+	git push bzr master
+	) &&
+
+	(
+	cd bzrrepo &&
+	bzr log | grep "^author: " > ../actual
+	) &&
+
+	echo "author: John Doe <jdoe@example.com>" > expected &&
 	test_cmp expected actual
 '
 

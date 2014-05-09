@@ -2,11 +2,13 @@
 set -e
 
 if [ "$1" = remove ]; then
-    ARCH=${DPKG_MAINTSCRIPT_ARCH:-$(dpkg --print-architecture)}
-    if [ "${ARCH}" = "amd64" ] && [ "libc6-i386" = "libc6-i386" ]; then
-	if [ -h /lib/ld-linux.so.2 ] && [ ! -f /lib/ld-linux.so.2 ]; then
-	    rm /lib/ld-linux.so.2
-	fi
+    # Native multiarch packages declare a Replaces: on the corresponding
+    # biarch package. Therefore if both a biarch package and the corresponding
+    # multiarch package are installed, then the multiarch package is removed,
+    # and then the biarch package is removed, the dynamic linker symlink
+    # becomes a dangling symlink. Remove it in that case.
+    if [ -h /lib/ld-linux.so.2 ] && [ ! -f /lib/ld-linux.so.2 ]; then
+        rm /lib/ld-linux.so.2
     fi
 fi
 

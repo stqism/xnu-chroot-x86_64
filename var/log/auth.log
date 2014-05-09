@@ -1,0 +1,64 @@
+May  9 23:15:54 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount /dev
+May  9 23:15:54 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:15:54 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:16:13 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/mount /dev/
+May  9 23:16:13 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:16:13 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:16:26 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount dev
+May  9 23:16:26 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:16:26 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:16:30 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount dev/pts
+May  9 23:16:30 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:16:30 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:16:32 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount dev
+May  9 23:16:32 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:16:32 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:16:35 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount dev
+May  9 23:16:35 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:16:35 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:16:37 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount dev/pts
+May  9 23:16:37 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:16:37 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:16:38 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount dev/pts
+May  9 23:16:38 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:16:38 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:16:39 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount dev
+May  9 23:16:39 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:16:39 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:16:45 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount -f dev
+May  9 23:16:45 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:16:45 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:16:57 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount proc
+May  9 23:16:57 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:16:57 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:17:00 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount sys
+May  9 23:17:00 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:17:00 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:17:01 samism CRON[28258]: pam_unix(cron:session): session opened for user root by (uid=0)
+May  9 23:17:01 samism CRON[28258]: pam_unix(cron:session): session closed for user root
+May  9 23:17:02 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount proc
+May  9 23:17:02 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:17:02 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:20:17 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount -f dev
+May  9 23:20:17 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:20:17 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:20:29 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount -l dev
+May  9 23:20:29 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:20:29 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:20:30 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount -l dev
+May  9 23:20:30 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:20:30 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:20:33 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount -l proc
+May  9 23:20:33 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:20:33 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:20:34 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount -l proc
+May  9 23:20:34 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:20:34 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:20:36 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/bin/umount -l sys
+May  9 23:20:36 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:20:36 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:25:09 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/usr/sbin/chroot .
+May  9 23:25:09 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)
+May  9 23:25:29 samism sudo: pam_unix(sudo:session): session closed for user root
+May  9 23:25:35 samism sudo:      sam : TTY=pts/7 ; PWD=/home/sam/xnu-chroot-x86_64 ; USER=root ; COMMAND=/usr/bin/git add . -A
+May  9 23:25:35 samism sudo: pam_unix(sudo:session): session opened for user root by sam(uid=0)

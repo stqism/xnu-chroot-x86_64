@@ -9,7 +9,7 @@ USAGE="[--quiet] add [-b <branch>] [-f|--force] [--name <name>] [--reference <re
    or: $dashless [--quiet] status [--cached] [--recursive] [--] [<path>...]
    or: $dashless [--quiet] init [--] [<path>...]
    or: $dashless [--quiet] deinit [-f|--force] [--] <path>...
-   or: $dashless [--quiet] update [--init] [--remote] [-N|--no-fetch] [-f|--force] [--rebase] [--reference <repository>] [--merge] [--recursive] [--] [<path>...]
+   or: $dashless [--quiet] update [--init] [--remote] [-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--reference <repository>] [--recursive] [--] [<path>...]
    or: $dashless [--quiet] summary [--cached|--files] [--summary-limit <n>] [commit] [--] [<path>...]
    or: $dashless [--quiet] foreach [--recursive] <command>
    or: $dashless [--quiet] sync [--recursive] [--] [<path>...]"
@@ -156,7 +156,7 @@ module_list()
 		git ls-files -z --error-unmatch --stage -- "$@" ||
 		echo "unmatched pathspec exists"
 	) |
-	perl -e '
+	/usr/bin/perl -e '
 	my %unmerged = ();
 	my ($null_sha1) = ("0" x 40);
 	my @out = ();
@@ -240,6 +240,12 @@ module_name()
 
 #
 # Clone a submodule
+#
+# $1 = submodule path
+# $2 = submodule name
+# $3 = URL to clone
+# $4 = reference repository to reuse (empty for independent)
+# $5 = depth argument for shallow clones (empty for deep)
 #
 # Prior to calling, cmd_update checks that a possibly existing
 # path is not a git repository.
@@ -545,7 +551,12 @@ cmd_foreach()
 				sm_path=$(relative_path "$sm_path") &&
 				# we make $path available to scripts ...
 				path=$sm_path &&
-				eval "$@" &&
+				if test $# -eq 1
+				then
+					eval "$1"
+				else
+					"$@"
+				fi &&
 				if test -n "$recursive"
 				then
 					cmd_foreach "--recursive" "$@"
@@ -617,7 +628,7 @@ cmd_init()
 		   test -z "$(git config submodule."$name".update)"
 		then
 			case "$upd" in
-			rebase | merge | none)
+			checkout | rebase | merge | none)
 				;; # known modes of updating
 			*)
 				echo >&2 "warning: unknown update mode '$upd' suggested for submodule '$name'"
@@ -716,7 +727,6 @@ cmd_deinit()
 cmd_update()
 {
 	# parse $args after "submodule ... update".
-	orig_flags=
 	while test $# -ne 0
 	do
 		case "$1" in
@@ -741,7 +751,6 @@ cmd_update()
 		--reference)
 			case "$2" in '') usage ;; esac
 			reference="--reference=$2"
-			orig_flags="$orig_flags $(git rev-parse --sq-quote "$1")"
 			shift
 			;;
 		--reference=*)
@@ -775,7 +784,6 @@ cmd_update()
 			break
 			;;
 		esac
-		orig_flags="$orig_flags $(git rev-parse --sq-quote "$1")"
 		shift
 	done
 
@@ -803,6 +811,10 @@ cmd_update()
 			update_module=$update
 		else
 			update_module=$(git config submodule."$name".update)
+			if test -z "$update_module"
+			then
+				update_module="checkout"
+			fi
 		fi
 
 		displaypath=$(relative_path "$prefix$sm_path")
@@ -871,11 +883,16 @@ Maybe you want to use 'update --init'?")"
 			case ";$cloned_modules;" in
 			*";$name;"*)
 				# then there is no local change to integrate
-				update_module= ;;
+				update_module=checkout ;;
 			esac
 
 			must_die_on_failure=
 			case "$update_module" in
+			checkout)
+				command="git checkout $subforce -q"
+				die_msg="$(eval_gettext "Unable to checkout '\$sha1' in submodule path '\$displaypath'")"
+				say_msg="$(eval_gettext "Submodule path '\$displaypath': checked out '\$sha1'")"
+				;;
 			rebase)
 				command="git rebase"
 				die_msg="$(eval_gettext "Unable to rebase '\$sha1' in submodule path '\$displaypath'")"
@@ -895,10 +912,7 @@ Maybe you want to use 'update --init'?")"
 				must_die_on_failure=yes
 				;;
 			*)
-				command="git checkout $subforce -q"
-				die_msg="$(eval_gettext "Unable to checkout '\$sha1' in submodule path '\$displaypath'")"
-				say_msg="$(eval_gettext "Submodule path '\$displaypath': checked out '\$sha1'")"
-				;;
+				die "$(eval_gettext "Invalid update mode '$update_module' for submodule '$name'")"
 			esac
 
 			if (clear_local_git_env; cd "$sm_path" && $command "$sha1")
@@ -919,7 +933,7 @@ Maybe you want to use 'update --init'?")"
 				prefix="$prefix$sm_path/"
 				clear_local_git_env
 				cd "$sm_path" &&
-				eval cmd_update "$orig_flags"
+				eval cmd_update
 			)
 			res=$?
 			if test $res -gt 0

@@ -1,4 +1,4 @@
-/* Copyright (C) 2001,2002,2003,2005,2006 Free Software Foundation, Inc.
+/* Copyright (C) 2001-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -30,7 +30,7 @@
 # if __WORDSIZE == 64
 typedef long int __jmp_buf[8];
 # elif defined  __x86_64__
-typedef long long int __jmp_buf[8];
+__extension__ typedef long long int __jmp_buf[8];
 # else
 typedef int __jmp_buf[6];
 # endif

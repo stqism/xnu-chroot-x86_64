@@ -3,11 +3,11 @@
 /usr/share
 /usr/share/doc
 /usr/share/doc/libclang1-3.3
-/usr/share/doc/libclang1-3.3/copyright
 /usr/share/doc/libclang1-3.3/changelog.Debian.gz
+/usr/share/doc/libclang1-3.3/copyright
 /usr/lib
-/usr/lib/llvm-3.3
-/usr/lib/llvm-3.3/lib
 /usr/lib/x86_64-linux-gnu
 /usr/lib/x86_64-linux-gnu/libclang-3.3.so.1
+/usr/lib/llvm-3.3
+/usr/lib/llvm-3.3/lib
 /usr/lib/llvm-3.3/lib/libclang.so.1

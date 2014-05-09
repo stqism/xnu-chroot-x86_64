@@ -55,7 +55,7 @@ do_start() {
 		mknod -m 600 "$INITCTL" p
 
 		# Reopen control channel.
-		PID="$(pidof /sbin/init || echo 1)"
+		PID="$(pidof -s /sbin/init || echo 1)"
 		[ -n "$PID" ] && kill -s USR1 "$PID"
 	fi
 

@@ -1,6 +1,5 @@
 /* Definitions of macros to access `dev_t' values.
-   Copyright (C) 1996, 1997, 1999, 2003, 2004, 2007, 2011
-   Free Software Foundation, Inc.
+   Copyright (C) 1996-2013 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
    The GNU C Library is free software; you can redistribute it and/or
@@ -22,10 +21,6 @@
 
 #include <features.h>
 
-/* If the compiler does not know long long it is out of luck.  We are
-   not going to hack weird hacks to support the dev_t representation
-   they need.  */
-#ifdef __GLIBC_HAVE_LONG_LONG
 __BEGIN_DECLS
 
 __extension__
@@ -39,7 +34,7 @@ extern unsigned long long int gnu_dev_makedev (unsigned int __major,
 					       unsigned int __minor)
      __THROW __attribute_const__;
 
-# if defined __GNUC__ && __GNUC__ >= 2 && defined __USE_EXTERN_INLINES
+#ifdef __USE_EXTERN_INLINES
 __extension__ __extern_inline __attribute_const__ unsigned int
 __NTH (gnu_dev_major (unsigned long long int __dev))
 {
@@ -59,13 +54,12 @@ __NTH (gnu_dev_makedev (unsigned int __major, unsigned int __minor))
 	  | (((unsigned long long int) (__minor & ~0xff)) << 12)
 	  | (((unsigned long long int) (__major & ~0xfff)) << 32));
 }
-# endif
+#endif
 __END_DECLS
 
 /* Access the functions with their traditional names.  */
-# define major(dev) gnu_dev_major (dev)
-# define minor(dev) gnu_dev_minor (dev)
-# define makedev(maj, min) gnu_dev_makedev (maj, min)
-#endif
+#define major(dev) gnu_dev_major (dev)
+#define minor(dev) gnu_dev_minor (dev)
+#define makedev(maj, min) gnu_dev_makedev (maj, min)
 
 #endif /* sys/sysmacros.h */

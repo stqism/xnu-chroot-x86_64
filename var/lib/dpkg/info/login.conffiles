@@ -1,4 +1,4 @@
-/etc/pam.d/login
-/etc/pam.d/su
-/etc/login.defs
 /etc/securetty
+/etc/login.defs
+/etc/pam.d/su
+/etc/pam.d/login
